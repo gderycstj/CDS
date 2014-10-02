@@ -141,6 +141,7 @@ namespace WpfApplication1
         public List<string>[] selection(string sel, int nbChamp, ref int nbRange)
         {
             List<string> infoBrute = new List<string>();
+            MessageBox.Show(sel);
             nbRange = 0;
 
             try

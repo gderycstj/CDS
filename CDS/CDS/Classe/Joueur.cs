@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfApplication1
+namespace LCDLS.Classe
 {
     class Joueur
     {
@@ -15,7 +15,7 @@ namespace WpfApplication1
 
         Joueur()
         {
-            nom="Visiteur";
+            nom="sansnom";
             idJoueur=-1;
             pathImage="..\\images\\pasdimage.png";
         }
@@ -27,5 +27,6 @@ namespace WpfApplication1
             pathImage=pathIm;
 
         }
+
     }
 }

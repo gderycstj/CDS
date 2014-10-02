@@ -42,8 +42,7 @@ namespace CDS
             txtTitreInstruc.Text = "But";
             txtContenu.TextAlignment = TextAlignment.Center;
             txtContenu.Text = "La chambre de survie vous confrontera à plusieurs niveaux de survie qui augmente en difficulté. En outre, si la peur vous hante, vous pourriez toujours vous entrainer face aux plus puissants poursuivants avant de relevé le défi.\n Dans la chambre de survie, vous allez devoir survivre à des vagues de poursuivants de plus en plus acharnée au fil du temps et des niveaux. De plus, plusieurs variétés de poursuivants seront disponibles et s'ajouterons aux poursuivants de « base » présente dans les premiers niveaux. \n"+
-            "Sauvegardez votre  partie, partagez vos score mémorables, surpassez l'élite des survivants. Le défi sera de taille. Et si vous finissez par le vaincre, d'autres chambres seront assemblées par vous et les autres survivants. Saurez-vous survivre à \n"+
-            "la chambre de survie?";
+            "Vous devrez éviter les poursuivants au péril de votre vie. Ceux-ci disparaitrons lorsqu'ils atteindront le bord de la grille vous donnant des points.Cependant, si vous êtes touchés 3 fois, la partie sera terminée.\n Saurez-vous survivre à la chambre de survie?";
 
             //Activation/Désactivation des boutons
             if (btnBut.IsEnabled == true)
@@ -58,7 +57,12 @@ namespace CDS
         private void btnCommandes_Click(object sender, RoutedEventArgs e)
         {
             txtTitreInstruc.Text = "Commandes";
-            txtContenu.Text = "blablablabla";
+            txtContenu.Text = "|"+"Déplacement du Personnage"+"|"+" \n\n"+
+            "Version Clavier: Utiliser les flèches directionelles et la touche entrer pour passer votre tour.\n"+
+            "Version Souris: Cliquer sur les flèches directionelles directement dans l'interface du jeu et cliquer sur le bouton rouge pour passer votre tour.\n \n"+
+            "|"+"Utilisation d'objet"+"|"+"\n\n"+
+            "Version Clavier: Utiliser les touches Z(Case de Gauche) et X(Case de droite) pour utiliser vos objets\n"+
+            "Version Souris: Cliquer sur la case contenant l'objet\n\n";
 
             //Activation/Désactivation des boutons
             if (btnCommandes.IsEnabled == true)
@@ -73,7 +77,10 @@ namespace CDS
         private void btnPoursuivants_Click(object sender, RoutedEventArgs e)
         {
             txtTitreInstruc.Text = "Poursuivants";
-            txtContenu.Text = "blablablabla";
+            txtContenu.Text ="|"+"Carré Vert"+"|"+" \n"+
+            "Le carré vert se déplace en ligne droite(Horizontalement).\n Il se déplacera seulement de une case à chaque tour.\n\n"+
+            "|"+"Carré bleu"+"|"+" \n"+ "Le carré bleu se déplace en ligne droite(Vertical).\n Il se déplacera seulement de une case à chaque tour.\n\n"+
+            "|"+"Triangle"+"|"+" \n"+ "Le triangle se déplace de toutes les façon possible vers la bas selon la position du personnage.\n Il se déplacera seulement de une case à chaque tour.\n D'autres poursuivants sont disponible. À vous de les découvrir.";
 
             //Activation/Désactivation des boutons
             if (btnPoursuivants.IsEnabled == true)
