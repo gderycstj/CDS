@@ -29,12 +29,17 @@ namespace WpfApplication1
 
         private void Connexion_Click(object sender, RoutedEventArgs e)
         {
+            List<string>[] listeJoueur;
+
            string req = "SELECT * FROM Utilisateurs WHERE nom = '" + txtNomUsager.Text + "' AND motDePasse = '" + txtMotDePasse.Password + "'";
 
            int nombreRange = 0;
            
-           bdCDS.selection(req, 3, ref nombreRange);
+           //va sélectionner l'identifiant  qui c'est connecté
+          listeJoueur = bdCDS.selection(req, 4, ref nombreRange);
            
+
+           //si le nombre de rangé = 0, ça veut dire que la requête n'a rien retourné, donc que l'utilisateur existe pas
            if(nombreRange == 0)
            {
                 MessageBox.Show("Votre nom d'utilisateur ou votre mot de passe sont incorrects ");
@@ -44,7 +49,15 @@ namespace WpfApplication1
            else
            {
                 MessageBox.Show("L''identifiant est bon");
+
+                foreach (string test in listeJoueur[0]) 
+                {
+                     
+                
+                
+                 }
            }
+
 
 
         }

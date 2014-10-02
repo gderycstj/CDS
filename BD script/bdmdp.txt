@@ -1,0 +1,2 @@
+user:chambre
+password:e7AEf6x7J
