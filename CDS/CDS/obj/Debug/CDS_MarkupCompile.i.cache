@@ -9,12 +9,12 @@ CDS
 none
 false
 DEBUG;TRACE
-K:\chambre de survie\infoMenu\CDS\CDS\App.xaml
-4-1576219425
+K:\chambre de survie\infoMenu\CDS\CDS\Écran\App.xaml
+41820995827
 
-12-1036788962
+12384737510
 141012385901
-menuPrincipal.xaml;menuEditeur.xaml;menuInstruction.xaml;menuJouer.xaml;
+Écran\menuPrincipal.xaml;Écran\menuEditeur.xaml;Écran\menuInstruction.xaml;Écran\menuJouer.xaml;
 
 False
 

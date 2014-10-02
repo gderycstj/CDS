@@ -51,43 +51,43 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <ApplicationDefinition Include="Écran\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="menuPrincipal.xaml">
+    <Page Include="Écran\menuPrincipal.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.xaml.cs">
+    <Compile Include="Écran\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="menuPrincipal.xaml.cs">
+    <Compile Include="Écran\menuPrincipal.xaml.cs">
       <DependentUpon>menuPrincipal.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="menuEditeur.xaml">
+    <Page Include="Écran\menuEditeur.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="menuInstruction.xaml">
+    <Page Include="Écran\menuInstruction.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="menuJouer.xaml">
+    <Page Include="Écran\menuJouer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="menuEditeur.xaml.cs">
+    <Compile Include="Écran\menuEditeur.xaml.cs">
       <DependentUpon>menuEditeur.xaml</DependentUpon>
     </Compile>
-    <Compile Include="menuInstruction.xaml.cs">
+    <Compile Include="Écran\menuInstruction.xaml.cs">
       <DependentUpon>menuInstruction.xaml</DependentUpon>
     </Compile>
-    <Compile Include="menuJouer.xaml.cs">
+    <Compile Include="Écran\menuJouer.xaml.cs">
       <DependentUpon>menuJouer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -115,7 +115,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Écran\App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2.jpg" />
