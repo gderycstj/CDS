@@ -24,12 +24,12 @@
                 <ImageBrush ImageSource="K:\chambre de survie\infoMenu\CDS\CDS\Resources/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnObjets" Content="Objets" HorizontalAlignment="Left" Margin="3,350,0,0" VerticalAlignment="Top" Width="224" Height="95" FontFamily="Agency FB" FontSize="36" IsCancel="True" Foreground="Black" Click="btnObjets_Click">
+        <Button x:Name="btnObjets" Content="Objets" HorizontalAlignment="Left" Margin="3,350,0,0" VerticalAlignment="Top" Width="224" Height="95" FontFamily="Agency FB" FontSize="36" Foreground="Black" Click="btnObjets_Click" IsHitTestVisible="True">
             <Button.Background>
                 <ImageBrush ImageSource="K:\chambre de survie\infoMenu\CDS\CDS\Resources/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnRetour" Content="Retour" HorizontalAlignment="Left" Margin="3,445,0,0" VerticalAlignment="Top" Width="224" Height="95" FontFamily="Agency FB" FontSize="36" Foreground="Black" Click="btnRetour_Click">
+        <Button x:Name="btnRetour" Content="Retour" HorizontalAlignment="Left" Margin="3,445,0,0" VerticalAlignment="Top" Width="224" Height="95" FontFamily="Agency FB" FontSize="36" Foreground="Black" Click="btnRetour_Click" IsHitTestVisible="True">
             <Button.Background>
                 <ImageBrush ImageSource="K:\chambre de survie\infoMenu\CDS\CDS\Resources/3.jpg"/>
             </Button.Background>
