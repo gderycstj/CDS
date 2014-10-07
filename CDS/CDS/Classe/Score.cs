@@ -39,12 +39,12 @@ namespace CDS
             return true;
         }
 
-       /* List<Score> obtenirScore(int? quantiter, Joueur? qui, string? mode)
+       List<Score> obtenirScore(int quantiter, Joueur qui, string mode)
         {
             List<Score> liste= null;
 
             return liste;
-        }*/
+        }
 
         //affiche les scores qui sont dans la liste
         void afficherScore(List <Score> listedescore)
