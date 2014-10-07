@@ -95,7 +95,10 @@ namespace CDS
         private void btnObjets_Click(object sender, RoutedEventArgs e)
         {
             txtTitreInstruc.Text = "Objets";
-            txtContenu.Text = "blablablabla";
+            txtContenu.Text = "|" + "Potion de vie" + "|" + " \n" +
+            "Lorsqu'elle est utilisée, la potion de vie vous redonne un point de vie\n\n" +
+            "|" + "Potion de vitesse" + "|" + " \n" + "Lorsqu'elle est utilisée , la potion de vitesse vous permet de vous déplacé deux fois par tour pendant 2 tours\n\n" +
+            "|" + "Bombe" + "|" + " \n" + "Lorsqu'elle est utilisée, la bombe se pose a votre case et explose 2 tours plus tard détruisant tous les poursuivants sur la case. \n D'autres objets sont disponible. À vous de les découvrir.";
 
             //Activation/Désactivation des boutons
             if (btnObjets.IsEnabled == true)
