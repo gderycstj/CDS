@@ -41,5 +41,13 @@ namespace CDS
         {
             return;
         }
+
+        private void btnInscription_Click(object sender, RoutedEventArgs e)
+        {
+            menuInscription menuI = new menuInscription();
+            menuI.Show();
+            Close();
+        }
+
     }
 }

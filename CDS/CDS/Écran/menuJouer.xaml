@@ -29,7 +29,7 @@
                 <ImageBrush ImageSource="K:\chambre de survie\CDS\CDS\Resources/3.jpg"/>
             </ComboBox.Background>
         </ComboBox>
-        <Button x:Name="btnInscription" Content="Inscription" HorizontalAlignment="Left" Margin="74,174,0,0" VerticalAlignment="Top" Width="96" FontFamily="Agency FB" FontSize="22" FontWeight="Bold" IsCancel="True" Height="33" Foreground="#FF4B634D">
+        <Button x:Name="btnInscription" Content="Inscription" HorizontalAlignment="Left" Margin="74,174,0,0" VerticalAlignment="Top" Width="96" FontFamily="Agency FB" FontSize="22" FontWeight="Bold" IsCancel="True" Height="33" Foreground="#FF4B634D" Click="btnInscription_Click">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
