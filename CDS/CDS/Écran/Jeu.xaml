@@ -1,4 +1,4 @@
-﻿<Window x:Class="CDS.Écran.Jeu"
+﻿<Window x:Class="CDS.Jeu"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Jeu" Height="479.95" Width="745">

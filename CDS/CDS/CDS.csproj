@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -55,12 +56,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classe\bdService.cs" />
+    <Compile Include="Classe\Case.cs" />
+    <Compile Include="Classe\Effet.cs" />
+    <Compile Include="Classe\Entite.cs" />
+    <Compile Include="Classe\GrilleDeJeu.cs" />
+    <Compile Include="Classe\Joueur.cs" />
+    <Compile Include="Classe\Objectif.cs" />
+    <Compile Include="Classe\Objet.cs" />
+    <Compile Include="Classe\Partie.cs" />
+    <Compile Include="Classe\Position.cs" />
+    <Compile Include="Classe\Poursuivant.cs" />
+    <Compile Include="Classe\Score.cs" />
+    <Compile Include="Classe\Vie.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Jeu.xaml.cs">
+      <DependentUpon>Jeu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\menuInscription.xaml.cs">
       <DependentUpon>menuInscription.xaml</DependentUpon>
     </Compile>
     <Compile Include="Écran\menuSurvie.xaml.cs">
       <DependentUpon>menuSurvie.xaml</DependentUpon>
     </Compile>
+    <Page Include="Écran\Jeu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Écran\menuInscription.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,11 +133,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -122,6 +143,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Broken Type.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -132,19 +154,16 @@
     <None Include="Écran\App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\2.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\3.jpg" />
+    <Resource Include="2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Broken Type.ttf" />
-    <None Include="Resources\cds.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Resource Include="3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classe\" />
+    <Resource Include="cds.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LCDLS.Classe
+namespace CDS
 {
     class Score
     {
@@ -39,12 +39,12 @@ namespace LCDLS.Classe
             return true;
         }
 
-        List<Score> obtenirScore(int? quantiter, Joueur? qui, string? mode)
+       /* List<Score> obtenirScore(int? quantiter, Joueur? qui, string? mode)
         {
             List<Score> liste= null;
 
             return liste;
-        }
+        }*/
 
         //affiche les scores qui sont dans la liste
         void afficherScore(List <Score> listedescore)

@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace CDS.Écran
+namespace CDS
 {
     /// <summary>
     /// Logique d'interaction pour Jeu.xaml

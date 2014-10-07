@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LCDLS.Classe
+namespace CDS
 {
     class Entite
     {
@@ -13,11 +13,11 @@ namespace LCDLS.Classe
         protected string urlImage { get; set; }
 
         //lire la liste CMD et agire
-        abstract bool action();
+        //abstract bool action();
         //détruire l'entité et faire les modification associé
-        abstract bool mort();
+        //abstract bool mort();
         //Vérification et action effectuer à chaque fin de tour
-        abstract bool finDetour();
+        //abstract bool finDetour();
 
     }
 }

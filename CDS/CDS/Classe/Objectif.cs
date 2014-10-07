@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LCDLS.Classe
+namespace CDS
 {
     class Objectif
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using MySql.Data.MySqlClient;
 
-namespace WpfApplication1
+namespace CDS
 {
     /// <summary>
     /// Classe qui va permettre d'accéder à la bd(insertion,modif,supression)

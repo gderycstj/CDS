@@ -1,14 +1,14 @@
 ﻿<Window x:Class="CDS.menuInscription"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Mode Survie" Height="675" Width="620"
+        Title="Inscription" Height="675" Width="620"
         WindowStyle="ThreeDBorderWindow"
-        ResizeMode="NoResize" Icon="K:\chambre de survie\CDS\CDS\Resources\cds.png">
+        ResizeMode="NoResize" Icon="/CDS;component/cds.png">
     <Grid Margin="0,0,0,-2">
         <Grid.Background>
-            <ImageBrush ImageSource="K:\chambre de survie\CDS\CDS\Resources\2.jpg"/>
+            <ImageBrush ImageSource="/CDS;component/2.jpg"/>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Left" Margin="176,10,0,0" TextWrapping="Wrap" Text="Inscription" VerticalAlignment="Top" Height="74" FontSize="72" FontFamily="K:\chambre de survie\CDS\CDS\Resources/#Broken Type" TextAlignment="Center" Width="248"/>
+        <TextBlock HorizontalAlignment="Left" Margin="176,10,0,0" TextWrapping="Wrap" Text="Inscription" VerticalAlignment="Top" Height="74" FontSize="72" FontFamily="/CDS;component/#Broken Type" TextAlignment="Center" Width="248"/>
         <TextBlock x:Name="txtNomUtilisateur" HorizontalAlignment="Left" Height="32" Margin="19,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" FontSize="22" Foreground="#FF4B634D" FontWeight="Bold" FontFamily="Agency FB"><Run Language="fr-ca" Text="Nom d'utilisateur:"/></TextBlock>
         <TextBox x:Name="txtUtilisateur" HorizontalAlignment="Left" Height="39" Margin="19,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Background="#FF4B634D" FontFamily="Agency FB" FontSize="22"/>
         <TextBlock x:Name="txtNomMotDePasse" HorizontalAlignment="Left" Height="32" Margin="19,213,0,0" TextWrapping="Wrap" Text="Mot de Passe:" VerticalAlignment="Top" Width="556" Foreground="#FF4B634D" FontFamily="Agency FB" FontWeight="Bold" FontSize="22"/>
@@ -20,12 +20,12 @@
         <TextBlock x:Name="txtErreurConfirm" HorizontalAlignment="Left" Height="36" Margin="19,391,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Foreground="#FFC50E0E" FontFamily="Agency FB" FontSize="24"/>
         <Button x:Name="btnCreation" Content="Créer le compte" HorizontalAlignment="Left" Height="78" Margin="19,432,0,0" VerticalAlignment="Top" Width="556" FontSize="48" FontFamily="Agency FB">
             <Button.Background>
-                <ImageBrush ImageSource="K:\chambre de survie\CDS\CDS\Resources\3.jpg"/>
+                <ImageBrush ImageSource="/CDS;component/3.jpg"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnAnnuler" Content="Annuler la création" HorizontalAlignment="Left" Height="78" Margin="19,534,0,0" VerticalAlignment="Top" Width="556" FontSize="48" FontFamily="Agency FB" Click="btnAnnuler_Click">
             <Button.Background>
-                <ImageBrush ImageSource="K:\chambre de survie\CDS\CDS\Resources\3.jpg"/>
+                <ImageBrush ImageSource="/CDS;component/3.jpg"/>
             </Button.Background>
         </Button>
     </Grid>

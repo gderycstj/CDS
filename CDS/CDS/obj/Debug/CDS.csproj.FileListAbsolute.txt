@@ -40,7 +40,6 @@ K:\chambre de survie\infoMenu\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReferen
 K:\chambre de survie\CDS\CDS\bin\Debug\CDS.exe.config
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.exe
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.pdb
-K:\chambre de survie\CDS\CDS\bin\Debug\Resources\cds.png
 K:\chambre de survie\CDS\CDS\bin\Debug\CDS.exe
 K:\chambre de survie\CDS\CDS\bin\Debug\CDS.pdb
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuPrincipal.baml
@@ -60,3 +59,5 @@ K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInscription.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInscription.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSurvie.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSurvie.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Jeu.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Jeu.g.cs
