@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using MySql.Data.MySqlClient;
 
-namespace CDS
+namespace WpfApplication1
 {
     /// <summary>
     /// Classe qui va permettre d'accéder à la bd(insertion,modif,supression)
@@ -141,7 +141,6 @@ namespace CDS
         public List<string>[] selection(string sel, int nbChamp, ref int nbRange)
         {
             List<string> infoBrute = new List<string>();
-            MessageBox.Show(sel);
             nbRange = 0;
 
             try

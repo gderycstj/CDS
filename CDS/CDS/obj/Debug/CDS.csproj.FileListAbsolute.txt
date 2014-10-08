@@ -62,3 +62,6 @@ K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSurvie.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Jeu.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Jeu.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
+D:\CDS\CDS\CDS\bin\Debug\CDS.exe.config
+D:\CDS\CDS\CDS\obj\Debug\CDS.exe
+D:\CDS\CDS\CDS\obj\Debug\CDS.pdb

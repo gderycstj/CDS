@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-K:\chambre de survie\CDS\CDS\obj\Debug\
+D:\CDS\CDS\CDS\obj\Debug\
 CDS
 none
 false
 DEBUG;TRACE
-K:\chambre de survie\CDS\CDS\Écran\App.xaml
+D:\CDS\CDS\CDS\Écran\App.xaml
 7639335171
 
-281097529324
+281300621812
 151924750321
 Écran\Jeu.xaml;Écran\menuInscription.xaml;Écran\menuPrincipal.xaml;Écran\menuEditeur.xaml;Écran\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\menuSurvie.xaml;
 
