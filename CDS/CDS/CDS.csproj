@@ -172,6 +172,36 @@
   <ItemGroup>
     <Resource Include="cds.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cliqueMouv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="clavierMouv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="clavierObjet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cliqueObjet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="carrerBleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="carrerVert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bombe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="potionVie.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -37,52 +37,49 @@
         <Rectangle Fill="#FF4B634D" HorizontalAlignment="Left" Height="625" Margin="241,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="512"/>
         <TextBlock x:Name="txtTitreInstruc" HorizontalAlignment="Left" Height="59" Margin="333,67,0,0" TextWrapping="Wrap" Text="But" VerticalAlignment="Top" Width="333" FontFamily="/CDS;component/#Broken Type" FontSize="48" TextAlignment="Center"/>
         <TextBlock x:Name="txtContenu" HorizontalAlignment="Left" Height="566" Margin="241,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="512" FontFamily="Agency FB" FontSize="24" TextAlignment="Center"><Run FontSize="24" FontFamily="Agency FB" Language="fr-ca" Text="La chambre de survie vous confrontera à plusieurs niveaux de survie qui augmente en difficulté. En outre, si la peur vous hante, vous pourriez toujours vous entrainer face aux plus puissants poursuivants avant de relevé le défi."/><LineBreak/><Run FontSize="24" FontFamily="Agency FB" Language="fr-ca" Text="Dans la chambre de survie, vous allez devoir survivre à des vagues de poursuivants de plus en plus acharnée au fil du temps et des niveaux. De plus, plusieurs variétés de poursuivants seront disponibles et s'ajouterons aux poursuivants de « base » présente dans les premiers niveaux."/><LineBreak/><Run FontSize="24" FontFamily="Agency FB" Language="fr-ca" Text=" Vous devrez éviter les poursuivants au péril de votre vie. Ceux-ci disparaîtront lorsqu'ils atteindront le bord de la grille vous donnant des points. Cependant, si vous êtes touchés 3 fois, la partie sera terminée. Saurez-vous survivre à la chambre de survie?"/><LineBreak/><LineBreak/></TextBlock>
-        <Image x:Name="imgClavierMouv" HorizontalAlignment="Left" Height="120" Margin="600,274,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/cds.png" Visibility="Hidden">
+        <Image x:Name="imgClavierMouv" HorizontalAlignment="Left" Height="120" Margin="600,131,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/clavierMouv.png" Visibility="Hidden">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CDS;component/cds.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image x:Name="imgCliquerObjet" HorizontalAlignment="Left" Height="113" Margin="600,567,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/cds.png" Visibility="Hidden">
+        <Image x:Name="imgCliquerObjet" HorizontalAlignment="Left" Height="113" Margin="600,567,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/cliqueObjet.png" Visibility="Hidden">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CDS;component/cds.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image x:Name="imgCarreBleu" HorizontalAlignment="Left" Height="121" Margin="600,153,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/cds.png" Visibility="Hidden">
+        <Image x:Name="imgCarreBleu" HorizontalAlignment="Left" Height="121" Margin="600,322,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/carrerBleu.png" Visibility="Hidden">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CDS;component/cds.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image x:Name="imgCarreVert" HorizontalAlignment="Left" Height="120" Margin="600,322,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/cds.png" Visibility="Hidden">
+        <Image x:Name="imgCarreVert" HorizontalAlignment="Left" Height="120" Margin="600,153,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/carrerVert.png" Visibility="Hidden">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CDS;component/cds.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image x:Name="imgTriangle" HorizontalAlignment="Left" Height="134" Margin="600,521,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/cds.png" Visibility="Hidden">
+        <Image x:Name="imgTriangle" HorizontalAlignment="Left" Height="134" Margin="600,521,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/triangle.png" Visibility="Hidden">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CDS;component/cds.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image x:Name="imgCliquerMouv" HorizontalAlignment="Left" Height="126" Margin="600,131,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/cds.png" Visibility="Hidden">
+        <Image x:Name="imgCliquerMouv" HorizontalAlignment="Left" Height="126" Margin="600,274,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/cliqueMouv.png" Visibility="Hidden">
+        </Image>
+        <Image x:Name="imgClavierObjet" HorizontalAlignment="Left" Height="123" Margin="600,417,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/clavierObjet.png" Visibility="Hidden">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CDS;component/cds.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image x:Name="imgClavierObjet" HorizontalAlignment="Left" Height="123" Margin="600,417,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/cds.png" Visibility="Hidden">
+        <Image x:Name="imgPotionRouge" HorizontalAlignment="Left" Height="105" Margin="599,126,0,0" VerticalAlignment="Top" Width="140" Source="/CDS;component/potionVie.png" Visibility="Hidden">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CDS;component/cds.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image x:Name="imgPotionRouge" HorizontalAlignment="Left" Height="120" Margin="599,126,0,0" VerticalAlignment="Top" Width="140" Source="/CDS;component/cds.png" Visibility="Hidden">
+        <Image x:Name="imgSprint" HorizontalAlignment="Left" Height="120" Margin="600,251,0,0" VerticalAlignment="Top" Width="140" Source="/CDS;component/sprint.png" Visibility="Hidden">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CDS;component/cds.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image x:Name="imgPotionVitesse" HorizontalAlignment="Left" Height="120" Margin="600,274,0,0" VerticalAlignment="Top" Width="140" Source="/CDS;component/cds.png" Visibility="Hidden">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/CDS;component/cds.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="imgBombe" HorizontalAlignment="Left" Height="120" Margin="599,417,0,0" VerticalAlignment="Top" Width="140" Source="/CDS;component/cds.png" Visibility="Hidden">
+        <Image x:Name="imgBombe" HorizontalAlignment="Left" Height="120" Margin="599,376,0,0" VerticalAlignment="Top" Width="140" Source="/CDS;component/bombe.png" Visibility="Hidden">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CDS;component/cds.png"/>
             </Image.OpacityMask>

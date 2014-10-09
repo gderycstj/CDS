@@ -67,7 +67,7 @@ namespace CDS
             "Version Souris\n Cliquer sur les flèches directionelles directement dans l'interface du jeu et cliquer sur le bouton rouge pour passer votre tour.\n \n" +
             "|"+"Utilisation d'objet"+"|"+"\n"+
             "Version Clavier\n Utiliser les touches Z(Case de Gauche) et X(Case de droite) pour utiliser vos objets\n\n" +
-            "Version Souris\n Cliquer sur la case contenant l'objet\n\n";
+            "Version Souris\n Cliquer sur la case contenant l'objet dans votre inventaire\n\n";
 
             //Désactivation des images
             desactivIMG();
@@ -119,15 +119,15 @@ namespace CDS
             txtContenu.Width = 350;
             txtContenu.Text = "|" + "Potion de vie" + "|" + " \n" +
             "Lorsqu'elle est utilisée, la potion de vie vous redonne un point de vie\n\n" +
-            "|" + "Potion de vitesse" + "|" + " \n" + "Lorsqu'elle est utilisée , la potion de vitesse vous permet de vous déplacé deux fois par tour pendant 2 tours\n\n" +
-            "|" + "Bombe" + "|" + " \n" + "Lorsqu'elle est utilisée, la bombe se pose a votre case et explose 2 tours plus tard détruisant tous les poursuivants sur la case. \n\n\n D'autres objets sont disponible. À vous de les découvrir.";
+            "|" + "Sprint" + "|" + " \n" + "Lorsqu'utilisé , le sprint vous permet de vous déplacé de trois case pour un tour\n\n" +
+            "|" + "Bombe" + "|" + " \n" + "Lorsqu'elle est utilisée, la bombe se pose a votre case et explose 2 tours plus tard détruisant tous les poursuivants sur les cases aux alentours . \n\n\n D'autres objets sont disponible. À vous de les découvrir.";
 
             //Désactivation des images
             desactivIMG();
             //Activation des images nécéssaires
             imgBombe.Visibility = Visibility.Visible;
             imgPotionRouge.Visibility = Visibility.Visible;
-            imgPotionVitesse.Visibility = Visibility.Visible;
+            imgSprint.Visibility = Visibility.Visible;
 
             //Activation/Désactivation des boutons
             if (btnObjets.IsEnabled == true)
@@ -149,7 +149,7 @@ namespace CDS
             imgCliquerMouv.Visibility = Visibility.Hidden;
             imgCliquerObjet.Visibility = Visibility.Hidden;
             imgPotionRouge.Visibility = Visibility.Hidden;
-            imgPotionVitesse.Visibility = Visibility.Hidden;
+            imgSprint.Visibility = Visibility.Hidden;
             imgTriangle.Visibility = Visibility.Hidden;
         }
     }
