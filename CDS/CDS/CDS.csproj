@@ -62,6 +62,7 @@
     <Compile Include="Classe\Entite.cs" />
     <Compile Include="Classe\GrilleDeJeu.cs" />
     <Compile Include="Classe\Joueur.cs" />
+    <Compile Include="Classe\MemoireDEntite.cs" />
     <Compile Include="Classe\Objectif.cs" />
     <Compile Include="Classe\Objet.cs" />
     <Compile Include="Classe\Partie.cs" />

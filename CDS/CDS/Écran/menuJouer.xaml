@@ -24,7 +24,7 @@
                 <ImageBrush ImageSource="/CDS;component/3.jpg"/>
             </Button.Background>
         </Button>
-        <ComboBox x:Name="cboChoixMode" HorizontalAlignment="Left" Height="66" Margin="206,433,0,0" VerticalAlignment="Top" Width="392" FontFamily="Agency FB" FontSize="36">
+        <ComboBox x:Name="cboChoixMode" HorizontalAlignment="Left" Height="49" Margin="206,433,0,0" VerticalAlignment="Top" Width="392" FontFamily="Agency FB" FontSize="36">
             <ComboBox.Background>
                 <ImageBrush ImageSource="/CDS;component/3.jpg"/>
             </ComboBox.Background>

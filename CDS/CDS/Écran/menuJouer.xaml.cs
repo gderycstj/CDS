@@ -28,6 +28,19 @@ namespace CDS
             InitializeComponent();
             txtErreur.Text ="";
             Connect(estConnecter);
+            string req = "SELECT nom FROM modesDeJeu;";
+            List<string>[] listeMode;
+            int col = 0;
+
+            listeMode = bdCDS.selection(req,1,ref col);
+
+            for (int i = 0; i < listeMode.Length; i++) 
+            {
+                cboChoixMode.Items.Add(listeMode[i][0]);
+             }
+
+             cboChoixMode.SelectedIndex = 0;
+
         }
 
         private void btnConnexion_Click(object sender, RoutedEventArgs e)

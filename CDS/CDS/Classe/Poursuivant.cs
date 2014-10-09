@@ -8,12 +8,6 @@ namespace CDS
 {
     class Poursuivant:Entite
     {
-        Poursuivant()
-        {
-            listeCMD="";
-            age=0;
-            urlImage="";
-        }
         //lire la liste CMD et agire
         public override bool action()
         {

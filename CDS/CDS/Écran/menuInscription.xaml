@@ -15,10 +15,10 @@
         <PasswordBox x:Name="txtMotDePasse" HorizontalAlignment="Left" Height="39" Margin="19,245,0,0" VerticalAlignment="Top" Width="556" Background="#FF4B634D" FontFamily="Agency FB" FontSize="22"/>
         <TextBlock x:Name="txtNomMDP" HorizontalAlignment="Left" Margin="19,320,0,0" Height="32" TextWrapping="Wrap" Text="Confirmation Mot de Passe:" VerticalAlignment="Top" Width="556" Foreground="#FF4B634D" FontFamily="Agency FB" FontSize="22" FontWeight="Bold"/>
         <PasswordBox x:Name="txtConfirmMotPasse" HorizontalAlignment="Left" Height="39" Margin="19,352,0,0" VerticalAlignment="Top" Width="556" Background="#FF4B634D" FontFamily="Agency FB" FontSize="22"/>
-        <TextBlock x:Name="txtErreurNom" HorizontalAlignment="Left" Height="36" Margin="19,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Foreground="#FFC50E0E" FontFamily="Agency FB" FontSize="24"/>
-        <TextBlock x:Name="txtErreurMDP" HorizontalAlignment="Left" Height="36" Margin="19,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Foreground="#FFC50E0E" FontFamily="Agency FB" FontSize="24"/>
-        <TextBlock x:Name="txtErreurConfirm" HorizontalAlignment="Left" Height="36" Margin="19,391,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Foreground="#FFC50E0E" FontFamily="Agency FB" FontSize="24"/>
-        <Button x:Name="btnCreation" Content="Créer le compte" HorizontalAlignment="Left" Height="78" Margin="19,432,0,0" VerticalAlignment="Top" Width="556" FontSize="48" FontFamily="Agency FB">
+        <TextBlock x:Name="txtErreurNom" HorizontalAlignment="Left" Height="36" Margin="19,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Foreground="White" FontFamily="Agency FB" FontSize="24"/>
+        <TextBlock x:Name="txtErreurMDP" HorizontalAlignment="Left" Height="36" Margin="19,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Foreground="White" FontFamily="Agency FB" FontSize="24"/>
+        <TextBlock x:Name="txtErreurConfirm" HorizontalAlignment="Left" Height="36" Margin="19,391,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Foreground="White" FontFamily="Agency FB" FontSize="24"/>
+        <Button x:Name="btnCreation" Content="Créer le compte" HorizontalAlignment="Left" Height="78" Margin="19,432,0,0" VerticalAlignment="Top" Width="556" FontSize="48" FontFamily="Agency FB" Click="btnCreation_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/3.jpg"/>
             </Button.Background>
