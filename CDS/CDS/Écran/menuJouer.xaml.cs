@@ -26,11 +26,13 @@ namespace CDS
         public menuJouer()
         {
             InitializeComponent();
+            txtErreur.Text ="";
             Connect(estConnecter);
         }
 
         private void btnConnexion_Click(object sender, RoutedEventArgs e)
         {
+            txtErreur.Text ="";
             List<string>[] listeJoueur;
 
             string req = "SELECT * FROM Utilisateurs WHERE nom = '" + txtNomUsager.Text + "' AND motDePasse = '" + txtMotDePasse.Password + "';";
@@ -43,7 +45,7 @@ namespace CDS
             //si le nombre de rangé = 0, ça veut dire que la requête n'a rien retourné, donc que l'utilisateur existe pas
             if (nombreRange == 0)
             {
-                MessageBox.Show("Votre nom d'utilisateur ou votre mot de passe sont incorrects ");
+                txtErreur.Text = "Votre nom d'utilisateur ou votre mot de passe est incorrect";
                 txtNomUsager.Clear();
                 txtMotDePasse.Clear();
             }
