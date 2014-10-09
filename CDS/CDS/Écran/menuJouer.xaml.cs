@@ -54,7 +54,7 @@ namespace CDS
               //  string nom = j1.getNom;
                 estConnecter = true;
                 Connect(estConnecter);
-            //    txtNomJoueur.Text();
+                txtNomJoueur.Text = j1.getNom();
             }
         }
 
