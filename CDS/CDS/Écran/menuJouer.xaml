@@ -7,7 +7,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/CDS;component/2.jpg"/>
         </Grid.Background>
-        <TextBlock x:Name="txtProfil" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Profil" VerticalAlignment="Top" Margin="355,21,0,0" FontFamily="/CDS;component/#Broken Type" FontSize="48" Width="98" TextAlignment="Center"/>
+        <TextBlock x:Name="txtProfil" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Profil" VerticalAlignment="Top" Margin="347,15,0,0" FontFamily="/CDS;component/#Broken Type" FontSize="48" Width="98" TextAlignment="Center"/>
         <TextBox x:Name="txtNomUsager" HorizontalAlignment="Left" Height="29" Margin="74,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
         <Button x:Name="btnConnexion" Content="se connecter" HorizontalAlignment="Left" Height="56" Margin="552,122,0,0" VerticalAlignment="Top" Width="167" FontFamily="Agency FB" FontSize="24" Click="btnConnexion_Click">
             <Button.Background>
@@ -15,9 +15,9 @@
             </Button.Background>
         </Button>
         <Label x:Name="lblNomUtilisateur" Content="Nom d'utilisateur" HorizontalAlignment="Left" Height="31" Margin="74,104,0,0" VerticalAlignment="Top" Width="169" FontFamily="Agency FB" FontSize="20" BorderBrush="#FFE3E9EF" Background="{x:Null}" FontWeight="Bold"/>
-        <Label Content="Mot de Passe" HorizontalAlignment="Left" Height="31" Margin="319,104,0,0" VerticalAlignment="Top" Width="169" FontFamily="Agency FB" FontSize="18" FontWeight="Bold"/>
-        <PasswordBox HorizontalAlignment="Left" Height="29" Margin="319,135,0,0" VerticalAlignment="Top" Width="169" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
-        <TextBlock x:Name="txtChoixMode" HorizontalAlignment="Left" Height="52" Margin="308,355,0,0" TextWrapping="Wrap" Text="Choix du mode" VerticalAlignment="Top" Width="197" FontFamily="/CDS;component/#Broken Type" FontSize="48"/>
+        <Label x:Name="lblMDP" Content="Mot de Passe" HorizontalAlignment="Left" Height="31" Margin="319,104,0,0" VerticalAlignment="Top" Width="169" FontFamily="Agency FB" FontSize="18" FontWeight="Bold"/>
+        <PasswordBox x:Name="txtMotDePasse" HorizontalAlignment="Left" Height="29" Margin="319,135,0,0" VerticalAlignment="Top" Width="169" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
+        <TextBlock x:Name="txtChoixMode" HorizontalAlignment="Left" Height="52" Margin="309,356,0,0" TextWrapping="Wrap" Text="Choix du mode" VerticalAlignment="Top" Width="197" FontFamily="/CDS;component/#Broken Type" FontSize="48"/>
         <TextBlock x:Name="txtModeDeJeu" HorizontalAlignment="Left" Height="53" Margin="325,199,0,0" TextWrapping="Wrap" Text="Mode de jeu" VerticalAlignment="Top" Width="164" FontFamily="/CDS;component/#Broken Type" FontSize="48"/>
         <Button x:Name="btnDemarrer" Content="Démarrer" HorizontalAlignment="Left" Height="66" Margin="192,268,0,0" VerticalAlignment="Top" Width="416" FontFamily="Agency FB" FontSize="36" Click="btnDemarrer_Click">
             <Button.Background>
@@ -45,6 +45,17 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
+        <Button x:Name="btnDeconnexion" Content="Deconnexion" HorizontalAlignment="Left" Margin="325,114,0,0" VerticalAlignment="Top" Width="154" Height="43" FontFamily="Agency FB" FontSize="18" Click="btnDeconnexion_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnGestionProfil" Content="Gestion de Profil" HorizontalAlignment="Left" Height="29" Margin="325,162,0,0" VerticalAlignment="Top" Width="154" FontFamily="Agency FB" FontSize="20" Foreground="#000000" Click="btnGestionProfil_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="txtNomJoueur" HorizontalAlignment="Left" Height="39" Margin="309,70,0,0" TextWrapping="Wrap" Text="Admin" VerticalAlignment="Top" Width="180" FontFamily="Agency FB" FontSize="36" TextAlignment="Center"/>
 
     </Grid>
 </Window>

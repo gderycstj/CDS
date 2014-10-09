@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -74,6 +74,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Écran\menuGestionProfil.xaml.cs">
+      <DependentUpon>menuGestionProfil.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\Jeu.xaml.cs">
       <DependentUpon>Jeu.xaml</DependentUpon>
     </Compile>
@@ -83,6 +86,10 @@
     <Compile Include="Écran\menuSurvie.xaml.cs">
       <DependentUpon>menuSurvie.xaml</DependentUpon>
     </Compile>
+    <Page Include="Écran\menuGestionProfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Écran\Jeu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
