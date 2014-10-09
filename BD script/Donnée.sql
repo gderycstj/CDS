@@ -31,3 +31,17 @@ VALUES
  ,'Admin'
  ,'Willgabvinc3'
 );
+
+
+INSERT INTO modesdejeu(idUtilisateur,nom)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Normal'
+);
+
+INSERT INTO modesdejeu(idUtilisateur,nom)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Survie'
+
+);
