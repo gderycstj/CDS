@@ -17,9 +17,12 @@ namespace CDS
     /// <summary>
     /// Logique d'interaction pour menuJouer.xaml
     /// </summary>
+    /// 
     public partial class menuJouer : Window
     {
+        BdService bdCDS = new BdService();
         bool estConnecter;
+
         public menuJouer()
         {
             InitializeComponent();
@@ -28,8 +31,31 @@ namespace CDS
 
         private void btnConnexion_Click(object sender, RoutedEventArgs e)
         {
-            estConnecter = true;
-            Connect(estConnecter);
+            List<string>[] listeJoueur;
+
+            string req = "SELECT * FROM Utilisateurs WHERE nom = '" + txtNomUsager.Text + "' AND motDePasse = '" + txtMotDePasse.Password + "';";
+            int nombreRange = 0;
+
+            //va sélectionner l'identifiant  qui c'est connecté
+            listeJoueur = bdCDS.selection(req, 5, ref nombreRange);
+
+
+            //si le nombre de rangé = 0, ça veut dire que la requête n'a rien retourné, donc que l'utilisateur existe pas
+            if (nombreRange == 0)
+            {
+                MessageBox.Show("Votre nom d'utilisateur ou votre mot de passe sont incorrects ");
+                txtNomUsager.Clear();
+                txtMotDePasse.Clear();
+            }
+            //Sinon, il va rentrer le contenu de la liste dans un joueur et va afficher l'interface connecté
+            else
+            {
+                Joueur j1 = new Joueur(listeJoueur[0][2], Convert.ToInt32(listeJoueur[0][0]), listeJoueur[0][1]);
+              //  string nom = j1.getNom;
+                estConnecter = true;
+                Connect(estConnecter);
+            //    txtNomJoueur.Text();
+            }
         }
 
         private void btnRetourCDS_Click(object sender, RoutedEventArgs e)
