@@ -85,7 +85,7 @@ namespace CDS
             }
             catch (Exception e)
             {
-                MessageBox.Show("Il y a une érreur dans votre SELECT");
+                MessageBox.Show("Votre identifiant eziste déjà, veuillez en choisir un nouveau");
             }
         }
 
