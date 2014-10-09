@@ -18,7 +18,8 @@ CREATE TABLE IF NOT EXISTS Utilisateurs
 (idUtilisateur INT AUTO_INCREMENT PRIMARY KEY,
  idApparence INT NOT NULL,
  nom VARCHAR(30) NOT NULL,
- motDePasse VARCHAR(30) NOT NULL
+ motDePasse VARCHAR(30) NOT NULL,
+ estActive BOOL DEFAULT TRUE
 );
 
 /*le nom de l'utilisateur doit être unique*/
