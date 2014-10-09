@@ -13,19 +13,24 @@ namespace CDS
         string pathImage { get;set;}
 
 
-        Joueur()
+        public Joueur()
         {
             nom="sansnom";
             idJoueur=-1;
             pathImage="..\\images\\pasdimage.png";
         }
 
-        Joueur(string nomJ, int id, string pathIm)
+        public Joueur(string nomJ, int id, string pathIm)
         {
             nom=nomJ;
             idJoueur=id;
             pathImage=pathIm;
 
+        }
+
+        public string getNom() 
+        {
+            return nom;
         }
 
     }
