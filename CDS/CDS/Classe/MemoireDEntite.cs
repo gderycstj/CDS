@@ -13,6 +13,12 @@ namespace CDS
             Objet objet;
             int valeur{get;set;}
             int rareté{get;set;}
+
+            MObjet()
+            {
+                valeur=999999;
+                rareté=999999;
+            }
         }
 
         public class MPoursuivant
@@ -20,6 +26,13 @@ namespace CDS
             Poursuivant poursuivant;
             int valeur { get;set;}
             int rareté { get;set;}
+
+            MPoursuivant()
+            {
+                poursuivant= new Poursuivant();
+                valeur=999999;
+                rareté=999999;
+            }
         }
 
         List<Effet> MEffet { get;set;}
