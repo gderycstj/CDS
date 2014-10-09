@@ -16,7 +16,7 @@ namespace CDS
         int toursImmunite { get;set;}
 
 
-        Vie()
+        public Vie()
         {
             nbVieMax=3;
             nbVieActu=nbVieMax;
@@ -24,7 +24,7 @@ namespace CDS
             toursImmunite=1;
         }
 
-        Vie(int vieDepart, int vieMax, int armureDepart, int toursImmuniterAuDepart)
+        public Vie(int vieDepart, int vieMax, int armureDepart, int toursImmuniterAuDepart)
         {
             nbVieActu=vieDepart;
             nbVieMax=vieMax;
@@ -33,7 +33,7 @@ namespace CDS
         }
 
         //retourne si oui ou non et a été blessé
-        bool degat()
+        public bool degat()
         {
             if(toursImmunite<1)
             {
@@ -53,7 +53,7 @@ namespace CDS
         }
 
         //retourne si oui ou non le joueur a été soigné
-        bool soin(int puissance)
+        public bool soin(int puissance)
         {
             //Si le joueur n'est pas plein de vie
             if(nbVieActu<nbVieMax)

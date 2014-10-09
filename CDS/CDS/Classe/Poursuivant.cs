@@ -9,17 +9,17 @@ namespace CDS
     class Poursuivant:Entite
     {
         //lire la liste CMD et agire
-        bool action()
+        public override bool action()
         {
             return true;
         }
         //détruire l'entité et faire les modification associé
-        bool mort()
+        public override bool mort()
         {
             return true;
         }
         //Vérification et action effectuer à chaque fin de tour
-        bool finDetour()
+        public override bool finDetour()
         {
             age++;
             return true;

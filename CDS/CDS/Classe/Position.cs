@@ -13,13 +13,13 @@ namespace CDS
         public int posX{get;set;}
         public int posY {get;set;}
 
-        Position()
+        public Position()
         {
             posX=0;
             posY=0;
         }
 
-        Position(int X, int Y)
+        public Position(int X, int Y)
         {
             posX=X;
             posY=Y;

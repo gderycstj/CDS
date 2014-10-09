@@ -28,10 +28,5 @@ namespace CDS
 
         }
 
-        public string getNom() 
-        {
-            return nom;
-        }
-
     }
 }

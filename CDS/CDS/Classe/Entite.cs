@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace CDS
 {
-    class Entite
+    abstract class Entite
     {
         protected string listeCMD {get;set;}
         protected int age { get; set; }
         protected string urlImage { get; set; }
 
         //lire la liste CMD et agire
-        //abstract bool action();
+        public abstract bool action();
         //détruire l'entité et faire les modification associé
-        //abstract bool mort();
+        public abstract bool mort();
         //Vérification et action effectuer à chaque fin de tour
-        //abstract bool finDetour();
+        public abstract bool finDetour();
 
     }
 }

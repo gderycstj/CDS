@@ -19,7 +19,7 @@ namespace CDS
 
         public Case(int X, int Y)
         {
-            pos.set(X,Y);
+            pos.set(0,0);
             listeHabitants = null;
         }
 

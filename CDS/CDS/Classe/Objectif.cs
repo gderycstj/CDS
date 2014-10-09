@@ -11,13 +11,13 @@ namespace CDS
         string  typeObjectif { get;set;}
         int valeurObjectif { get;set;}
 
-        Objectif()
+        public Objectif()
         {
             typeObjectif="point";
             valeurObjectif=1;
         }
 
-        Objectif(string typeO, int O)
+        public Objectif(string typeO, int O)
         {
             typeObjectif = typeO;
             valeurObjectif = O;
@@ -44,7 +44,7 @@ namespace CDS
         }
 
         //Vérifie si le nombre de point à d'épasser l'objectif
-        bool testObjectifPoint()
+        private bool testObjectifPoint()
         {
             return false;
         }

@@ -11,24 +11,24 @@ namespace CDS
         private int score { get;set;}
         private string nom{get;set;}
 
-        Score()
+        public Score()
         {
             score=0;
             nom="nompardefaut";
         }
 
-        Score(int points,string nJoueur)
+        public Score(int points, string nJoueur)
         {
             score=points;
             nom=nJoueur;
         }
 
-        void modifierScore(int changement)
+        public void modifierScore(int changement)
         {
             score += changement;
         }
 
-        bool envoyerScore(Joueur quiafaitlescore)
+        public bool envoyerScore(Joueur quiafaitlescore)
         {
             if(false)
             {
@@ -39,7 +39,7 @@ namespace CDS
             return true;
         }
 
-       List<Score> obtenirScore(int quantiter, Joueur qui, string mode)
+        public List<Score> obtenirScore(int quantiter, Joueur qui, string mode)
         {
             List<Score> liste= null;
 
@@ -47,7 +47,7 @@ namespace CDS
         }
 
         //affiche les scores qui sont dans la liste
-        void afficherScore(List <Score> listedescore)
+        public void afficherScore(List<Score> listedescore)
         {
 
         }
