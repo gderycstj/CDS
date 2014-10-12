@@ -57,7 +57,7 @@
                 <ImageBrush ImageSource="/CDS;component/cds.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image x:Name="imgTriangle" HorizontalAlignment="Left" Height="134" Margin="600,521,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/triangle.png" Visibility="Hidden">
+        <Image x:Name="imgTriangle" HorizontalAlignment="Left" Height="134" Margin="613,501,0,0" VerticalAlignment="Top" Width="140" Source="/CDS;component/triangle.png" Visibility="Hidden">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CDS;component/cds.png"/>
             </Image.OpacityMask>
