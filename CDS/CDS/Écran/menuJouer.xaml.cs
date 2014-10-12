@@ -21,13 +21,12 @@ namespace CDS
     public partial class menuJouer : Window
     {
         BdService bdCDS = new BdService();
-        bool estConnecter;
 
         public menuJouer()
         {
             InitializeComponent();
             txtErreur.Text ="";
-            Connect(estConnecter);
+            Connect();
             string req = "SELECT nom FROM modesDeJeu;";
             List<string>[] listeMode;
             int col = 0;
@@ -65,11 +64,8 @@ namespace CDS
             //Sinon, il va rentrer le contenu de la liste dans un joueur et va afficher l'interface connecté
             else
             {
-                Joueur j1 = new Joueur(listeJoueur[0][2], Convert.ToInt32(listeJoueur[0][0]), listeJoueur[0][1]);
-              //  string nom = j1.getNom;
-                estConnecter = true;
-                Connect(estConnecter);
-                txtNomJoueur.Text = j1.getNom();
+                Globale.j1.setJoueur(listeJoueur[0][2], Convert.ToInt32(listeJoueur[0][0]), listeJoueur[0][1], true);
+                Connect();
             }
         }
 
@@ -94,14 +90,17 @@ namespace CDS
 
         private void btnDeconnexion_Click(object sender, RoutedEventArgs e)
         {
-            estConnecter = false;
-            Connect(estConnecter);
+            Globale.j1.estConnecte = false;
+            Connect();
         }
 
-        public void Connect(bool connecter)
+        public void Connect()
         {
-            if (estConnecter)
+            if (Globale.j1.estConnecte)
             {
+                //Va mettre le nom du joueur dans la
+                txtNomJoueur.Text = Globale.j1.getNom();
+
                 //On cache les anciens objets de connexion
                 btnConnexion.Visibility = Visibility.Hidden;
                 btnInscription.Visibility = Visibility.Hidden;
@@ -115,7 +114,7 @@ namespace CDS
                 txtNomJoueur.Visibility = Visibility.Visible;
                 btnGestionProfil.Visibility = Visibility.Visible;
             }
-            if (!estConnecter)
+            else
             {
                 //On met les objets de connexion
                 btnConnexion.Visibility = Visibility.Visible;

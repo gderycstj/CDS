@@ -60,6 +60,7 @@
     <Compile Include="Classe\Case.cs" />
     <Compile Include="Classe\Effet.cs" />
     <Compile Include="Classe\Entite.cs" />
+    <Compile Include="Classe\Globale.cs" />
     <Compile Include="Classe\GrilleDeJeu.cs" />
     <Compile Include="Classe\Joueur.cs" />
     <Compile Include="Classe\MemoireDEntite.cs" />

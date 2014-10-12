@@ -72,7 +72,7 @@ namespace CDS
         /// Insertion d'un enregistrement dans la bd
         /// </summary>
         /// <param name="ins">Requête d'insertion de bd</param>
-        public void Insertion(string ins)
+        public int Insertion(string ins)
         {
             try
             {
@@ -81,12 +81,14 @@ namespace CDS
                     MySqlCommand cmd = new MySqlCommand(ins,connexion);
                     cmd.ExecuteNonQuery();
                     Fermer();
+                    return (int)cmd.LastInsertedId;
                 }
             }
             catch (Exception e)
             {
-                MessageBox.Show("Votre identifiant eziste déjà, veuillez en choisir un nouveau");
+                MessageBox.Show("Votre identifiant existe déjà, veuillez en choisir un nouveau");
             }
+            return 0;
         }
 
         /// <summary>

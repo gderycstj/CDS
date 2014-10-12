@@ -54,9 +54,11 @@ namespace CDS
             }
             if (estValide == true)
             {
+
                 string Req = "INSERT INTO Utilisateurs(idApparence,nom,motDePasse)VALUES ((SELECT idApparence FROM Apparences WHERE image = 'test.pnj'),'" + txtUtilisateur.Text + "','" + txtMotDePasse.Password + "');";
-                bdCDS.Insertion(Req);
+                int id = bdCDS.Insertion(Req);
                 bdCDS.Insertion("COMMIT;");
+                Globale.j1.setJoueur(txtUtilisateur.Text, id, "test.png", true);
                 menuJouer mj = new menuJouer();
                 mj.Show();
                 Close();
