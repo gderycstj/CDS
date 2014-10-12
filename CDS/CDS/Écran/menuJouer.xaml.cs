@@ -61,6 +61,12 @@ namespace CDS
                 txtNomUsager.Clear();
                 txtMotDePasse.Clear();
             }
+            /*if(listeJoueur[0][4] == "false")
+            {
+                txtErreur.Text = "Votre nom d'utilisateur ou votre mot de passe est incorrect";
+                txtNomUsager.Clear();
+                txtMotDePasse.Clear();
+            }*/
             //Sinon, il va rentrer le contenu de la liste dans un joueur et va afficher l'interface connecté
             else
             {

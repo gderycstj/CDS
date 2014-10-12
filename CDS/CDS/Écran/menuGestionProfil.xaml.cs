@@ -19,6 +19,12 @@ namespace CDS
     /// </summary>
     public partial class menuGestionProfil : Window
     {
+        BdService bdCDS = new BdService();
+        List<string>[] listeJoueur;
+        string nom = Globale.j1.getNom();
+        int nombreRange = 0;
+
+        //va sélectionner l'identifiant  qui c'est connecté
         public menuGestionProfil()
         {
             InitializeComponent();
@@ -38,11 +44,62 @@ namespace CDS
 
         private void btnConfirmerMod_Click(object sender, RoutedEventArgs e)
         {
+            bool estValide = true;
+            string req = "SELECT motDePasse FROM Utilisateurs WHERE nom = '" + nom + "';";
+            listeJoueur = bdCDS.selection(req, 1, ref nombreRange);
+
+            if(txtAncienMdp.Password != listeJoueur[0][0].ToString())
+            {
+                txtErreur.Text = "Votre mot de passe actuel ne correspond pas avec celui inscrit";
+                estValide = false;
+            }
+
+            if (txtMotDePasseModif.Password.Length < 3 || txtMotDePasseModif.Password.Length > 30)
+            {
+                txtErreur.Text = "Votre mot de passe doit avoir entre 3 et 20 caractères";
+                estValide = false;
+
+            }
+
+            if(txtMotDePasseModif.Password != txtMotDePasseConfirm.Password)
+            {
+                txtErreur.Text = "Les 2 mots de passe que vous avez écrit ne sont pas identique";
+                estValide = false;
+            }
+
+            if(estValide == true)
+            {
+                string req2 = "UPDATE Utilisateurs SET motDePasse = '"+txtMotDePasseModif.Password+"' WHERE nom ='" + nom + "';";
+                bdCDS.modification(req2);
+                txtErreur.Text = "Votre mot de passe à été mis à jour";
+                txtMotDePasseModif.Clear();
+                txtMotDePasseConfirm.Clear();
+                txtAncienMdp.Clear();
+            }
+            else
+            {
+                txtMotDePasseConfirm.Clear();
+                txtMotDePasseModif.Clear();
+                txtAncienMdp.Clear();
+            }
 
         }
 
         private void btnConfirmerSupp_Click(object sender, RoutedEventArgs e)
         {
+            //On va chercher le mot de passe
+            string req = "SELECT motDePasse FROM Utilisateurs WHERE nom = '" + nom + "';";
+            listeJoueur = bdCDS.selection(req, 1, ref nombreRange);
+            //Si le mot de passe est pareille, on désactive le compte
+            if (txtMotDePasseSupp.Password == listeJoueur[0][0].ToString())
+            {
+                string req2 = "UPDATE Utilisateurs SET estActive=false WHERE nom ='" + nom + "';";
+                bdCDS.modification(req2);
+                Globale.j1.estConnecte = false;
+                menuJouer menuJ = new menuJouer();
+                menuJ.Show();
+                Close();
+            }
 
         }
 
@@ -64,18 +121,18 @@ namespace CDS
 
             //Activation
             btnConfirmerMod.Visibility = Visibility.Visible;
-            txtNomUsager.Visibility = Visibility.Visible;
-            txtNomUsagerMod.Visibility = Visibility.Visible;
             txtMotPasse.Visibility = Visibility.Visible;
             txtMotDePasseModif.Visibility = Visibility.Visible;
             txtMotDePasseConfirm.Visibility = Visibility.Visible;
             txtConfirmMotPasse.Visibility = Visibility.Visible;
+            txtErreur.Visibility = Visibility.Visible;
 
             //Désactivation
             btnConfirmerSupp.Visibility = Visibility.Hidden;
             txtSupprimerInfo.Visibility = Visibility.Hidden;
             txtMDPSupp.Visibility = Visibility.Hidden;
             txtMotDePasseSupp.Visibility = Visibility.Hidden;
+
         }
 
         public void supprimer()
@@ -95,12 +152,11 @@ namespace CDS
 
             //Désactivation
             btnConfirmerMod.Visibility = Visibility.Hidden;
-            txtNomUsager.Visibility = Visibility.Hidden;
-            txtNomUsagerMod.Visibility = Visibility.Hidden;
             txtMotPasse.Visibility = Visibility.Hidden;
             txtMotDePasseModif.Visibility = Visibility.Hidden;
             txtMotDePasseConfirm.Visibility = Visibility.Hidden;
             txtConfirmMotPasse.Visibility = Visibility.Hidden;
+            txtErreur.Visibility = Visibility.Hidden;
         }
     }
 }

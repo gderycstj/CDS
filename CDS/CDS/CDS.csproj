@@ -166,43 +166,43 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="2.jpg" />
+    <Resource Include="Image\2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="3.jpg" />
+    <Resource Include="Image\3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cds.png" />
+    <Resource Include="Image\cds.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cliqueMouv.png" />
+    <Resource Include="Image\cliqueMouv.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="clavierMouv.png" />
+    <Resource Include="Image\clavierMouv.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="clavierObjet.png" />
+    <Resource Include="Image\clavierObjet.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cliqueObjet.png" />
+    <Resource Include="Image\cliqueObjet.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="carrerBleu.png" />
+    <Resource Include="Image\carrerBleu.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="carrerVert.png" />
+    <Resource Include="Image\carrerVert.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="triangle.png" />
+    <Resource Include="Image\triangle.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bombe.png" />
+    <Resource Include="Image\bombe.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="sprint.png" />
+    <Resource Include="Image\sprint.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="potionVie.png" />
+    <Resource Include="Image\potionVie.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
