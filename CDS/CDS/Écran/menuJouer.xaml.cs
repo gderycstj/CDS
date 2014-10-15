@@ -61,7 +61,7 @@ namespace CDS
                 txtNomUsager.Clear();
                 txtMotDePasse.Clear();
             }
-            if(listeJoueur[0][4] == "0")
+            if(listeJoueur[0][4].ToString() == "False")
             {
                 txtErreur.Text = "Votre nom d'utilisateur ou votre mot de passe est incorrect";
                 txtNomUsager.Clear();
@@ -84,16 +84,16 @@ namespace CDS
 
         private void btnDemarrer_Click(object sender, RoutedEventArgs e)
         {
-            if(cboChoixMode.SelectedItem.ToString() == "Normal")
-            {
-                Partie partieNormal = new Partie();
-                partieNormal.jouer();
-            }
             if(cboChoixMode.SelectedItem.ToString() == "Survie")
             {
                 menuSurvie menuS = new menuSurvie();
                 menuS.Show();
                 Close();
+            }
+            else
+            {
+                Partie partieNormal = new Partie();
+                partieNormal.jouer();
             }
         }
 
