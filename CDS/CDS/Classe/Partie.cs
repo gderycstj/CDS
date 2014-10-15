@@ -16,10 +16,10 @@ namespace CDS
         Objet[] objets {get;set;}
         MemoireDEntite regleaparition { get;set;}
 
-        Partie()
+        public Partie()
         {}
 
-        Partie(Vie viedepart, Objectif objParti,int maxobjets, List<Objet> objetDepart)
+        public Partie(Vie viedepart, Objectif objParti,int maxobjets, List<Objet> objetDepart)
         {
             vie=viedepart;
             objectif=objParti;
@@ -49,7 +49,6 @@ namespace CDS
         /// <returns>retourne si la partie s'est effectué</returns>
         public bool jouer()
         {
-
             if(initialiser())
             {
             

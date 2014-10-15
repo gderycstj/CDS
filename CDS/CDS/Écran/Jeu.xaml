@@ -1,9 +1,9 @@
 ﻿<Window x:Class="CDS.Jeu"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Jeu" Height="479.95" Width="745">
+        Title="Jeu" Height="650" Width="745">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="356" Margin="10,84,0,0" VerticalAlignment="Top" Width="399" RenderTransformOrigin="0.5,0.5" >
+        <Grid HorizontalAlignment="Left" Height="356" Margin="14,245,0,0" VerticalAlignment="Top" Width="399" RenderTransformOrigin="0.5,0.5" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Name="BordGauche"/>
                 <ColumnDefinition Name="C1"/>

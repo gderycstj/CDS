@@ -3,37 +3,37 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Gestion de profil" Height="625" Width="750"
         WindowStyle="ThreeDBorderWindow"
-        ResizeMode="NoResize" Icon="/CDS;component/cds.png">
+        ResizeMode="NoResize" Icon="/CDS;component/Image/cds.png">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/CDS;component/2.jpg"/>
+            <ImageBrush ImageSource="/CDS;component/Image/2.jpg"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Height="65" Margin="192,10,0,0" TextWrapping="Wrap" Text="Gestion de profil" VerticalAlignment="Top" Width="349" FontFamily="/CDS;component/#Broken Type" FontSize="48" TextAlignment="Center"/>
         <Button x:Name="btnModifier" Content="Modifier" HorizontalAlignment="Left" Height="134" Margin="24,80,0,0" VerticalAlignment="Top" Width="218" FontFamily="Agency FB" FontSize="48" Click="btnModifier_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/CDS;component/3.jpg"/>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnSupprimer" Content="Supprimer" HorizontalAlignment="Left" Height="138" Margin="24,249,0,0" VerticalAlignment="Top" Width="218" FontFamily="Agency FB" FontSize="48" Click="btnSupprimer_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/CDS;component/3.jpg"/>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnRetour" Content="Retour" HorizontalAlignment="Left" Height="134" Margin="24,427,0,0" VerticalAlignment="Top" Width="218" FontFamily="Agency FB" FontSize="48" Click="btnRetour_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/CDS;component/3.jpg"/>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
         <Rectangle Fill="#FF4B634D" HorizontalAlignment="Left" Height="481" Margin="266,80,0,0" Stroke="Black" VerticalAlignment="Top" Width="454"/>
         <TextBlock x:Name="txtTitreOnglet" HorizontalAlignment="Left" Height="54" Margin="324,87,0,0" TextWrapping="Wrap" Text="Test" VerticalAlignment="Top" Width="338" FontFamily="/CDS;component/#Broken Type" FontSize="48" TextAlignment="Center"/>
         <Button x:Name="btnConfirmerMod" Content="Confirmer" HorizontalAlignment="Left" Height="64" Margin="326,479,0,0" VerticalAlignment="Top" Width="338" FontFamily="Agency FB" FontSize="48" Click="btnConfirmerMod_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/CDS;component/3.jpg"/>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnConfirmerSupp" Content="Confirmer" HorizontalAlignment="Left" Height="64" Margin="326,479,0,0" VerticalAlignment="Top" Width="338" FontFamily="Agency FB" FontSize="48" Click="btnConfirmerSupp_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/CDS;component/3.jpg"/>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
         <TextBlock x:Name="txtSupprimerInfo" HorizontalAlignment="Left" Height="133" Margin="281,141,0,0" TextWrapping="Wrap" Text="Si vous entrer votre mot de passe et confirmer, vous ne pourrez plus accéder à votre compte et à tout information provenant de celui-ci. Cependant, les modes créer resteront disponible.Lorsque vous allez cliquer sur confirmer, vous serez automatiquement redirigez vers l'écran de connexion" VerticalAlignment="Top" Width="425" FontFamily="Agency FB" FontSize="20" TextAlignment="Center" Visibility="Hidden"/>

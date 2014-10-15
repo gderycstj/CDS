@@ -92,8 +92,11 @@ namespace CDS
             }
             else
             {
-                Partie partieNormal = new Partie();
-                partieNormal.jouer();
+                /*Partie partieNormal = new Partie();
+                partieNormal.jouer();*/
+                Jeu menuJeu = new Jeu();
+                menuJeu.Show();
+                Close();
             }
         }
 
