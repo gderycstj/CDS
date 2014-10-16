@@ -1,186 +1,174 @@
 ﻿<Window x:Class="CDS.Jeu"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Jeu" Height="650" Width="745">
+        Title="Jeu" Height="710" Width="1100"
+        ResizeMode="NoResize"
+        Icon="/CDS;component/Image/cds.png">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="356" Margin="14,245,0,0" VerticalAlignment="Top" Width="399" RenderTransformOrigin="0.5,0.5" >
+        <Grid.Background>
+            <ImageBrush ImageSource="/CDS;component/Image/2.jpg"/>
+        </Grid.Background>
+        <Grid Margin="2.5,2.5,275,2.5">
+            <Grid.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg" Stretch="None"/>
+            </Grid.Background>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Name="BordGauche"/>
-                <ColumnDefinition Name="C1"/>
-                <ColumnDefinition Name="C2"/>
-                <ColumnDefinition Name="C3"/>
-                <ColumnDefinition Name="C4"/>
-                <ColumnDefinition Name="C5"/>
-                <ColumnDefinition Name="C6"/>
-                <ColumnDefinition Name="C7"/>
-                <ColumnDefinition Name="C8"/>
-                <ColumnDefinition Name="C9"/>
-                <ColumnDefinition Name="BordDroit"/>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Name="BordHaut"/>
-                <RowDefinition Name="R9"/>
-                <RowDefinition Name="R8"/>
-                <RowDefinition Name="R7"/>
-                <RowDefinition Name="R6"/>
-                <RowDefinition Name="R5"/>
-                <RowDefinition Name="R4"/>
-                <RowDefinition Name="R3"/>
-                <RowDefinition Name="R2"/>
-                <RowDefinition Name="R1"/>
-                <RowDefinition Name="BordBas"/>
-            </Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Row="2" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Row="3" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Row="4" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Row="5" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Row="6" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Row="7" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Row="8" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Row="9" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
 
-            <!--Rangée 10 (Bors Haut) -->
-            <Rectangle Name="X0Y10" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Column="1" Name="X1Y10" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Column="2" Name="X2Y10" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Column="3" Name="X3Y10" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Column="4" Name="X4Y10" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Column="5" Name="X5Y10" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Column="6" Name="X6Y10" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Column="7" Name="X7Y10" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Column="8" Name="X8Y10" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Column="9" Name="X9Y10" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Column="10" Name="X10Y10" Fill="Red" Opacity="0.8"/>
-            <Rectangle Grid.Row="1" Grid.Column="1" />
+                <Border Grid.Column="1" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="2"/>
+            <Border Grid.Column="1" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="1" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="1" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="1" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="1" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="1" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="1" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="1" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="1" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
 
-            <!--Rangée 9 -->
-            <Rectangle  Grid.Row="1" Name="X0Y9" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Row="1" Grid.Column="1" Name="X1Y9"/>
-            <Rectangle  Grid.Row="1" Grid.Column="2" Name="X2Y9"/>
-            <Rectangle  Grid.Row="1" Grid.Column="3" Name="X3Y9"/>
-            <Rectangle  Grid.Row="1" Grid.Column="4" Name="X4Y9"/>
-            <Rectangle  Grid.Row="1" Grid.Column="5" Name="X5Y9"/>
-            <Rectangle  Grid.Row="1" Grid.Column="6" Name="X6Y9"/>
-            <Rectangle  Grid.Row="1" Grid.Column="7" Name="X7Y9"/>
-            <Rectangle  Grid.Row="1" Grid.Column="8" Name="X8Y9"/>
-            <Rectangle  Grid.Row="1" Grid.Column="9" Name="X9Y9"/>
-            <Rectangle  Grid.Row="1" Grid.Column="10" Name="X10Y9" Fill="Red" Opacity="0.8"/>
+                <Border Grid.Column="2" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="2" Grid.Row="1" BorderBrush="Black" BorderThickness="2"/>
+            <Border Grid.Column="2" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="2" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="2" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="2" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="2" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="2" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="2" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="2" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="2" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
 
-            <!--Rangée 8 -->
-            <Rectangle  Grid.Row="2" Name="X0Y8" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Row="2" Grid.Column="1" Name="X1Y8"/>
-            <Rectangle  Grid.Row="2" Grid.Column="2" Name="X2Y8"/>
-            <Rectangle  Grid.Row="2" Grid.Column="3" Name="X3Y8"/>
-            <Rectangle  Grid.Row="2" Grid.Column="4" Name="X4Y8"/>
-            <Rectangle  Grid.Row="2" Grid.Column="5" Name="X5Y8"/>
-            <Rectangle  Grid.Row="2" Grid.Column="6" Name="X6Y8"/>
-            <Rectangle  Grid.Row="2" Grid.Column="7" Name="X7Y8"/>
-            <Rectangle  Grid.Row="2" Grid.Column="8" Name="X8Y8"/>
-            <Rectangle  Grid.Row="2" Grid.Column="9" Name="X9Y8"/>
-            <Rectangle  Grid.Row="2" Grid.Column="10" Name="X10Y8" Fill="Red" Opacity="0.8"/>
+                <Border Grid.Column="3" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="3" Grid.Row="1" BorderBrush="Black" BorderThickness="2"/>
+            <Border Grid.Column="3" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="3" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="3" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="3" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="3" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="3" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="3" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="3" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="3" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
 
-            <!--Rangée 7 -->
-            <Rectangle  Grid.Row="3" Name="X0Y7" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Row="3" Grid.Column="1" Name="X1Y7"/>
-            <Rectangle  Grid.Row="3" Grid.Column="2" Name="X2Y7"/>
-            <Rectangle  Grid.Row="3" Grid.Column="3" Name="X3Y7"/>
-            <Rectangle  Grid.Row="3" Grid.Column="4" Name="X4Y7"/>
-            <Rectangle  Grid.Row="3" Grid.Column="5" Name="X5Y7"/>
-            <Rectangle  Grid.Row="3" Grid.Column="6" Name="X6Y7"/>
-            <Rectangle  Grid.Row="3" Grid.Column="7" Name="X7Y7"/>
-            <Rectangle  Grid.Row="3" Grid.Column="8" Name="X8Y7"/>
-            <Rectangle  Grid.Row="3" Grid.Column="9" Name="X9Y7"/>
-            <Rectangle  Grid.Row="3" Grid.Column="10" Name="X10Y7" Fill="Red" Opacity="0.8"/>
+                <Border Grid.Column="4" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="4" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="4" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="4" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="4" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="4" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="4" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="4" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="4" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="4" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="4" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
 
-            <!--Rangée 6 -->
-            <Rectangle  Grid.Row="4" Name="X0Y6" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Row="4" Grid.Column="1" Name="X1Y6"/>
-            <Rectangle  Grid.Row="4" Grid.Column="2" Name="X2Y6"/>
-            <Rectangle  Grid.Row="4" Grid.Column="3" Name="X3Y6"/>
-            <Rectangle  Grid.Row="4" Grid.Column="4" Name="X4Y6"/>
-            <Rectangle  Grid.Row="4" Grid.Column="5" Name="X5Y6"/>
-            <Rectangle  Grid.Row="4" Grid.Column="6" Name="X6Y6"/>
-            <Rectangle  Grid.Row="4" Grid.Column="7" Name="X7Y6"/>
-            <Rectangle  Grid.Row="4" Grid.Column="8" Name="X8Y6"/>
-            <Rectangle  Grid.Row="4" Grid.Column="9" Name="X9Y6"/>
-            <Rectangle  Grid.Row="4" Grid.Column="10" Name="X10Y6" Fill="Red" Opacity="0.8"/>
+                <Border Grid.Column="5" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="5" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="5" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="5" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="5" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="5" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="5" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="5" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="5" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="5" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="5" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
 
-            <!--Rangée 5 -->
-            <Rectangle  Grid.Row="5" Name="X0Y5" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Row="5" Grid.Column="1" Name="X1Y5"/>
-            <Rectangle  Grid.Row="5" Grid.Column="2" Name="X2Y5"/>
-            <Rectangle  Grid.Row="5" Grid.Column="3" Name="X3Y5"/>
-            <Rectangle  Grid.Row="5" Grid.Column="4" Name="X4Y5"/>
-            <Rectangle  Grid.Row="5" Grid.Column="5" Name="X5Y5"/>
-            <Rectangle  Grid.Row="5" Grid.Column="6" Name="X6Y5"/>
-            <Rectangle  Grid.Row="5" Grid.Column="7" Name="X7Y5"/>
-            <Rectangle  Grid.Row="5" Grid.Column="8" Name="X8Y5"/>
-            <Rectangle  Grid.Row="5" Grid.Column="9" Name="X9Y5"/>
-            <Rectangle  Grid.Row="5" Grid.Column="10" Name="X10Y5" Fill="Red" Opacity="0.8"/>
+                <Border Grid.Column="6" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="6" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="6" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="6" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="6" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="6" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="6" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="6" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="6" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="6" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="6" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
 
-            <!--Rangée 4 -->
-            <Rectangle  Grid.Row="6" Name="X0Y4" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Row="6" Grid.Column="1" Name="X1Y4"/>
-            <Rectangle  Grid.Row="6" Grid.Column="2" Name="X2Y4"/>
-            <Rectangle  Grid.Row="6" Grid.Column="3" Name="X3Y4"/>
-            <Rectangle  Grid.Row="6" Grid.Column="4" Name="X4Y4"/>
-            <Rectangle  Grid.Row="6" Grid.Column="5" Name="X5Y4"/>
-            <Rectangle  Grid.Row="6" Grid.Column="6" Name="X6Y4"/>
-            <Rectangle  Grid.Row="6" Grid.Column="7" Name="X7Y4"/>
-            <Rectangle  Grid.Row="6" Grid.Column="8" Name="X8Y4"/>
-            <Rectangle  Grid.Row="6" Grid.Column="9" Name="X9Y4"/>
-            <Rectangle  Grid.Row="6" Grid.Column="10" Name="X10Y4" Fill="Red" Opacity="0.8"/>
+                <Border Grid.Column="7" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="7" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="7" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="7" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="7" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="7" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="7" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="7" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="7" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="7" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="7" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
 
+                <Border Grid.Column="8" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="8" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="8" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="8" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="8" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="8" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="8" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="8" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="8" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="8" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="8" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
 
-            <!--Rangée 3 -->
-            <Rectangle  Grid.Row="7" Name="X0Y3" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Row="7" Grid.Column="1" Name="X1Y3"/>
-            <Rectangle  Grid.Row="7" Grid.Column="2" Name="X2Y3"/>
-            <Rectangle  Grid.Row="7" Grid.Column="3" Name="X3Y3"/>
-            <Rectangle  Grid.Row="7" Grid.Column="4" Name="X4Y3"/>
-            <Rectangle  Grid.Row="7" Grid.Column="5" Name="X5Y3"/>
-            <Rectangle  Grid.Row="7" Grid.Column="6" Name="X6Y3"/>
-            <Rectangle  Grid.Row="7" Grid.Column="7" Name="X7Y3"/>
-            <Rectangle  Grid.Row="7" Grid.Column="8" Name="X8Y3"/>
-            <Rectangle  Grid.Row="7" Grid.Column="9" Name="X9Y3"/>
-            <Rectangle  Grid.Row="7" Grid.Column="10" Name="X10Y3" Fill="Red" Opacity="0.8"/>
+                <Border Grid.Column="9" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="9" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="9" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="9" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="9" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="9" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="9" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="9" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="9" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="9" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
+                <Border Grid.Column="9" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
 
-            <!--Rangée 2 -->
-            <Rectangle  Grid.Row="8" Name="X0Y2" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Row="8" Grid.Column="1" Name="X1Y2"/>
-            <Rectangle  Grid.Row="8" Grid.Column="2" Name="X2Y2"/>
-            <Rectangle  Grid.Row="8" Grid.Column="3" Name="X3Y2"/>
-            <Rectangle  Grid.Row="8" Grid.Column="4" Name="X4Y2"/>
-            <Rectangle  Grid.Row="8" Grid.Column="5" Name="X5Y2"/>
-            <Rectangle  Grid.Row="8" Grid.Column="6" Name="X6Y2"/>
-            <Rectangle  Grid.Row="8" Grid.Column="7" Name="X7Y2"/>
-            <Rectangle  Grid.Row="8" Grid.Column="8" Name="X8Y2"/>
-            <Rectangle  Grid.Row="8" Grid.Column="9" Name="X9Y2"/>
-            <Rectangle  Grid.Row="8" Grid.Column="10" Name="X10Y2" Fill="Red" Opacity="0.8"/>
-
-
-            <!--Rangée 1 -->
-            <Rectangle  Grid.Row="9" Name="X0Y1" Fill="Red" Opacity="0.8"/>
-            <Rectangle  Grid.Row="9" Grid.Column="1" Name="X1Y1"/>
-            <Rectangle  Grid.Row="9" Grid.Column="2" Name="X2Y1"/>
-            <Rectangle  Grid.Row="9" Grid.Column="3" Name="X3Y1"/>
-            <Rectangle  Grid.Row="9" Grid.Column="4" Name="X4Y1"/>
-            <Rectangle  Grid.Row="9" Grid.Column="5" Name="X5Y1"/>
-            <Rectangle  Grid.Row="9" Grid.Column="6" Name="X6Y1"/>
-            <Rectangle  Grid.Row="9" Grid.Column="7" Name="X7Y1"/>
-            <Rectangle  Grid.Row="9" Grid.Column="8" Name="X8Y1"/>
-            <Rectangle  Grid.Row="9" Grid.Column="9" Name="X9Y1"/>
-            <Rectangle  Grid.Row="9" Grid.Column="10" Name="X10Y1" Fill="Red" Opacity="0.8"/>
-
-            <!--Rangée 10 (Bors Bas) -->
-            <Rectangle Grid.Row="10" Name="X0Y0" Fill="Red" Opacity="0.8"/>
-            <Rectangle Grid.Row="10" Grid.Column="1" Name="X1Y0" Fill="Red" Opacity="0.8"/>
-            <Rectangle Grid.Row="10" Grid.Column="2" Name="X2Y0" Fill="Red" Opacity="0.8"/>
-            <Rectangle Grid.Row="10" Grid.Column="3" Name="X3Y0" Fill="Red" Opacity="0.8"/>
-            <Rectangle Grid.Row="10" Grid.Column="4" Name="X4Y0" Fill="Red" Opacity="0.8"/>
-            <Rectangle Grid.Row="10" Grid.Column="5" Name="X5Y0" Fill="Red" Opacity="0.8"/>
-            <Rectangle Grid.Row="10" Grid.Column="6" Name="X6Y0" Fill="Red" Opacity="0.8"/>
-            <Rectangle Grid.Row="10" Grid.Column="7" Name="X7Y0" Fill="Red" Opacity="0.8"/>
-            <Rectangle Grid.Row="10" Grid.Column="8" Name="X8Y0" Fill="Red" Opacity="0.8"/>
-            <Rectangle Grid.Row="10" Grid.Column="9" Name="X9Y0" Fill="Red" Opacity="0.8"/>
-            <Rectangle Grid.Row="10" Grid.Column="10"  Name="X10Y0" Fill="Red" Opacity="0.8">
-            </Rectangle>
-
-
-
+                <Border Grid.Column="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="10" Grid.Row="1" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="10" Grid.Row="2" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="10" Grid.Row="3" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="10" Grid.Row="4" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="10" Grid.Row="5" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="10" Grid.Row="6" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="10" Grid.Row="7" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="10" Grid.Row="8" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="10" Grid.Row="9" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <Border Grid.Column="10" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
         </Grid>
-
     </Grid>
 </Window>
