@@ -11,6 +11,7 @@ namespace CDS
         protected string listeCMD {get;set;}
         protected int age { get; set; }
         protected string urlImage { get; set; }
+        protected int direction { get; set; }//1 à 4
 
         //lire la liste CMD et agire
         public abstract bool action();
