@@ -8,9 +8,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="/CDS;component/Image/2.jpg"/>
         </Grid.Background>
-        <Grid Margin="2.5,2.5,275,2.5">
+        <Grid x:Name="grillePrincipale" Margin="2.5,2.5,275,2.5">
             <Grid.Background>
-                <ImageBrush ImageSource="/CDS;component/Image/3.jpg" Stretch="None"/>
+                <ImageBrush ImageSource="/CDS;component/Image/grille.png" Stretch="None"/>
             </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -27,148 +27,45 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Border Grid.Row="0" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Row="2" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Row="3" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Row="4" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Row="5" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Row="6" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Row="7" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Row="8" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Row="9" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-
-                <Border Grid.Column="1" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="2"/>
-            <Border Grid.Column="1" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="1" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="1" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="1" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="1" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="1" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="1" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="1" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="1" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-
-                <Border Grid.Column="2" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="2" Grid.Row="1" BorderBrush="Black" BorderThickness="2"/>
-            <Border Grid.Column="2" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="2" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="2" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="2" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="2" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="2" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="2" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="2" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="2" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-
-                <Border Grid.Column="3" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="3" Grid.Row="1" BorderBrush="Black" BorderThickness="2"/>
-            <Border Grid.Column="3" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="3" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="3" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="3" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="3" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="3" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="3" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="3" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="3" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-
-                <Border Grid.Column="4" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="4" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="4" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="4" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="4" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="4" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="4" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="4" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="4" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="4" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="4" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-
-                <Border Grid.Column="5" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="5" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="5" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="5" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="5" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="5" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="5" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="5" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="5" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="5" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="5" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-
-                <Border Grid.Column="6" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="6" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="6" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="6" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="6" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="6" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="6" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="6" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="6" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="6" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="6" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-
-                <Border Grid.Column="7" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="7" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="7" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="7" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="7" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="7" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="7" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="7" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="7" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="7" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="7" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-
-                <Border Grid.Column="8" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="8" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="8" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="8" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="8" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="8" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="8" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="8" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="8" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="8" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="8" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-
-                <Border Grid.Column="9" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="9" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="9" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="9" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="9" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="9" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="9" Grid.Row="6" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="9" Grid.Row="7" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="9" Grid.Row="8" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="9" Grid.Row="9" BorderBrush="Black" BorderThickness="2"></Border>
-                <Border Grid.Column="9" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-
-                <Border Grid.Column="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="10" Grid.Row="1" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="10" Grid.Row="2" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="10" Grid.Row="3" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="10" Grid.Row="4" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="10" Grid.Row="5" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="10" Grid.Row="6" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="10" Grid.Row="7" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="10" Grid.Row="8" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="10" Grid.Row="9" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
-                <Border Grid.Column="10" Grid.Row="10" BorderBrush="Black" BorderThickness="2" Background="#FFB61010"></Border>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
         </Grid>
+        <Button Content="" HorizontalAlignment="Left" Height="62" Margin="833,313,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="77" Click="gauche">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/flecheGauche.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Height="68" Margin="915,240,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="67" Click="haut">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/flecheHaut.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Height="62" Margin="987,313,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="78" Click="droite">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/flecheDroite.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Height="68" Margin="915,380,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.522,0.068" Click="bas">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/flecheBas.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Height="62" Margin="915,313,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="67">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/rond.png"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="77" Margin="813,142,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/coeurPlein.png"/>
+        <Image HorizontalAlignment="Left" Height="77" Margin="905,142,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/coeurPlein.png"/>
+        <Image HorizontalAlignment="Left" Height="77" Margin="997,142,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/coeurVide.png"/>
     </Grid>
 </Window>
