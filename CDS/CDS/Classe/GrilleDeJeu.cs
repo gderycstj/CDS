@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CDS
 {
-    class GrilleDeJeu
+    public class GrilleDeJeu
     {
         Case[][] grille{get;set;}
         public List<Position> ouetesvous{get;set;}
