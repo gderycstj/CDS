@@ -22,7 +22,7 @@ namespace CDS
             idJoueur=-1;
             pathImage = "/image/perso.png";
             estConnecte = false;
-            positionJoueur = new Case(6,6);
+            positionJoueur = new Case(5,5);
         }
 
         public Joueur(string nomJ, int id, string pathIm)
