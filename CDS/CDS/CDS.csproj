@@ -204,6 +204,22 @@
   <ItemGroup>
     <Resource Include="Image\potionVie.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\perso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\grille.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\coeurBouclier.png" />
+    <Resource Include="Image\coeurPlein.png" />
+    <Resource Include="Image\coeurVide.png" />
+    <Resource Include="Image\flecheBas.png" />
+    <Resource Include="Image\flecheDroite.png" />
+    <Resource Include="Image\flecheGauche.png" />
+    <Resource Include="Image\flecheHaut.png" />
+    <Resource Include="Image\rond.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace CDS
 {
-    public class GrilleDeJeu
+    class GrilleDeJeu
     {
         Case[][] grille{get;set;}
         public List<Position> ouetesvous{get;set;}
 
-        const int LARGEUR=11;
+        public static int TailleGrille=11;
 
         public GrilleDeJeu()
         {
-            for (int y = LARGEUR-1; y <= 0; y--)
+            for (int y = TailleGrille - 1; y <= 0; y--)
             {
-                for (int x = LARGEUR-1; x <= 0; x--)
+                for (int x = TailleGrille - 1; x <= 0; x--)
                 {
                     grille[x][y]= new Case(x,y);
                 }
@@ -25,7 +25,6 @@ namespace CDS
 
             ouetesvous=null;
         }
-
         //parcour la liste de position d'ou se trouve les entiter pour les faire leurs actions/mouvement
         //retourne true si tout est correct
         public bool action()
