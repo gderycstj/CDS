@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace CDS
 {
-    
-
-    class Position
+    public class Position
     {
         public int posX{get;set;}
         public int posY {get;set;}
