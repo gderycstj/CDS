@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace CDS
 {
-    class Case
+   public class Case
     {
-        Position pos;
+       public Position pos;
         List<Entite> listeHabitants;
 
-        Case()
+       public Case()
         {
             pos.set(0,0);
             listeHabitants=null;
@@ -19,7 +19,9 @@ namespace CDS
 
         public Case(int X, int Y)
         {
-            pos.set(0,0);
+            Position p1 = new Position();
+            pos = p1;
+            pos.set(X,Y);
             listeHabitants = null;
         }
 

@@ -61,21 +61,17 @@ namespace CDS
                 txtNomUsager.Clear();
                 txtMotDePasse.Clear();
             }
-            if (nombreRange != 0)
+            if(listeJoueur[0][4].ToString() == "False")
             {
-                if (listeJoueur[0][4].ToString() == "False")
-                {
-                    txtErreur.Text = "Votre nom d'utilisateur ou votre mot de passe est incorrect";
-                    txtNomUsager.Clear();
-                    txtMotDePasse.Clear();
-                }
-
+                txtErreur.Text = "Votre nom d'utilisateur ou votre mot de passe est incorrect";
+                txtNomUsager.Clear();
+                txtMotDePasse.Clear();
+            }
             //Sinon, il va rentrer le contenu de la liste dans un joueur et va afficher l'interface connecté
-                else
-                {
-                    Globale.j1.setJoueur(listeJoueur[0][2], Convert.ToInt32(listeJoueur[0][0]), listeJoueur[0][1], true);
-                    Connect();
-                }
+            else
+            {
+                Globale.j1.setJoueur(listeJoueur[0][2], Convert.ToInt32(listeJoueur[0][0]), listeJoueur[0][1], true);
+                Connect();
             }
         }
 
