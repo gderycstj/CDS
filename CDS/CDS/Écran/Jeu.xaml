@@ -40,33 +40,33 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
         </Grid>
-        <Button Content="" HorizontalAlignment="Left" Height="62" Margin="833,313,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="77" Click="gauche">
+        <Button Content="" HorizontalAlignment="Left" Height="62" Margin="833,313,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="77" Click="gauche" BorderThickness="0" Focusable="False" IsHitTestVisible="True">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/flecheGauche.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Height="68" Margin="915,240,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="67" Click="haut">
+        <Button Content="" HorizontalAlignment="Left" Height="68" Margin="915,240,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="67" Click="haut" Focusable="False">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/flecheHaut.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Height="62" Margin="987,313,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="78" Click="droite">
+        <Button Content="" HorizontalAlignment="Left" Height="62" Margin="987,313,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="78" Click="droite" Focusable="False">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/flecheDroite.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Height="68" Margin="915,380,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.522,0.068" Click="bas">
+        <Button Content="" HorizontalAlignment="Left" Height="68" Margin="915,380,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.522,0.068" Click="bas" Focusable="False">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/flecheBas.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Height="62" Margin="915,313,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="67">
+        <Button Content="" HorizontalAlignment="Left" Height="62" Margin="915,313,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="67" Focusable="False">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/rond.png"/>
             </Button.Background>
         </Button>
-        <Image HorizontalAlignment="Left" Height="77" Margin="813,142,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/coeurPlein.png"/>
-        <Image HorizontalAlignment="Left" Height="77" Margin="905,142,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/coeurPlein.png"/>
-        <Image HorizontalAlignment="Left" Height="77" Margin="997,142,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/coeurVide.png"/>
+        <Image x:Name="vie1" HorizontalAlignment="Left" Height="77" Margin="813,142,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/coeurPlein.png"/>
+        <Image x:Name="vie2" HorizontalAlignment="Left" Height="77" Margin="905,142,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/coeurPlein.png"/>
+        <Image x:Name="vie3" HorizontalAlignment="Left" Height="77" Margin="997,142,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/coeurVide.png"/>
     </Grid>
 </Window>
