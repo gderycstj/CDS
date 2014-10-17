@@ -50,41 +50,102 @@ namespace CDS
         //fonctionde déplacement pour les boutons, haut veux dire déplacement haut... fait aussi les validations pour pas dépasser la grille
         private void haut(object sender, RoutedEventArgs e)
         {
-            if (Globale.j1.positionJoueur.pos.posY > 1)
-            {
-                Globale.j1.positionJoueur.pos.posY = Globale.j1.positionJoueur.pos.posY - 1;
-                DéplacerJoueur();
-            }
-
+            deplacerHaut();
         }
 
         private void bas(object sender, RoutedEventArgs e)
         {
-            if (Globale.j1.positionJoueur.pos.posY < GrilleDeJeu.TailleGrille - 2)
-            {
-                Globale.j1.positionJoueur.pos.posY = Globale.j1.positionJoueur.pos.posY + 1;
-                DéplacerJoueur();
-            }
+            deplacerBas();
         }
 
         private void droite(object sender, RoutedEventArgs e)
         {
-            if (Globale.j1.positionJoueur.pos.posX < GrilleDeJeu.TailleGrille - 2)
-            {
-                Globale.j1.positionJoueur.pos.posX = Globale.j1.positionJoueur.pos.posX + 1;
-                DéplacerJoueur();
-            }
+            deplacerDroite();
         }
 
         private void gauche(object sender, RoutedEventArgs e)
         {
+            deplacerGauche();
+        }
 
-            if (Globale.j1.positionJoueur.pos.posX > 1)
+        private void grilleJeuWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+              //Vers le bas
+              if(Keyboard.IsKeyDown(Key.Down))
+              {
+                  deplacerBas();
+              }
+            //Vers le Haut
+              if(Keyboard.IsKeyDown(Key.Up))
+              {
+                 deplacerHaut();
+              }
+            //Vers la droite
+            if(Keyboard.IsKeyDown(Key.Right))
             {
-                Globale.j1.positionJoueur.pos.posX = Globale.j1.positionJoueur.pos.posX - 1;
-                DéplacerJoueur();
+                deplacerDroite();
+            }
+            //Vers la gauche
+            if(Keyboard.IsKeyDown(Key.Left))
+            {
+                deplacerGauche();
             }
 
+            /*Bouton X(item)
+            if(Keyboard.IsKeyDown(Key.X))
+            {
+                
+            }
+            */
+
+            /*Bouton Z(item)
+             if(Keyboard.IsKeyDown(Key.Z))
+              {
+             
+             
+             }*/ 
+            /*Bouton Enter(passer le tour)
+            if(Keyboard.IsKeyDown(Key.Enter))
+            {
+
+            }
+             */
         }
+            void deplacerDroite()
+            {
+                 if (Globale.j1.positionJoueur.pos.posX < GrilleDeJeu.TailleGrille - 2)
+                {
+                    Globale.j1.positionJoueur.pos.posX = Globale.j1.positionJoueur.pos.posX + 1;
+                    DéplacerJoueur();
+                }
+            }
+
+            void deplacerGauche()
+            {
+                if (Globale.j1.positionJoueur.pos.posX > 1)
+                {
+                    Globale.j1.positionJoueur.pos.posX = Globale.j1.positionJoueur.pos.posX - 1;
+                    DéplacerJoueur();
+                }
+            }
+
+             void deplacerHaut()
+            {
+                if (Globale.j1.positionJoueur.pos.posY > 1)
+                {
+                    Globale.j1.positionJoueur.pos.posY = Globale.j1.positionJoueur.pos.posY - 1;
+                    DéplacerJoueur();
+                }
+            }
+
+            void deplacerBas()
+            {
+                 if (Globale.j1.positionJoueur.pos.posY < GrilleDeJeu.TailleGrille - 2)
+                  {
+                      Globale.j1.positionJoueur.pos.posY = Globale.j1.positionJoueur.pos.posY + 1;
+                      DéplacerJoueur();
+                  }
+            }
+        
     }
 }
