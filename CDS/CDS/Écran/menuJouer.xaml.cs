@@ -20,7 +20,6 @@ namespace CDS
     /// 
     public partial class menuJouer : Window
     {
-        BdService bdCDS = new BdService();
 
         public menuJouer()
         {
@@ -31,7 +30,7 @@ namespace CDS
             List<string>[] listeMode;
             int col = 0;
 
-            listeMode = bdCDS.selection(req,1,ref col);
+            listeMode = Globale.bdCDS.selection(req,1,ref col);
 
             for (int i = 0; i < listeMode.Length; i++) 
             {
@@ -51,7 +50,7 @@ namespace CDS
             int nombreRange = 0;
 
             //va sélectionner l'identifiant  qui c'est connecté
-            listeJoueur = bdCDS.selection(req, 5, ref nombreRange);
+            listeJoueur = Globale.bdCDS.selection(req, 5, ref nombreRange);
 
 
             //si le nombre de rangé = 0, ça veut dire que la requête n'a rien retourné, donc que l'utilisateur existe pas
@@ -87,6 +86,7 @@ namespace CDS
             if(cboChoixMode.SelectedItem.ToString() == "Survie")
             {
                 menuSurvie menuS = new menuSurvie();
+                Globale.mode = "Survie";
                 menuS.Show();
                 Close();
             }

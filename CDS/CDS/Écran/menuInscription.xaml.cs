@@ -23,7 +23,6 @@ namespace CDS
         {
             InitializeComponent();
         }
-        BdService bdCDS = new BdService();
 
         private void btnAnnuler_Click(object sender, RoutedEventArgs e)
         {
@@ -56,8 +55,8 @@ namespace CDS
             {
 
                 string Req = "INSERT INTO Utilisateurs(idApparence,nom,motDePasse)VALUES ((SELECT idApparence FROM Apparences WHERE image = 'test.pnj'),'" + txtUtilisateur.Text + "','" + txtMotDePasse.Password + "');";
-                int id = bdCDS.Insertion(Req);
-                bdCDS.Insertion("COMMIT;");
+                int id = Globale.bdCDS.Insertion(Req);
+                Globale.bdCDS.Insertion("COMMIT;");
                 Globale.j1.setJoueur(txtUtilisateur.Text, id, "test.png", true);
                 menuJouer mj = new menuJouer();
                 mj.Show();

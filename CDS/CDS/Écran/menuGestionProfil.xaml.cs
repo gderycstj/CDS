@@ -19,7 +19,6 @@ namespace CDS
     /// </summary>
     public partial class menuGestionProfil : Window
     {
-        BdService bdCDS = new BdService();
         List<string>[] listeJoueur;
         string nom = Globale.j1.getNom();
         int nombreRange = 0;
@@ -46,7 +45,7 @@ namespace CDS
         {
             bool estValide = true;
             string req = "SELECT motDePasse FROM Utilisateurs WHERE nom = '" + nom + "';";
-            listeJoueur = bdCDS.selection(req, 1, ref nombreRange);
+            listeJoueur = Globale.bdCDS.selection(req, 1, ref nombreRange);
 
             if(txtAncienMdp.Password != listeJoueur[0][0].ToString())
             {
@@ -70,7 +69,7 @@ namespace CDS
             if(estValide == true)
             {
                 string req2 = "UPDATE Utilisateurs SET motDePasse = '"+txtMotDePasseModif.Password+"' WHERE nom ='" + nom + "';";
-                bdCDS.modification(req2);
+                Globale.bdCDS.modification(req2);
                 txtErreur.Text = "Votre mot de passe à été mis à jour";
                 txtMotDePasseModif.Clear();
                 txtMotDePasseConfirm.Clear();
@@ -89,12 +88,12 @@ namespace CDS
         {
             //On va chercher le mot de passe
             string req = "SELECT motDePasse FROM Utilisateurs WHERE nom = '" + nom + "';";
-            listeJoueur = bdCDS.selection(req, 1, ref nombreRange);
+            listeJoueur = Globale.bdCDS.selection(req, 1, ref nombreRange);
             //Si le mot de passe est pareille, on désactive le compte
             if (txtMotDePasseSupp.Password == listeJoueur[0][0].ToString())
             {
                 string req2 = "UPDATE Utilisateurs SET estActive=false WHERE nom ='" + nom + "';";
-                bdCDS.modification(req2);
+                Globale.bdCDS.modification(req2);
                 Globale.j1.estConnecte = false;
                 menuJouer menuJ = new menuJouer();
                 menuJ.Show();

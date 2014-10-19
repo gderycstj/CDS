@@ -12,11 +12,15 @@ namespace CDS
     public static class Globale
     {
        public static Joueur j1;
+       public static string mode;
+       public static BdService bdCDS;
 
         static Globale()
         {
             Joueur j0 = new Joueur();
+            BdService bd = new BdService();
 
+            bdCDS = bd;
             j1 = j0;
         }
     }

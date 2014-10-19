@@ -30,7 +30,31 @@ namespace CDS
         void afficherGrilleJeu()
         {
             DéplacerJoueur();
+            chargerInfoBD();
         }
+
+        /// <summary>
+        /// Cette fonction va charger toutes les infos en bd et les rentrer dans les objets correspondant
+        /// </summary>
+        void chargerInfoBD() 
+        {
+            int nb = 0;
+            List<string>[] listePoursuivants;
+            List<string>[] listeObjets;
+
+
+            //Poursuivants
+            string req = "SELECT * FROM Poursuivants";
+            listePoursuivants = Globale.bdCDS.selection(req,6,ref nb);
+
+            //Objets
+            string req2 = "SELECT * FROM Objets";
+            listeObjets = Globale.bdCDS.selection(req, 6, ref nb);
+
+        
+        
+        }
+
 
         /// <summary>
         /// Fonction pour déplacer un joueur
