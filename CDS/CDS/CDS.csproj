@@ -76,11 +76,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Écran\jeuSurvie.xaml.cs">
+      <DependentUpon>jeuSurvie.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\menuGestionProfil.xaml.cs">
       <DependentUpon>menuGestionProfil.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Écran\Jeu.xaml.cs">
-      <DependentUpon>Jeu.xaml</DependentUpon>
+    <Compile Include="Écran\JeuNormal.xaml.cs">
+      <DependentUpon>JeuNormal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Écran\menuInscription.xaml.cs">
       <DependentUpon>menuInscription.xaml</DependentUpon>
@@ -88,11 +91,15 @@
     <Compile Include="Écran\menuSurvie.xaml.cs">
       <DependentUpon>menuSurvie.xaml</DependentUpon>
     </Compile>
+    <Page Include="Écran\jeuSurvie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Écran\menuGestionProfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Écran\Jeu.xaml">
+    <Page Include="Écran\JeuNormal.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

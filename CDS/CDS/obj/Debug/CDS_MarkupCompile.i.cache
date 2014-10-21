@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 K:\chambre de survie\CDS\CDS\Écran\App.xaml
-81079856912
+91488485684
 
-31529610355
+32-1783819574
 15345843343
-Écran\menuGestionProfil.xaml;Écran\Jeu.xaml;Écran\menuInscription.xaml;Écran\menuPrincipal.xaml;Écran\menuEditeur.xaml;Écran\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\menuSurvie.xaml;
+Écran\jeuSurvie.xaml;Écran\menuGestionProfil.xaml;Écran\JeuNormal.xaml;Écran\menuInscription.xaml;Écran\menuPrincipal.xaml;Écran\menuEditeur.xaml;Écran\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\menuSurvie.xaml;
 
 False
 

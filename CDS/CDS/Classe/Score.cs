@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CDS
 {
-    class Score
+    public class Score
     {
         private int score { get;set;}
         private string nom{get;set;}
@@ -51,6 +51,7 @@ namespace CDS
         {
 
         }
+
 
     }
 }

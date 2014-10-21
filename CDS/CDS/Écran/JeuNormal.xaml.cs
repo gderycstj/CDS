@@ -17,21 +17,16 @@ namespace CDS
     /// <summary>
     /// Logique d'interaction pour Jeu.xaml
     /// </summary>
-    public partial class Jeu : Window
+    public partial class JeuNormal : Window
     {
-        public Jeu()
+        
+        int tour = 1;
+        Partie partieNormal = new Partie();
+        public JeuNormal()
         {
             InitializeComponent();
-            if (Globale.mode == "Normal")
-            {
-                txtCScore.Visibility = Visibility.Visible;
-                txtTScore.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                txtCScore.Visibility = Visibility.Visible;
-                txtTScore.Visibility = Visibility.Visible;
-            }
+            txtCTour.Text = tour.ToString();
+            txtCScore.Text = partieNormal.GetScore().ToString();
             afficherGrilleJeu();
         }
         /// <summary>
@@ -40,31 +35,8 @@ namespace CDS
         void afficherGrilleJeu()
         {
             DéplacerJoueur();
-            chargerInfoBD();
+            //Déplacer Poursuivant
         }
-
-        /// <summary>
-        /// Cette fonction va charger toutes les infos en bd et les rentrer dans les objets correspondant
-        /// </summary>
-        void chargerInfoBD() 
-        {
-            int nb = 0;
-            List<string>[] listePoursuivants;
-            List<string>[] listeObjets;
-
-
-            //Poursuivants
-            string req = "SELECT * FROM Poursuivants";
-            listePoursuivants = Globale.bdCDS.selection(req,6,ref nb);
-
-            //Objets
-            string req2 = "SELECT * FROM Objets";
-            listeObjets = Globale.bdCDS.selection(req, 6, ref nb);
-
-        
-        
-        }
-
 
         /// <summary>
         /// Fonction pour déplacer un joueur
@@ -85,22 +57,31 @@ namespace CDS
         private void haut(object sender, RoutedEventArgs e)
         {
             deplacerHaut();
+            afficherInfo();
         }
 
         private void bas(object sender, RoutedEventArgs e)
         {
             deplacerBas();
+            afficherInfo();
         }
 
         private void droite(object sender, RoutedEventArgs e)
         {
             deplacerDroite();
+            afficherInfo();
         }
 
         private void gauche(object sender, RoutedEventArgs e)
         {
             deplacerGauche();
+            afficherInfo();
         }
+
+        private void btnPasserTour_Click(object sender, RoutedEventArgs e)
+        {
+            afficherInfo();
+        }     
 
         private void grilleJeuWindow_KeyDown(object sender, KeyEventArgs e)
         {
@@ -108,23 +89,26 @@ namespace CDS
               if(Keyboard.IsKeyDown(Key.Down))
               {
                   deplacerBas();
+                  afficherInfo();
               }
             //Vers le Haut
               if(Keyboard.IsKeyDown(Key.Up))
               {
                  deplacerHaut();
+                 afficherInfo();
               }
             //Vers la droite
             if(Keyboard.IsKeyDown(Key.Right))
             {
                 deplacerDroite();
+                afficherInfo();
             }
             //Vers la gauche
             if(Keyboard.IsKeyDown(Key.Left))
             {
                 deplacerGauche();
+                afficherInfo();
             }
-
             /*Bouton X(item)
             if(Keyboard.IsKeyDown(Key.X))
             {
@@ -138,12 +122,12 @@ namespace CDS
              
              
              }*/ 
-            /*Bouton Enter(passer le tour)
+            //Bouton Enter(passer le tour)
             if(Keyboard.IsKeyDown(Key.Enter))
             {
-
+                afficherInfo();
             }
-             */
+            
         }
             void deplacerDroite()
             {
@@ -163,7 +147,7 @@ namespace CDS
                 }
             }
 
-             void deplacerHaut()
+            void deplacerHaut()
             {
                 if (Globale.j1.positionJoueur.pos.posY > 1)
                 {
@@ -180,6 +164,12 @@ namespace CDS
                       DéplacerJoueur();
                   }
             }
-        
+
+            void afficherInfo()
+            {
+                tour += 1;
+                txtCTour.Text = tour.ToString();
+                txtCScore.Text = partieNormal.GetScore().ToString();
+            }
     }
 }

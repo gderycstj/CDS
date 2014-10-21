@@ -6,26 +6,28 @@ using System.Threading.Tasks;
 
 namespace CDS
 {
-    class Partie
+    public class Partie
     {
         GrilleDeJeu grille { get;set;}
-        Score score { get;set;}
-        Vie vie { get;set;}
+        int score { get;set;}
+        Vie vie { get; set; }
         Objectif objectif { get;set;}
         int qtyObjetsMax;
         Objet[] objets {get;set;}
         MemoireDEntite regleaparition { get;set;}
 
         public Partie()
-        {}
+        {   
+            score = 0;
+        }
 
-        public Partie(Vie viedepart, Objectif objParti,int maxobjets, List<Objet> objetDepart)
+        /*public Partie(Vie viedepart, Objectif objParti,int maxobjets, List<Objet> objetDepart)
         {
             vie=viedepart;
             objectif=objParti;
             qtyObjetsMax=maxobjets;
             objetDepart.CopyTo(objets);
-        }
+        }*/
 
         /// <summary>
         /// initialisation des param de base de la partie
@@ -33,38 +35,31 @@ namespace CDS
         /// Est lancer dès le départ de jouer
         /// </summary>
         /// <returns>Si tout fonctione et que l'on peu faire une partie</returns>
-        private bool initialiser()
+        public bool initialiser()
         {
-            if(/*Erreur*/false)
-            {
-                return false;
-            }
+            //Requête BD
+            //-------------------------------------------------------------------------------------------------------------
+            
+            //-------------------------------------------------------------------------------------------------------------
+
+            //Traitement Requête (Création d'objet)
+
+
+            //-------------------------------------------------------------------------------------------------------------
             return true;
         }
-
-
-        /// <summary>
-        /// Le jeu (une sorte de sous-main)
-        /// </summary>
-        /// <returns>retourne si la partie s'est effectué</returns>
-        public bool jouer()
-        {
-            if(initialiser())
-            {
-            
-               return true;
-            }
-
-            return false;
-        }
-
-
         bool finDeTour()
         {
             grille.finDeTour();
             vie.finDeTour();
             objectif.finDeTour();
             return true;
+        }
+
+        public int GetScore(){
+            int nouvScore;
+            nouvScore = score;
+            return nouvScore;
         }
     }
 }
