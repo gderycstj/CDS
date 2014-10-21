@@ -83,10 +83,10 @@ namespace CDS
 
         private void btnDemarrer_Click(object sender, RoutedEventArgs e)
         {
+              Globale.mode = cboChoixMode.SelectedItem.ToString();
             if(cboChoixMode.SelectedItem.ToString() == "Survie")
             {
                 menuSurvie menuS = new menuSurvie();
-                Globale.mode = "Survie";
                 menuS.Show();
                 Close();
             }

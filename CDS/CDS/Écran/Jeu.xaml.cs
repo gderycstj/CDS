@@ -22,6 +22,16 @@ namespace CDS
         public Jeu()
         {
             InitializeComponent();
+            if (Globale.mode == "Normal")
+            {
+                txtCScore.Visibility = Visibility.Visible;
+                txtTScore.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                txtCScore.Visibility = Visibility.Visible;
+                txtTScore.Visibility = Visibility.Visible;
+            }
             afficherGrilleJeu();
         }
         /// <summary>

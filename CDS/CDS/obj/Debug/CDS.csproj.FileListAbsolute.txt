@@ -64,7 +64,6 @@ K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Jeu.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuGestionProfil.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuGestionProfil.g.cs
-K:\chambre de survie\CDS\CDS\bin\Debug\MySql.Data.dll
 C:\Users\Admin\Desktop\CDS\CDS\CDS\bin\Debug\CDS.exe.config
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\CDS.exe
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\CDS.pdb
@@ -119,6 +118,3 @@ C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cach
 C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.exe
 C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.pdb
 C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
-D:\CDS\CDS\CDS\bin\Debug\CDS.exe.config
-D:\CDS\CDS\CDS\obj\Debug\CDS.exe
-D:\CDS\CDS\CDS\obj\Debug\CDS.pdb
