@@ -45,3 +45,34 @@ VALUES
  ,'Survie'
 
 );
+
+INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,numNiveau)
+VALUES((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Survie')
+	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+	   ,0);
+};
+
+INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rareté)
+VALUES
+((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Survie'))
+,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'carré vert')	
+,5
+,5
+);
+
+INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rareté)
+VALUES
+((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Survie'))
+,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'carré bleu')	
+,5
+,5
+);
+
+INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rareté)
+VALUES
+((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Survie'))
+,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'triangle')	
+,15
+,25
+);
+
