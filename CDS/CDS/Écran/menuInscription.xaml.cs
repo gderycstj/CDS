@@ -57,7 +57,7 @@ namespace CDS
                 string Req = "INSERT INTO Utilisateurs(idApparence,nom,motDePasse)VALUES ((SELECT idApparence FROM Apparences WHERE image = 'test.pnj'),'" + txtUtilisateur.Text + "','" + txtMotDePasse.Password + "');";
                 int id = Globale.bdCDS.Insertion(Req);
                 Globale.bdCDS.Insertion("COMMIT;");
-                Globale.j1.setJoueur(txtUtilisateur.Text, id, "test.png", true);
+                Globale.j1.setJoueur(txtUtilisateur.Text, id, "/image/perso.png", true);
                 menuJouer mj = new menuJouer();
                 mj.Show();
                 Close();

@@ -12,12 +12,35 @@ namespace CDS
         protected int age { get; set; }
         protected string urlImage { get; set; }
         protected int direction { get; set; }//1 à 4
+        public Case positionEntite { get; set; }
 		
 		 protected Entite(string listeC,string image) 
         {
+            Random lesPositions = new Random();
+            Random lesDirections = new Random();
             listeCMD=listeC;
             urlImage=image;
-            direction = 0;
+
+            direction = lesDirections.Next(1, 5);
+            switch (direction)
+            {
+                case 1:
+                    positionEntite.pos.posX = lesPositions.Next(1, 10);
+                    positionEntite.pos.posY = 0;
+                break;
+                case 2:
+                    positionEntite.pos.posX = 10;
+                    positionEntite.pos.posY = lesPositions.Next(1,10);
+                break;
+                case 3:
+                    positionEntite.pos.posX = lesPositions.Next(1,10);
+                    positionEntite.pos.posY = 10;
+                break;
+                case 4:
+                    positionEntite.pos.posX = 0;
+                    positionEntite.pos.posY = lesPositions.Next(1,10);
+                break;
+            }
             age = 0;
         }
 		
@@ -102,12 +125,17 @@ namespace CDS
         }
 
         /// <summary>
-        /// 
+        /// Valide si l'entité est dans une zone interdite (rouge)
         /// </summary>
         /// <returns></returns>
         protected bool inBoundary()
         {
-            return false;
+            if(positionEntite.pos.posX == 0 || positionEntite.pos.posX == 10 || positionEntite.pos.posY == 0 || positionEntite.pos.posY == 10)
+            {
+                return false;
+            }
+            else
+            {return true;}
         }
 
         /// <summary>
@@ -116,7 +144,12 @@ namespace CDS
         /// <returns></returns>
         protected bool verification()
         {
-            return true;
+            if(positionEntite.pos.posX == Globale.j1.positionJoueur.pos.posX && positionEntite.pos.posY == Globale.j1.positionJoueur.pos.posY)
+            {
+                //L'entité est sur la case du joueur
+                return true;
+            }
+            return false;
         }
 
     }

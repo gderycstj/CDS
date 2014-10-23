@@ -46,11 +46,11 @@ namespace CDS
             txtErreur.Text ="";
             List<string>[] listeJoueur;
 
-            string req = "SELECT * FROM Utilisateurs WHERE nom = '" + txtNomUsager.Text + "' AND motDePasse = '" + txtMotDePasse.Password + "';";
+            string req = "SELECT nom,idUtilisateur,image,estActive FROM Utilisateurs u INNER JOIN apparences p ON p.idApparence = u.idApparence WHERE nom = '" + txtNomUsager.Text + "' AND motDePasse = '" + txtMotDePasse.Password + "';";
             int nombreRange = 0;
 
             //va sélectionner l'identifiant  qui c'est connecté
-            listeJoueur = Globale.bdCDS.selection(req, 5, ref nombreRange);
+            listeJoueur = Globale.bdCDS.selection(req, 4, ref nombreRange);
 
 
             //si le nombre de rangé = 0, ça veut dire que la requête n'a rien retourné, donc que l'utilisateur existe pas
@@ -60,7 +60,7 @@ namespace CDS
                 txtNomUsager.Clear();
                 txtMotDePasse.Clear();
             }
-            if(listeJoueur[0][4].ToString() == "False")
+            if(listeJoueur[0][3].ToString() == "False")
             {
                 txtErreur.Text = "Votre nom d'utilisateur ou votre mot de passe est incorrect";
                 txtNomUsager.Clear();
@@ -69,7 +69,7 @@ namespace CDS
             //Sinon, il va rentrer le contenu de la liste dans un joueur et va afficher l'interface connecté
             else
             {
-                Globale.j1.setJoueur(listeJoueur[0][2], Convert.ToInt32(listeJoueur[0][0]), listeJoueur[0][1], true);
+                Globale.j1.setJoueur(listeJoueur[0][0], Convert.ToInt32(listeJoueur[0][1]), listeJoueur[0][2],true);
                 Connect();
             }
         }

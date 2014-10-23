@@ -125,6 +125,8 @@ namespace CDS
             txtMotDePasseConfirm.Visibility = Visibility.Visible;
             txtConfirmMotPasse.Visibility = Visibility.Visible;
             txtErreur.Visibility = Visibility.Visible;
+            txtAncienMdp.Visibility = Visibility.Visible;
+            txtAncienMdpTxt.Visibility = Visibility.Visible;
 
             //Désactivation
             btnConfirmerSupp.Visibility = Visibility.Hidden;
@@ -156,6 +158,8 @@ namespace CDS
             txtMotDePasseConfirm.Visibility = Visibility.Hidden;
             txtConfirmMotPasse.Visibility = Visibility.Hidden;
             txtErreur.Visibility = Visibility.Hidden;
+            txtAncienMdp.Visibility = Visibility.Hidden;
+            txtAncienMdpTxt.Visibility = Visibility.Hidden;
         }
     }
 }

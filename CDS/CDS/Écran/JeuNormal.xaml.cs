@@ -50,6 +50,10 @@ namespace CDS
             Grid.SetColumn(img, Globale.j1.positionJoueur.pos.posX);
             Grid.SetRow(img, Globale.j1.positionJoueur.pos.posY);
             grillePrincipale.Children.Add(img);
+            if(tour == 1 && Globale.j1.positionJoueur.pos.posX == 5 && Globale.j1.positionJoueur.pos.posY == 5)
+            {
+                tour -=1;
+            }
             tour +=1;
         }
         
