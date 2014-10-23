@@ -17,6 +17,8 @@ namespace CDS
         List<Poursuivant> PoursuivantDansLaPartie;
         List<Objet> objetDansLaPartie;
 
+        List<Entite> listeEntite;
+
         public Partie()
         {   
             score = 0;
@@ -50,8 +52,23 @@ namespace CDS
             //-------------------------------------------------------------------------------------------------------------
             return true;
         }
+
+
+        private void action()
+        {
+            foreach(Entite E in listeEntite)
+            {
+                E.action();
+            }
+        }
+
         private bool finDeTour()
         {
+            foreach (Entite E in listeEntite)
+            {
+                E.finDetour();
+            }
+
             bool validation = true;
             if(!grille.finDeTour())
             {
