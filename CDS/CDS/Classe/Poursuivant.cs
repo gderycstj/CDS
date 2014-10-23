@@ -10,6 +10,17 @@ namespace CDS
     {
         List<Effet> listeEffet;
 
+		
+        /// <summary>
+        /// Constructeur d'un poursuivant
+        /// </summary>
+        /// <param name="listeE">Liste d'effet qu'un poursuivant peut avoir</param>
+        /// <param name="listC">liste de commande du poursuivant</param>
+        /// <param name="url">url de l'image</param>
+        public Poursuivant(string listC,string url):base(listC,url)
+        {
+
+        }
 
         //lire la liste CMD et agire
         /// <summary>

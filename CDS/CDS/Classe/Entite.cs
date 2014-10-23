@@ -12,7 +12,13 @@ namespace CDS
         protected int age { get; set; }
         protected string urlImage { get; set; }
         protected int direction { get; set; }//1 à 4
-
+		
+		 protected Entite(string listeC,string image) 
+        {
+            direction = 0;
+            age = 0;
+        }
+		
         //lire la liste CMD et agire
         public abstract bool action();
         //détruire l'entité et faire les modification associé
