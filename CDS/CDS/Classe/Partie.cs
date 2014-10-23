@@ -13,12 +13,14 @@ namespace CDS
         Vie vie { get; set; }
         Objectif objectif { get;set;}
         int qtyObjetsMax;
-        Objet[] objets {get;set;}
-        MemoireDEntite regleaparition { get;set;}
+        List<Poursuivant> PoursuivantDansLaPartie;
+        List<Objet> objetDansLaPartie;
 
         public Partie()
         {   
             score = 0;
+            PoursuivantDansLaPartie = new List<Poursuivant>();
+            objetDansLaPartie = new List<Objet>();
         }
 
         /*public Partie(Vie viedepart, Objectif objParti,int maxobjets, List<Objet> objetDepart)
@@ -43,8 +45,6 @@ namespace CDS
             //-------------------------------------------------------------------------------------------------------------
 
             //Traitement Requête (Création d'objet)
-
-
             //-------------------------------------------------------------------------------------------------------------
             return true;
         }

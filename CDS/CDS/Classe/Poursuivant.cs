@@ -9,6 +9,8 @@ namespace CDS
     class Poursuivant:Entite
     {
         List<Effet> listeEffet;
+		int valeur { get; set; }
+        int rareté { get; set; }
 
 		
         /// <summary>

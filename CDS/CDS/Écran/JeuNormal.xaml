@@ -75,7 +75,7 @@
         <TextBlock x:Name="txtTItem" HorizontalAlignment="Left" Height="41" Margin="832,475,0,0" TextWrapping="Wrap" Text="Items" VerticalAlignment="Top" Width="67" Foreground="#FF4B6348" FontFamily="Agency FB" FontSize="36" RenderTransformOrigin="0.478,0.537"/>
         <Ellipse HorizontalAlignment="Left" Height="82" Margin="824,553,0,0" Stroke="#FF4B634D" VerticalAlignment="Top" Width="112" Fill="#FF4B634D"/>
         <Ellipse HorizontalAlignment="Left" Height="82" Margin="954,553,0,0" Stroke="#FF4B634D" VerticalAlignment="Top" Width="112" Fill="#FF4B634D"/>
-        <Button x:Name="item1" Content="" HorizontalAlignment="Left" Height="53" Margin="841,568,0,0" VerticalAlignment="Top" Width="78" Background="{x:Null}" BorderBrush="{x:Null}"/>
-        <Button x:Name="item2" Content="" HorizontalAlignment="Left" Height="53" Margin="970,568,0,0" VerticalAlignment="Top" Width="78" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <Button x:Name="item1" Content="" HorizontalAlignment="Left" Height="53" Margin="841,568,0,0" VerticalAlignment="Top" Width="78" Background="{x:Null}" BorderBrush="{x:Null}" Focusable="False"/>
+        <Button x:Name="item2" Content="" HorizontalAlignment="Left" Height="53" Margin="970,568,0,0" VerticalAlignment="Top" Width="78" Background="{x:Null}" BorderBrush="{x:Null}" Focusable="False"/>
     </Grid>
 </Window>

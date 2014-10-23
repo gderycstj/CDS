@@ -8,6 +8,9 @@ namespace CDS
 {
     class Objet:Entite
     {
+        int valeur { get; set; }
+        int rareté { get; set; }
+
         //lire la liste CMD et agire
         public override bool action()
         {
