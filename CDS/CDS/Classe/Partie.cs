@@ -52,7 +52,28 @@ namespace CDS
             //-------------------------------------------------------------------------------------------------------------
             return true;
         }
+		  public void chargerEnnemie(int numNiveau)
+        {
+            //trouver le niveau utilisé présentement
+            int nbRange = 0;
 
+            string req = "SELECT nom,valeur,rareté,valeurPoint,listeCMD,image FROM Niveaux as n " +
+                         "INNER JOIN NiveauxPoursuivants as np ON np.idNiveau = n.idNiveau " + 
+                         "INNER JOIN Poursuivants as p ON np.idPoursuivant = p.idPoursuivant WHERE n.idModeDeJeu = " +
+                         "INNER JOIN apparences a ON a.idApparence = p.idApparence" +
+                         "(SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = '" + Globale.mode + "' AND numNiveau = " + numNiveau + ");";
+
+            List<string>[] unNiveau;
+
+            unNiveau = Globale.bdCDS.selection(req,1,ref nbRange);
+
+            for(int i = 0;i<unNiveau.Length;i++)
+            {
+                PoursuivantDansLaPartie.Add(new Poursuivant(unNiveau[i][4],unNiveau[i][5]));
+
+            }
+        
+         }
 
         private void action()
         {
