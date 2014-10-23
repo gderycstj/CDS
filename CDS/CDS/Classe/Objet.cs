@@ -10,6 +10,7 @@ namespace CDS
     {
         int valeur { get; set; }
         int rareté { get; set; }
+        Effet unEffet;
 
 		/// <summary>
         /// Constructeur d'un objet
@@ -19,9 +20,9 @@ namespace CDS
         /// <param name="url">url de l'image</param>
         /// <param name="Pvaleur">Puissance de l'objet</param>
         /// <param name="Prareté">Rareté de l'objet(selon sa puissance)</param>
-        public Objet(string listeE,int Pvaleur,int Prareté,string listC,string url):base(listC,url)
+        public Objet(Effet E,int Pvaleur,int Prareté,string listC,string url):base(listC,url)
         {
-            listeEffet = new List<Effet>();
+            unEffet = E;
             valeur = Pvaleur;
             rareté = Prareté;
         }
