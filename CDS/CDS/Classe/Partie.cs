@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace CDS
 {
@@ -45,15 +46,39 @@ namespace CDS
             //-------------------------------------------------------------------------------------------------------------
 
             //Traitement Requête (Création d'objet)
+
             //-------------------------------------------------------------------------------------------------------------
             return true;
         }
-        bool finDeTour()
+        private bool finDeTour()
         {
-            grille.finDeTour();
-            vie.finDeTour();
-            objectif.finDeTour();
-            return true;
+            bool validation = true;
+            if(!grille.finDeTour())
+            {
+                validation = false;
+            }
+            if(!vie.finDeTour())
+            {
+                validation = false;
+            }
+            if(objectif.finDeTour())
+            {
+                validation = false;
+            }
+
+            if(!validation)
+            {return false;}
+
+            else { return true;}
+        }
+
+        public void validationObjectifPartieNormal()
+        {
+            if(!finDeTour())
+            {
+                //Appel de l'écran de fin de partie
+            }
+
         }
 
         public int GetScore(){

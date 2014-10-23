@@ -108,19 +108,19 @@ namespace CDS
                 deplacerGauche();
                 afficherInfo();
             }
-            /*Bouton X(item)
+            //Bouton X(item)
             if(Keyboard.IsKeyDown(Key.X))
             {
                 
             }
-            */
+            
 
-            /*Bouton Z(item)
-             if(Keyboard.IsKeyDown(Key.Z))
-              {
+            //Bouton Z(item)
+            if(Keyboard.IsKeyDown(Key.Z))
+            {
              
              
-             }*/
+            }
             //Bouton Enter(passer le tour)
             if (Keyboard.IsKeyDown(Key.Enter))
             {

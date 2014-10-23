@@ -8,6 +8,10 @@ namespace CDS
 {
     class Effet:Entite
     {
+		public Effet(string listC,string url):base(listC,url)
+        {
+        }
+		
         /// <summary>
         /// lire la liste CMD et agire
         /// </summary>

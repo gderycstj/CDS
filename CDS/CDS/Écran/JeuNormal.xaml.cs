@@ -50,10 +50,10 @@ namespace CDS
             Grid.SetColumn(img, Globale.j1.positionJoueur.pos.posX);
             Grid.SetRow(img, Globale.j1.positionJoueur.pos.posY);
             grillePrincipale.Children.Add(img);
-        
+            tour +=1;
         }
         
-        //fonctionde déplacement pour les boutons, haut veux dire déplacement haut... fait aussi les validations pour pas dépasser la grille
+        //fonction de déplacement pour les boutons, haut veux dire déplacement haut... fait aussi les validations pour pas dépasser la grille
         private void haut(object sender, RoutedEventArgs e)
         {
             deplacerHaut();
@@ -80,6 +80,7 @@ namespace CDS
 
         private void btnPasserTour_Click(object sender, RoutedEventArgs e)
         {
+            tour += 1;
             afficherInfo();
         }     
 
@@ -109,22 +110,23 @@ namespace CDS
                 deplacerGauche();
                 afficherInfo();
             }
-            /*Bouton X(item)
+
+            //Bouton X(item)
             if(Keyboard.IsKeyDown(Key.X))
             {
                 
             }
-            */
+            
 
-            /*Bouton Z(item)
-             if(Keyboard.IsKeyDown(Key.Z))
-              {
-             
-             
-             }*/ 
+            //Bouton Z(item)
+            if(Keyboard.IsKeyDown(Key.Z))
+            {
+               
+            } 
             //Bouton Enter(passer le tour)
             if(Keyboard.IsKeyDown(Key.Enter))
             {
+                tour += 1;
                 afficherInfo();
             }
             
@@ -163,11 +165,11 @@ namespace CDS
                       Globale.j1.positionJoueur.pos.posY = Globale.j1.positionJoueur.pos.posY + 1;
                       DéplacerJoueur();
                   }
+                  
             }
 
             void afficherInfo()
             {
-                tour += 1;
                 txtCTour.Text = tour.ToString();
                 txtCScore.Text = partieNormal.GetScore().ToString();
             }
