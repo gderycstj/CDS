@@ -68,18 +68,18 @@ namespace CDS
 
 
 
-        private void lire(char[] CMD)
+        private bool lire(char[] CMD)
         {
             string newCMD=CMD.ToString();
 
-            lire(newCMD);
+            return lire(newCMD);
         }
 
         /// <summary>
         /// Lit la chaine de commande
         /// </summary>
         /// <param name="CMD">la chaine de commande</param>
-        private void lire(string CMD)
+        private bool lire(string CMD)
         {
             char lettre;
             char lettre2;
@@ -441,6 +441,7 @@ namespace CDS
                         break;
                 }
             }
+            return false;
         }
 
        

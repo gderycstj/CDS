@@ -8,6 +8,7 @@ namespace CDS
 {
     class Effet:Entite
     {
+        List<Effet> listeEffet;
 		public Effet(string listC,string url):base(listC,url)
         {
         }
@@ -51,10 +52,15 @@ namespace CDS
             return true;
         }
 
-            
+        private bool lire(char[] CMD)
+        {
+            string newCMD=CMD.ToString();
+
+            return lire(newCMD);
+        }
 
 
-        private void lire(string CMD)
+        private bool lire(string CMD)
         {
             char lettre;
             char lettre2;
@@ -71,8 +77,6 @@ namespace CDS
             //Lecture de CMD
             while(CMD!="")
             {
-
-               
 
                lettre= CMD[iLecture];
                iLecture++;
@@ -415,11 +419,8 @@ namespace CDS
                        break;
 
                 }
-
-
-
-
-            return true;
+        }
+            return false;
         }
        
 
