@@ -441,78 +441,7 @@ namespace CDS
             }
         }
 
-        /// <summary>
-        /// WIP mouvement vers le haut
-        /// </summary>
-        void mouvementNord()
-        {
-
-        }
-
-        /// <summary>
-        /// WIP mouvement vers le bas
-        /// </summary>
-        void mouvementSud()
-        {
-
-        }
-
-        /// <summary>
-        /// WIP mouvement vers la droite
-        /// </summary>
-        void mouvementEst()
-        {
-
-        }
-
-        /// <summary>
-        /// WIP mouvement vers la gauche
-        /// </summary>
-        void mouvementOuest()
-        {
-
-        }
-
-        /// <summary>
-        /// Teste si le joueur est au nord de l'entite
-        /// </summary>
-        /// <returns>Si le joueur est au nord de l'entite</returns>
-        bool ifJoueurNord()
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// Teste si le joueur est au sud de l'entite
-        /// </summary>
-        /// <returns>Si le joueur est au sud de l'entite</returns>
-        bool ifJoueurSud()
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// Teste si le joueur est à l'est de l'entite
-        /// </summary>
-        /// <returns>Si le joueur est à l'est de l'entite</returns>
-        bool ifJoueurEst()
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// Teste si le joueur est à l'ouest de l'entite
-        /// </summary>
-        /// <returns>Si le joueur est à l'ouest de l'entite</returns>
-        bool ifJoueurOuest()
-        {
-            return true;
-        }
-
-        bool ifJoueurProche()
-        {
-            return true;
-        }
+       
 
         //détruire l'entité et faire les modification associé
         public override bool mort()

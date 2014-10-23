@@ -14,6 +14,7 @@ namespace CDS
         //lire la liste CMD et agire
         public override bool action()
         {
+            // pas d'action
             return true;
         }
         //détruire l'entité et faire les modification associé
