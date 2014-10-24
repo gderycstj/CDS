@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\projet\CDS\CDS\obj\Debug\
+D:\CDS\CDS\CDS\obj\Debug\
 CDS
 none
 false
 DEBUG;TRACE
-D:\projet\CDS\CDS\Écran\App.xaml
+D:\CDS\CDS\CDS\Écran\App.xaml
 91488485684
 
 27713555547
-151835489943
+15-893456241
 Écran\jeuSurvie.xaml;Écran\menuGestionProfil.xaml;Écran\JeuNormal.xaml;Écran\menuInscription.xaml;Écran\menuPrincipal.xaml;Écran\menuEditeur.xaml;Écran\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\menuSurvie.xaml;
 
 False

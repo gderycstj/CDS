@@ -25,6 +25,13 @@ namespace CDS
             unEffet = E;
             valeur = Pvaleur;
             rareté = Prareté;
+
+            //Position Random
+            positionEntite = new Case();
+            Random randomX = new Random();
+            Random randomY = new Random();
+            positionEntite.pos.posX = randomX.Next(1,10);
+            positionEntite.pos.posY = randomY.Next(1,10);
         }
 		
         //lire la liste CMD et agire

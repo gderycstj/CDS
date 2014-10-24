@@ -13,6 +13,7 @@ namespace CDS
         List<Effet> listeEffet;
 		private int valeur { get; set; }
         public int rareté { get; set; }
+        public Case positionEntite { get; set; }
 
 		
         /// <summary>
@@ -26,6 +27,31 @@ namespace CDS
             listeEffet = new List<Effet>();
             valeur = Pvaleur;
             rareté = Prareté;
+
+            positionEntite = new Case();
+            Random lesPositions = new Random();
+            Random lesDirections = new Random();
+
+            direction = lesDirections.Next(1, 5);
+            switch (direction)
+            {
+                case 1:
+                    positionEntite.pos.posX = lesPositions.Next(1, 10);
+                    positionEntite.pos.posY = 0;
+                    break;
+                case 2:
+                    positionEntite.pos.posX = 10;
+                    positionEntite.pos.posY = lesPositions.Next(1, 10);
+                    break;
+                case 3:
+                    positionEntite.pos.posX = lesPositions.Next(1, 10);
+                    positionEntite.pos.posY = 10;
+                    break;
+                case 4:
+                    positionEntite.pos.posX = 0;
+                    positionEntite.pos.posY = lesPositions.Next(1, 10);
+                    break;
+            }
         }
 
         //lire la liste CMD et agire

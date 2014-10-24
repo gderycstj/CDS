@@ -18,33 +18,9 @@ namespace CDS
 		
 		 protected Entite(string listeC,string image) 
         {
-            Random lesPositions = new Random();
-            Random lesDirections = new Random();
             positionEntite = new Case();
-
             listeCMD=listeC;
             urlImage=image;
-
-            direction = lesDirections.Next(1, 5);
-            switch (direction)
-            {
-                case 1:
-                    positionEntite.pos.posX = lesPositions.Next(1, 10);
-                    positionEntite.pos.posY = 0;
-                break;
-                case 2:
-                    positionEntite.pos.posX = 10;
-                    positionEntite.pos.posY = lesPositions.Next(1,10);
-                break;
-                case 3:
-                    positionEntite.pos.posX = lesPositions.Next(1,10);
-                    positionEntite.pos.posY = 10;
-                break;
-                case 4:
-                    positionEntite.pos.posX = 0;
-                    positionEntite.pos.posY = lesPositions.Next(1,10);
-                break;
-            }
             age = 0;
         }
 
