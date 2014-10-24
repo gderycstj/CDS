@@ -18,6 +18,8 @@ namespace CDS
         {
             Random lesPositions = new Random();
             Random lesDirections = new Random();
+            positionEntite = new Case();
+
             listeCMD=listeC;
             urlImage=image;
 

@@ -9,8 +9,8 @@ namespace CDS
     class Poursuivant:Entite
     {
         List<Effet> listeEffet;
-		int valeur { get; set; }
-        int rareté { get; set; }
+		private int valeur { get; set; }
+        public int rareté { get; set; }
 
 		
         /// <summary>
@@ -19,7 +19,7 @@ namespace CDS
         /// <param name="listeE">Liste d'effet qu'un poursuivant peut avoir</param>
         /// <param name="listC">liste de commande du poursuivant</param>
         /// <param name="url">url de l'image</param>
-        public Poursuivant(string listeE,int Pvaleur,int Prareté,string listC,string url):base(listC,url)
+        public Poursuivant(int Pvaleur,int Prareté,string listC,string url):base(listC,url)
         {
             listeEffet = new List<Effet>();
             valeur = Pvaleur;

@@ -11,7 +11,8 @@ namespace CDS
        public Position pos;
 
        public Case()
-        {
+       {
+            pos = new Position();
             pos.set(0,0);
         }
 

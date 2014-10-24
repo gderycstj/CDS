@@ -52,24 +52,29 @@ namespace CDS
             //-------------------------------------------------------------------------------------------------------------
             return true;
         }
-		  public void chargerEnnemie(int numNiveau)
+        /// <summary>
+        /// Va charger tous les énnemis dans la liste
+        /// </summary>
+        /// <param name="numNiveau"></param>
+		public void chargerEnnemi(int numNiveau)
         {
             //trouver le niveau utilisé présentement
             int nbRange = 0;
 
             string req = "SELECT nom,valeur,rareté,valeurPoint,listeCMD,image FROM Niveaux as n " +
                          "INNER JOIN NiveauxPoursuivants as np ON np.idNiveau = n.idNiveau " + 
-                         "INNER JOIN Poursuivants as p ON np.idPoursuivant = p.idPoursuivant WHERE n.idModeDeJeu = " +
-                         "INNER JOIN apparences a ON a.idApparence = p.idApparence" +
+                         "INNER JOIN Poursuivants as p ON np.idPoursuivant = p.idPoursuivant "+
+                         "INNER JOIN Apparences a ON a.idApparence = p.idApparence " +
+                         "WHERE n.idModeDeJeu = " +
                          "(SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = '" + Globale.mode + "' AND numNiveau = " + numNiveau + ");";
 
             List<string>[] unNiveau;
 
-            unNiveau = Globale.bdCDS.selection(req,1,ref nbRange);
+            unNiveau = Globale.bdCDS.selection(req,6,ref nbRange);
 
             for(int i = 0;i<unNiveau.Length;i++)
             {
-                PoursuivantDansLaPartie.Add(new Poursuivant(unNiveau[i][4],unNiveau[i][5]));
+                PoursuivantDansLaPartie.Add(new Poursuivant(Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][4], unNiveau[i][5]));
 
             }
         
