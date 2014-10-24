@@ -412,11 +412,18 @@ namespace CDS
 
                        break;
 
-                   //=====Check=====
-                   case 'C':
-                       //vérifie si le joueur est là, s'il ne marcher pas sur du feu, s'il active une mine, etc.
-                       //bouger sans faire de check, c'est de la téléportation
-                       break;
+                    //Degat
+                    case 'D': break;
+                    //Soin    
+                    case 'S': break;
+                    //Armure
+                    case 'A': break;
+                    //Vitesse
+                    case 'V': break;
+                    //Pousse
+                    case 'P': break;
+                    //Invincibilité
+                    case '*': break;
 
                 }
         }
