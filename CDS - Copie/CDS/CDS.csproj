@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22FE2787-5D8C-4B75-A7E5-2131B4C11624}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CDS</RootNamespace>
+    <AssemblyName>CDS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="Écran\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Classe\bdService.cs" />
+    <Compile Include="Classe\Case.cs" />
+    <Compile Include="Classe\Effet.cs" />
+    <Compile Include="Classe\Entite.cs" />
+    <Compile Include="Classe\Globale.cs" />
+    <Compile Include="Classe\GrilleDeJeu.cs" />
+    <Compile Include="Classe\Joueur.cs" />
+    <Compile Include="Classe\Objectif.cs" />
+    <Compile Include="Classe\Objet.cs" />
+    <Compile Include="Classe\Partie.cs" />
+    <Compile Include="Classe\Position.cs" />
+    <Compile Include="Classe\Poursuivant.cs" />
+    <Compile Include="Classe\Score.cs" />
+    <Compile Include="Classe\Vie.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\jeuSurvie.xaml.cs">
+      <DependentUpon>jeuSurvie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\menuGestionProfil.xaml.cs">
+      <DependentUpon>menuGestionProfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\JeuNormal.xaml.cs">
+      <DependentUpon>JeuNormal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\menuInscription.xaml.cs">
+      <DependentUpon>menuInscription.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\menuSurvie.xaml.cs">
+      <DependentUpon>menuSurvie.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Écran\jeuSurvie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Écran\menuGestionProfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Écran\JeuNormal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\menuInscription.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Écran\menuPrincipal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Écran\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Écran\menuPrincipal.xaml.cs">
+      <DependentUpon>menuPrincipal.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Écran\menuEditeur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Écran\menuInstruction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Écran\menuJouer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Écran\menuSurvie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Écran\menuEditeur.xaml.cs">
+      <DependentUpon>menuEditeur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\menuInstruction.xaml.cs">
+      <DependentUpon>menuInstruction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\menuJouer.xaml.cs">
+      <DependentUpon>menuJouer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Broken Type.ttf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Écran\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\cds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\cliqueMouv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\clavierMouv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\clavierObjet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\cliqueObjet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\bombe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\sprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\potionVie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\perso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\grille.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\coeurBouclier.png" />
+    <Resource Include="Image\coeurPlein.png" />
+    <Resource Include="Image\coeurVide.png" />
+    <Resource Include="Image\flecheBas.png" />
+    <Resource Include="Image\flecheDroite.png" />
+    <Resource Include="Image\flecheGauche.png" />
+    <Resource Include="Image\flecheHaut.png" />
+    <Resource Include="Image\rond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\carreBleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\carreVert.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
