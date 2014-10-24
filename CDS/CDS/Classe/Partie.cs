@@ -77,6 +77,10 @@ namespace CDS
             for(int i = 0;i<unNiveau.Length;i++)
             {
                 PoursuivantDansLaPartie.Add(new Poursuivant(Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][4], unNiveau[i][5]));
+                if(i != unNiveau.Length-1)
+                { 
+                    System.Threading.Thread.Sleep(150);
+                }
 
             }
         

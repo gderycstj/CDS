@@ -27,12 +27,10 @@ namespace CDS
             listeEffet = new List<Effet>();
             valeur = Pvaleur;
             rareté = Prareté;
-
             positionEntite = new Case();
             Random lesPositions = new Random();
-            Random lesDirections = new Random();
 
-            direction = lesDirections.Next(1, 5);
+            direction = lesPositions.Next(1, 5);
             switch (direction)
             {
                 case 1:
@@ -499,6 +497,11 @@ namespace CDS
         {
             age++;
             return true;
+        }
+
+        public override string getType()
+        {
+            return "Poursuivant";
         }
 
     }

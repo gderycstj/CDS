@@ -52,5 +52,10 @@ namespace CDS
             return true;
         }
 
+        public override string getType()
+        {
+            return "Objet";
+        }
+
     }
 }

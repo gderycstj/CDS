@@ -124,13 +124,24 @@ namespace CDS
         /// <returns></returns>
         protected bool verification()
         {
+            //Le joueur est sur la case d'une entité
             if(positionEntite.pos.posX == Globale.j1.positionJoueur.pos.posX && positionEntite.pos.posY == Globale.j1.positionJoueur.pos.posY)
             {
-                //L'entité est sur la case du joueur
-                return true;
+                if(getType() == "Poursuivant")
+                {
+                    //Poursuivant meurt(disparait), joueur -1 vie , aucun point de score
+                    return true;
+                }
+                if(getType() == "Objet")
+                {
+                    //Ramasse l'objet ou l'utilise
+                    return true;
+                }
             }
             return false;
         }
+
+        public abstract string getType();
 
     }
 }

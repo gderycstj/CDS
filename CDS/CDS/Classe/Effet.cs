@@ -8,7 +8,7 @@ namespace CDS
 {
     class Effet:Entite
     {
-        List<Effet> listeEffet;
+           List<Effet> listeEffet;
 		public Effet(string listC,string url):base(listC,url)
         {
         }
@@ -436,6 +436,10 @@ namespace CDS
         {
             age++;
             return true;
+        }
+
+        public override string getType(){
+            return "Effet";
         }
 
     }

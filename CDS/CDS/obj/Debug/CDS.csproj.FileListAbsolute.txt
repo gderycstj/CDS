@@ -178,3 +178,32 @@ D:\CDS\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
 D:\CDS\CDS\CDS\obj\Debug\CDS.g.resources
 D:\CDS\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 D:\CDS\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
+G:\chambre de survie\CDS\CDS\CDS\bin\Debug\CDS.exe.config
+G:\chambre de survie\CDS\CDS\CDS\bin\Debug\CDS.exe
+G:\chambre de survie\CDS\CDS\CDS\bin\Debug\CDS.pdb
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\jeuSurvie.baml
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuGestionProfil.baml
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\JeuNormal.baml
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuInscription.baml
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuPrincipal.baml
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuEditeur.baml
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuInstruction.baml
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuJouer.baml
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuSurvie.baml
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\jeuSurvie.g.cs
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuGestionProfil.g.cs
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\JeuNormal.g.cs
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuInscription.g.cs
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuPrincipal.g.cs
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuEditeur.g.cs
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuInstruction.g.cs
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuJouer.g.cs
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\menuSurvie.g.cs
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\Écran\App.g.cs
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\CDS.g.resources
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\CDS.exe
+G:\chambre de survie\CDS\CDS\CDS\obj\Debug\CDS.pdb
