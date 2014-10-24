@@ -1,4 +1,4 @@
-
+DROP TABLE IF EXISTS ObjetsEffets;
 DROP TABLE IF EXISTS PoursuivantsEffets;
 DROP TABLE IF EXISTS Effets;
 DROP TABLE IF EXISTS NiveauxObjets;
@@ -174,6 +174,7 @@ FOREIGN KEY(idObjet) REFERENCES Objets(idObjet);
 CREATE TABLE Effets
 (idEffet INT AUTO_INCREMENT PRIMARY KEY,
  idUtilisateur INT NOT NULL,
+ nom VARCHAR(60) NOT NULL, 
  listeCMD VARCHAR(100)
 );
 
@@ -181,6 +182,9 @@ ALTER TABLE Effets
 ADD CONSTRAINT Effets_Utilisateurs_FK
 FOREIGN KEY(idUtilisateur) REFERENCES Utilisateurs(idUtilisateur);
 
+ALTER TABLE Effets
+ADD CONSTRAINT nomEffet_UK
+UNIQUE(nom);
 
 /**************************************Table logique effet****************************************/
 CREATE TABLE PoursuivantsEffets
@@ -197,6 +201,23 @@ FOREIGN KEY(idPoursuivant) REFERENCES Poursuivants(idPoursuivant);
 ALTER TABLE PoursuivantsEffets
 ADD CONSTRAINT PoursuivantsEffets_Effets_FK
 FOREIGN KEY(idEffet) REFERENCES Effets(idEffet);
+
+/**************************************Table logique effet****************************************/
+CREATE TABLE ObjetsEffets
+(idObjetsEffets INT AUTO_INCREMENT PRIMARY KEY,
+ idObjet INT NOT NULL,
+ idEffet INT NOT NULL
+);
+
+
+ALTER TABLE ObjetsEffets
+ADD CONSTRAINT ObjetsEffets_Objets_FK
+FOREIGN KEY(idObjet) REFERENCES Objets(idObjet);
+
+ALTER TABLE ObjetsEffets
+ADD CONSTRAINT ObjetsEffets_Effets_FK
+FOREIGN KEY(idEffet) REFERENCES Effets(idEffet);
+
 
 
 

@@ -181,3 +181,29 @@ VALUES
 ,2
 ,25
 );
+
+INSERT INTO Effets(idUtilisateur,nom,listeCMD)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Vie 1'
+ ,'V1'
+);
+
+INSERT INTO Effets(idUtilisateur,nom,listeCMD)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Armure 1'
+ ,'A1'
+);
+
+INSERT INTO ObjetsEffets(idObjet,idEffet)
+VALUES
+((SELECT idObjet FROM Objets WHERE nom = 'Potion de vie')
+ ,(SELECT idEffet FROM Effets WHERE nom = 'Vie 1')
+);
+
+INSERT INTO ObjetsEffets(idObjet,idEffet)
+VALUES
+((SELECT idObjet FROM Objets WHERE nom = 'Armure')
+ ,(SELECT idEffet FROM Effets WHERE nom = 'Armure 1')
+)

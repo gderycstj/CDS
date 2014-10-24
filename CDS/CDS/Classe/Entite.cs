@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace CDS
 {
-    abstract class Entite
+    public abstract class Entite
     {
         protected string listeCMD {get;set;}
         protected int age { get; set; }
@@ -45,7 +47,7 @@ namespace CDS
             }
             age = 0;
         }
-		
+
         //lire la liste CMD et agire
         public abstract bool action();
         //détruire l'entité et faire les modification associé

@@ -14,7 +14,7 @@ namespace CDS
         Vie vie { get; set; }
         Objectif objectif { get;set;}
         int qtyObjetsMax;
-        List<Poursuivant> PoursuivantDansLaPartie;
+        public List<Poursuivant> PoursuivantDansLaPartie;
         List<Objet> objetDansLaPartie;
 
         List<Entite> listeEntite;
@@ -53,14 +53,15 @@ namespace CDS
             return true;
         }
         /// <summary>
-        /// Va charger tous les énnemis dans la liste
+        /// Va charger tous les poursuivants dans la liste
         /// </summary>
-        /// <param name="numNiveau"></param>
+        /// <param name="numNiveau">niveau présentement 0 pour normal</param>
 		public void chargerEnnemi(int numNiveau)
         {
-            //trouver le niveau utilisé présentement
+
             int nbRange = 0;
 
+            //requête qui sélectionne toutes les infos d'un poursuivant et son apparence
             string req = "SELECT nom,valeur,rareté,valeurPoint,listeCMD,image FROM Niveaux as n " +
                          "INNER JOIN NiveauxPoursuivants as np ON np.idNiveau = n.idNiveau " + 
                          "INNER JOIN Poursuivants as p ON np.idPoursuivant = p.idPoursuivant "+
@@ -72,6 +73,7 @@ namespace CDS
 
             unNiveau = Globale.bdCDS.selection(req,6,ref nbRange);
 
+            //chargement de la liste de poursuivant
             for(int i = 0;i<unNiveau.Length;i++)
             {
                 PoursuivantDansLaPartie.Add(new Poursuivant(Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][4], unNiveau[i][5]));
@@ -79,6 +81,28 @@ namespace CDS
             }
         
          }
+
+         /// <summary>
+         /// Va charger tous les objets pour un niveau
+         /// </summary>
+         /// <param name="numNiveau"></param>
+        public void chargerObjet(int numNiveau) 
+        {
+        int nbRange = 0;
+
+        //requête qui sélectionne toutes les infos d'un objet et son apparence
+        string req =    "SELECT o.nom,valeur,rarete,listeCMD,image FROM Niveaux as n " +
+                        "INNER JOIN NiveauxObjets as no ON no.idNiveau = n.idNiveau " +
+                        "INNER JOIN Objets as o ON no.idObjet = o.idObjet " +
+                        "INNER JOIN ObjetsEffets as nf ON nf.idObjet = o.idObjet " +
+                        "INNER JOIN Effets as e ON e.idEffet = nf.idEffet " +
+                        "INNER JOIN Apparences a ON a.idApparence = o.idApparence " +
+                        "WHERE n.idModeDeJeu = " +
+                        "(SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = '" + Globale.mode + "' AND numNiveau = " + numNiveau + ");";
+
+                          List<string>[] unNiveau = Globale.bdCDS.selection(req,5,ref nbRange);
+         }
+
 
         private void action()
         {

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace CDS
 {
-    class Poursuivant:Entite
+    public class Poursuivant:Entite
     {
         List<Effet> listeEffet;
 		private int valeur { get; set; }
@@ -66,7 +68,21 @@ namespace CDS
             return true;
         }
 
+        public Image obtenirImage() 
+        {
+            Image img = new Image();
+            BitmapImage bImg = new BitmapImage();
 
+            bImg.BeginInit();
+            bImg.UriSource = new Uri(urlImage, UriKind.RelativeOrAbsolute);
+            bImg.DecodePixelWidth = 60;
+            bImg.EndInit();
+
+            img.Source = bImg;
+
+            return img;
+        
+         }
 
         private bool lire(char[] CMD)
         {

@@ -193,12 +193,6 @@
     <Resource Include="Image\cliqueObjet.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\carrerBleu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Image\carrerVert.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Image\triangle.png" />
   </ItemGroup>
   <ItemGroup>
@@ -225,6 +219,12 @@
     <Resource Include="Image\flecheGauche.png" />
     <Resource Include="Image\flecheHaut.png" />
     <Resource Include="Image\rond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\carreBleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\carreVert.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

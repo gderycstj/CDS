@@ -22,11 +22,13 @@ namespace CDS
         
         int tour = 1;
         Partie partieNormal = new Partie();
+
         public JeuNormal()
         {
             InitializeComponent();
             txtCTour.Text = tour.ToString();
             txtCScore.Text = partieNormal.GetScore().ToString();
+            partieNormal.chargerEnnemi(0);
             afficherGrilleJeu();
         }
         /// <summary>
@@ -35,7 +37,21 @@ namespace CDS
         void afficherGrilleJeu()
         {
             DéplacerJoueur();
+            AfficherMonstre();
             //Déplacer Poursuivant
+        }
+
+        //fonction test
+        void AfficherMonstre() 
+        {
+            foreach (Poursuivant p in partieNormal.PoursuivantDansLaPartie) 
+            {
+                Image img = new Image();
+                img = p.obtenirImage();
+                Grid.SetColumn(img,  p.positionEntite.pos.posX);
+                Grid.SetRow(img, p.positionEntite.pos.posY);
+                 grillePrincipale.Children.Add(img);
+             }
         }
 
         /// <summary>
@@ -44,7 +60,7 @@ namespace CDS
         void DéplacerJoueur() 
         {
             //va éffacer la grille a chaque déplacement et va réafficher le joueur à sa nouvelle position
-            grillePrincipale.Children.Clear();
+          grillePrincipale.Children.Clear();
             Image img = new Image();
             img = Globale.j1.obtenirImage();
             Grid.SetColumn(img, Globale.j1.positionJoueur.pos.posX);
@@ -135,6 +151,8 @@ namespace CDS
             }
             
         }
+
+            //fonction de déplacement par les boutons
             void deplacerDroite()
             {
                  if (Globale.j1.positionJoueur.pos.posX < GrilleDeJeu.TailleGrille - 2)
