@@ -79,7 +79,7 @@ namespace CDS
             //chargement de la liste de poursuivant
             for(int i = 0;i<unNiveau.Length;i++)
             {
-                PoursuivantDispoPourLaPartie.Add(new Poursuivant(Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][4], unNiveau[i][5]));
+                PoursuivantDispoPourLaPartie.Add(new Poursuivant(Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][4], unNiveau[i][5],Convert.ToInt32(unNiveau[i][3])));
             }
         
          }
@@ -171,7 +171,7 @@ namespace CDS
                 PoursuivantChoisi = iPoursuivant.Next(1, nbPoursuivantDispoDansLaListe+1);
                 PoursuivantChoisi = PoursuivantChoisi-1;
 
-                PoursuivantDansLaPartie.Add(new Poursuivant(PoursuivantDispoPourLaPartie[PoursuivantChoisi].getValeur(),PoursuivantDispoPourLaPartie[PoursuivantChoisi].getRarete(), PoursuivantDispoPourLaPartie[PoursuivantChoisi].getListeCMD(), PoursuivantDispoPourLaPartie[PoursuivantChoisi].getUrlImage()));
+                PoursuivantDansLaPartie.Add(new Poursuivant(PoursuivantDispoPourLaPartie[PoursuivantChoisi].getValeur(),PoursuivantDispoPourLaPartie[PoursuivantChoisi].getRarete(), PoursuivantDispoPourLaPartie[PoursuivantChoisi].getListeCMD(), PoursuivantDispoPourLaPartie[PoursuivantChoisi].getUrlImage(),PoursuivantDispoPourLaPartie[PoursuivantChoisi].getScore()));
                 if(i != nbPoursuivant)
                 {
                     System.Threading.Thread.Sleep(150);
@@ -221,7 +221,7 @@ namespace CDS
                     //Rareté Spawn par tour
                     if (tour % rarete == 0)
                     {
-                        PoursuivantDansLaPartie.Add(new Poursuivant(p.getValeur(), p.getRarete(), p.getListeCMD(), p.getUrlImage()));
+                        PoursuivantDansLaPartie.Add(new Poursuivant(p.getValeur(), p.getRarete(), p.getListeCMD(), p.getUrlImage(),p.getScore()));
                         System.Threading.Thread.Sleep(150);
                     }
                 }

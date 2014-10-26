@@ -12,7 +12,8 @@ namespace CDS
     {
         List<Effet> listeEffet;
 		private int valeur { get; set; }
-        public int rareté { get; set; }
+        private int rareté { get; set; }
+        private int valeurScore { get; set; }
         public Case positionEntite { get; set; }
 
 		
@@ -22,11 +23,12 @@ namespace CDS
         /// <param name="listeE">Liste d'effet qu'un poursuivant peut avoir</param>
         /// <param name="listC">liste de commande du poursuivant</param>
         /// <param name="url">url de l'image</param>
-        public Poursuivant(int Pvaleur,int Prareté,string listC,string url):base(listC,url)
+        public Poursuivant(int Pvaleur,int Prareté,string listC,string url,int valeurScoreP):base(listC,url)
         {
             listeEffet = new List<Effet>();
             valeur = Pvaleur;
             rareté = Prareté;
+            valeurScore = valeurScoreP;
             positionEntite = new Case();
             Random lesPositions = new Random();
             direction = lesPositions.Next(1, 5);
@@ -585,6 +587,10 @@ namespace CDS
             return urlImage;
         }
 
+        public int getScore()
+        {
+            return valeurScore;
+        }
         public string getListeCMD()
         {
             return listeCMD;

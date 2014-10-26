@@ -71,6 +71,8 @@ namespace CDS
                 tour -=1;
             }
             tour +=1;
+            //DeplacementPoursuivant
+            //ValidationPoint,Vie,Collision
             partieNormal.generationPoursuivantTour(tour);
             AfficherMonstre();
         }
