@@ -14,7 +14,8 @@ namespace CDS
         Vie vie { get; set; }
         Objectif objectif { get;set;}
         int qtyObjetsMax;
-        public List<Poursuivant> PoursuivantDansLaPartie;
+        public List<Poursuivant> PoursuivantDispoPourLaPartie { get; set; }
+        public List<Poursuivant> PoursuivantDansLaPartie{ get; set; }
         List<Objet> objetDansLaPartie;
 
         List<Entite> listeEntite;
@@ -23,6 +24,7 @@ namespace CDS
         {   
             score = 0;
             PoursuivantDansLaPartie = new List<Poursuivant>();
+            PoursuivantDispoPourLaPartie = new List<Poursuivant>();
             objetDansLaPartie = new List<Objet>();
         }
 
@@ -44,7 +46,8 @@ namespace CDS
         {
             //Requête BD
             //-------------------------------------------------------------------------------------------------------------
-            
+            chargerEnnemi(0);
+            débutDePartieGenPoursuivant();
             //-------------------------------------------------------------------------------------------------------------
 
             //Traitement Requête (Création d'objet)
@@ -76,12 +79,7 @@ namespace CDS
             //chargement de la liste de poursuivant
             for(int i = 0;i<unNiveau.Length;i++)
             {
-                PoursuivantDansLaPartie.Add(new Poursuivant(Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][4], unNiveau[i][5]));
-                if(i != unNiveau.Length-1)
-                { 
-                    System.Threading.Thread.Sleep(150);
-                }
-
+                PoursuivantDispoPourLaPartie.Add(new Poursuivant(Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][4], unNiveau[i][5]));
             }
         
          }
@@ -156,6 +154,78 @@ namespace CDS
             int nouvScore;
             nouvScore = score;
             return nouvScore;
+        }
+
+        public void débutDePartieGenPoursuivant()
+        {
+            int nbPoursuivant;
+            int nbPoursuivantDispoDansLaListe;
+            int PoursuivantChoisi;
+
+            Random iPoursuivant = new Random();
+            nbPoursuivant = iPoursuivant.Next(1,4);
+            nbPoursuivantDispoDansLaListe = PoursuivantDispoPourLaPartie.Count();
+
+            for(int i = 0;i<nbPoursuivant+1;i++)
+            {
+                PoursuivantChoisi = iPoursuivant.Next(1, nbPoursuivantDispoDansLaListe+1);
+                PoursuivantChoisi = PoursuivantChoisi-1;
+
+                PoursuivantDansLaPartie.Add(new Poursuivant(PoursuivantDispoPourLaPartie[PoursuivantChoisi].getValeur(),PoursuivantDispoPourLaPartie[PoursuivantChoisi].getRarete(), PoursuivantDispoPourLaPartie[PoursuivantChoisi].getListeCMD(), PoursuivantDispoPourLaPartie[PoursuivantChoisi].getUrlImage()));
+                if(i != nbPoursuivant)
+                {
+                    System.Threading.Thread.Sleep(150);
+                }
+            }
+        }
+
+        public void generationPoursuivantTour(int tour)
+        {
+
+            foreach (Poursuivant p in PoursuivantDispoPourLaPartie)
+            {
+                int rarete = p.getRarete();
+                int valeur = p.getValeur();
+                int nbPoursuivant = 0;
+
+                foreach( Poursuivant pi in PoursuivantDansLaPartie)
+                {
+                    //Si on tente d'ajouter un carrer, on regarde si les 2 couleurs de carré ne dépasse pas la valeur maximale
+                    if (p.getUrlImage() == "/image/carreVert.png" || p.getUrlImage() == "/image/carreBleu.png")
+                    {
+                        if(pi.getUrlImage() == "/image/carreVert.png" || pi.getUrlImage() == "/image/carreBleu.png")
+                        {
+                            nbPoursuivant += 1;
+                        }
+                    }
+                    //Si on tente d'ajouter un losange, on regarde si les 2 couleurs de losange ne dépasse pas la valeur maximale
+                    if (p.getUrlImage() == "/image/LosangeJaune.png" || p.getUrlImage() == "/image/LosangeMauve.png")
+                    {
+                        if (pi.getUrlImage() == "/image/LosangeJaune.png" || pi.getUrlImage() == "/image/LosangeMauve.png")
+                        {
+                            nbPoursuivant += 1;
+                        }
+                    }
+                    //Tout les autres
+                    if (p.getUrlImage() != "/image/LosangeJaune.png" && p.getUrlImage() != "/image/LosangeMauve.png" && p.getUrlImage() == "/image/carreVert.png" && p.getUrlImage() == "/image/carreBleu.png")
+                    {
+                        if (p.getUrlImage() == pi.getUrlImage())
+                        {
+                            nbPoursuivant += 1;
+                        }
+                    }
+                }
+
+                if (valeur != nbPoursuivant)
+                {
+                    //Rareté Spawn par tour
+                    if (tour % rarete == 0)
+                    {
+                        PoursuivantDansLaPartie.Add(new Poursuivant(p.getValeur(), p.getRarete(), p.getListeCMD(), p.getUrlImage()));
+                        System.Threading.Thread.Sleep(150);
+                    }
+                }
+            }
         }
     }
 }

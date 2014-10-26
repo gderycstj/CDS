@@ -28,7 +28,7 @@ namespace CDS
             InitializeComponent();
             txtCTour.Text = tour.ToString();
             txtCScore.Text = partieNormal.GetScore().ToString();
-            partieNormal.chargerEnnemi(0);
+            partieNormal.initialiser();
             afficherGrilleJeu();
         }
         /// <summary>
@@ -60,7 +60,7 @@ namespace CDS
         void DéplacerJoueur() 
         {
             //va éffacer la grille a chaque déplacement et va réafficher le joueur à sa nouvelle position
-          grillePrincipale.Children.Clear();
+            grillePrincipale.Children.Clear();
             Image img = new Image();
             img = Globale.j1.obtenirImage();
             Grid.SetColumn(img, Globale.j1.positionJoueur.pos.posX);
@@ -71,6 +71,8 @@ namespace CDS
                 tour -=1;
             }
             tour +=1;
+            partieNormal.generationPoursuivantTour(tour);
+            AfficherMonstre();
         }
         
         //fonction de déplacement pour les boutons, haut veux dire déplacement haut... fait aussi les validations pour pas dépasser la grille

@@ -29,7 +29,6 @@ namespace CDS
             rareté = Prareté;
             positionEntite = new Case();
             Random lesPositions = new Random();
-
             direction = lesPositions.Next(1, 5);
             switch (direction)
             {
@@ -50,6 +49,65 @@ namespace CDS
                     positionEntite.pos.posY = lesPositions.Next(1, 10);
                     break;
             }
+
+            //Validation Carrer(selon sa direction)
+            if(urlImage == "/image/carreVert.png")
+            {
+                if(direction == 1 || direction == 3)
+                {
+                    urlImage = "/image/carreBleu.png";
+                }
+            }
+
+            if(urlImage == "/image/carreBleu.png")
+            {
+                if (direction == 2 || direction == 4)
+                {
+                    urlImage = "/image/carreVert.png";
+                }
+            }
+            //-----------------------------------------------------------
+            //Validation Losange(selon son positionnement de l'axe des x)
+            if(urlImage == "/image/LosangeMauve.png")
+            {
+                if(positionEntite.pos.posX > 5)
+                {
+                    urlImage = "/image/LosangeJaune.png";
+                    listeCMD = "MhMgC";
+                }
+
+                if(positionEntite.pos.posX == 5)
+                {
+                    int randomLosange;
+                    randomLosange = lesPositions.Next(1, 3);
+                    if(randomLosange == 1)
+                    {
+                        urlImage = "/image/LosangeJaune.png";
+                        listeCMD = "MhMgC";
+                    }
+                }
+            }
+
+            if (urlImage == "/image/LosangeJaune.png")
+            {
+                if (positionEntite.pos.posX < 5)
+                {
+                    urlImage = "/image/LosangeMauve.png";
+                    listeCMD = "MhMdC";
+                }
+
+                if (positionEntite.pos.posX == 5)
+                {
+                    int randomLosange;
+                    randomLosange = lesPositions.Next(1, 3);
+                    if (randomLosange == 2)
+                    {
+                        urlImage = "/image/LosangeMauve.png";
+                        listeCMD = "MhMdC";
+                    }
+                }
+            }
+            //-------------------------------------------------------------------------
         }
 
         //lire la liste CMD et agire
@@ -499,10 +557,38 @@ namespace CDS
             return true;
         }
 
+
+        //Validation Carrer(direction pour la couleur)
+
+        public void carrerValidation()
+        {
+
+        }
+        //Get nécéssaire
         public override string getType()
         {
             return "Poursuivant";
         }
 
+        public int getValeur()
+        {
+            return valeur;
+        }
+
+        public int getRarete()
+        {
+            return rareté;
+        }
+
+        public string getUrlImage()
+        {
+            return urlImage;
+        }
+
+        public string getListeCMD()
+        {
+            return listeCMD;
+        }
+        //-------------------------------------------------
     }
 }

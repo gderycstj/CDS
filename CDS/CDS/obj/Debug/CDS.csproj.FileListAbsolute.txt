@@ -119,7 +119,6 @@ K:\chambre de survie\CDS\CDS\obj\Debug\Écran\jeuSurvie.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\JeuNormal.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\jeuSurvie.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\JeuNormal.g.cs
-K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
 D:\projet\CDS\CDS\bin\Debug\CDS.exe.config
 D:\projet\CDS\CDS\obj\Debug\CDS.exe
 D:\projet\CDS\CDS\obj\Debug\CDS.pdb
@@ -207,3 +206,5 @@ G:\chambre de survie\CDS\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 G:\chambre de survie\CDS\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
 G:\chambre de survie\CDS\CDS\CDS\obj\Debug\CDS.exe
 G:\chambre de survie\CDS\CDS\CDS\obj\Debug\CDS.pdb
+K:\chambre de survie\CDS\CDS\bin\Debug\MySql.Data.dll
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
