@@ -137,7 +137,7 @@ namespace CDS
                 validation = false;
             }*/
 
-            if(!validation)
+            if(validation == false)
             {return false;}
 
             else { return true;}

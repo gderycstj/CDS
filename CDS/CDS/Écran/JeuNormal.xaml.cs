@@ -22,6 +22,7 @@ namespace CDS
         
         int tour = 1;
         Partie partieNormal = new Partie();
+        bool partieEnCours = true;
 
         public JeuNormal()
         {
@@ -135,9 +136,12 @@ namespace CDS
             //Bouton Enter(passer le tour)
             if(Keyboard.IsKeyDown(Key.Enter))
             {
-                tour += 1;
-                generationTour();
-                afficherInfo();
+                if(partieEnCours == true)
+                { 
+                    tour += 1;
+                    generationTour();
+                    afficherInfo();
+                }
             }
             
         }
@@ -183,7 +187,6 @@ namespace CDS
             {
                 txtCTour.Text = tour.ToString();
                 txtCScore.Text = partieNormal.score.ToString();
-                validationVie();
             }
 
             public void validationVie()
@@ -263,7 +266,6 @@ namespace CDS
                 }
                 partieNormal.validationPoursuivant(false);
                 tour += 1;
-
                 AfficherJoueur();
                 foreach (Poursuivant p in partieNormal.PoursuivantDansLaPartie)
                 {
@@ -273,8 +275,6 @@ namespace CDS
                 {
                     partieNormal.validationPoursuivant(true);
                     AfficherPoursuivant();
-                    //DeplacementPoursuivant
-                    //ValidationPoint,Vie,Collision
                     partieNormal.generationPoursuivantTour(tour);
                     AfficherPoursuivant();
                 }
@@ -284,9 +284,10 @@ namespace CDS
 			
 			public void validationObjectifPartieNormal()
             {
-                if (!partieNormal.finDeTour())
+                if (partieNormal.finDeTour() == false)
                 {
                     //Appel de l'écran de fin de partie
+                    partieEnCours = false;
                     MessageBox.Show("Partie Terminé"); //Sa va être un xaml plus tard
                     menuJouer menuJ = new menuJouer();
                     menuJ.Show();
