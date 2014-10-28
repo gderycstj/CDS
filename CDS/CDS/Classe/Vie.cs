@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CDS
 {
-    class Vie
+    public class Vie
     {
-        int nbVieActu { get;set;}
-        int nbVieMax { get;set;}
+        public int nbVieActu { get;set;}
+        public int nbVieMax { get;set;}
 
-        int nbArmure { get;set;}
+        public int nbArmure { get;set;}
 
-        int toursImmunite { get;set;}
+        public int toursImmunite { get;set;}
 
 
         public Vie()
@@ -21,7 +21,7 @@ namespace CDS
             nbVieMax=3;
             nbVieActu=nbVieMax;
             nbArmure=0;
-            toursImmunite=1;
+            toursImmunite=0;
         }
 
         public Vie(int vieDepart, int vieMax, int armureDepart, int toursImmuniterAuDepart)
@@ -33,22 +33,23 @@ namespace CDS
         }
 
         //retourne si oui ou non et a été blessé
-        public bool degat()
+        public void degat()
         {
-            if(toursImmunite<1)
+            if (toursImmunite < 1)
             {
-                if(nbArmure>0)
+                if (nbArmure > 0)
                 {
-                    nbArmure-=1;
+                    nbArmure -= 1;
                 }
                 else
                 {
-                    nbVieActu-=1;
+                    nbVieActu -= 1;
                 }
-                return true;
-            }
+             }
             else
-            return false;
+            {
+                toursImmunite -= 1;
+            }
 
         }
 

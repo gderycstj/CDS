@@ -26,8 +26,6 @@ namespace CDS
 
         //lire la liste CMD et agire
         public abstract bool action();
-        //détruire l'entité et faire les modification associé
-        public abstract bool mort();
         //Vérification et action effectuer à chaque fin de tour
         public abstract bool finDetour();
 
@@ -108,40 +106,27 @@ namespace CDS
         /// Valide si l'entité est dans une zone interdite (rouge)
         /// </summary>
         /// <returns></returns>
-        protected bool inBoundary()
+        public bool inBoundary()
         {
             if(positionEntite.pos.posX == 0 || positionEntite.pos.posX == 10 || positionEntite.pos.posY == 0 || positionEntite.pos.posY == 10)
             {
-                return false;
+                return true;
             }
             else
-            {return true;}
+            {return false;}
         }
 
         /// <summary>
         /// Verifier si sur la cas du jouer, sur un effet.
         /// </summary>
         /// <returns></returns>
-        protected bool verification()
+        public bool verification()
         {
-            //Le joueur est sur la case d'une entité
-            if(positionEntite.pos.posX == Globale.j1.positionJoueur.pos.posX && positionEntite.pos.posY == Globale.j1.positionJoueur.pos.posY)
+            if (positionEntite.pos.posX == Globale.j1.positionJoueur.pos.posX && positionEntite.pos.posY == Globale.j1.positionJoueur.pos.posY)
             {
-                if(getType() == "Poursuivant")
-                {
-                    //Poursuivant meurt(disparait), joueur -1 vie , aucun point de score
-                    return true;
-                }
-                if(getType() == "Objet")
-                {
-                    //Ramasse l'objet ou l'utilise
-                    return true;
-                }
+                return true;
             }
             return false;
         }
-
-        public abstract string getType();
-
     }
 }

@@ -10,8 +10,8 @@ namespace CDS
     public class Partie
     {
         GrilleDeJeu grille { get;set;}
-        int score { get;set;}
-        Vie vie { get; set; }
+        public int score { get;set;}
+        public Vie vie { get; set; }
         Objectif objectif { get;set;}
         int qtyObjetsMax;
         public List<Poursuivant> PoursuivantDispoPourLaPartie { get; set; }
@@ -24,6 +24,7 @@ namespace CDS
         {   
             score = 0;
             PoursuivantDansLaPartie = new List<Poursuivant>();
+            vie = new Vie();
             PoursuivantDispoPourLaPartie = new List<Poursuivant>();
             objetDansLaPartie = new List<Objet>();
         }
@@ -150,12 +151,6 @@ namespace CDS
 
         }
 
-        public int GetScore(){
-            int nouvScore;
-            nouvScore = score;
-            return nouvScore;
-        }
-
         public void débutDePartieGenPoursuivant()
         {
             int nbPoursuivant;
@@ -171,7 +166,7 @@ namespace CDS
                 PoursuivantChoisi = iPoursuivant.Next(1, nbPoursuivantDispoDansLaListe+1);
                 PoursuivantChoisi = PoursuivantChoisi-1;
 
-                PoursuivantDansLaPartie.Add(new Poursuivant(PoursuivantDispoPourLaPartie[PoursuivantChoisi].getValeur(),PoursuivantDispoPourLaPartie[PoursuivantChoisi].getRarete(), PoursuivantDispoPourLaPartie[PoursuivantChoisi].getListeCMD(), PoursuivantDispoPourLaPartie[PoursuivantChoisi].getUrlImage(),PoursuivantDispoPourLaPartie[PoursuivantChoisi].getScore()));
+                PoursuivantDansLaPartie.Add(new Poursuivant(PoursuivantDispoPourLaPartie[PoursuivantChoisi].valeur,PoursuivantDispoPourLaPartie[PoursuivantChoisi].rareté, PoursuivantDispoPourLaPartie[PoursuivantChoisi].getListeCMD(), PoursuivantDispoPourLaPartie[PoursuivantChoisi].getUrlImage(),PoursuivantDispoPourLaPartie[PoursuivantChoisi].valeurScore));
                 if(i != nbPoursuivant)
                 {
                     System.Threading.Thread.Sleep(150);
@@ -184,8 +179,8 @@ namespace CDS
 
             foreach (Poursuivant p in PoursuivantDispoPourLaPartie)
             {
-                int rarete = p.getRarete();
-                int valeur = p.getValeur();
+                int rarete = p.rareté;
+                int valeur = p.valeur;
                 int nbPoursuivant = 0;
 
                 foreach( Poursuivant pi in PoursuivantDansLaPartie)
@@ -221,11 +216,36 @@ namespace CDS
                     //Rareté Spawn par tour
                     if (tour % rarete == 0)
                     {
-                        PoursuivantDansLaPartie.Add(new Poursuivant(p.getValeur(), p.getRarete(), p.getListeCMD(), p.getUrlImage(),p.getScore()));
+                        PoursuivantDansLaPartie.Add(new Poursuivant(p.valeur, p.rareté, p.getListeCMD(), p.getUrlImage(),p.valeurScore));
                         System.Threading.Thread.Sleep(150);
                     }
                 }
             }
         }
+
+        public void validationPoursuivant()
+        {
+            for (int i = PoursuivantDansLaPartie.Count - 1; i >= 0; i--)
+            {
+                bool validation = false;
+                if (PoursuivantDansLaPartie[i].verification())
+                {
+                    //Enlever une vie au personnage
+                    vie.degat();
+                    //Supprimer le poursuivant de la liste
+                    PoursuivantDansLaPartie.RemoveAt(i);
+                    validation = true;
+                }
+                if (PoursuivantDansLaPartie[i].inBoundary() && validation == false)
+                {
+                    //Prendre le score
+                    score += PoursuivantDansLaPartie[i].valeurScore;
+                    //Supprimer le poursuivant de la liste
+                    PoursuivantDansLaPartie.RemoveAt(i);
+                    validation = true;
+                }
+            }
+        }
+
     }
 }

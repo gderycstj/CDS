@@ -27,8 +27,9 @@ namespace CDS
         {
             InitializeComponent();
             txtCTour.Text = tour.ToString();
-            txtCScore.Text = partieNormal.GetScore().ToString();
             partieNormal.initialiser();
+            txtCScore.Text = partieNormal.score.ToString();
+            validationVie();
             afficherGrilleJeu();
         }
         /// <summary>
@@ -38,7 +39,6 @@ namespace CDS
         {
             DéplacerJoueur();
             AfficherMonstre();
-            //Déplacer Poursuivant
         }
 
         //fonction test
@@ -50,7 +50,7 @@ namespace CDS
                 img = p.obtenirImage();
                 Grid.SetColumn(img,  p.positionEntite.pos.posX);
                 Grid.SetRow(img, p.positionEntite.pos.posY);
-                 grillePrincipale.Children.Add(img);
+                grillePrincipale.Children.Add(img);
              }
         }
 
@@ -71,10 +71,10 @@ namespace CDS
                 tour -=1;
             }
             tour +=1;
-            //DeplacementPoursuivant
-            //ValidationPoint,Vie,Collision
-            partieNormal.generationPoursuivantTour(tour);
-            AfficherMonstre();
+            if (tour > 1)
+            {
+                generationTour();
+            }
         }
         
         //fonction de déplacement pour les boutons, haut veux dire déplacement haut... fait aussi les validations pour pas dépasser la grille
@@ -105,6 +105,7 @@ namespace CDS
         private void btnPasserTour_Click(object sender, RoutedEventArgs e)
         {
             tour += 1;
+            generationTour();
             afficherInfo();
         }     
 
@@ -151,6 +152,7 @@ namespace CDS
             if(Keyboard.IsKeyDown(Key.Enter))
             {
                 tour += 1;
+                generationTour();
                 afficherInfo();
             }
             
@@ -190,14 +192,85 @@ namespace CDS
                   {
                       Globale.j1.positionJoueur.pos.posY = Globale.j1.positionJoueur.pos.posY + 1;
                       DéplacerJoueur();
-                  }
-                  
+                  }   
             }
 
             void afficherInfo()
             {
                 txtCTour.Text = tour.ToString();
-                txtCScore.Text = partieNormal.GetScore().ToString();
+                txtCScore.Text = partieNormal.score.ToString();
+                validationVie();
+            }
+
+            public void validationVie()
+            {
+                //Vie Actuelle
+                switch(partieNormal.vie.nbVieActu)
+                {
+                    case 1:
+                        vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                        vie2.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+                        vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+                        break;
+                    case 2:
+                        vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                        vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                        vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+                        break;
+                    case 3:
+                        vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                        vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                        vie3.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                        break;
+                }
+                //Armure
+                switch(partieNormal.vie.nbArmure)
+                {
+                    case 1:
+                        if (partieNormal.vie.nbVieActu == 1)
+                        {
+                            vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                            vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                            vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+                        }
+                        if(partieNormal.vie.nbVieActu < 2)
+                        {
+                            vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                            vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                            vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        }
+                        break;
+                    case 2:
+                        if (partieNormal.vie.nbVieActu == 1)
+                        {
+                            vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                            vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                            vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        }
+                        if(partieNormal.vie.nbVieActu < 2)
+                        {
+                            vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                            vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                            vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        }
+                        break;
+                    case 3:
+                        vie1.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        break;
+                }
+            }
+
+            public void generationTour()
+            {
+                //DeplacementPoursuivant
+                partieNormal.validationPoursuivant();
+                partieNormal.generationPoursuivantTour(tour);
+                AfficherMonstre();
+                //affichage des monstres déplacé
+                //fonctionFinDeTour();
+                //Affichage des infos
             }
     }
 }

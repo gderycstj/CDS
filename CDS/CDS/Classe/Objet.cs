@@ -40,11 +40,6 @@ namespace CDS
             // pas d'action
             return true;
         }
-        //détruire l'entité et faire les modification associé
-        public override bool mort()
-        {
-            return true;
-        }
         //Vérification et action effectuer à chaque fin de tour
         public override bool finDetour()
         {
@@ -52,10 +47,6 @@ namespace CDS
             return true;
         }
 
-        public override string getType()
-        {
-            return "Objet";
-        }
-
+      
     }
 }

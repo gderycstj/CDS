@@ -11,9 +11,9 @@ namespace CDS
     public class Poursuivant:Entite
     {
         List<Effet> listeEffet;
-		private int valeur { get; set; }
-        private int rareté { get; set; }
-        private int valeurScore { get; set; }
+		public int valeur { get; set; }
+        public int rareté { get; set; }
+        public int valeurScore { get; set; }
         public Case positionEntite { get; set; }
 
 		
@@ -544,57 +544,21 @@ namespace CDS
             return false;
         }
 
-       
-
-        //détruire l'entité et faire les modification associé
-        public override bool mort()
-        {
-            return true;
-        }
-
         //Vérification et action effectuer à chaque fin de tour
         public override bool finDetour()
         {
             age++;
             return true;
         }
-
-
-        //Validation Carrer(direction pour la couleur)
-
-        public void carrerValidation()
-        {
-
-        }
         //Get nécéssaire
-        public override string getType()
-        {
-            return "Poursuivant";
-        }
-
-        public int getValeur()
-        {
-            return valeur;
-        }
-
-        public int getRarete()
-        {
-            return rareté;
-        }
-
         public string getUrlImage()
         {
             return urlImage;
-        }
-
-        public int getScore()
-        {
-            return valeurScore;
         }
         public string getListeCMD()
         {
             return listeCMD;
         }
-        //-------------------------------------------------
+
     }
 }
