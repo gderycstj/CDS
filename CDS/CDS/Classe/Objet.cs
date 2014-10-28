@@ -30,10 +30,10 @@ namespace CDS
 
             //Position Random
             positionEntite = new Position();
-            Random randomX = new Random();
-            Random randomY = new Random();
-            positionEntite.posX = randomX.Next(1,10);
-            positionEntite.posY = randomY.Next(1,10);
+            Random randomPosition = new Random();
+            positionEntite.posX = randomPosition.Next(1,10);
+            positionEntite.posY = randomPosition.Next(1,10);
+
         }
 		
         //lire la liste CMD et agire

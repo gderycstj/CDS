@@ -44,7 +44,6 @@ C:\Users\Admin\Desktop\CDS\CDS\CDS\bin\Debug\CDS.exe
 C:\Users\Admin\Desktop\CDS\CDS\CDS\bin\Debug\CDS.pdb
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\menuGestionProfil.baml
-C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\Jeu.baml
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\menuInscription.baml
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\menuPrincipal.baml
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\menuEditeur.baml
@@ -52,7 +51,6 @@ C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\menuInstruction.baml
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\menuJouer.baml
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\menuSurvie.baml
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\menuGestionProfil.g.cs
-C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\Jeu.g.cs
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\menuInscription.g.cs
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\menuPrincipal.g.cs
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\menuEditeur.g.cs
@@ -234,3 +232,36 @@ K:\chambre de survie\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.exe
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.pdb
+C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\jeuSurvie.baml
+C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\JeuNormal.baml
+C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\jeuSurvie.g.cs
+C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\Écran\JeuNormal.g.cs
+C:\Users\Admin\Desktop\CDS2\CDS\bin\Debug\CDS.exe.config
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\CDS.exe
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\CDS.pdb
+C:\Users\Admin\Desktop\CDS2\CDS\bin\Debug\CDS.exe
+C:\Users\Admin\Desktop\CDS2\CDS\bin\Debug\CDS.pdb
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\jeuSurvie.baml
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuGestionProfil.baml
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\JeuNormal.baml
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuInscription.baml
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuPrincipal.baml
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuEditeur.baml
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuInstruction.baml
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuJouer.baml
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuSurvie.baml
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\jeuSurvie.g.cs
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuGestionProfil.g.cs
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\JeuNormal.g.cs
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuInscription.g.cs
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuPrincipal.g.cs
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuEditeur.g.cs
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuInstruction.g.cs
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuJouer.g.cs
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\menuSurvie.g.cs
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\Écran\App.g.cs
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\CDS_MarkupCompile.cache
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\CDS.g.resources
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\CDS.Properties.Resources.resources
+C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
