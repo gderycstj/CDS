@@ -372,14 +372,14 @@ INSERT INTO Effets(idUtilisateur,nom,listeCMD)
 VALUES
 ((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
  ,'Vie 1'
- ,'V1'
+ ,'V'
 );
 
 INSERT INTO Effets(idUtilisateur,nom,listeCMD)
 VALUES
 ((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
  ,'Armure 1'
- ,'A1'
+ ,'A'
 );
 
 INSERT INTO ObjetsEffets(idObjet,idEffet)
