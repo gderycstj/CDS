@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CDS
 {
-    class Effet:Entite
+    public class Effet:Entite
     {
            List<Effet> listeEffet;
 		public Effet(string listC,string url):base(listC,url)
@@ -415,9 +415,13 @@ namespace CDS
                     //Degat
                     case 'D': break;
                     //Soin    
-                    case 'S': break;
+                    case 'S': 
+                    Globale.vie.soin(1);
+                    break;
                     //Armure
-                    case 'A': break;
+                    case 'A': 
+                    Globale.vie.nbArmure++;
+                    break;
                     //Vitesse
                     case 'V': break;
                     //Pousse
@@ -468,7 +472,15 @@ namespace CDS
         {
             this.positionEntite.posX = positionEntite.posX - 1;
         }
-
+        //Get nécéssaire
+        public string getUrlImage()
+        {
+            return urlImage;
+        }
+        public string getListeCMD()
+        {
+            return listeCMD;
+        }
 
     }
 }

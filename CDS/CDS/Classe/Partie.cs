@@ -14,9 +14,8 @@ namespace CDS
         int qtyObjetsMax;
         public List<Poursuivant> PoursuivantDispoPourLaPartie { get; set; }
         public List<Poursuivant> PoursuivantDansLaPartie{ get; set; }
-        List<Objet> objetDansLaPartie;
-
-        List<Entite> listeEntite;
+        public List<Objet> objetDansLaPartie{get; set;}
+       public List<Objet> objetDispoPourLaPartie { get;set;}
 
         public Partie()
         {   
@@ -25,6 +24,7 @@ namespace CDS
             Globale.vie.setVie();
             PoursuivantDispoPourLaPartie = new List<Poursuivant>();
             objetDansLaPartie = new List<Objet>();
+            objetDispoPourLaPartie = new List<Objet>();
         }
 
         /*public Partie(Vie viedepart, Objectif objParti,int maxobjets, List<Objet> objetDepart)
@@ -46,6 +46,7 @@ namespace CDS
             //Requête BD
             //-------------------------------------------------------------------------------------------------------------
             chargerEnnemi(0);
+            chargerObjet(0);
             débutDePartieGenPoursuivant();
             //-------------------------------------------------------------------------------------------------------------
 
@@ -107,23 +108,10 @@ namespace CDS
             {
                 Effet e = new Effet(unNiveau[i][4], unNiveau[i][4]);
 
-                objetDansLaPartie.Add(new Objet(e, Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][3], unNiveau[i][4]));
-                if (i != unNiveau.Length - 1)
-                {
-                    System.Threading.Thread.Sleep(150);
-                }
+                objetDispoPourLaPartie.Add(new Objet(e, Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][3], unNiveau[i][4]));
 
             }
          }
-
-
-        private void action()
-        {
-            foreach(Entite E in listeEntite)
-            {
-                E.action();
-            }
-        }
 
         public bool finDeTour()
         {
@@ -240,6 +228,36 @@ namespace CDS
                     }
                 }
             }
+        }
+
+        public void GenerationObjet(int tour)
+        {
+            int nbObjetDispo = objetDispoPourLaPartie.Count;
+            int objetChoisi;
+            string listeCMDEffet;
+            string urlImageEffet;
+
+            Random rnd = new Random();
+            if(tour%7 == 0)
+            {
+               objetChoisi = rnd.Next(1,nbObjetDispo+1);
+               objetChoisi -= 1;
+               listeCMDEffet = objetDispoPourLaPartie[objetChoisi].unEffet.getListeCMD();
+               urlImageEffet = objetDispoPourLaPartie[objetChoisi].unEffet.getUrlImage();
+               Effet e = new Effet(listeCMDEffet,urlImageEffet);
+
+               objetDansLaPartie.Add(new Objet(e,
+               objetDispoPourLaPartie[objetChoisi].valeur,
+               objetDispoPourLaPartie[objetChoisi].rareté,
+               objetDispoPourLaPartie[objetChoisi].getListeCMD(),
+               objetDispoPourLaPartie[objetChoisi].getUrlImage()));
+            }
+        }
+
+        public void validationObjet()
+        {
+
+
         }
 
     }

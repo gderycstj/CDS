@@ -61,6 +61,21 @@ namespace CDS
              }
         }
 
+        void AfficherObjet()
+        {
+            foreach (Objet o in partieNormal.objetDansLaPartie)
+            {
+                Image img = new Image();
+                img = o.obtenirImage();
+                if (o.positionEntite.posX >= 0 && o.positionEntite.posY >= 0)
+                {
+                    Grid.SetColumn(img, o.positionEntite.posX);
+                    Grid.SetRow(img, o.positionEntite.posY);
+                }
+                grillePrincipale.Children.Add(img);
+            }
+        }
+
         //fonction de déplacement pour les boutons, haut veux dire déplacement haut... fait aussi les validations pour pas dépasser la grille
         private void haut(object sender, RoutedEventArgs e)
         {
@@ -274,9 +289,10 @@ namespace CDS
                 if(Globale.vie.nbVieActu != 0)
                 {
                     partieNormal.validationPoursuivant(true);
-                    AfficherPoursuivant();
                     partieNormal.generationPoursuivantTour(tour);
                     AfficherPoursuivant();
+                    partieNormal.GenerationObjet(tour);
+                    AfficherObjet();
                 }
                 validationVie();
                 validationObjectifPartieNormal();

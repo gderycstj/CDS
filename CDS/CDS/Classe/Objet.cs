@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace CDS
 {
-    class Objet:Entite
+    public class Objet:Entite
     {
-        int valeur { get; set; }
-        int rareté { get; set; }
-        Effet unEffet;
+        public int valeur { get; set; }
+        public int rareté { get; set; }
+        public Effet unEffet {get;set;}
 
 		/// <summary>
         /// Constructeur d'un objet
@@ -46,7 +48,31 @@ namespace CDS
             age++;
             return true;
         }
+        //Get nécéssaire
+        public string getUrlImage()
+        {
+            return urlImage;
+        }
+        public string getListeCMD()
+        {
+            return listeCMD;
+        }
 
+        public Image obtenirImage()
+        {
+            Image img = new Image();
+            BitmapImage bImg = new BitmapImage();
+
+            bImg.BeginInit();
+            bImg.UriSource = new Uri(urlImage, UriKind.RelativeOrAbsolute);
+            bImg.DecodePixelWidth = 60;
+            bImg.EndInit();
+
+            img.Source = bImg;
+
+            return img;
+
+        }
       
     }
 }

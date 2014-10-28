@@ -10,7 +10,6 @@ namespace CDS
 {
     public class Poursuivant:Entite
     {
-        List<Effet> listeEffet;
 		public int valeur { get; set; }
         public int rareté { get; set; }
         public int valeurScore { get; set; }
@@ -25,7 +24,6 @@ namespace CDS
         /// <param name="url">url de l'image</param>
         public Poursuivant(int Pvaleur,int Prareté,string listC,string url,int valeurScoreP):base(listC,url)
         {
-            listeEffet = new List<Effet>();
             valeur = Pvaleur;
             rareté = Prareté;
             valeurScore = valeurScoreP;
@@ -318,7 +316,7 @@ namespace CDS
                        
 
                         //on lance l'effet commandé
-                        listeEffet[numero].action();
+                        
 
                         break;
 
