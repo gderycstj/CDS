@@ -13,10 +13,18 @@ namespace CDS
     /// </summary>
     public class BdService
     {
+		/*Environnement de développement 
         private string serveur = "420.cstj.qc.ca";
         private string BD = "5a5_a14_chambre";
         private string user = "chambre";
         private string password = "e7AEf6x7J";
+		*/
+		//Environnement de Production
+        private string serveur = "localhost";
+        private string BD = "chambre";
+        private string user = "root";
+        private string password = "";
+
 
         private MySqlConnection connexion;
 
