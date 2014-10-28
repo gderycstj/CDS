@@ -207,6 +207,11 @@ namespace CDS
                 //Vie Actuelle
                 switch(partieNormal.vie.nbVieActu)
                 {
+                    case 0:
+                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+                         vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+                        break;
                     case 1:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
@@ -271,6 +276,19 @@ namespace CDS
                 //affichage des monstres déplacé
                 //fonctionFinDeTour();
                 //Affichage des infos
+            }
+
+            public void validationObjectifPartieNormal()
+            {
+                if (!partieNormal.finDeTour())
+                {
+                    //Appel de l'écran de fin de partie
+                    MessageBox.Show("Partie Terminé"); //Sa va être un xaml plus tard
+                    menuJouer menuJ = new menuJouer();
+                    menuJ.Show();
+                    Close();
+                }
+
             }
     }
 }

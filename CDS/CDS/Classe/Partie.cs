@@ -114,7 +114,7 @@ namespace CDS
             }
         }
 
-        private bool finDeTour()
+        public bool finDeTour()
         {
             foreach (Entite E in listeEntite)
             {
@@ -135,15 +135,6 @@ namespace CDS
             {return false;}
 
             else { return true;}
-        }
-
-        public void validationObjectifPartieNormal()
-        {
-            if(!finDeTour())
-            {
-                //Appel de l'écran de fin de partie
-            }
-
         }
 
         public void débutDePartieGenPoursuivant()
