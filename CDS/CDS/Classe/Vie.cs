@@ -88,5 +88,13 @@ namespace CDS
 
             return true;
         }
+
+        public void setVie()
+        {
+            nbVieMax=3;
+            nbVieActu=nbVieMax;
+            nbArmure=0;
+            toursImmunite=0;
+        }
     }
 }

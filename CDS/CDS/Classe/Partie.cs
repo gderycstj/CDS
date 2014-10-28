@@ -10,7 +10,6 @@ namespace CDS
     public class Partie
     {
         public int score { get;set;}
-        public Vie vie { get; set; }
         Objectif objectif { get;set;}
         int qtyObjetsMax;
         public List<Poursuivant> PoursuivantDispoPourLaPartie { get; set; }
@@ -23,7 +22,7 @@ namespace CDS
         {   
             score = 0;
             PoursuivantDansLaPartie = new List<Poursuivant>();
-            vie = new Vie();
+            Globale.vie.setVie();
             PoursuivantDispoPourLaPartie = new List<Poursuivant>();
             objetDansLaPartie = new List<Objet>();
         }
@@ -129,7 +128,7 @@ namespace CDS
         public bool finDeTour()
         {
             bool validation = true;
-            if(!vie.finDeTour())
+            if(!Globale.vie.finDeTour())
             {
                 validation = false;
             }
@@ -225,7 +224,7 @@ namespace CDS
                 if (PoursuivantDansLaPartie[i].verification())
                 {
                     //Enlever une vie au personnage
-                    vie.degat();
+                    Globale.vie.degat();
                     //Supprimer le poursuivant de la liste
                     PoursuivantDansLaPartie.RemoveAt(i);
                     validation = true;

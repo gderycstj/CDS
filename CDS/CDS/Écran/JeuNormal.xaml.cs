@@ -189,7 +189,7 @@ namespace CDS
             public void validationVie()
             {
                 //Vie Actuelle
-                switch(partieNormal.vie.nbVieActu)
+                switch (Globale.vie.nbVieActu)
                 {
 					case 0:
                          vie1.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
@@ -213,16 +213,16 @@ namespace CDS
                         break;
                 }
                 //Armure
-                switch(partieNormal.vie.nbArmure)
+                switch (Globale.vie.nbArmure)
                 {
                     case 1:
-                        if (partieNormal.vie.nbVieActu == 1)
+                        if (Globale.vie.nbVieActu == 1)
                         {
                             vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                             vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                             vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
                         }
-                        if(partieNormal.vie.nbVieActu < 2)
+                        if (Globale.vie.nbVieActu < 2)
                         {
                             vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                             vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
@@ -230,13 +230,13 @@ namespace CDS
                         }
                         break;
                     case 2:
-                        if (partieNormal.vie.nbVieActu == 1)
+                        if (Globale.vie.nbVieActu == 1)
                         {
                             vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                             vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                             vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                         }
-                        if(partieNormal.vie.nbVieActu < 2)
+                        if (Globale.vie.nbVieActu < 2)
                         {
                             vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                             vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
@@ -269,7 +269,7 @@ namespace CDS
                 {
                     p.action();
                 }
-                if(partieNormal.vie.nbVieActu != 0)
+                if(Globale.vie.nbVieActu != 0)
                 {
                     partieNormal.validationPoursuivant(true);
                     AfficherPoursuivant();
