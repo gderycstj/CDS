@@ -261,23 +261,23 @@ namespace CDS
                 {
                     tour -= 1;
                 }
-
+                partieNormal.validationPoursuivant(false);
                 tour += 1;
 
                 AfficherJoueur();
-                for (int i = 0; i < partieNormal.PoursuivantDansLaPartie.Count; i++)
+                foreach (Poursuivant p in partieNormal.PoursuivantDansLaPartie)
                 {
-                    partieNormal.PoursuivantDansLaPartie[i].action();
-
-                    i++;
+                    p.action();
                 }
-
-                partieNormal.validationPoursuivant();
-                AfficherPoursuivant();
-                //DeplacementPoursuivant
-                //ValidationPoint,Vie,Collision
-                partieNormal.generationPoursuivantTour(tour);
-                AfficherPoursuivant();
+                if(partieNormal.vie.nbVieActu != 0)
+                {
+                    partieNormal.validationPoursuivant(true);
+                    AfficherPoursuivant();
+                    //DeplacementPoursuivant
+                    //ValidationPoint,Vie,Collision
+                    partieNormal.generationPoursuivantTour(tour);
+                    AfficherPoursuivant();
+                }
                 validationVie();
                 validationObjectifPartieNormal();
             }

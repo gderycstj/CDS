@@ -217,7 +217,7 @@ namespace CDS
             }
         }
 
-        public void validationPoursuivant()
+        public void validationPoursuivant(bool validationInBoundary)
         {
             for (int i = PoursuivantDansLaPartie.Count - 1; i >= 0; i--)
             {
@@ -230,12 +230,15 @@ namespace CDS
                     PoursuivantDansLaPartie.RemoveAt(i);
                     validation = true;
                 }
-                if (validation == false && PoursuivantDansLaPartie[i].inBoundary())
+                if(validationInBoundary == true)
                 {
-                    //Prendre le score
-                    score += PoursuivantDansLaPartie[i].valeurScore;
-                    //Supprimer le poursuivant de la liste
-                    PoursuivantDansLaPartie.RemoveAt(i);
+                    if (validation == false && PoursuivantDansLaPartie[i].inBoundary())
+                    {
+                        //Prendre le score
+                        score += PoursuivantDansLaPartie[i].valeurScore;
+                        //Supprimer le poursuivant de la liste
+                        PoursuivantDansLaPartie.RemoveAt(i);
+                    }
                 }
             }
         }

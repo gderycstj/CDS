@@ -602,7 +602,7 @@ namespace CDS
         /// Valide si l'entité est dans une zone interdite (rouge)
         /// </summary>
         /// <returns></returns>
-        public bool inBoundary()
+        public override bool inBoundary()
         {
             if (positionEntite.posX == 0 || positionEntite.posX == 10 || positionEntite.posY == 0 || positionEntite.posY == 10)
             {
@@ -617,7 +617,7 @@ namespace CDS
         /// Verifier si sur la cas du jouer, sur un effet.
         /// </summary>
         /// <returns></returns>
-        public bool verification()
+        public override bool verification()
         {
             if (positionEntite.posX == Globale.j1.positionJoueur.posX && positionEntite.posY == Globale.j1.positionJoueur.posY)
             {

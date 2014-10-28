@@ -69,5 +69,24 @@ namespace CDS
         {
             return true;
         }
+
+              /// <summary>
+        /// Valide si l'entité est dans une zone interdite (rouge)
+        /// </summary>
+        /// <returns></returns>
+        public virtual bool inBoundary()
+        {
+            return true;
+        }
+
+
+        /// <summary>
+        /// Verifier si sur la cas du jouer, sur un effet.
+        /// </summary>
+        /// <returns></returns>
+        public virtual bool verification()
+        {
+            return true;
+        }
     }
 }

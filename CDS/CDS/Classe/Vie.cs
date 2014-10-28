@@ -40,15 +40,17 @@ namespace CDS
                 if (nbArmure > 0)
                 {
                     nbArmure -= 1;
+                    toursImmunite +=1;
                 }
                 else
                 {
                     nbVieActu -= 1;
+                    toursImmunite +=1;
                 }
              }
             else
             {
-                toursImmunite -= 1;
+                
             }
 
         }
