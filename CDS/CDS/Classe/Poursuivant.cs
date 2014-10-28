@@ -14,7 +14,7 @@ namespace CDS
 		public int valeur { get; set; }
         public int rareté { get; set; }
         public int valeurScore { get; set; }
-        public Case positionEntite { get; set; }
+        public Position positionEntite { get; set; }
 
 		
         /// <summary>
@@ -29,26 +29,26 @@ namespace CDS
             valeur = Pvaleur;
             rareté = Prareté;
             valeurScore = valeurScoreP;
-            positionEntite = new Case();
+            positionEntite = new Position();
             Random lesPositions = new Random();
             direction = lesPositions.Next(1, 5);
             switch (direction)
             {
                 case 1:
-                    positionEntite.pos.posX = lesPositions.Next(1, 10);
-                    positionEntite.pos.posY = 0;
+                    positionEntite.posX = lesPositions.Next(1, 10);
+                    positionEntite.posY = 0;
                     break;
                 case 2:
-                    positionEntite.pos.posX = 10;
-                    positionEntite.pos.posY = lesPositions.Next(1, 10);
+                    positionEntite.posX = 10;
+                    positionEntite.posY = lesPositions.Next(1, 10);
                     break;
                 case 3:
-                    positionEntite.pos.posX = lesPositions.Next(1, 10);
-                    positionEntite.pos.posY = 10;
+                    positionEntite.posX = lesPositions.Next(1, 10);
+                    positionEntite.posY = 10;
                     break;
                 case 4:
-                    positionEntite.pos.posX = 0;
-                    positionEntite.pos.posY = lesPositions.Next(1, 10);
+                    positionEntite.posX = 0;
+                    positionEntite.posY = lesPositions.Next(1, 10);
                     break;
             }
 
@@ -72,13 +72,13 @@ namespace CDS
             //Validation Losange(selon son positionnement de l'axe des x)
             if(urlImage == "/image/LosangeMauve.png")
             {
-                if(positionEntite.pos.posX > 5)
+                if(positionEntite.posX > 5)
                 {
                     urlImage = "/image/LosangeJaune.png";
                     listeCMD = "MhMgC";
                 }
 
-                if(positionEntite.pos.posX == 5)
+                if(positionEntite.posX == 5)
                 {
                     int randomLosange;
                     randomLosange = lesPositions.Next(1, 3);
@@ -92,13 +92,13 @@ namespace CDS
 
             if (urlImage == "/image/LosangeJaune.png")
             {
-                if (positionEntite.pos.posX < 5)
+                if (positionEntite.posX < 5)
                 {
                     urlImage = "/image/LosangeMauve.png";
                     listeCMD = "MhMdC";
                 }
 
-                if (positionEntite.pos.posX == 5)
+                if (positionEntite.posX == 5)
                 {
                     int randomLosange;
                     randomLosange = lesPositions.Next(1, 3);

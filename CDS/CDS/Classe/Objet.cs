@@ -27,11 +27,11 @@ namespace CDS
             rareté = Prareté;
 
             //Position Random
-            positionEntite = new Case();
+            positionEntite = new Position();
             Random randomX = new Random();
             Random randomY = new Random();
-            positionEntite.pos.posX = randomX.Next(1,10);
-            positionEntite.pos.posY = randomY.Next(1,10);
+            positionEntite.posX = randomX.Next(1,10);
+            positionEntite.posY = randomY.Next(1,10);
         }
 		
         //lire la liste CMD et agire

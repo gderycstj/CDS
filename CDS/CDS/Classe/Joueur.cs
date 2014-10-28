@@ -15,7 +15,7 @@ namespace CDS
         private int idJoueur {get;set;}
         public string pathImage {get;set;}
         public bool estConnecte;
-        public Case positionJoueur{get;set;}
+        public Position positionJoueur{get;set;}
 
         public Joueur()
         {
@@ -23,7 +23,7 @@ namespace CDS
             idJoueur=-1;
             pathImage = "/image/perso.png";
             estConnecte = false;
-            positionJoueur = new Case(5,5);
+            positionJoueur = new Position(5,5);
         }
 
         public Joueur(string nomJ, int id, string pathIm)
@@ -32,7 +32,7 @@ namespace CDS
             idJoueur=id;
             pathImage=pathIm;
             estConnecte = true;
-            positionJoueur = new Case(6, 6);
+            positionJoueur = new Position(6, 6);
         }
 
         public string getNom()

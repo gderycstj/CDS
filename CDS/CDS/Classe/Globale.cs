@@ -14,6 +14,7 @@ namespace CDS
        public static Joueur j1;
        public static string mode;
        public static BdService bdCDS;
+       public static int tailleGrille = 11;
 
         static Globale()
         {

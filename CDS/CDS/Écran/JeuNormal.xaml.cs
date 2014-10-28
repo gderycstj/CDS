@@ -48,8 +48,8 @@ namespace CDS
             {
                 Image img = new Image();
                 img = p.obtenirImage();
-                Grid.SetColumn(img,  p.positionEntite.pos.posX);
-                Grid.SetRow(img, p.positionEntite.pos.posY);
+                Grid.SetColumn(img,  p.positionEntite.posX);
+                Grid.SetRow(img, p.positionEntite.posY);
                 grillePrincipale.Children.Add(img);
              }
         }
@@ -63,10 +63,10 @@ namespace CDS
             grillePrincipale.Children.Clear();
             Image img = new Image();
             img = Globale.j1.obtenirImage();
-            Grid.SetColumn(img, Globale.j1.positionJoueur.pos.posX);
-            Grid.SetRow(img, Globale.j1.positionJoueur.pos.posY);
+            Grid.SetColumn(img, Globale.j1.positionJoueur.posX);
+            Grid.SetRow(img, Globale.j1.positionJoueur.posY);
             grillePrincipale.Children.Add(img);
-            if(tour == 1 && Globale.j1.positionJoueur.pos.posX == 5 && Globale.j1.positionJoueur.pos.posY == 5)
+            if(tour == 1 && Globale.j1.positionJoueur.posX == 5 && Globale.j1.positionJoueur.posY == 5)
             {
                 tour -=1;
             }
@@ -161,36 +161,36 @@ namespace CDS
             //fonction de déplacement par les boutons
             void deplacerDroite()
             {
-                 if (Globale.j1.positionJoueur.pos.posX < GrilleDeJeu.TailleGrille - 2)
+                 if (Globale.j1.positionJoueur.posX < Globale.tailleGrille - 2)
                 {
-                    Globale.j1.positionJoueur.pos.posX = Globale.j1.positionJoueur.pos.posX + 1;
+                    Globale.j1.positionJoueur.posX = Globale.j1.positionJoueur.posX + 1;
                     DéplacerJoueur();
                 }
             }
 
             void deplacerGauche()
             {
-                if (Globale.j1.positionJoueur.pos.posX > 1)
+                if (Globale.j1.positionJoueur.posX > 1)
                 {
-                    Globale.j1.positionJoueur.pos.posX = Globale.j1.positionJoueur.pos.posX - 1;
+                    Globale.j1.positionJoueur.posX = Globale.j1.positionJoueur.posX - 1;
                     DéplacerJoueur();
                 }
             }
 
             void deplacerHaut()
             {
-                if (Globale.j1.positionJoueur.pos.posY > 1)
+                if (Globale.j1.positionJoueur.posY > 1)
                 {
-                    Globale.j1.positionJoueur.pos.posY = Globale.j1.positionJoueur.pos.posY - 1;
+                    Globale.j1.positionJoueur.posY = Globale.j1.positionJoueur.posY - 1;
                     DéplacerJoueur();
                 }
             }
 
             void deplacerBas()
             {
-                 if (Globale.j1.positionJoueur.pos.posY < GrilleDeJeu.TailleGrille - 2)
+                 if (Globale.j1.positionJoueur.posY < Globale.tailleGrille - 2)
                   {
-                      Globale.j1.positionJoueur.pos.posY = Globale.j1.positionJoueur.pos.posY + 1;
+                      Globale.j1.positionJoueur.posY = Globale.j1.positionJoueur.posY + 1;
                       DéplacerJoueur();
                   }   
             }

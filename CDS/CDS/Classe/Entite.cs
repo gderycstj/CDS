@@ -14,11 +14,11 @@ namespace CDS
         protected int age { get; set; }
         protected string urlImage { get; set; }
         protected int direction { get; set; }//1 à 4
-        public Case positionEntite { get; set; }
+        public Position positionEntite { get; set; }
 		
 		 protected Entite(string listeC,string image) 
         {
-            positionEntite = new Case();
+            positionEntite = new Position();
             listeCMD=listeC;
             urlImage=image;
             age = 0;
@@ -108,7 +108,7 @@ namespace CDS
         /// <returns></returns>
         public bool inBoundary()
         {
-            if(positionEntite.pos.posX == 0 || positionEntite.pos.posX == 10 || positionEntite.pos.posY == 0 || positionEntite.pos.posY == 10)
+            if(positionEntite.posX == 0 || positionEntite.posX == 10 || positionEntite.posY == 0 || positionEntite.posY == 10)
             {
                 return true;
             }
@@ -122,7 +122,7 @@ namespace CDS
         /// <returns></returns>
         public bool verification()
         {
-            if (positionEntite.pos.posX == Globale.j1.positionJoueur.pos.posX && positionEntite.pos.posY == Globale.j1.positionJoueur.pos.posY)
+            if (positionEntite.posX == Globale.j1.positionJoueur.posX && positionEntite.posY == Globale.j1.positionJoueur.posY)
             {
                 return true;
             }

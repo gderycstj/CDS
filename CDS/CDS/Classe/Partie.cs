@@ -9,7 +9,6 @@ namespace CDS
 {
     public class Partie
     {
-        GrilleDeJeu grille { get;set;}
         public int score { get;set;}
         public Vie vie { get; set; }
         Objectif objectif { get;set;}
@@ -123,10 +122,6 @@ namespace CDS
             }
 
             bool validation = true;
-            if(!grille.finDeTour())
-            {
-                validation = false;
-            }
             if(!vie.finDeTour())
             {
                 validation = false;
