@@ -126,22 +126,17 @@ namespace CDS
             }
         }
 
-        private bool finDeTour()
+        public bool finDeTour()
         {
-            foreach (Entite E in listeEntite)
-            {
-                E.finDetour();
-            }
-
             bool validation = true;
             if(!vie.finDeTour())
             {
                 validation = false;
             }
-            if(objectif.finDeTour())
+            /*if(objectif.finDeTour())
             {
                 validation = false;
-            }
+            }*/
 
             if(!validation)
             {return false;}
@@ -149,15 +144,7 @@ namespace CDS
             else { return true;}
         }
 
-        public void validationObjectifPartieNormal()
-        {
-            if(!finDeTour())
-            {
-                //Appel de l'écran de fin de partie
-            }
-
-        }
-
+      
         public void débutDePartieGenPoursuivant()
         {
             int nbPoursuivant;
@@ -243,13 +230,12 @@ namespace CDS
                     PoursuivantDansLaPartie.RemoveAt(i);
                     validation = true;
                 }
-                if (PoursuivantDansLaPartie[i].inBoundary() && validation == false)
+                if (validation == false && PoursuivantDansLaPartie[i].inBoundary())
                 {
                     //Prendre le score
                     score += PoursuivantDansLaPartie[i].valeurScore;
                     //Supprimer le poursuivant de la liste
                     PoursuivantDansLaPartie.RemoveAt(i);
-                    validation = true;
                 }
             }
         }

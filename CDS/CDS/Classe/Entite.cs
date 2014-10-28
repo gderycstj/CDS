@@ -69,32 +69,5 @@ namespace CDS
         {
             return true;
         }
-
-        /// <summary>
-        /// Valide si l'entité est dans une zone interdite (rouge)
-        /// </summary>
-        /// <returns></returns>
-        public bool inBoundary()
-        {
-            if(positionEntite.posX == 0 || positionEntite.posX == 10 || positionEntite.posY == 0 || positionEntite.posY == 10)
-            {
-                return true;
-            }
-            else
-            {return false;}
-        }
-
-        /// <summary>
-        /// Verifier si sur la cas du jouer, sur un effet.
-        /// </summary>
-        /// <returns></returns>
-        public bool verification()
-        {
-            if (positionEntite.posX == Globale.j1.positionJoueur.posX && positionEntite.posY == Globale.j1.positionJoueur.posY)
-            {
-                return true;
-            }
-            return false;
-        }
     }
 }

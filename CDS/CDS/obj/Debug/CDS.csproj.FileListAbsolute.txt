@@ -234,3 +234,4 @@ D:\projet\CDS\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 D:\projet\CDS\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
 D:\projet\CDS\CDS\CDS\obj\Debug\CDS.exe
 D:\projet\CDS\CDS\CDS\obj\Debug\CDS.pdb
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache

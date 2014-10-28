@@ -29,7 +29,6 @@ namespace CDS
             txtCTour.Text = tour.ToString();
             partieNormal.initialiser();
             txtCScore.Text = partieNormal.score.ToString();
-            partieNormal.débutDePartieGenPoursuivant();
             validationVie();
             AfficherJoueur();
             AfficherPoursuivant();
@@ -192,6 +191,11 @@ namespace CDS
                 //Vie Actuelle
                 switch(partieNormal.vie.nbVieActu)
                 {
+					case 0:
+                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+                         vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+                        break;
                     case 1:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
@@ -250,10 +254,8 @@ namespace CDS
             public void generationTour()
             {
                 //va éffacer la grille a chaque déplacement et va réafficher le joueur à sa nouvelle position
-                if(tour > 1)
-                { 
                   grillePrincipale.Children.Clear();
-                }
+
 
                 if (tour == 1 && Globale.j1.positionJoueur.posX == 5 && Globale.j1.positionJoueur.posY == 5)
                 {
@@ -270,13 +272,27 @@ namespace CDS
                     i++;
                 }
 
-              partieNormal.validationPoursuivant();
+                partieNormal.validationPoursuivant();
                 AfficherPoursuivant();
                 //DeplacementPoursuivant
                 //ValidationPoint,Vie,Collision
                 partieNormal.generationPoursuivantTour(tour);
                 AfficherPoursuivant();
-              
+                validationVie();
+                validationObjectifPartieNormal();
+            }
+			
+			public void validationObjectifPartieNormal()
+            {
+                if (!partieNormal.finDeTour())
+                {
+                    //Appel de l'écran de fin de partie
+                    MessageBox.Show("Partie Terminé"); //Sa va être un xaml plus tard
+                    menuJouer menuJ = new menuJouer();
+                    menuJ.Show();
+                    Close();
+                }
+
             }
     }
 }
