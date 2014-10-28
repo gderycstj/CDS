@@ -90,19 +90,31 @@ namespace CDS
          /// <param name="numNiveau"></param>
         public void chargerObjet(int numNiveau) 
         {
-        int nbRange = 0;
+            int nbRange = 0;
 
-        //requête qui sélectionne toutes les infos d'un objet et son apparence
-        string req =    "SELECT o.nom,valeur,rarete,listeCMD,image FROM Niveaux as n " +
-                        "INNER JOIN NiveauxObjets as no ON no.idNiveau = n.idNiveau " +
-                        "INNER JOIN Objets as o ON no.idObjet = o.idObjet " +
-                        "INNER JOIN ObjetsEffets as nf ON nf.idObjet = o.idObjet " +
-                        "INNER JOIN Effets as e ON e.idEffet = nf.idEffet " +
-                        "INNER JOIN Apparences a ON a.idApparence = o.idApparence " +
-                        "WHERE n.idModeDeJeu = " +
-                        "(SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = '" + Globale.mode + "' AND numNiveau = " + numNiveau + ");";
+            //requête qui sélectionne toutes les infos d'un objet et son apparence
+            string req = "SELECT o.nom,valeur,rarete,listeCMD,image FROM Niveaux as n " +
+                            "INNER JOIN NiveauxObjets as no ON no.idNiveau = n.idNiveau " +
+                            "INNER JOIN Objets as o ON no.idObjet = o.idObjet " +
+                            "INNER JOIN ObjetsEffets as nf ON nf.idObjet = o.idObjet " +
+                            "INNER JOIN Effets as e ON e.idEffet = nf.idEffet " +
+                            "INNER JOIN Apparences a ON a.idApparence = o.idApparence " +
+                            "WHERE n.idModeDeJeu = " +
+                            "(SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = '" + Globale.mode + "' AND numNiveau = " + numNiveau + ");";
 
-                          List<string>[] unNiveau = Globale.bdCDS.selection(req,5,ref nbRange);
+            List<string>[] unNiveau = Globale.bdCDS.selection(req, 5, ref nbRange);
+
+            for (int i = 0; i < unNiveau.Length; i++)
+            {
+                Effet e = new Effet(unNiveau[i][4], unNiveau[i][4]);
+
+                objetDansLaPartie.Add(new Objet(e, Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][3], unNiveau[i][4]));
+                if (i != unNiveau.Length - 1)
+                {
+                    System.Threading.Thread.Sleep(150);
+                }
+
+            }
          }
 
 
@@ -114,7 +126,7 @@ namespace CDS
             }
         }
 
-        public bool finDeTour()
+        private bool finDeTour()
         {
             foreach (Entite E in listeEntite)
             {
@@ -135,6 +147,15 @@ namespace CDS
             {return false;}
 
             else { return true;}
+        }
+
+        public void validationObjectifPartieNormal()
+        {
+            if(!finDeTour())
+            {
+                //Appel de l'écran de fin de partie
+            }
+
         }
 
         public void débutDePartieGenPoursuivant()

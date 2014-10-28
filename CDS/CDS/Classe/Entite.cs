@@ -30,38 +30,6 @@ namespace CDS
         public abstract bool finDetour();
 
         /// <summary>
-        /// WIP mouvement vers le haut
-        /// </summary>
-        protected void mouvementNord()
-        {
-
-        }
-
-        /// <summary>
-        /// WIP mouvement vers le bas
-        /// </summary>
-        protected void mouvementSud()
-        {
-
-        }
-
-        /// <summary>
-        /// WIP mouvement vers la droite
-        /// </summary>
-        protected void mouvementEst()
-        {
-
-        }
-
-        /// <summary>
-        /// WIP mouvement vers la gauche
-        /// </summary>
-        protected void mouvementOuest()
-        {
-
-        }
-
-        /// <summary>
         /// Teste si le joueur est au nord de l'entite
         /// </summary>
         /// <returns>Si le joueur est au nord de l'entite</returns>

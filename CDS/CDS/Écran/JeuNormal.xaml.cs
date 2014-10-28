@@ -29,54 +29,38 @@ namespace CDS
             txtCTour.Text = tour.ToString();
             partieNormal.initialiser();
             txtCScore.Text = partieNormal.score.ToString();
+            partieNormal.débutDePartieGenPoursuivant();
             validationVie();
-            afficherGrilleJeu();
-        }
-        /// <summary>
-        /// cette fonction devrait théorquement afficher tout les éléments du jeu mais je n'ai fait que le déplacement du joueur
-        /// </summary>
-        void afficherGrilleJeu()
-        {
-            DéplacerJoueur();
-            AfficherMonstre();
+            AfficherJoueur();
+            AfficherPoursuivant();
         }
 
-        //fonction test
-        void AfficherMonstre() 
+        void AfficherJoueur()
         {
-            foreach (Poursuivant p in partieNormal.PoursuivantDansLaPartie) 
-            {
-                Image img = new Image();
-                img = p.obtenirImage();
-                Grid.SetColumn(img,  p.positionEntite.posX);
-                Grid.SetRow(img, p.positionEntite.posY);
-                grillePrincipale.Children.Add(img);
-             }
-        }
-
-        /// <summary>
-        /// Fonction pour déplacer un joueur
-        /// </summary>
-        void DéplacerJoueur() 
-        {
-            //va éffacer la grille a chaque déplacement et va réafficher le joueur à sa nouvelle position
-            grillePrincipale.Children.Clear();
             Image img = new Image();
             img = Globale.j1.obtenirImage();
             Grid.SetColumn(img, Globale.j1.positionJoueur.posX);
             Grid.SetRow(img, Globale.j1.positionJoueur.posY);
             grillePrincipale.Children.Add(img);
-            if(tour == 1 && Globale.j1.positionJoueur.posX == 5 && Globale.j1.positionJoueur.posY == 5)
-            {
-                tour -=1;
-            }
-            tour +=1;
-            if (tour > 1)
-            {
-                generationTour();
-            }
+
         }
-        
+
+        //fonction test
+        void AfficherPoursuivant() 
+        {
+            foreach (Poursuivant p in partieNormal.PoursuivantDansLaPartie) 
+            {
+                Image img = new Image();
+                img = p.obtenirImage();
+                 if(p.positionEntite.posX >= 0 && p.positionEntite.posY >= 0)
+                { 
+                  Grid.SetColumn(img,  p.positionEntite.posX);
+                   Grid.SetRow(img, p.positionEntite.posY);
+                }
+                grillePrincipale.Children.Add(img);
+             }
+        }
+
         //fonction de déplacement pour les boutons, haut veux dire déplacement haut... fait aussi les validations pour pas dépasser la grille
         private void haut(object sender, RoutedEventArgs e)
         {
@@ -111,6 +95,7 @@ namespace CDS
 
         private void grilleJeuWindow_KeyDown(object sender, KeyEventArgs e)
         {
+       
               //Vers le bas
               if(Keyboard.IsKeyDown(Key.Down))
               {
@@ -164,7 +149,7 @@ namespace CDS
                  if (Globale.j1.positionJoueur.posX < Globale.tailleGrille - 2)
                 {
                     Globale.j1.positionJoueur.posX = Globale.j1.positionJoueur.posX + 1;
-                    DéplacerJoueur();
+                    generationTour();
                 }
             }
 
@@ -173,7 +158,7 @@ namespace CDS
                 if (Globale.j1.positionJoueur.posX > 1)
                 {
                     Globale.j1.positionJoueur.posX = Globale.j1.positionJoueur.posX - 1;
-                    DéplacerJoueur();
+                    generationTour();
                 }
             }
 
@@ -182,7 +167,7 @@ namespace CDS
                 if (Globale.j1.positionJoueur.posY > 1)
                 {
                     Globale.j1.positionJoueur.posY = Globale.j1.positionJoueur.posY - 1;
-                    DéplacerJoueur();
+                    generationTour();
                 }
             }
 
@@ -191,7 +176,7 @@ namespace CDS
                  if (Globale.j1.positionJoueur.posY < Globale.tailleGrille - 2)
                   {
                       Globale.j1.positionJoueur.posY = Globale.j1.positionJoueur.posY + 1;
-                      DéplacerJoueur();
+                      generationTour();
                   }   
             }
 
@@ -207,11 +192,6 @@ namespace CDS
                 //Vie Actuelle
                 switch(partieNormal.vie.nbVieActu)
                 {
-                    case 0:
-                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
-                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
-                         vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
-                        break;
                     case 1:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
@@ -269,26 +249,34 @@ namespace CDS
 
             public void generationTour()
             {
-                //DeplacementPoursuivant
-                partieNormal.validationPoursuivant();
-                partieNormal.generationPoursuivantTour(tour);
-                AfficherMonstre();
-                //affichage des monstres déplacé
-                //fonctionFinDeTour();
-                //Affichage des infos
-            }
-
-            public void validationObjectifPartieNormal()
-            {
-                if (!partieNormal.finDeTour())
-                {
-                    //Appel de l'écran de fin de partie
-                    MessageBox.Show("Partie Terminé"); //Sa va être un xaml plus tard
-                    menuJouer menuJ = new menuJouer();
-                    menuJ.Show();
-                    Close();
+                //va éffacer la grille a chaque déplacement et va réafficher le joueur à sa nouvelle position
+                if(tour > 1)
+                { 
+                  grillePrincipale.Children.Clear();
                 }
 
+                if (tour == 1 && Globale.j1.positionJoueur.posX == 5 && Globale.j1.positionJoueur.posY == 5)
+                {
+                    tour -= 1;
+                }
+
+                tour += 1;
+
+                AfficherJoueur();
+                for (int i = 0; i < partieNormal.PoursuivantDansLaPartie.Count; i++)
+                {
+                    partieNormal.PoursuivantDansLaPartie[i].action();
+
+                    i++;
+                }
+
+              partieNormal.validationPoursuivant();
+                AfficherPoursuivant();
+                //DeplacementPoursuivant
+                //ValidationPoint,Vie,Collision
+                partieNormal.generationPoursuivantTour(tour);
+                AfficherPoursuivant();
+              
             }
     }
 }

@@ -530,6 +530,7 @@ namespace CDS
                                         break;
                                 }
                                 break;
+
                         }
 
                         break;
@@ -540,8 +541,12 @@ namespace CDS
                         //bouger sans faire de check, c'est de la téléportation
                         break;
                 }
+                if (iLecture >= CMD.Length)
+                {
+                    CMD = "";
+                }
             }
-            return false;
+            return true;
         }
 
         //Vérification et action effectuer à chaque fin de tour
@@ -558,6 +563,39 @@ namespace CDS
         public string getListeCMD()
         {
             return listeCMD;
+        }
+
+
+        /// <summary>
+        /// WIP mouvement vers le haut
+        /// </summary>
+        public void mouvementNord()
+        {
+            this.positionEntite.posY = positionEntite.posY - 1;
+        }
+
+        /// <summary>
+        /// WIP mouvement vers le bas
+        /// </summary>
+        public void mouvementSud()
+        {
+            this.positionEntite.posY = positionEntite.posY + 1;
+        }
+
+        /// <summary>
+        /// WIP mouvement vers la droite
+        /// </summary>
+        public void mouvementEst()
+        {
+            this.positionEntite.posX = positionEntite.posX + 1;
+        }
+
+        /// <summary>
+        /// WIP mouvement vers la gauche
+        /// </summary>
+        public void mouvementOuest()
+        {
+            this.positionEntite.posX = positionEntite.posX - 1;
         }
 
     }
