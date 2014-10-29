@@ -24,29 +24,42 @@ namespace CDS
         /// <param name="url">url de l'image</param>
         public Poursuivant(int Pvaleur,int Prareté,string listC,string url,int valeurScoreP):base(listC,url)
         {
+            
             valeur = Pvaleur;
             rareté = Prareté;
             valeurScore = valeurScoreP;
             positionEntite = new Position();
             Random lesPositions = new Random();
             direction = lesPositions.Next(1, 5);
+            int memoireRdm ;
             switch (direction)
             {
                 case 1:
-                    positionEntite.posX = lesPositions.Next(1, 10);
+                    memoireRdm = lesPositions.Next(1, 10);
+                    positionEntite.posX =  memoireRdm;
                     positionEntite.posY = 0;
                     break;
                 case 2:
+                    memoireRdm = lesPositions.Next(1, 10);
                     positionEntite.posX = 10;
-                    positionEntite.posY = lesPositions.Next(1, 10);
+                    positionEntite.posY = memoireRdm;
                     break;
                 case 3:
-                    positionEntite.posX = lesPositions.Next(1, 10);
+                    memoireRdm = lesPositions.Next(1, 10);
+                    positionEntite.posX = memoireRdm;
                     positionEntite.posY = 10;
+                    //inverse les case 9->1, 8->2, 7->3, 6->4, 5->5, 4->6... Pour verification
+                    memoireRdm = (memoireRdm - 10) * -1;
                     break;
                 case 4:
+                    memoireRdm = lesPositions.Next(1, 10);
                     positionEntite.posX = 0;
-                    positionEntite.posY = lesPositions.Next(1, 10);
+                    positionEntite.posY = memoireRdm;
+                    //inverse les case 9->1, 8->2, 7->3, 6->4, 5->5, 4->6... Pour verification
+                    memoireRdm = (memoireRdm - 10) * -1;
+                    break;
+                default://arrivera jamais mais pour que le compilateur me foute la paix
+                    memoireRdm = lesPositions.Next(1, 10);
                     break;
             }
 
@@ -67,28 +80,27 @@ namespace CDS
                 }
             }
             //-----------------------------------------------------------
-            //Validation Losange(selon son positionnement de l'axe des x)
+            //Validation Losange(selon son positionnement)
             if(urlImage == "/image/LosangeMauve.png")
             {
-                if(positionEntite.posX > 5)
-                {
-                    urlImage = "/image/LosangeJaune.png";
-                    listeCMD = "MhMgC";
-                }
+                if(memoireRdm <=5)
+                { 
+                    int randomLosange=2;
+                    if(memoireRdm == 5)
+                    {
+                    
+                        randomLosange = lesPositions.Next(1, 3);
+                    }
 
-                if(positionEntite.posX == 5)
-                {
-                    int randomLosange;
-                    randomLosange = lesPositions.Next(1, 3);
-                    if(randomLosange == 1)
+                    if(randomLosange == 2)
                     {
                         urlImage = "/image/LosangeJaune.png";
-                        listeCMD = "MhMgC";
+                        listeCMD= "MhMgC";
                     }
                 }
             }
 
-            if (urlImage == "/image/LosangeJaune.png")
+            /*if (urlImage == "/image/LosangeJaune.png")
             {
                 if (positionEntite.posX < 5)
                 {
@@ -106,7 +118,7 @@ namespace CDS
                         listeCMD = "MhMdC";
                     }
                 }
-            }
+            }*/
             //-------------------------------------------------------------------------
         }
 
@@ -234,19 +246,19 @@ namespace CDS
                                 switch (direction)
                                 {
                                     case 2:
-                                        mouvementSud();
-                                        break;
-
-                                    case 3:
-                                        mouvementOuest();
-                                        break;
-
-                                    case 4:
                                         mouvementNord();
                                         break;
 
-                                    case 1:
+                                    case 3:
                                         mouvementEst();
+                                        break;
+
+                                    case 4:
+                                        mouvementSud();
+                                        break;
+
+                                    case 1:
+                                        mouvementOuest();
                                         break;
                                 }
                                 break;
@@ -278,19 +290,19 @@ namespace CDS
                                 switch (direction)
                                 {
                                     case 4:
-                                        mouvementSud();
-                                        break;
-
-                                    case 1:
-                                        mouvementOuest();
-                                        break;
-
-                                    case 2:
                                         mouvementNord();
                                         break;
 
-                                    case 3:
+                                    case 1:
                                         mouvementEst();
+                                        break;
+
+                                    case 2:
+                                        mouvementSud();
+                                        break;
+
+                                    case 3:
+                                        mouvementOuest();
                                         break;
                                 }
                                 break;

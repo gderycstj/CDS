@@ -53,6 +53,7 @@ namespace CDS
             listeJoueur = Globale.bdCDS.selection(req, 4, ref nombreRange);
 
 
+
             //si le nombre de rangé = 0, ça veut dire que la requête n'a rien retourné, donc que l'utilisateur existe pas
             if (nombreRange == 0)
             {
@@ -60,7 +61,7 @@ namespace CDS
                 txtNomUsager.Clear();
                 txtMotDePasse.Clear();
             }
-            if(listeJoueur[0][3].ToString() == "False")
+            else if(listeJoueur[0][3].ToString() == "False")
             {
                 txtErreur.Text = "Votre nom d'utilisateur ou votre mot de passe est incorrect";
                 txtNomUsager.Clear();

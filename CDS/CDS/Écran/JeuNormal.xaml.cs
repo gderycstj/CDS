@@ -144,6 +144,7 @@ namespace CDS
                     partieNormal.obj2.unEffet.action();
                     partieNormal.obj2 = null;
                     validationVie();
+                    item2.Background = null;
                 }
             }
             
@@ -156,6 +157,7 @@ namespace CDS
                     partieNormal.obj1.unEffet.action();
                     partieNormal.obj1 = null;
                     validationVie();
+                    item1.Background = null;
                 }
             } 
             //Bouton Enter(passer le tour)
@@ -216,77 +218,84 @@ namespace CDS
 
             public void rentrerObjet() 
             {
-               // if (partieNormal.obj1 != null) 
-                //{
-                  //  item1.Background = new ImageBrush(new BitmapImage(new Uri(@"./image/coeurVide.png", UriKind.Relative)));
-                  
-                //}
-            
+               if (partieNormal.obj1 != null) 
+               {
+                    var brush = new ImageBrush();
+                    brush.ImageSource = new BitmapImage(new Uri("../.." + partieNormal.obj1.getUrlImage() + "", UriKind.RelativeOrAbsolute));
+                    item1.Background = brush;
+               }
+
+               if (partieNormal.obj2 != null)
+               {
+                   var brush = new ImageBrush();
+                   brush.ImageSource = new BitmapImage(new Uri("../.." + partieNormal.obj2.getUrlImage() + "", UriKind.RelativeOrAbsolute));
+                   item2.Background = brush;
+               }
             }
 
             public void validationVie()
             {
-                //Vie Actuelle
+                //on met les coueur vide
+                vie1.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+                vie2.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+                vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
+
+                viesSup.Text = "";
+                armuresSup.Text = "";
+                //on remplit les coeur selon la Vie Actuelle
                 switch (Globale.vie.nbVieActu)
                 {
 					case 0:
-                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
-                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
-                         vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
                         break;
                     case 1:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
-                        vie2.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
-                        vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
                         break;
                     case 2:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
-                        vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
                         break;
                     case 3:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie3.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         break;
+
+                    default:
+                        vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                        vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                        vie3.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+
+                        viesSup.Text="+"+(Globale.vie.nbVieActu-3);
+                        break;
                 }
                 //Armure
                 switch (Globale.vie.nbArmure)
                 {
+                    case 0:
+                        break;
+
                     case 1:
-                        if (Globale.vie.nbVieActu == 1)
-                        {
-                            vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
-                            vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
-                            vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
-                        }
-                        if (Globale.vie.nbVieActu >= 2)
-                        {
-                            vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
-                            vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
-                            vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
-                        }
+                        vie1.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                         break;
+
                     case 2:
-                        if (Globale.vie.nbVieActu == 1)
-                        {
-                            vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
-                            vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
-                            vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
-                        }
-                        if (Globale.vie.nbVieActu >= 2)
-                        {
-                            vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
-                            vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
-                            vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
-                        }
+                        vie1.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                         break;
-                }
-                if(Globale.vie.nbArmure >= 3)
-                {
-                    vie1.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
-                    vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
-                    vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+
+                    case 3:
+                        vie1.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        break;
+
+                    default:
+                        vie1.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+
+                        armuresSup.Text = "+" + (Globale.vie.nbArmure - 3);
+                        break;
                 }
             }
 
@@ -345,6 +354,7 @@ namespace CDS
                     partieNormal.obj1.unEffet.action();
                     partieNormal.obj1 = null;
                     validationVie();
+                    item1.Background = null;
                 }
 
             }
@@ -356,6 +366,7 @@ namespace CDS
                     partieNormal.obj2.unEffet.action();
                     partieNormal.obj2 = null;
                     validationVie();
+                    item2.Background = null;
 
                 }
 

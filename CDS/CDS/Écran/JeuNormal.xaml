@@ -65,9 +65,9 @@
                 <ImageBrush ImageSource="/CDS;component/Image/rond.png"/>
             </Button.Background>
         </Button>
-        <Image x:Name="vie1" HorizontalAlignment="Left" Height="77" Margin="813,161,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/coeurPlein.png"/>
-        <Image x:Name="vie2" HorizontalAlignment="Left" Height="77" Margin="905,161,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/coeurPlein.png"/>
-        <Image x:Name="vie3" HorizontalAlignment="Left" Height="77" Margin="997,161,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/coeurPlein.png"/>
+        <Image x:Name="vie1" HorizontalAlignment="Left" Height="64" Margin="813,161,0,0" VerticalAlignment="Top" Width="74" Source="/CDS;component/Image/coeurPlein.png"/>
+        <Image x:Name="vie2" HorizontalAlignment="Left" Height="64" Margin="888,161,0,0" VerticalAlignment="Top" Width="74" Source="/CDS;component/Image/coeurPlein.png"/>
+        <Image x:Name="vie3" HorizontalAlignment="Left" Height="64" Margin="962,161,0,0" VerticalAlignment="Top" Width="74" Source="/CDS;component/Image/coeurPlein.png"/>
         <TextBlock x:Name="txtTScore" HorizontalAlignment="Left" Height="38" Margin="824,10,0,0" TextWrapping="Wrap" Text="Score" VerticalAlignment="Top" Width="241" FontFamily="Agency FB" FontSize="36" TextAlignment="Center" Foreground="#FF4B634D"/>
         <TextBlock x:Name="txtCScore" HorizontalAlignment="Left" Height="38" Margin="824,53,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="241" FontFamily="Agency FB" FontSize="36" TextAlignment="Center" Foreground="#FF4B634D"/>
         <TextBlock x:Name="txtTTour" HorizontalAlignment="Left" Height="36" Margin="888,106,0,0" TextWrapping="Wrap" Text="Tours:" VerticalAlignment="Top" Width="77" Foreground="#FF4B634D" FontFamily="Agency FB" FontSize="36"/>
@@ -77,5 +77,7 @@
         <Ellipse HorizontalAlignment="Left" Height="82" Margin="954,553,0,0" Stroke="#FF4B634D" VerticalAlignment="Top" Width="112" Fill="#FF4B634D"/>
         <Button x:Name="item1" Content="" HorizontalAlignment="Left" Height="53" Margin="841,568,0,0" VerticalAlignment="Top" Width="78" Background="{x:Null}" BorderBrush="{x:Null}" Focusable="False" Click="item1_click"/>
         <Button x:Name="item2" Content="" HorizontalAlignment="Left" Height="53" Margin="970,568,0,0" VerticalAlignment="Top" Width="78" Background="{x:Null}" BorderBrush="{x:Null}" Focusable="False" Click="item2_click"/>
+        <TextBlock x:Name="viesSup" HorizontalAlignment="Left" Margin="1035,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="48" Foreground="#FFFD0000" FontSize="36" TextAlignment="Center" LineHeight="6" RenderTransformOrigin="-0.128,0.726"/>
+        <TextBlock x:Name="armuresSup" HorizontalAlignment="Left" Margin="1037,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="48" Foreground="#FF494747" FontSize="36" LineHeight="6"/>
     </Grid>
 </Window>
