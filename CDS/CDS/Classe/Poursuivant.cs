@@ -196,8 +196,6 @@ namespace CDS
 
             while (CMD != "")
             {
-
-
                 lettre = CMD[iLecture];
                 iLecture++;
                 switch (lettre)

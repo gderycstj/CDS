@@ -139,14 +139,24 @@ namespace CDS
             //Bouton X(item)
             if(Keyboard.IsKeyDown(Key.X))
             {
-                
+                if (partieNormal.obj2 != null)
+                {
+                    partieNormal.obj2.unEffet.action();
+                    partieNormal.obj2 = null;
+                    validationVie();
+                }
             }
             
 
             //Bouton Z(item)
             if(Keyboard.IsKeyDown(Key.Z))
             {
-               
+                if (partieNormal.obj1 != null)
+                {
+                    partieNormal.obj1.unEffet.action();
+                    partieNormal.obj1 = null;
+                    validationVie();
+                }
             } 
             //Bouton Enter(passer le tour)
             if(Keyboard.IsKeyDown(Key.Enter))
@@ -204,6 +214,16 @@ namespace CDS
                 txtCScore.Text = partieNormal.score.ToString();
             }
 
+            public void rentrerObjet() 
+            {
+               // if (partieNormal.obj1 != null) 
+                //{
+                  //  item1.Background = new ImageBrush(new BitmapImage(new Uri(@"./image/coeurVide.png", UriKind.Relative)));
+                  
+                //}
+            
+            }
+
             public void validationVie()
             {
                 //Vie Actuelle
@@ -240,7 +260,7 @@ namespace CDS
                             vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                             vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
                         }
-                        if (Globale.vie.nbVieActu < 2)
+                        if (Globale.vie.nbVieActu >= 2)
                         {
                             vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                             vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
@@ -254,7 +274,7 @@ namespace CDS
                             vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                             vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                         }
-                        if (Globale.vie.nbVieActu < 2)
+                        if (Globale.vie.nbVieActu >= 2)
                         {
                             vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                             vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
@@ -274,12 +294,15 @@ namespace CDS
                 //va éffacer la grille a chaque déplacement et va réafficher le joueur à sa nouvelle position
                   grillePrincipale.Children.Clear();
 
-
                 if (tour == 1 && Globale.j1.positionJoueur.posX == 5 && Globale.j1.positionJoueur.posY == 5)
                 {
                     tour -= 1;
                 }
+
                 partieNormal.validationPoursuivant(false);
+                partieNormal.validationObjet();
+                rentrerObjet();
+
                 tour += 1;
                 AfficherJoueur();
                 foreach (Poursuivant p in partieNormal.PoursuivantDansLaPartie)
@@ -289,8 +312,10 @@ namespace CDS
                 if(Globale.vie.nbVieActu != 0)
                 {
                     partieNormal.validationPoursuivant(true);
+
                     partieNormal.generationPoursuivantTour(tour);
                     AfficherPoursuivant();
+
                     partieNormal.GenerationObjet(tour);
                     AfficherObjet();
                 }
@@ -308,6 +333,29 @@ namespace CDS
                     menuJouer menuJ = new menuJouer();
                     menuJ.Show();
                     Close();
+                }
+
+            }
+
+            private void item1_click(object sender, RoutedEventArgs e)
+            {
+                if (partieNormal.obj1 != null) 
+                {
+                    partieNormal.obj1.unEffet.action();
+                    partieNormal.obj1 = null;
+                    validationVie();
+                }
+
+            }
+
+            private void item2_click(object sender, RoutedEventArgs e)
+            {
+                if (partieNormal.obj2 != null)
+                {
+                    partieNormal.obj2.unEffet.action();
+                    partieNormal.obj2 = null;
+                    validationVie();
+
                 }
 
             }

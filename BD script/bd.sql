@@ -372,7 +372,7 @@ INSERT INTO Effets(idUtilisateur,nom,listeCMD)
 VALUES
 ((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
  ,'Vie 1'
- ,'V'
+ ,'S'
 );
 
 INSERT INTO Effets(idUtilisateur,nom,listeCMD)
@@ -392,7 +392,6 @@ INSERT INTO ObjetsEffets(idObjet,idEffet)
 VALUES
 ((SELECT idObjet FROM Objets WHERE nom = 'Armure')
  ,(SELECT idEffet FROM Effets WHERE nom = 'Armure 1')
-)
+);
 
-
-
+COMMIT

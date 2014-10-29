@@ -428,10 +428,13 @@ namespace CDS
                     case 'P': break;
                     //Invincibilité
                     case '*': break;
-
                 }
+               if (iLecture >= CMD.Length)
+               {
+                   CMD = "";
+               }
         }
-            return false;
+            return true;
         }
        
         //Vérification et action effectuer à chaque fin de tour

@@ -73,6 +73,19 @@ namespace CDS
             return img;
 
         }
+
+        /// <summary>
+        /// Verifier si sur la cas du jouer, sur un effet.
+        /// </summary>
+        /// <returns></returns>
+        public override bool verification()
+        {
+            if (positionEntite.posX == Globale.j1.positionJoueur.posX && positionEntite.posY == Globale.j1.positionJoueur.posY)
+            {
+                return true;
+            }
+            return false;
+        }
       
     }
 }

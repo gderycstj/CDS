@@ -11,11 +11,12 @@ namespace CDS
     {
         public int score { get;set;}
         Objectif objectif { get;set;}
-        int qtyObjetsMax;
         public List<Poursuivant> PoursuivantDispoPourLaPartie { get; set; }
         public List<Poursuivant> PoursuivantDansLaPartie{ get; set; }
         public List<Objet> objetDansLaPartie{get; set;}
-       public List<Objet> objetDispoPourLaPartie { get;set;}
+        public List<Objet> objetDispoPourLaPartie { get;set;}
+        public Objet obj1{get;set;}
+        public Objet obj2{get;set;}
 
         public Partie()
         {   
@@ -106,7 +107,7 @@ namespace CDS
 
             for (int i = 0; i < unNiveau.Length; i++)
             {
-                Effet e = new Effet(unNiveau[i][4], unNiveau[i][4]);
+                Effet e = new Effet(unNiveau[i][3], unNiveau[i][4]);
 
                 objetDispoPourLaPartie.Add(new Objet(e, Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][3], unNiveau[i][4]));
 
@@ -230,6 +231,31 @@ namespace CDS
             }
         }
 
+        public void validationObjet()
+        {
+            for (int i = objetDansLaPartie.Count - 1; i >= 0; i--)
+            {
+                if (objetDansLaPartie[i].verification())
+                {
+                    //Enlever une vie au personnage
+                    if (obj1 == null)
+                    {
+                        //va rentrer l'objet dans la variable dans bouton
+                        obj1 = objetDansLaPartie[i];
+                    }
+                    else if (obj2 == null) 
+                    {
+                        obj2 = objetDansLaPartie[i];
+                    }
+                    else 
+                    {
+                        objetDansLaPartie[i].unEffet.action();
+                    }
+                    objetDansLaPartie.RemoveAt(i);
+                }
+            }
+        }
+
         public void GenerationObjet(int tour)
         {
             int nbObjetDispo = objetDispoPourLaPartie.Count;
@@ -245,7 +271,6 @@ namespace CDS
                listeCMDEffet = objetDispoPourLaPartie[objetChoisi].unEffet.getListeCMD();
                urlImageEffet = objetDispoPourLaPartie[objetChoisi].unEffet.getUrlImage();
                Effet e = new Effet(listeCMDEffet,urlImageEffet);
-
                objetDansLaPartie.Add(new Objet(e,
                objetDispoPourLaPartie[objetChoisi].valeur,
                objetDispoPourLaPartie[objetChoisi].rareté,
@@ -254,11 +279,6 @@ namespace CDS
             }
         }
 
-        public void validationObjet()
-        {
-
-
-        }
 
     }
 }
