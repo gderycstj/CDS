@@ -11,7 +11,7 @@ namespace CDS
     public abstract class Entite
     {
         protected string listeCMD {get;set;}
-        protected int age { get; set; }
+        public int age { get; set; }
         protected string urlImage { get; set; }
         protected int direction { get; set; }//1 à 4
         public Position positionEntite { get; set; }
@@ -21,7 +21,7 @@ namespace CDS
             positionEntite = new Position();
             listeCMD=listeC;
             urlImage=image;
-            age = 0;
+            age = 1;
         }
 
         //lire la liste CMD et agire

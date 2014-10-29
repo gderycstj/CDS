@@ -265,3 +265,33 @@ C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
 C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\CDS.exe
 C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\CDS.pdb
 C:\Users\Admin\Desktop\CDS2\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\bin\Debug\CDS.exe.config
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.exe
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.pdb
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\bin\Debug\CDS.exe
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\bin\Debug\CDS.pdb
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\bin\Debug\MySql.Data.dll
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\jeuSurvie.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuGestionProfil.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\JeuNormal.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuInscription.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuPrincipal.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuEditeur.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuInstruction.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuJouer.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuSurvie.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\jeuSurvie.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuGestionProfil.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\JeuNormal.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuInscription.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuPrincipal.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuEditeur.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuInstruction.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuJouer.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuSurvie.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\App.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.g.resources
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache

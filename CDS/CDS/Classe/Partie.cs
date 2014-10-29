@@ -116,6 +116,11 @@ namespace CDS
 
         public bool finDeTour()
         {
+            foreach (Objet o in objetDansLaPartie)
+            {
+                o.age += 1;
+            }
+
             bool validation = true;
             if(!Globale.vie.finDeTour())
             {
@@ -125,7 +130,6 @@ namespace CDS
             {
                 validation = false;
             }*/
-
             if(validation == false)
             {return false;}
 
@@ -233,9 +237,17 @@ namespace CDS
 
         public void validationObjet()
         {
+            bool validation = true;
+
             for (int i = objetDansLaPartie.Count - 1; i >= 0; i--)
             {
-                if (objetDansLaPartie[i].verification())
+                validation = true;
+                if(objetDansLaPartie[i].age > 10)
+                {
+                    objetDansLaPartie.RemoveAt(i);
+                    validation = false;
+                }
+                if (validation!= false && objetDansLaPartie[i].verification())
                 {
                     //Enlever une vie au personnage
                     if (obj1 == null)
