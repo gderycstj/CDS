@@ -74,6 +74,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Écran\ecranMeilleurScore.xaml.cs">
+      <DependentUpon>ecranMeilleurScore.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\jeuSurvie.xaml.cs">
       <DependentUpon>jeuSurvie.xaml</DependentUpon>
     </Compile>
@@ -89,6 +92,10 @@
     <Compile Include="Écran\menuSurvie.xaml.cs">
       <DependentUpon>menuSurvie.xaml</DependentUpon>
     </Compile>
+    <Page Include="Écran\ecranMeilleurScore.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Écran\jeuSurvie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

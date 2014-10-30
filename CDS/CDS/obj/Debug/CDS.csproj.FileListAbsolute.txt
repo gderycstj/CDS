@@ -28,3 +28,5 @@ K:\chambre de survie\CDS\CDS\bin\Debug\CDS.exe
 K:\chambre de survie\CDS\CDS\bin\Debug\CDS.pdb
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.exe
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.pdb
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.g.cs

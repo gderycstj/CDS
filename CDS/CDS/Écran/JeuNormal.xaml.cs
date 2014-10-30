@@ -342,13 +342,13 @@ namespace CDS
                     AfficherJoueur();
                     //Appel de l'écran de fin de partie
                     partieEnCours = false;
-                    MessageBox.Show("Partie Terminé"); //Sa va être un xaml plus tard
-                    menuJouer menuJ = new menuJouer();
-                    menuJ.Show();
+                    ecranMeilleurScore ecranM = new ecranMeilleurScore();
+                    ecranM.Show();
+                    System.Threading.Thread.Sleep(1000);
                     Close();
-                }
+                 }
+             }
 
-            }
 
             private void item1_click(object sender, RoutedEventArgs e)
             {
