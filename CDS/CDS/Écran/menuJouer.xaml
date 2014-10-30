@@ -9,7 +9,7 @@
         </Grid.Background>
         <TextBlock x:Name="txtProfil" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Profil" VerticalAlignment="Top" Margin="347,15,0,0" FontFamily="/CDS;component/#Broken Type" FontSize="48" Width="98" TextAlignment="Center"/>
         <TextBox x:Name="txtNomUsager" HorizontalAlignment="Left" Height="29" Margin="74,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
-        <Button x:Name="btnConnexion" Content="se connecter" HorizontalAlignment="Left" Height="56" Margin="552,118,0,0" VerticalAlignment="Top" Width="167" FontFamily="Agency FB" FontSize="24" Click="btnConnexion_Click">
+        <Button x:Name="btnConnexion" Content="Connexion" HorizontalAlignment="Left" Height="56" Margin="552,118,0,0" VerticalAlignment="Top" Width="167" FontFamily="Agency FB" FontSize="24" Click="btnConnexion_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>

@@ -28,38 +28,36 @@ namespace CDS
             valeur = Pvaleur;
             rareté = Prareté;
             valeurScore = valeurScoreP;
+            int randomLosange = 2;
             positionEntite = new Position();
             Random lesPositions = new Random();
             direction = lesPositions.Next(1, 5);
+        
             int memoireRdm ;
+            memoireRdm = lesPositions.Next(1, 10);
             switch (direction)
             {
                 case 1:
-                    memoireRdm = lesPositions.Next(1, 10);
                     positionEntite.posX =  memoireRdm;
                     positionEntite.posY = 0;
                     break;
                 case 2:
-                    memoireRdm = lesPositions.Next(1, 10);
                     positionEntite.posX = 10;
                     positionEntite.posY = memoireRdm;
                     break;
                 case 3:
-                    memoireRdm = lesPositions.Next(1, 10);
                     positionEntite.posX = memoireRdm;
                     positionEntite.posY = 10;
                     //inverse les case 9->1, 8->2, 7->3, 6->4, 5->5, 4->6... Pour verification
                     memoireRdm = (memoireRdm - 10) * -1;
                     break;
                 case 4:
-                    memoireRdm = lesPositions.Next(1, 10);
                     positionEntite.posX = 0;
                     positionEntite.posY = memoireRdm;
                     //inverse les case 9->1, 8->2, 7->3, 6->4, 5->5, 4->6... Pour verification
                     memoireRdm = (memoireRdm - 10) * -1;
                     break;
                 default://arrivera jamais mais pour que le compilateur me foute la paix
-                    memoireRdm = lesPositions.Next(1, 10);
                     break;
             }
 
@@ -83,48 +81,44 @@ namespace CDS
             //Validation Losange(selon son positionnement)
             if(urlImage == "/image/LosangeMauve.png")
             {
-                if(memoireRdm <=5)
-                { 
-                    int randomLosange=2;
-                    if(memoireRdm == 5)
-                    {
-                    
+                  if(memoireRdm == 5)
+                   {
                         randomLosange = lesPositions.Next(1, 3);
+                        if (randomLosange == 2)
+                        {
+                            urlImage = "/image/LosangeJaune.png";
+                            listeCMD = "MhMgC";
+                        }
                     }
-
-                    if(randomLosange == 2)
+                   else if(memoireRdm <5)
                     {
-                        urlImage = "/image/LosangeJaune.png";
-                        listeCMD= "MhMgC";
-                    }
-                }
+                         urlImage = "/image/LosangeJaune.png";
+                         listeCMD = "MhMgC";
+                    }     
             }
-
-            /*if (urlImage == "/image/LosangeJaune.png")
+            else if (urlImage == "/image/LosangeJaune.png")
             {
-                if (positionEntite.posX < 5)
+                if (memoireRdm == 5)
                 {
-                    urlImage = "/image/LosangeMauve.png";
-                    listeCMD = "MhMdC";
-                }
-
-                if (positionEntite.posX == 5)
-                {
-                    int randomLosange;
                     randomLosange = lesPositions.Next(1, 3);
-                    if (randomLosange == 2)
+                    if (randomLosange == 1)
                     {
                         urlImage = "/image/LosangeMauve.png";
                         listeCMD = "MhMdC";
                     }
                 }
-            }*/
+                else if (memoireRdm > 5)
+                {
+                    urlImage = "/image/LosangeMauve.png";
+                    listeCMD = "MhMdC";
+                }
+            }
+            
             //-------------------------------------------------------------------------
         }
 
-        //lire la liste CMD et agire
         /// <summary>
-        /// lire la liste CMD et agire
+        /// lire la liste CMD et agir
         /// </summary>
         /// <returns> que tout est correct</returns>
         public override bool action()

@@ -324,3 +324,4 @@ D:\CDS - Copie\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
 D:\CDS - Copie\CDS\CDS\obj\Debug\CDS.g.resources
 D:\CDS - Copie\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 D:\CDS - Copie\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
