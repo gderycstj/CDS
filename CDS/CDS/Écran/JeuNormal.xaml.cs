@@ -221,14 +221,14 @@ namespace CDS
                if (partieNormal.obj1 != null) 
                {
                     var brush = new ImageBrush();
-                    brush.ImageSource = new BitmapImage(new Uri("../.." + partieNormal.obj1.getUrlImage() + "", UriKind.RelativeOrAbsolute));
+                    brush.ImageSource = new BitmapImage(new Uri("pack://application:,,," + partieNormal.obj1.getUrlImage(), UriKind.RelativeOrAbsolute));
                     item1.Background = brush;
                }
 
                if (partieNormal.obj2 != null)
                {
                    var brush = new ImageBrush();
-                   brush.ImageSource = new BitmapImage(new Uri("../.." + partieNormal.obj2.getUrlImage() + "", UriKind.RelativeOrAbsolute));
+                   brush.ImageSource = new BitmapImage(new Uri("pack://application:,,," + partieNormal.obj2.getUrlImage(), UriKind.RelativeOrAbsolute));
                    item2.Background = brush;
                }
             }

@@ -10,7 +10,7 @@ namespace CDS
     {
         public int nbVieActu { get;set;}
         public int nbVieMax { get;set;}
-
+        public int nbArmureMax { get;set;}
         public int nbArmure { get;set;}
 
         public int toursImmunite { get;set;}
@@ -20,16 +20,18 @@ namespace CDS
         {
             nbVieMax=3;
             nbVieActu=nbVieMax;
+            nbArmureMax = 12;
             nbArmure=0;
             toursImmunite=0;
         }
 
-        public Vie(int vieDepart, int vieMax, int armureDepart, int toursImmuniterAuDepart)
+        public Vie(int vieDepart, int vieMax, int armureDepart, int toursImmuniterAuDepart,int nbArmureMaxa)
         {
             nbVieActu=vieDepart;
             nbVieMax=vieMax;
             nbArmure=armureDepart;
             toursImmunite=toursImmuniterAuDepart;
+            nbArmureMax = nbArmureMaxa;
         }
 
         //retourne si oui ou non et a été blessé

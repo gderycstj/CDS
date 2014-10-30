@@ -420,7 +420,10 @@ namespace CDS
                     break;
                     //Armure
                     case 'A': 
-                    Globale.vie.nbArmure++;
+                    if(Globale.vie.nbArmure != Globale.vie.nbArmureMax)
+                    { 
+                        Globale.vie.nbArmure++;
+                    }
                     break;
                     //Vitesse
                     case 'V': break;
