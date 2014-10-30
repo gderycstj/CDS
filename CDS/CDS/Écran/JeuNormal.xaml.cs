@@ -23,10 +23,10 @@ namespace CDS
         int tour = 1;
         Partie partieNormal = new Partie();
         bool partieEnCours = true;
-
         public JeuNormal()
         {
             InitializeComponent();
+            Globale.j1.pathImage="/image/perso.png";
             txtCTour.Text = tour.ToString();
             partieNormal.initialiser();
             txtCScore.Text = partieNormal.score.ToString();
@@ -337,6 +337,9 @@ namespace CDS
             {
                 if (partieNormal.finDeTour() == false)
                 {
+                    Globale.j1.pathImage=("/image/persoMort.png");
+                    grillePrincipale.Children.Clear();
+                    AfficherJoueur();
                     //Appel de l'écran de fin de partie
                     partieEnCours = false;
                     MessageBox.Show("Partie Terminé"); //Sa va être un xaml plus tard

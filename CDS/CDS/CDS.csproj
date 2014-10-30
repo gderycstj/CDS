@@ -165,7 +165,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Écran\App.config" />
+    <None Include="Écran\App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -233,6 +235,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\cliqueObjet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\persoMort.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
