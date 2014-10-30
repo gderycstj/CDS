@@ -55,7 +55,7 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <TextBlock x:Name="txtNomJoueur" HorizontalAlignment="Left" Height="39" Margin="309,70,0,0" TextWrapping="Wrap" Text="Admin" VerticalAlignment="Top" Width="180" FontFamily="Agency FB" FontSize="36" TextAlignment="Center"/>
+        <TextBlock x:Name="txtNomJoueur" HorizontalAlignment="Left" Height="39" Margin="309,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" FontFamily="Agency FB" FontSize="36" TextAlignment="Center"/>
         <TextBlock x:Name="txtErreur" HorizontalAlignment="Left" Height="33" Margin="192,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="527" FontFamily="Agency FB" FontSize="24" Foreground="#FFF9F8F8" TextDecorations="{x:Null}"/>
 
     </Grid>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,18 +14,13 @@ namespace CDS
     /// </summary>
     public class BdService
     {
-        private string serveur = "420.cstj.qc.ca";
-        private string BD = "5a5_a14_chambre";
-        private string user = "chambre";
-        private string password = "e7AEf6x7J";
-
         private MySqlConnection connexion;
 
         public BdService()
         {
             try
             {
-                string sConnection = "SERVER="+serveur+";DATABASE="+BD+";UID="+user+";PASSWORD="+password+";";
+                string sConnection = ConfigurationManager.ConnectionStrings["MySqlConnexion"].ConnectionString;
                 connexion = new MySqlConnection(sConnection);
             }
             catch (Exception e)
@@ -42,7 +38,8 @@ namespace CDS
         {
             try
             {
-                connexion.Open();
+                    connexion.Open();
+                
                 return true;
             }
             catch 
@@ -74,7 +71,7 @@ namespace CDS
         /// <param name="ins">Requête d'insertion de bd</param>
         public int Insertion(string ins)
         {
-            try
+              try
             {
                 if(Ouvrir())
                 {
@@ -83,10 +80,11 @@ namespace CDS
                     Fermer();
                     return (int)cmd.LastInsertedId;
                 }
-            }
+           }
             catch (Exception e)
             {
                 MessageBox.Show("Votre identifiant existe déjà, veuillez en choisir un nouveau");
+                Fermer();
             }
             return 0;
         }

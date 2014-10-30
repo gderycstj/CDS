@@ -25,7 +25,7 @@
             </Button.Background>
         </Button>
         <Rectangle Fill="#FF4B634D" HorizontalAlignment="Left" Height="481" Margin="266,80,0,0" Stroke="Black" VerticalAlignment="Top" Width="454"/>
-        <TextBlock x:Name="txtTitreOnglet" HorizontalAlignment="Left" Height="54" Margin="324,87,0,0" TextWrapping="Wrap" Text="Test" VerticalAlignment="Top" Width="338" FontFamily="/CDS;component/#Broken Type" FontSize="48" TextAlignment="Center"/>
+        <TextBlock x:Name="txtTitreOnglet" HorizontalAlignment="Left" Height="54" Margin="324,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" FontFamily="/CDS;component/#Broken Type" FontSize="48" TextAlignment="Center"/>
         <Button x:Name="btnConfirmerMod" Content="Confirmer" HorizontalAlignment="Left" Height="64" Margin="326,479,0,0" VerticalAlignment="Top" Width="338" FontFamily="Agency FB" FontSize="48" Click="btnConfirmerMod_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
