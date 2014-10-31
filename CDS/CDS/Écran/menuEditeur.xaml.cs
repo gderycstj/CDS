@@ -22,6 +22,49 @@ namespace CDS
         public menuEditeur()
         {
             InitializeComponent();
+            btnMode.IsEnabled = false;
+        }
+
+        /// <summary>
+        /// Active tout les boutons de navigation entre les différentes parties de l'éditeur
+        /// </summary>
+        public void activerBouton()
+        {
+            btnMode.IsEnabled = true;
+            btnPoursuivant.IsEnabled = true;
+            btnObjet.IsEnabled = true;
+            btnEffet.IsEnabled = true;
+        }
+
+        private void btnRetour_Click(object sender, RoutedEventArgs e)
+        {
+            menuPrincipal menuP = new menuPrincipal();
+            menuP.Show();
+            Close();
+        }
+
+        private void btnMode_Click(object sender, RoutedEventArgs e)
+        {
+            activerBouton();
+            btnMode.IsEnabled = false;
+        }
+
+        private void btnPoursuivant_Click(object sender, RoutedEventArgs e)
+        {
+            activerBouton();
+            btnPoursuivant.IsEnabled = false;
+        }
+
+        private void btnObjet_Click(object sender, RoutedEventArgs e)
+        {
+            activerBouton();
+            btnObjet.IsEnabled = false;
+        }
+
+        private void btnEffet_Click(object sender, RoutedEventArgs e)
+        {
+            activerBouton();
+            btnEffet.IsEnabled = false;
         }
     }
 }

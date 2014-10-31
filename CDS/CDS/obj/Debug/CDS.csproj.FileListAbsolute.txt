@@ -29,7 +29,6 @@ K:\chambre de survie\CDS\CDS\obj\Debug\CDS.exe
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.pdb
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.g.cs
-K:\chambre de survie\CDS\CDS\bin\Debug\MySql.Data.dll
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.g.cs

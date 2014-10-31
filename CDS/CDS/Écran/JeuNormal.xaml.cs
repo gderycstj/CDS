@@ -24,18 +24,14 @@ namespace CDS
         int tour = 1;
         Partie partieNormal = new Partie();
         bool partieEnCours = true;
-        Timer aTimer = new Timer(2500);
         public JeuNormal()
         {
             InitializeComponent();
             Globale.j1.pathImage="/image/perso.png";
-            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            aTimer.Enabled = true;
 
             txtCTour.Text = tour.ToString();
 
             partieNormal.initialiser();
-            aTimer.Start();
             txtCScore.Text = partieNormal.score.ToString();
 
             validationVie();
@@ -45,7 +41,6 @@ namespace CDS
 
         private void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            aTimer.Stop();
             tour += 1;
             generationTour();
             afficherInfo();
@@ -319,7 +314,6 @@ namespace CDS
             {
                 //va éffacer la grille a chaque déplacement et va réafficher le joueur à sa nouvelle position
                   grillePrincipale.Children.Clear();
-                aTimer.Stop();
                 if (tour == 1 && Globale.j1.positionJoueur.posX == 5 && Globale.j1.positionJoueur.posY == 5)
                 {
                     tour -= 1;
@@ -347,7 +341,6 @@ namespace CDS
                 }
                 validationVie();
                 validationObjectifPartieNormal();
-                aTimer.Start();
             }
 			
 			public void validationObjectifPartieNormal()
