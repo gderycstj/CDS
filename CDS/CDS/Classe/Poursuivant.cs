@@ -569,7 +569,7 @@ namespace CDS
 
 
         /// <summary>
-        /// mouvement vers le haut
+        /// WIP mouvement vers le haut
         /// </summary>
         public void mouvementNord()
         {
@@ -577,7 +577,7 @@ namespace CDS
         }
 
         /// <summary>
-        /// mouvement vers le bas
+        /// WIP mouvement vers le bas
         /// </summary>
         public void mouvementSud()
         {
@@ -585,7 +585,7 @@ namespace CDS
         }
 
         /// <summary>
-        /// mouvement vers la droite
+        /// WIP mouvement vers la droite
         /// </summary>
         public void mouvementEst()
         {
@@ -593,7 +593,7 @@ namespace CDS
         }
 
         /// <summary>
-        /// mouvement vers la gauche
+        /// WIP mouvement vers la gauche
         /// </summary>
         public void mouvementOuest()
         {
@@ -616,7 +616,7 @@ namespace CDS
 
 
         /// <summary>
-        /// Verifier si sur la case du jouer, sur un effet.
+        /// Verifier si sur la cas du jouer, sur un effet.
         /// </summary>
         /// <returns></returns>
         public override bool verification()

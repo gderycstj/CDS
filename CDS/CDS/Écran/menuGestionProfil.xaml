@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Gestion de profil" Height="625" Width="750"
         WindowStyle="ThreeDBorderWindow"
-        ResizeMode="NoResize" Icon="/CDS;component/Image/cds.png">
+        ResizeMode="NoResize" Icon="/CDS;component/Image/cds.png" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/CDS;component/Image/2.jpg"/>

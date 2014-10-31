@@ -116,19 +116,19 @@ namespace CDS
                                switch (direction)
                                {
                                    case 2:
-                                       mouvementNord();
-                                       break;
-
-                                   case 3:
-                                       mouvementEst();
-                                       break;
-
-                                   case 4:
                                        mouvementSud();
                                        break;
 
-                                   case 1:
+                                   case 3:
                                        mouvementOuest();
+                                       break;
+
+                                   case 4:
+                                       mouvementNord();
+                                       break;
+
+                                   case 1:
+                                       mouvementEst();
                                        break;
                                }
                                break;
@@ -160,19 +160,19 @@ namespace CDS
                                switch (direction)
                                {
                                    case 4:
-                                       mouvementNord();
-                                       break;
-
-                                   case 1:
-                                       mouvementEst();
-                                       break;
-
-                                   case 2:
                                        mouvementSud();
                                        break;
 
-                                   case 3:
+                                   case 1:
                                        mouvementOuest();
+                                       break;
+
+                                   case 2:
+                                       mouvementNord();
+                                       break;
+
+                                   case 3:
+                                       mouvementEst();
                                        break;
                                }
                                break;
@@ -429,10 +429,8 @@ namespace CDS
                     case 'V': break;
                     //Pousse
                     case 'P': break;
-                    //Invincibilité Joueur
-                    case '*':
-                        Globale.vie.toursImmunite++;
-                     break;
+                    //Invincibilité
+                    case '*': break;
                 }
                if (iLecture >= CMD.Length)
                {
@@ -450,7 +448,7 @@ namespace CDS
         }
 
         /// <summary>
-        /// mouvement vers le haut
+        /// WIP mouvement vers le haut
         /// </summary>
         public void mouvementNord()
         {
@@ -458,7 +456,7 @@ namespace CDS
         }
 
         /// <summary>
-        /// mouvement vers le bas
+        /// WIP mouvement vers le bas
         /// </summary>
         public void mouvementSud()
         {
@@ -466,7 +464,7 @@ namespace CDS
         }
 
         /// <summary>
-        /// mouvement vers la droite
+        /// WIP mouvement vers la droite
         /// </summary>
         public void mouvementEst()
         {
@@ -474,44 +472,12 @@ namespace CDS
         }
 
         /// <summary>
-        /// mouvement vers la gauche
+        /// WIP mouvement vers la gauche
         /// </summary>
         public void mouvementOuest()
         {
             this.positionEntite.posX = positionEntite.posX - 1;
         }
-
-        /// <summary>
-        /// Valide si l'entité est dans une zone interdite (rouge)
-        /// </summary>
-        /// <returns></returns>
-        public override bool inBoundary()
-        {
-            if (positionEntite.posX == 0 || positionEntite.posX == 10 || positionEntite.posY == 0 || positionEntite.posY == 10)
-            {
-                return true;
-            }
-            else
-            { return false; }
-        }
-
-
-        /// <summary>
-        /// Verifier si sur la case du joueur.
-        /// </summary>
-        /// <returns></returns>
-        public override bool verification()
-        {
-            if (positionEntite.posX == Globale.j1.positionJoueur.posX && positionEntite.posY == Globale.j1.positionJoueur.posY)
-            {
-                return true;
-            }
-            return false;
-        }
-
-
-
-
         //Get nécéssaire
         public string getUrlImage()
         {

@@ -4,7 +4,7 @@
         Title="Jeu" Height="710" Width="1100"
         ResizeMode="NoResize"
         Icon="/CDS;component/Image/cds.png"
-        KeyDown="grilleJeuWindow_KeyDown">
+        KeyDown="grilleJeuWindow_KeyDown" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/CDS;component/Image/2.jpg"/>

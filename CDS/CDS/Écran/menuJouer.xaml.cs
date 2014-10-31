@@ -20,24 +20,17 @@ namespace CDS
     /// 
     public partial class menuJouer : Window
     {
-
+        string req = "SELECT nom FROM modesDeJeu;";
+        List<string>[] listeMode;
+        int col = 0;
         public menuJouer()
         {
             InitializeComponent();
             txtErreur.Text ="";
             Connect();
-            string req = "SELECT nom FROM modesDeJeu;";
-            List<string>[] listeMode;
-            int col = 0;
 
-            listeMode = Globale.bdCDS.selection(req,1,ref col);
-
-            for (int i = 0; i < listeMode.Length; i++) 
-            {
-                cboChoixMode.Items.Add(listeMode[i][0]);
-             }
-
-             cboChoixMode.SelectedIndex = 0;
+            cboChoixMode.Items.Add("Normal");
+            cboChoixMode.SelectedIndex = 0;
 
         }
 
@@ -72,6 +65,16 @@ namespace CDS
             {
                 Globale.j1.setJoueur(listeJoueur[0][0], Convert.ToInt32(listeJoueur[0][1]), listeJoueur[0][2],true);
                 Connect();
+
+                cboChoixMode.Items.Clear();
+ 
+                req = "SELECT nom FROM modesDeJeu;";
+                listeMode = Globale.bdCDS.selection(req, 1, ref col);
+                for (int i = 0; i < listeMode.Length; i++)
+                {
+                    cboChoixMode.Items.Add(listeMode[i][0]);
+                }
+                cboChoixMode.SelectedIndex = 0;
             }
         }
 
@@ -79,6 +82,8 @@ namespace CDS
         {
             menuPrincipal menuP = new menuPrincipal();
             menuP.Show();
+            Globale.j1.estConnecte = false;
+            Connect();
             Close();
         }
 

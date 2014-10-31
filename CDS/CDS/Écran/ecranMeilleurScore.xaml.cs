@@ -22,6 +22,10 @@ namespace CDS
         public ecranMeilleurScore()
         {
             InitializeComponent();
+            if(Globale.j1.getNom() == "visiteur")
+            {
+                txtPub.Text = "Vous souhaitez partager vos scores également? Créer vous un compte dès maintenant pour envoyé automatiquement vos scores et à accéder a de nombreux autres modes de jeux!";
+            }
         }
 
         private void btnRetour_Click(object sender, RoutedEventArgs e)
@@ -37,6 +41,7 @@ namespace CDS
             Globale.j1.positionJoueur.posY=5;
             JeuNormal menuJeu = new JeuNormal();
             menuJeu.Show();
+            Close();
             Close();
         }
     }

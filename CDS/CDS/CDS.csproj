@@ -89,6 +89,9 @@
     <Compile Include="Écran\menuInscription.xaml.cs">
       <DependentUpon>menuInscription.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Écran\menuSelectionNiveau.xaml.cs">
+      <DependentUpon>menuSelectionNiveau.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\menuSurvie.xaml.cs">
       <DependentUpon>menuSurvie.xaml</DependentUpon>
     </Compile>
@@ -133,6 +136,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Écran\menuJouer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Écran\menuSelectionNiveau.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

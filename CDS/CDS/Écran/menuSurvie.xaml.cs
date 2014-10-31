@@ -48,7 +48,9 @@ namespace CDS
 
         private void btnSelection_Click(object sender, RoutedEventArgs e)
         {
-            return;
+            menuSelectionNiveau menuSelec = new menuSelectionNiveau();
+            menuSelec.Show();
+            Close();
         }
     }
 }
