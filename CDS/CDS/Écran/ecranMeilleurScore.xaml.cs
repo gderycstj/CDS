@@ -42,7 +42,6 @@ namespace CDS
             JeuNormal menuJeu = new JeuNormal();
             menuJeu.Show();
             Close();
-            Close();
         }
     }
 }

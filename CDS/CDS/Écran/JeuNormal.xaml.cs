@@ -25,6 +25,7 @@ namespace CDS
         Partie partieNormal = new Partie();
         bool partieEnCours = true;
         static Timer tim = new Timer();
+        static Timer timerFin = new Timer();
         public JeuNormal()
         {
             InitializeComponent();
@@ -52,6 +53,17 @@ namespace CDS
                 afficherInfo();
         }
 
+
+        private void OnTimedEvent2(object sender, EventArgs e)
+        {
+            timerFin.Stop();
+            //Appel de l'écran de fin de partie
+            //Utiliser un timer pour afficher l'ecran après 5 secondes.
+            ecranMeilleurScore ecranM = new ecranMeilleurScore();
+            ecranM.Show();
+            timerFin = null;
+            Close();
+        }
         void AfficherJoueur()
         {
             Image img = new Image();
@@ -348,26 +360,26 @@ namespace CDS
                 }
                 validationVie();
                 validationObjectifPartieNormal();
-                if(!tim.Enabled)
+                if (partieEnCours != false)
                 {
                     tim.Start();
-                 }
+                }
+
             }
 			
 			public void validationObjectifPartieNormal()
             {
                 if (partieNormal.finDeTour() == false)
                 {
+                    tim = null;
+                    timerFin.Interval = 3000;
+                    timerFin.Tick += new EventHandler(OnTimedEvent2);
+
                     Globale.j1.pathImage=("/image/persoMort.png");
                     grillePrincipale.Children.Clear();
                     AfficherJoueur();
                     partieEnCours = false;
-
-                    //Appel de l'écran de fin de partie
-                    //Utiliser un timer pour afficher l'ecran après 5 secondes.
-                    ecranMeilleurScore ecranM = new ecranMeilleurScore();
-                    ecranM.Show();
-                    Close();
+                    timerFin.Start();
                  }
              }
 
