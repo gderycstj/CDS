@@ -7,11 +7,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Timers;
 
 namespace CDS
 {
@@ -24,10 +24,14 @@ namespace CDS
         int tour = 1;
         Partie partieNormal = new Partie();
         bool partieEnCours = true;
+        static Timer tim = new Timer();
         public JeuNormal()
         {
             InitializeComponent();
             Globale.j1.pathImage="/image/perso.png";
+
+            tim.Tick += new EventHandler(OnTimedEvent);
+            tim.Interval = 1750;
 
             txtCTour.Text = tour.ToString();
 
@@ -37,13 +41,15 @@ namespace CDS
             validationVie();
             AfficherJoueur();
             AfficherPoursuivant();
+
+            tim.Start();
         }
 
-        private void OnTimedEvent(object source, ElapsedEventArgs e)
+        private void OnTimedEvent(object sender, EventArgs e) 
         {
-            tour += 1;
-            generationTour();
-            afficherInfo();
+                tim.Stop();
+                generationTour();
+                afficherInfo();
         }
 
         void AfficherJoueur()
@@ -114,12 +120,11 @@ namespace CDS
 
         private void btnPasserTour_Click(object sender, RoutedEventArgs e)
         {
-            tour += 1;
             generationTour();
             afficherInfo();
         }     
 
-        private void grilleJeuWindow_KeyDown(object sender, KeyEventArgs e)
+        private void grilleJeuWindow_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
        
               //Vers le bas
@@ -152,10 +157,12 @@ namespace CDS
             {
                 if (partieNormal.obj2 != null)
                 {
+                    tim.Stop();
                     partieNormal.obj2.unEffet.action();
                     partieNormal.obj2 = null;
                     validationVie();
                     item2.Background = null;
+                    tim.Start();
                 }
             }
             
@@ -165,10 +172,12 @@ namespace CDS
             {
                 if (partieNormal.obj1 != null)
                 {
+                    tim.Stop();
                     partieNormal.obj1.unEffet.action();
                     partieNormal.obj1 = null;
                     validationVie();
                     item1.Background = null;
+                    tim.Start();
                 }
             } 
             //Bouton Enter(passer le tour)
@@ -176,7 +185,6 @@ namespace CDS
             {
                 if(partieEnCours == true)
                 { 
-                    tour += 1;
                     generationTour();
                     afficherInfo();
                 }
@@ -312,13 +320,12 @@ namespace CDS
 
             public void generationTour()
             {
+                grillePrincipale.Children.Clear();
                 //va éffacer la grille a chaque déplacement et va réafficher le joueur à sa nouvelle position
-                  grillePrincipale.Children.Clear();
-                if (tour == 1 && Globale.j1.positionJoueur.posX == 5 && Globale.j1.positionJoueur.posY == 5)
+                if(tim.Enabled)
                 {
-                    tour -= 1;
+                    tim.Stop();
                 }
-
                 partieNormal.validationPoursuivant(false);
                 partieNormal.validationObjet();
                 rentrerObjet();
@@ -341,6 +348,10 @@ namespace CDS
                 }
                 validationVie();
                 validationObjectifPartieNormal();
+                if(!tim.Enabled)
+                {
+                    tim.Start();
+                 }
             }
 			
 			public void validationObjectifPartieNormal()
@@ -365,10 +376,12 @@ namespace CDS
             {
                 if (partieNormal.obj1 != null) 
                 {
+                    tim.Stop();
                     partieNormal.obj1.unEffet.action();
                     partieNormal.obj1 = null;
                     validationVie();
                     item1.Background = null;
+                    tim.Start();
                 }
 
             }
@@ -377,10 +390,12 @@ namespace CDS
             {
                 if (partieNormal.obj2 != null)
                 {
+                    tim.Stop();
                     partieNormal.obj2.unEffet.action();
                     partieNormal.obj2 = null;
                     validationVie();
                     item2.Background = null;
+                    tim.Start();
 
                 }
 

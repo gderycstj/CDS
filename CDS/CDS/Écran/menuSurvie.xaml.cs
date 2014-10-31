@@ -36,9 +36,7 @@ namespace CDS
 
         private void btnNouvellePartie_Click(object sender, RoutedEventArgs e)
         {
-            JeuSurvie menuJeu = new JeuSurvie();
-            menuJeu.Show();
-            Close();
+            return;
         }
 
         private void btnCharger_Click(object sender, RoutedEventArgs e)

@@ -1,6 +1,5 @@
 D:\Build\Source\CDS\CDS\bin\Debug\CDS.exe.config
 K:\chambre de survie\CDS\CDS\bin\Debug\CDS.exe.config
-K:\chambre de survie\CDS\CDS\obj\Debug\Écran\jeuSurvie.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuGestionProfil.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\JeuNormal.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInscription.baml
@@ -9,7 +8,6 @@ K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuEditeur.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInstruction.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuJouer.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSurvie.baml
-K:\chambre de survie\CDS\CDS\obj\Debug\Écran\jeuSurvie.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuGestionProfil.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\JeuNormal.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInscription.g.cs
