@@ -30,6 +30,7 @@ namespace CDS
             Connect();
 
             cboChoixMode.Items.Add("Normal");
+			cboChoixMode.Items.Add("Survie");
             cboChoixMode.SelectedIndex = 0;
 
         }
