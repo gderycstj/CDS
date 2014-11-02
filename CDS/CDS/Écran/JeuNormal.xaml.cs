@@ -112,32 +112,47 @@ namespace CDS
         //fonction de déplacement pour les boutons, haut veux dire déplacement haut... fait aussi les validations pour pas dépasser la grille
         private void haut(object sender, RoutedEventArgs e)
         {
-            deplacerHaut();
-            afficherInfo();
+            if (partieEnCours == true)
+            {
+                deplacerHaut();
+                afficherInfo();
+            }
         }
 
         private void bas(object sender, RoutedEventArgs e)
         {
-            deplacerBas();
-            afficherInfo();
+            if (partieEnCours == true)
+            {
+                deplacerBas();
+                afficherInfo();
+            }
         }
 
         private void droite(object sender, RoutedEventArgs e)
         {
-            deplacerDroite();
-            afficherInfo();
+            if (partieEnCours == true)
+            {
+                deplacerDroite();
+                afficherInfo();
+            }
         }
 
         private void gauche(object sender, RoutedEventArgs e)
         {
-            deplacerGauche();
-            afficherInfo();
+            if (partieEnCours == true)
+            {
+                deplacerGauche();
+                afficherInfo();
+            }
         }
 
         private void btnPasserTour_Click(object sender, RoutedEventArgs e)
         {
-            generationTour();
-            afficherInfo();
+            if (partieEnCours == true)
+            {
+                generationTour();
+                afficherInfo();
+            }
         }     
 
         private void grilleJeuWindow_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
@@ -146,39 +161,54 @@ namespace CDS
               //Vers le bas
               if(Keyboard.IsKeyDown(Key.Down))
               {
-                  deplacerBas();
-                  afficherInfo();
+                  if (partieEnCours == true)
+                  {
+                      deplacerBas();
+                      afficherInfo();
+                  }
               }
             //Vers le Haut
               if(Keyboard.IsKeyDown(Key.Up))
               {
-                 deplacerHaut();
-                 afficherInfo();
+                  if (partieEnCours == true)
+                  {
+                      deplacerHaut();
+                      afficherInfo();
+                  }
               }
             //Vers la droite
             if(Keyboard.IsKeyDown(Key.Right))
             {
-                deplacerDroite();
-                afficherInfo();
+                if (partieEnCours == true)
+                {
+                    deplacerDroite();
+                    afficherInfo();
+                }
             }
             //Vers la gauche
             if(Keyboard.IsKeyDown(Key.Left))
             {
-                deplacerGauche();
-                afficherInfo();
+                if (partieEnCours == true)
+                {
+                    deplacerGauche();
+                    afficherInfo();
+                }
             }
 
             //Bouton X(item)
             if(Keyboard.IsKeyDown(Key.X))
             {
-                if (partieNormal.obj2 != null)
+                if (partieEnCours == true)
                 {
-                    tim.Stop();
-                    partieNormal.obj2.unEffet.action();
-                    partieNormal.obj2 = null;
-                    validationVie();
-                    item2.Background = null;
-                    tim.Start();
+                    if (partieNormal.obj2 != null)
+                    {
+                        tim.Stop();
+                        partieNormal.obj2.unEffet.action();
+                        partieNormal.obj2 = null;
+                        validationVie();
+                        item2.Background = null;
+                        tim.Start();
+                    }
                 }
             }
             
@@ -186,14 +216,17 @@ namespace CDS
             //Bouton Z(item)
             if(Keyboard.IsKeyDown(Key.Z))
             {
-                if (partieNormal.obj1 != null)
+                if (partieEnCours == true)
                 {
-                    tim.Stop();
-                    partieNormal.obj1.unEffet.action();
-                    partieNormal.obj1 = null;
-                    validationVie();
-                    item1.Background = null;
-                    tim.Start();
+                    if (partieNormal.obj1 != null)
+                    {
+                        tim.Stop();
+                        partieNormal.obj1.unEffet.action();
+                        partieNormal.obj1 = null;
+                        validationVie();
+                        item1.Background = null;
+                        tim.Start();
+                    }
                 }
             } 
             //Bouton Enter(passer le tour)
