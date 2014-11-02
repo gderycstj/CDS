@@ -61,9 +61,25 @@ namespace CDS
 
             for (int i = 0; i < meilleurScore.Length; i++) 
             {
+                Thickness marge = new Thickness();
+                marge.Left = 10;
+                marge.Top = 3;
+               
                 TextBlock nom = new TextBlock();
                 TextBlock score = new TextBlock();
+                
+                //Change le font Family
+                nom.FontFamily = new FontFamily("Agency FB");
+                score.FontFamily = new FontFamily("Agency FB");
 
+                //Change le fontSize
+                nom.FontSize = 18;
+                score.FontSize = 18;
+
+                //Change le padding
+                nom.Padding = marge;
+                score.Padding = marge;
+                
                 nom.Text = meilleurScore[i][0];
                 score.Text = meilleurScore[i][1];
 
