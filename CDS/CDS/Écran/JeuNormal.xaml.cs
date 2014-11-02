@@ -59,6 +59,10 @@ namespace CDS
             timerFin.Stop();
             //Appel de l'écran de fin de partie
             //Utiliser un timer pour afficher l'ecran après 5 secondes.
+
+            //va setter le score avec celui de fin de partie en globale pour y avoir accès dans le nouvel écran
+            Globale.score.score = partieNormal.score;
+
             ecranMeilleurScore ecranM = new ecranMeilleurScore();
             ecranM.Show();
             timerFin = null;

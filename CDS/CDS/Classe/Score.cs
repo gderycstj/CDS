@@ -8,48 +8,43 @@ namespace CDS
 {
     public class Score
     {
-        private int score { get;set;}
-        private string nom{get;set;}
+        public int score { get;set;}
 
         public Score()
         {
             score=0;
-            nom="nompardefaut";
         }
 
-        public Score(int points, string nJoueur)
+        public Score(int points)
         {
             score=points;
-            nom=nJoueur;
         }
 
-        public void modifierScore(int changement)
+        public bool envoyerScore()
         {
-            score += changement;
-        }
-
-        public bool envoyerScore(Joueur quiafaitlescore)
-        {
-            if(false)
-            {
-                //Erreur
-                return false;
-            }
-            //succès
+            string req = "INSERT INTO Scores(idUtilisateur,idModeDeJeu,score)VALUES " +
+                             "((SELECT idUtilisateur FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() + "')" +
+                             ",(SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = '" + Globale.mode + "')" +
+                             "," + score + ");COMMIT;";
+            Globale.bdCDS.Insertion(req);
             return true;
         }
-
-        public List<Score> obtenirScore(int quantiter, Joueur qui, string mode)
+        /// <summary>
+        /// Va obtenir les 10 meilleurs scores pour un mode
+        /// </summary>
+        /// <returns>Retourne une liste qui contient les 10 meilleurs scores</returns>
+        public List<string>[] obtenirScore()
         {
-            List<Score> liste= null;
+            List<string>[] tabScore;
+            int num = 0;
+            string req = "SELECT nom,score FROM Scores s " +
+                         "INNER JOIN Utilisateurs u ON s.idUtilisateur = u.idUtilisateur " +
+                         "WHERE idModeDeJeu = (SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = '" + Globale.mode + "') " +
+                          "ORDER BY score DESC LIMIT 10; ";
 
-            return liste;
-        }
-
-        //affiche les scores qui sont dans la liste
-        public void afficherScore(List<Score> listedescore)
-        {
-
+           
+          tabScore =  Globale.bdCDS.selection(req, 2, ref num);
+          return tabScore;
         }
 
 
