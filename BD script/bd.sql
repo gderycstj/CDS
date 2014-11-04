@@ -258,6 +258,12 @@ VALUES
 ('/image/armure.png'
 );
 
+INSERT INTO Apparences(image)
+VALUES
+('/image/sprint.png'
+);
+
+
 INSERT INTO utilisateurs(idApparence,nom,motDePasse)
 VALUES
 ((SELECT idApparence FROM Apparences WHERE image = '/image/perso.png')
@@ -343,6 +349,12 @@ VALUES((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin' )
 	   ,'Armure'
 );
 
+INSERT INTO Objets(idUtilisateur,idApparence,nom)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+,(SELECT idApparence FROM Apparences WHERE image = '/image/sprint.png')
+,'Sprint'
+);
 
 INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rareté)
 VALUES
@@ -385,6 +397,14 @@ VALUES
 ,25
 );
 
+INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
+VALUES
+((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Normal'))
+,(SELECT idObjet FROM Objets WHERE nom = 'Sprint')	
+,2
+,25
+);
+
 INSERT INTO Effets(idUtilisateur,nom,listeCMD)
 VALUES
 ((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
@@ -399,6 +419,13 @@ VALUES
  ,'A'
 );
 
+INSERT INTO Effets(idUtilisateur,nom,listeCMD)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Sprint 1'
+ ,'V'
+);
+
 INSERT INTO ObjetsEffets(idObjet,idEffet)
 VALUES
 ((SELECT idObjet FROM Objets WHERE nom = 'Potion de vie')
@@ -410,5 +437,12 @@ VALUES
 ((SELECT idObjet FROM Objets WHERE nom = 'Armure')
  ,(SELECT idEffet FROM Effets WHERE nom = 'Armure 1')
 );
+
+INSERT INTO ObjetsEffets(idObjet,idEffet)
+VALUES
+((SELECT idObjet FROM Objets WHERE nom = 'Sprint')
+ ,(SELECT idEffet FROM Effets WHERE nom = 'Sprint 1')
+);
+
 
 COMMIT
