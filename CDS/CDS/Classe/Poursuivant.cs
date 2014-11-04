@@ -330,6 +330,9 @@ namespace CDS
                         lettre2 = CMD[iLecture];
                         iLecture++;
 
+                        lettre3 = CMD[iLecture];
+                        iLecture++;
+
                         //...pouvoir isolet la/les actions en cas de true
                         endif=false;
                         iEcriture=0;
@@ -373,7 +376,7 @@ namespace CDS
                         switch(lettre2)
                         {
                             //=====Joueur=====
-                            case 'p':
+                            case 'j':
                                 lettre3 = CMD[iLecture];
                                 iLecture++;
 
@@ -510,7 +513,7 @@ namespace CDS
                                 }
                                 break;
                             //=====Poursuivant=====
-                            case 'e':
+                            case 'p':
                                 lettre3 = CMD[iLecture];
                                 iLecture++;
                                 switch (lettre3)
