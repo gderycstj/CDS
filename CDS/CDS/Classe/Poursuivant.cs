@@ -330,8 +330,6 @@ namespace CDS
                         lettre2 = CMD[iLecture];
                         iLecture++;
 
-                        lettre3 = CMD[iLecture];
-                        iLecture++;
 
                         //...pouvoir isolet la/les actions en cas de true
                         endif=false;

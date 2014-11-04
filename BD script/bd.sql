@@ -322,6 +322,15 @@ VALUES('Losange Mauve'
 	   ,'MhMdC'
 );
 
+INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)
+VALUES('triangle'
+	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+	   ,(SELECT idApparence FROM apparences WHERE image = '/image/triangle.png')
+	   ,400
+	   ,'MhIjp{CMhC}Ijg{Mg}Ijd{Md}C'
+);
+
+
 INSERT INTO Objets(idUtilisateur,idApparence,nom)
 VALUES((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin' )
 	   ,(SELECT idApparence FROM apparences WHERE image = '/image/potionVie.png')
@@ -349,6 +358,14 @@ VALUES
 ,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Losange Mauve')	
 ,5
 ,3
+);
+
+INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rareté)
+VALUES
+((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Normal'))
+,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'triangle')	
+,25
+,10
 );
 
 
