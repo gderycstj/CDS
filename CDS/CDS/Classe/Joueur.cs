@@ -16,6 +16,7 @@ namespace CDS
         public string pathImage {get;set;}
         public bool estConnecte;
         public Position positionJoueur{get;set;}
+        public int vitesse { get;set;}
 
         public Joueur()
         {
@@ -24,18 +25,10 @@ namespace CDS
             pathImage = "/image/perso.png";
             estConnecte = false;
             positionJoueur = new Position(5,5);
+            vitesse = 1;
         }
 
-        public Joueur(string nomJ, int id, string pathIm)
-        {
-            nom=nomJ;
-            idJoueur=id;
-            pathImage=pathIm;
-            estConnecte = true;
-            positionJoueur = new Position(6, 6);
-        }
-
-        public string getNom()
+       public string getNom()
         {
             return nom;
         }

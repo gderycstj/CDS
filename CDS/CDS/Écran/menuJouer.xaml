@@ -44,12 +44,12 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnDeconnexion" Content="Deconnexion" HorizontalAlignment="Left" Margin="325,114,0,0" VerticalAlignment="Top" Width="154" Height="43" FontFamily="Agency FB" FontSize="18" Click="btnDeconnexion_Click">
+        <Button x:Name="btnDeconnexion" Content="Deconnexion" HorizontalAlignment="Left" Margin="325,114,0,0" VerticalAlignment="Top" Width="154" Height="43" FontFamily="Agency FB" FontSize="18" Click="btnDeconnexion_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnGestionProfil" Content="Gestion de Profil" HorizontalAlignment="Left" Height="29" Margin="325,162,0,0" VerticalAlignment="Top" Width="154" FontFamily="Agency FB" FontSize="20" Foreground="#000000" Click="btnGestionProfil_Click">
+        <Button x:Name="btnGestionProfil" Content="Gestion de Profil" HorizontalAlignment="Left" Height="29" Margin="325,162,0,0" VerticalAlignment="Top" Width="154" FontFamily="Agency FB" FontSize="20" Foreground="#000000" Click="btnGestionProfil_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>

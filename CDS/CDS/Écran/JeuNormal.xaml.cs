@@ -24,17 +24,18 @@ namespace CDS
         int tour = 1;
         Partie partieNormal = new Partie();
         bool partieEnCours = true;
-        static Timer tim = new Timer();
-        static Timer timerFin = new Timer();
+        Timer tim = new Timer();
+        Timer timerFin = new Timer();
         public JeuNormal()
         {
             InitializeComponent();
             Globale.j1.pathImage="/image/perso.png";
 
             tim.Tick += new EventHandler(OnTimedEvent);
-            tim.Interval = 1750;
+            tim.Interval = 2000;
 
             txtCTour.Text = tour.ToString();
+            mouvement.Text = Globale.j1.vitesse.ToString();
 
             partieNormal.initialiser();
             txtCScore.Text = partieNormal.score.ToString();
@@ -42,7 +43,6 @@ namespace CDS
             validationVie();
             AfficherJoueur();
             AfficherPoursuivant();
-
             tim.Start();
         }
 
@@ -150,7 +150,14 @@ namespace CDS
         {
             if (partieEnCours == true)
             {
-                generationTour();
+                if (Globale.j1.vitesse > 1)
+                {
+                    afficherEntiteGrille();
+                }
+                else
+                {
+                    generationTour();
+                }
                 afficherInfo();
             }
         }     
@@ -204,6 +211,7 @@ namespace CDS
                     {
                         tim.Stop();
                         partieNormal.obj2.unEffet.action();
+                        mouvement.Text = Globale.j1.vitesse.ToString();
                         partieNormal.obj2 = null;
                         validationVie();
                         item2.Background = null;
@@ -222,6 +230,7 @@ namespace CDS
                     {
                         tim.Stop();
                         partieNormal.obj1.unEffet.action();
+                        mouvement.Text = Globale.j1.vitesse.ToString();
                         partieNormal.obj1 = null;
                         validationVie();
                         item1.Background = null;
@@ -233,8 +242,15 @@ namespace CDS
             if(Keyboard.IsKeyDown(Key.Enter))
             {
                 if(partieEnCours == true)
-                { 
-                    generationTour();
+                {
+                    if (Globale.j1.vitesse > 1)
+                    {
+                        afficherEntiteGrille();
+                    }
+                    else
+                    {
+                        generationTour();
+                    }
                     afficherInfo();
                 }
             }
@@ -247,7 +263,14 @@ namespace CDS
                  if (Globale.j1.positionJoueur.posX < Globale.tailleGrille - 2)
                 {
                     Globale.j1.positionJoueur.posX = Globale.j1.positionJoueur.posX + 1;
-                    generationTour();
+                    if(Globale.j1.vitesse > 1)
+                    {
+                        afficherEntiteGrille();
+                    }
+                    else
+                    {
+                        generationTour();
+                     }
                 }
             }
 
@@ -256,7 +279,14 @@ namespace CDS
                 if (Globale.j1.positionJoueur.posX > 1)
                 {
                     Globale.j1.positionJoueur.posX = Globale.j1.positionJoueur.posX - 1;
-                    generationTour();
+                    if (Globale.j1.vitesse > 1)
+                    {
+                        afficherEntiteGrille();
+                    }
+                    else
+                    {
+                        generationTour();
+                    }
                 }
             }
 
@@ -265,7 +295,14 @@ namespace CDS
                 if (Globale.j1.positionJoueur.posY > 1)
                 {
                     Globale.j1.positionJoueur.posY = Globale.j1.positionJoueur.posY - 1;
-                    generationTour();
+                    if (Globale.j1.vitesse > 1)
+                    {
+                        afficherEntiteGrille();
+                    }
+                    else
+                    {
+                        generationTour();
+                    }
                 }
             }
 
@@ -274,7 +311,14 @@ namespace CDS
                  if (Globale.j1.positionJoueur.posY < Globale.tailleGrille - 2)
                   {
                       Globale.j1.positionJoueur.posY = Globale.j1.positionJoueur.posY + 1;
-                      generationTour();
+                      if (Globale.j1.vitesse > 1)
+                      {
+                          afficherEntiteGrille();
+                      }
+                      else
+                      {
+                          generationTour();
+                      }
                   }   
             }
 
@@ -308,7 +352,6 @@ namespace CDS
                 vie2.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
                 vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
 
-                viesSup.Text = "";
                 armuresSup.Text = "";
                 //on remplit les coeur selon la Vie Actuelle
                 switch (Globale.vie.nbVieActu)
@@ -332,8 +375,6 @@ namespace CDS
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie3.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
-
-                        viesSup.Text="+"+(Globale.vie.nbVieActu-3);
                         break;
                 }
                 //Armure
@@ -409,7 +450,7 @@ namespace CDS
                 if (partieNormal.finDeTour() == false)
                 {
                     tim = null;
-                    timerFin.Interval = 3000;
+                    timerFin.Interval = 1500;
                     timerFin.Tick += new EventHandler(OnTimedEvent2);
 
                     Globale.j1.pathImage=("/image/persoMort.png");
@@ -427,6 +468,7 @@ namespace CDS
                 {
                     tim.Stop();
                     partieNormal.obj1.unEffet.action();
+                    mouvement.Text = Globale.j1.vitesse.ToString();
                     partieNormal.obj1 = null;
                     validationVie();
                     item1.Background = null;
@@ -441,6 +483,7 @@ namespace CDS
                 {
                     tim.Stop();
                     partieNormal.obj2.unEffet.action();
+                    mouvement.Text = Globale.j1.vitesse.ToString();
                     partieNormal.obj2 = null;
                     validationVie();
                     item2.Background = null;
@@ -448,6 +491,16 @@ namespace CDS
 
                 }
 
+            }
+
+            public void afficherEntiteGrille()
+            {
+                Globale.j1.vitesse -= 1;
+                mouvement.Text = Globale.j1.vitesse.ToString();
+                grillePrincipale.Children.Clear();
+                AfficherJoueur();
+                AfficherPoursuivant();
+                AfficherObjet();
             }
     }
 }

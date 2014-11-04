@@ -426,7 +426,9 @@ namespace CDS
                     }
                     break;
                     //Vitesse
-                    case 'V': break;
+                    case 'V':
+                    Globale.j1.vitesse++; 
+                    break;
                     //Pousse
                     case 'P': break;
                     //Invincibilité

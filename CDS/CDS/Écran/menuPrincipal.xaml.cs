@@ -45,9 +45,18 @@ namespace CDS
 
         private void btnEditeur_Click(object sender, RoutedEventArgs e)
         {
-            menuEditeur menuE = new menuEditeur();
-            menuE.Show();
-            Close();
+           if (Globale.j1.estConnecte == true)
+           {
+               menuEditeur menuE = new menuEditeur();
+               menuE.Show();
+               Close();
+           }
+           else
+           {
+               menuConnexion menuC = new menuConnexion();
+               menuC.Show();
+               Close();
+           }
         }
 
         private void btnQuitter_Click(object sender, RoutedEventArgs e)

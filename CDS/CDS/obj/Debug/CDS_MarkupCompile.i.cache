@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 K:\chambre de survie\CDS\CDS\Écran\App.xaml
-101131615845
+111955349740
 
-301029691989
-16-505010483
-Écran\ecranMeilleurScore.xaml;Écran\menuGestionProfil.xaml;Écran\JeuNormal.xaml;Écran\menuInscription.xaml;Écran\menuPrincipal.xaml;Écran\menuEditeur.xaml;Écran\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\menuSelectionNiveau.xaml;Écran\menuSurvie.xaml;
+31452610986
+16654260161
+Écran\ecranMeilleurScore.xaml;Écran\menuConnexion.xaml;Écran\menuGestionProfil.xaml;Écran\JeuNormal.xaml;Écran\menuInscription.xaml;Écran\menuPrincipal.xaml;Écran\menuEditeur.xaml;Écran\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\menuSelectionNiveau.xaml;Écran\menuSurvie.xaml;
 
 False
 

@@ -35,10 +35,7 @@ namespace CDS
         /// <returns>Si le joueur est au nord de l'entite</returns>
         protected bool ifJoueurNord()
         {
-            if(Globale.j1.positionJoueur.posY<this.positionEntite.posY)
-                return true;
-            else
-                return false;
+            return true;
         }
 
         /// <summary>
@@ -47,10 +44,7 @@ namespace CDS
         /// <returns>Si le joueur est au sud de l'entite</returns>
         protected bool ifJoueurSud()
         {
-            if (Globale.j1.positionJoueur.posY > this.positionEntite.posY)
-                return true;
-            else
-                return false;
+            return true;
         }
 
         /// <summary>
@@ -59,10 +53,7 @@ namespace CDS
         /// <returns>Si le joueur est à l'est de l'entite</returns>
         protected bool ifJoueurEst()
         {
-            if (Globale.j1.positionJoueur.posX > this.positionEntite.posX)
-                return true;
-            else
-                return false;
+            return true;
         }
 
         /// <summary>
@@ -71,19 +62,12 @@ namespace CDS
         /// <returns>Si le joueur est à l'ouest de l'entite</returns>
         protected bool ifJoueurOuest()
         {
-            if (Globale.j1.positionJoueur.posX < this.positionEntite.posX)
-                return true;
-            else
-                return false;
+            return true;
         }
 
         protected bool ifJoueurProche()
         {
-            if (    (this.positionEntite.posX +1) >= Globale.j1.positionJoueur.posX && (this.positionEntite.posX -1) <= Globale.j1.positionJoueur.posX &&    //si le joueur est a +- 1 de la position en X de l'entite
-                    (this.positionEntite.posY +1) >= Globale.j1.positionJoueur.posY && (this.positionEntite.posY -1) <= Globale.j1.positionJoueur.posY)    //si le joueur est a +- 1 de la position en Y de l'entite
-                return true;
-            else
-                return false;
+            return true;
         }
 
               /// <summary>

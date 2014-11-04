@@ -83,7 +83,6 @@ namespace CDS
         {
             menuPrincipal menuP = new menuPrincipal();
             menuP.Show();
-            Globale.j1.estConnecte = false;
             Connect();
             Close();
         }

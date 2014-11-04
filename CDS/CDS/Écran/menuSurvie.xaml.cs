@@ -25,6 +25,16 @@ namespace CDS
         public menuSurvie()
         {
             InitializeComponent();
+            if(Globale.j1.estConnecte == true)
+            {
+                btnCharger.IsEnabled = true; 
+                btnNouvellePartie.IsEnabled = true;
+            }
+            else
+            {
+                btnCharger.IsEnabled = false;
+                btnNouvellePartie.IsEnabled = false;
+            }
         }
 
         private void btnRetourSurvie_Click(object sender, RoutedEventArgs e)

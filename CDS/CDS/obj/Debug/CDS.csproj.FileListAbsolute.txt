@@ -30,7 +30,6 @@ K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.g.cs
-K:\chambre de survie\CDS\CDS\bin\Debug\MySql.Data.dll
 C:\Users\Admin\Desktop\projet\CDS\CDS\bin\Debug\CDS.exe.config
 C:\Users\Admin\Desktop\projet\CDS\CDS\bin\Debug\CDS.exe
 C:\Users\Admin\Desktop\projet\CDS\CDS\bin\Debug\CDS.pdb
@@ -62,3 +61,5 @@ C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.Properties.Resources.resourc
 C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
 C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.exe
 C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.pdb
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuConnexion.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuConnexion.g.cs
