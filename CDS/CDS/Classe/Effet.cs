@@ -432,7 +432,9 @@ namespace CDS
                     //Pousse
                     case 'P': break;
                     //Invincibilité
-                    case '*': break;
+                    case '*': 
+                    Globale.vie.toursImmunite++;
+                    break;
                 }
                if (iLecture >= CMD.Length)
                {

@@ -29,7 +29,7 @@ namespace CDS
         public JeuNormal()
         {
             InitializeComponent();
-            Globale.j1.pathImage="/image/perso.png";
+            Globale.j1.pathImage="/image/bonhommeMod.png";
 
             tim.Tick += new EventHandler(OnTimedEvent);
             tim.Interval = 2000;
@@ -361,22 +361,25 @@ namespace CDS
                         break;
                     case 1:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
-                        Globale.j1.pathImage = "/image/perso.png";
+                        Globale.j1.pathImage = "/image/bonhommeTresBlesse.png";
                         break;
                     case 2:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                        Globale.j1.pathImage = "/image/bonhommeBlesse.png";
                         break;
                     case 3:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie3.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                        Globale.j1.pathImage = "/image/bonhommeMod.png";
                         break;
 
                     default:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                         vie3.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                        Globale.j1.pathImage = "/image/bonhommeMod.png";
                         break;
                 }
                 //Armure
@@ -387,29 +390,38 @@ namespace CDS
 
                     case 1:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        Globale.j1.pathImage = "/image/bonhommeAvecArmure.png";
                         break;
 
                     case 2:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        Globale.j1.pathImage = "/image/bonhommeAvecArmure.png";
                         break;
 
                     case 3:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                         vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        Globale.j1.pathImage = "/image/bonhommeAvecArmure.png";
                         break;
 
                     default:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                         vie2.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
                         vie3.Source = new BitmapImage(new Uri(@"/image/coeurBouclier.png", UriKind.Relative));
+                        Globale.j1.pathImage = "/image/bonhommeAvecArmure.png";
 
                         armuresSup.Text = "+" + (Globale.vie.nbArmure - 3);
                         break;
                 }
-                if(Globale.vie.toursImmunite >=1)
+                if(Globale.vie.toursImmunite >0)
                 {   
+                    if(Globale.vie.nbArmure > 0)
+                    {
+                        Globale.j1.pathImage = "/image/bonhommeModBarriereArmure.png";
+                    }
+                    else
                     Globale.j1.pathImage = "/image/bonhommeModBarriere.png";
                     AfficherJoueur();
                     AfficherPoursuivant();
@@ -465,12 +477,13 @@ namespace CDS
                     timerFin.Interval = 1500;
                     timerFin.Tick += new EventHandler(OnTimedEvent2);
 
-                    Globale.j1.pathImage=("/image/persoMort.png");
+                    Globale.j1.pathImage=("/image/bonhommeMort.png");
                     grillePrincipale.Children.Clear();
                     AfficherJoueur();
                     partieEnCours = false;
                     timerFin.Start();
                  }
+                 else
                  validationVie();
              }
 
