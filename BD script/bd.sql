@@ -220,7 +220,7 @@ FOREIGN KEY(idEffet) REFERENCES Effets(idEffet);
 
 INSERT INTO apparences(image)
 VALUES
-('/image/perso.png'
+('/image/bonhommeMod.png'
 );
 
 INSERT INTO apparences(image)
