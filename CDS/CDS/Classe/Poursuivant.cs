@@ -13,7 +13,6 @@ namespace CDS
 		public int valeur { get; set; }
         public int rareté { get; set; }
         public int valeurScore { get; set; }
-        public Position positionEntite { get; set; }
 
 		
         /// <summary>
@@ -189,14 +188,14 @@ namespace CDS
             char lettre2;
             char lettre3;
 
-            char[] sousCMD={'\0'}; //Une sous liste pour savoir quoi faire pour le if
+            string sousCMD=""; //Une sous liste pour savoir quoi faire pour le if
 
             int numero;
             int iLecture = 0;
             int incrementation=0;// la profondeur et quantiter de if dans un if dans un if dans... etc.
             int iEcriture=0;//
 
-            bool endif=false;
+            bool faitwhile=true;
 
 
 
@@ -330,10 +329,14 @@ namespace CDS
                         lettre2 = CMD[iLecture];
                         iLecture++;
 
+                        lettre3 = CMD[iLecture];
+                         iLecture++;
+
                         //...pouvoir isolet la/les actions en cas de true
-                        endif=false;
+                        faitwhile=true;
                         iEcriture=0;
-                        while(endif)
+                        sousCMD="";
+                        while(faitwhile)
                         {
                             switch(CMD[iLecture])
                             {
@@ -342,7 +345,8 @@ namespace CDS
                                     //on veut l'acolade dans la sousliste
                                     if(incrementation!=0)
                                     {
-                                        sousCMD[iEcriture] = CMD[iLecture];
+                                        sousCMD = sousCMD.Insert(iEcriture,CMD.Substring(iLecture,1));
+                                    //sousCMD[iEcriture] = CMD[iLecture];
                                         iEcriture++;
                                     }
                                     incrementation++;
@@ -352,30 +356,31 @@ namespace CDS
                                     //idem de l'autre acolade
                                     if(incrementation!=1)
                                     {
-                                        sousCMD[iEcriture] = CMD[iLecture];
+                                        sousCMD = sousCMD.Insert(iEcriture,CMD.Substring(iLecture,1));
+                                    //sousCMD[iEcriture] = CMD[iLecture];
                                         iEcriture++;
                                     }
                                     incrementation--;
                                     break;
 
                                 default:
-                                    sousCMD[iEcriture]=CMD[iLecture];
+                                    sousCMD = sousCMD.Insert(iEcriture,CMD.Substring(iLecture,1));
+                                    //sousCMD[iEcriture]=CMD[iLecture];
                                     iEcriture++;
                                     break;
                             }
 
                             iLecture++;
                             if(incrementation<=0)
-                                endif=true;
+                                faitwhile=false;
                         }
 
                         //on lit la lettre prise en réserve plus tôt pour savoir quoi vérifier
                         switch(lettre2)
                         {
                             //=====Joueur=====
-                            case 'p':
-                                lettre3 = CMD[iLecture];
-                                iLecture++;
+                            case 'j':
+                                
 
                                 switch(lettre3)
                                 {
@@ -408,22 +413,22 @@ namespace CDS
                                     case 'd':
                                         switch (direction)
                                         {
-                                            case 2:
+                                            case 4:
                                                 if (ifJoueurSud())
                                                     lire(sousCMD);
                                                 break;
 
-                                            case 3:
+                                            case 1:
                                                 if (ifJoueurOuest())
                                                     lire(sousCMD);
                                                 break;
 
-                                            case 4:
+                                            case 2:
                                                 if (ifJoueurNord())
                                                     lire(sousCMD);
                                                 break;
 
-                                            case 1:
+                                            case 3:
                                                 if (ifJoueurEst())
                                                     lire(sousCMD);
                                                 break;
@@ -458,22 +463,22 @@ namespace CDS
                                     case 'g':
                                         switch (direction)
                                         {
-                                            case 4:
+                                            case 2:
                                                 if(ifJoueurSud())
                                                     lire(sousCMD);
                                                 break;
 
-                                            case 1:
+                                            case 3:
                                                 if(ifJoueurOuest())
                                                     lire(sousCMD);
                                                 break;
 
-                                            case 2:
+                                            case 4:
                                                 if(ifJoueurNord())
                                                     lire(sousCMD);
                                                 break;
 
-                                            case 3:
+                                            case 1:
                                                 if(ifJoueurEst())
                                                     lire(sousCMD);
                                                 break;
@@ -510,7 +515,7 @@ namespace CDS
                                 }
                                 break;
                             //=====Poursuivant=====
-                            case 'e':
+                            case 'p':
                                 lettre3 = CMD[iLecture];
                                 iLecture++;
                                 switch (lettre3)
@@ -541,6 +546,8 @@ namespace CDS
                     case 'C':
                         //vérifie si le joueur est là, s'il ne marcher pas sur du feu, s'il active une mine, etc.
                         //bouger sans faire de check, c'est de la téléportation
+                        if (verification())
+                            CMD="";
                         break;
                 }
                 if (iLecture >= CMD.Length)
