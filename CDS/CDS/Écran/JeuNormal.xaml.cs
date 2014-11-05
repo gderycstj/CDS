@@ -347,7 +347,8 @@ namespace CDS
 
             public void validationVie()
             {
-                //on met les coueur vide
+                grillePrincipale.Children.Clear();
+                //on met les coeur vide
                 vie1.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
                 vie2.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
                 vie3.Source = new BitmapImage(new Uri(@"/image/coeurVide.png", UriKind.Relative));
@@ -360,6 +361,7 @@ namespace CDS
                         break;
                     case 1:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
+                        Globale.j1.pathImage = "/image/perso.png";
                         break;
                     case 2:
                         vie1.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
@@ -406,6 +408,16 @@ namespace CDS
                         armuresSup.Text = "+" + (Globale.vie.nbArmure - 3);
                         break;
                 }
+                if(Globale.vie.toursImmunite >=1)
+                {   
+                    Globale.j1.pathImage = "/image/bonhommeModBarriere.png";
+                    AfficherJoueur();
+                    AfficherPoursuivant();
+                    AfficherObjet();
+                }
+                AfficherJoueur();
+                AfficherPoursuivant();
+                AfficherObjet();
             }
 
             public void generationTour()
@@ -459,6 +471,7 @@ namespace CDS
                     partieEnCours = false;
                     timerFin.Start();
                  }
+                 validationVie();
              }
 
 
