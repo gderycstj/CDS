@@ -333,7 +333,7 @@ VALUES('triangle'
 	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
 	   ,(SELECT idApparence FROM apparences WHERE image = '/image/triangle.png')
 	   ,400
-	   ,'MhIjp{CMhC}Ijg{Mg}Ijd{Md}C'
+	   ,'Ijp{MhC}MhIjg{Mg}Ijd{Md}C'
 );
 
 
