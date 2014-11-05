@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="CDS.ecranSupressionPoursuivant"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="975">
+    <Grid>
+        <Label Content="nom:" HorizontalAlignment="Left" Height="42" Margin="33,37,0,0" VerticalAlignment="Top" Width="95" FontFamily="Agency FB" FontSize="30" FontWeight="Bold"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="128,47,0,0"/>
+
+    </Grid>
+</UserControl>

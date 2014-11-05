@@ -25,7 +25,7 @@ namespace CDS
             InitializeComponent();
             btnMode.IsEnabled = false;
             DataContext = new MainViewModel();
-            ViewModel.CurrentView = new MenuMode();
+            ViewModel.CurrentView = new menuMode();
         }
 
         /// <summary>
@@ -50,8 +50,7 @@ namespace CDS
         {
             activerBouton();
             btnMode.IsEnabled = false;
-            //MenuMode m = new Mode();
-            ViewModel.CurrentView = new MenuMode();
+            ViewModel.CurrentView = new menuMode();
            
         }
 
@@ -59,18 +58,21 @@ namespace CDS
         {
             activerBouton();
             btnPoursuivant.IsEnabled = false;
+            ViewModel.CurrentView = new menuPoursuivant();
         }
 
         private void btnObjet_Click(object sender, RoutedEventArgs e)
         {
             activerBouton();
             btnObjet.IsEnabled = false;
+            ViewModel.CurrentView = new menuObjet();
         }
 
         private void btnEffet_Click(object sender, RoutedEventArgs e)
         {
             activerBouton();
             btnEffet.IsEnabled = false;
+            ViewModel.CurrentView = new menuEffet();
         }
     }
 }

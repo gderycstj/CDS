@@ -100,3 +100,6 @@ D:\CDS2\CDS\CDS\obj\Debug\Écran\MenuMode.baml
 D:\CDS2\CDS\CDS\obj\Debug\Écran\MenuMode.g.cs
 D:\CDS2\CDS\CDS\obj\Debug\CDS.exe
 D:\CDS2\CDS\CDS\obj\Debug\CDS.pdb
+D:\CDS\CDS\CDS\bin\Debug\CDS.exe.config
+D:\CDS\CDS\CDS\obj\Debug\CDS.exe
+D:\CDS\CDS\CDS\obj\Debug\CDS.pdb

@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace CDS
 {
     /// <summary>
-    /// Logique d'interaction pour menuMode.xaml
+    /// Logique d'interaction pour ecranCreationPoursuivant.xaml
     /// </summary>
-    public partial class menuMode : UserControl
+    public partial class ecranCreationPoursuivant : UserControl
     {
-        public menuMode()
+        public ecranCreationPoursuivant()
         {
             InitializeComponent();
         }
-
     }
 }
