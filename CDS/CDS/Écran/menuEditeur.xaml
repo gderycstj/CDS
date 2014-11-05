@@ -33,5 +33,8 @@
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
+        <Grid Margin="17,208,23,23">
+            <ContentPresenter Content="{Binding CurrentView}" />
+        </Grid>
     </Grid>
 </Window>

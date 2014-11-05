@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Cstj.MvvmToolkit">
+      <HintPath>..\..\Cstj.MvvmToolkit\obj\Release\Cstj.MvvmToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -62,6 +65,7 @@
     <Compile Include="Classe\Entite.cs" />
     <Compile Include="Classe\Globale.cs" />
     <Compile Include="Classe\Joueur.cs" />
+    <Compile Include="Classe\MainViewModel.cs" />
     <Compile Include="Classe\Objectif.cs" />
     <Compile Include="Classe\Objet.cs" />
     <Compile Include="Classe\Partie.cs" />
@@ -89,6 +93,9 @@
     <Compile Include="Écran\menuInscription.xaml.cs">
       <DependentUpon>menuInscription.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Écran\MenuMode.xaml.cs">
+      <DependentUpon>MenuMode.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\menuSelectionNiveau.xaml.cs">
       <DependentUpon>menuSelectionNiveau.xaml</DependentUpon>
     </Compile>
@@ -114,6 +121,10 @@
     <Page Include="Écran\menuInscription.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Écran\MenuMode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Écran\menuPrincipal.xaml">
       <Generator>MSBuild:Compile</Generator>

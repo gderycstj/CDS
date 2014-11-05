@@ -1,0 +1,4 @@
+D:\Projet\Cstj.MvvmToolkit\bin\Debug\Cstj.MvvmToolkit.dll
+D:\Projet\Cstj.MvvmToolkit\bin\Debug\Cstj.MvvmToolkit.pdb
+D:\Projet\Cstj.MvvmToolkit\obj\Debug\Cstj.MvvmToolkit.dll
+D:\Projet\Cstj.MvvmToolkit\obj\Debug\Cstj.MvvmToolkit.pdb

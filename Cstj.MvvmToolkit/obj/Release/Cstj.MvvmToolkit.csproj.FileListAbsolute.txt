@@ -1,0 +1,5 @@
+D:\Immobilus\Cstj.MvvmToolkit\bin\Release\Cstj.MvvmToolkit.dll
+D:\Immobilus\Cstj.MvvmToolkit\bin\Release\Cstj.MvvmToolkit.pdb
+D:\Immobilus\Cstj.MvvmToolkit\obj\Release\Cstj.MvvmToolkit.csprojResolveAssemblyReference.cache
+D:\Immobilus\Cstj.MvvmToolkit\obj\Release\Cstj.MvvmToolkit.dll
+D:\Immobilus\Cstj.MvvmToolkit\obj\Release\Cstj.MvvmToolkit.pdb

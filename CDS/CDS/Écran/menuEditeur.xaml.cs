@@ -19,10 +19,13 @@ namespace CDS
     /// </summary>
     public partial class menuEditeur : Window
     {
+        public MainViewModel ViewModel { get { return (MainViewModel)DataContext; } }
         public menuEditeur()
         {
             InitializeComponent();
             btnMode.IsEnabled = false;
+            DataContext = new MainViewModel();
+            ViewModel.CurrentView = new MenuMode();
         }
 
         /// <summary>
@@ -47,6 +50,9 @@ namespace CDS
         {
             activerBouton();
             btnMode.IsEnabled = false;
+            //MenuMode m = new Mode();
+            ViewModel.CurrentView = new MenuMode();
+           
         }
 
         private void btnPoursuivant_Click(object sender, RoutedEventArgs e)
