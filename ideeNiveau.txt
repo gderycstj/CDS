@@ -1,0 +1,35 @@
+Niveau 1:
+Carré-Losange
+Atteindre 7500 points
+Potion de vitesse,Bouclier,Potion de vie
+
+Niveau 2:
+Carré-Losange
+Survivre 150 tours
+Potion de vitesse,bouclier
+
+Niveau 3:
+Carré-Losange-Triangle
+Une Vie
+Survivre 100 tours
+Potion de vitesse,Bouclier,Armure
+ 
+Niveau 4:
+Zappy
+Atteindre 10 000 points
+Potion de vitesse
+
+Niveau 5:
+Carré-Losange-Triangle-Zappy
+Récupérer un X objet 100 fois
+
+
+Niveau 6:
+
+Niveau 7:
+
+Niveau 8:
+ 
+Niveau 9:
+
+Niveau 10:
