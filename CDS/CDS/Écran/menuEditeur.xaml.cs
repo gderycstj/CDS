@@ -72,7 +72,8 @@ namespace CDS
         {
             activerBouton();
             btnEffet.IsEnabled = false;
-            ViewModel.CurrentView = new menuEffet();
+            //ViewModel.CurrentView = new menuEffet();
+
         }
     }
 }

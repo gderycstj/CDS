@@ -78,8 +78,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Écran\ecranCreationPoursuivant.xaml.cs">
+      <DependentUpon>ecranCreationPoursuivant.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\ecranMeilleurScore.xaml.cs">
       <DependentUpon>ecranMeilleurScore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\ecranSupressionPoursuivant.xaml.cs">
+      <DependentUpon>ecranSupressionPoursuivant.xaml</DependentUpon>
     </Compile>
     <Compile Include="Écran\menuConnexion.xaml.cs">
       <DependentUpon>menuConnexion.xaml</DependentUpon>
@@ -96,13 +102,27 @@
     <Compile Include="Écran\MenuMode.xaml.cs">
       <DependentUpon>MenuMode.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Écran\menuObjet.xaml.cs">
+      <DependentUpon>menuObjet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\menuPoursuivant.xaml.cs">
+      <DependentUpon>menuPoursuivant.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\menuSelectionNiveau.xaml.cs">
       <DependentUpon>menuSelectionNiveau.xaml</DependentUpon>
     </Compile>
     <Compile Include="Écran\menuSurvie.xaml.cs">
       <DependentUpon>menuSurvie.xaml</DependentUpon>
     </Compile>
+    <Page Include="Écran\ecranCreationPoursuivant.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Écran\ecranMeilleurScore.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\ecranSupressionPoursuivant.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -123,6 +143,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Écran\MenuMode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\menuObjet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\menuPoursuivant.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -228,9 +256,6 @@
     <Resource Include="Image\potionVie.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\perso.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Image\grille.png" />
   </ItemGroup>
   <ItemGroup>
@@ -262,7 +287,28 @@
     <Resource Include="Image\cliqueObjet.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\persoMort.png" />
+    <Resource Include="Image\barriere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\bonhommeAvecArmure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\bonhommeBlesse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\bonhommeMod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\bonhommeModBarriere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\bonhommeModBarriereArmure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\bonhommeMort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\bonhommeTresBlesse.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

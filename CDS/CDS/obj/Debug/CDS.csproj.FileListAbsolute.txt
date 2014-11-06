@@ -1,105 +1,46 @@
-D:\Build\Source\CDS\CDS\bin\Debug\CDS.exe.config
 K:\chambre de survie\CDS\CDS\bin\Debug\CDS.exe.config
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuConnexion.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuGestionProfil.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\JeuNormal.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInscription.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\MenuMode.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuPrincipal.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuEditeur.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInstruction.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuJouer.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSurvie.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuConnexion.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuGestionProfil.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\JeuNormal.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInscription.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\MenuMode.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuPrincipal.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuEditeur.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInstruction.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuJouer.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSurvie.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\App.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.g.resources
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationPoursuivant.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionPoursuivant.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuObjet.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuPoursuivant.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationPoursuivant.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionPoursuivant.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuObjet.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuPoursuivant.g.cs
 K:\chambre de survie\CDS\CDS\bin\Debug\CDS.exe
 K:\chambre de survie\CDS\CDS\bin\Debug\CDS.pdb
+K:\chambre de survie\CDS\CDS\bin\Debug\Cstj.MvvmToolkit.dll
+K:\chambre de survie\CDS\CDS\bin\Debug\MySql.Data.dll
+K:\chambre de survie\CDS\CDS\bin\Debug\Cstj.MvvmToolkit.pdb
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.exe
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.pdb
-K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.baml
-K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.g.cs
-K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
-K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.baml
-K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.g.cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\bin\Debug\CDS.exe.config
-C:\Users\Admin\Desktop\projet\CDS\CDS\bin\Debug\CDS.exe
-C:\Users\Admin\Desktop\projet\CDS\CDS\bin\Debug\CDS.pdb
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.baml
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuGestionProfil.baml
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\JeuNormal.baml
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuInscription.baml
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuPrincipal.baml
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuEditeur.baml
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuInstruction.baml
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuJouer.baml
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.baml
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuSurvie.baml
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.g.cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuGestionProfil.g.cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\JeuNormal.g.cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuInscription.g.cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuPrincipal.g.cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuEditeur.g.cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuInstruction.g.cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuJouer.g.cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.g.cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\menuSurvie.g.cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\Écran\App.g.cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.g.resources
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.exe
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\CDS.pdb
-K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuConnexion.baml
-K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuConnexion.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
-D:\CDS2\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.baml
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuConnexion.baml
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuGestionProfil.baml
-D:\CDS2\CDS\CDS\obj\Debug\Écran\JeuNormal.baml
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuInscription.baml
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuPrincipal.baml
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuEditeur.baml
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuInstruction.baml
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuJouer.baml
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.baml
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuSurvie.baml
-D:\CDS2\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuConnexion.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuGestionProfil.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\Écran\JeuNormal.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuInscription.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuPrincipal.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuEditeur.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuInstruction.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuJouer.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\Écran\menuSurvie.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\Écran\App.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
-D:\CDS2\CDS\CDS\obj\Debug\CDS.g.resources
-D:\CDS2\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
-D:\CDS2\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
-D:\CDS2\CDS\CDS\bin\Debug\CDS.exe.config
-D:\CDS2\CDS\CDS\bin\Debug\CDS.exe
-D:\CDS2\CDS\CDS\bin\Debug\CDS.pdb
-D:\CDS2\CDS\CDS\bin\Debug\Cstj.MvvmToolkit.dll
-D:\CDS2\CDS\CDS\bin\Debug\Cstj.MvvmToolkit.pdb
-D:\CDS2\CDS\CDS\obj\Debug\Écran\MenuMode.baml
-D:\CDS2\CDS\CDS\obj\Debug\Écran\MenuMode.g.cs
-D:\CDS2\CDS\CDS\obj\Debug\CDS.exe
-D:\CDS2\CDS\CDS\obj\Debug\CDS.pdb
-D:\CDS\CDS\CDS\bin\Debug\CDS.exe.config
-D:\CDS\CDS\CDS\obj\Debug\CDS.exe
-D:\CDS\CDS\CDS\obj\Debug\CDS.pdb

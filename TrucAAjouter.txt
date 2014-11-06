@@ -1,5 +1,4 @@
 Poursuivant à faire
-Triangle
 Zappy
 Cercle
 Spring(Temporaire) (Se déplace comme le cheval au échec).
