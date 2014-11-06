@@ -263,6 +263,11 @@ VALUES
 ('/image/sprint.png'
 );
 
+INSERT INTO Apparences(image)
+VALUES
+('/image/zappy.png'
+);
+
 
 INSERT INTO utilisateurs(idApparence,nom,motDePasse)
 VALUES
@@ -336,6 +341,14 @@ VALUES('triangle'
 	   ,'Ijp{MhC}MhIjg{Mg}Ijd{Md}C'
 );
 
+INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)
+VALUES('zappy'
+,(SELECT idUtilisateur FROM Utilisateurs WHERE nom='Admin')
+,(SELECT idApparence FROM apparences WHERE image = '/image/zappy.png')
+,350
+,'Mh/MhCMh/MhCMhCMh/MhCMhCMhCMh'
+);
+
 
 INSERT INTO Objets(idUtilisateur,idApparence,nom)
 VALUES((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin' )
@@ -376,8 +389,16 @@ INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rareté)
 VALUES
 ((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Normal'))
 ,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'triangle')	
-,25
-,10
+,2
+,8
+);
+
+INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rareté)
+VALUES
+((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Normal'))
+,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'zappy')	
+,3
+,6
 );
 
 
