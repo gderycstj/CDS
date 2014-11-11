@@ -8,6 +8,7 @@ DROP TABLE IF EXISTS Poursuivants;
 DROP TABLE IF EXISTS Apparences;
 DROP TABLE IF EXISTS Niveaux;
 DROP TABLE IF EXISTS Progressions;
+DROP TABLE IF EXISTS Objectifs;
 DROP TABLE IF EXISTS ModesDeJeu;
 DROP TABLE IF EXISTS Scores;
 DROP TABLE IF EXISTS Utilisateurs;
@@ -54,6 +55,12 @@ ALTER TABLE ModesDeJeu
 ADD CONSTRAINT nomMode_UK
 UNIQUE(nom);
 
+/*************************************Table Objectifs********************************************/
+CREATE TABLE Objectifs
+(idObjectif INT AUTO_INCREMENT PRIMARY KEY,
+nom VARCHAR(30) NOT NULL,
+valeurObjectif INT NOT NULL
+);
 
 /*******************************Table Progression*******************************************/
 CREATE TABLE IF NOT EXISTS Progressions
@@ -67,13 +74,18 @@ ALTER TABLE Progressions
 ADD CONSTRAINT Progression_Utilisateurs_FK
 FOREIGN KEY(idUtilisateur) REFERENCES Utilisateurs(idUtilisateur);
 
-/*******************************Table option général******************************************/
+/*******************************Table Niveaux******************************************/
 CREATE TABLE Niveaux	
 (idNiveau INT AUTO_INCREMENT PRIMARY KEY,
  idModeDeJeu INT NOT NULL,
  idUtilisateur INT NOT NULL,
+ idObjectif INT,
  numNiveau INT NOT NULL
 );
+
+ALTER TABLE Niveaux
+ADD CONSTRAINT Niveaux_Objectifs_FK
+FOREIGN KEY (idObjectif) REFERENCES Objectifs(idObjectif);
 
 ALTER TABLE Niveaux
 ADD CONSTRAINT Niveaux_Utilisateurs_FK
@@ -82,6 +94,8 @@ FOREIGN KEY(idUtilisateur) REFERENCES Utilisateurs(idUtilisateur);
 ALTER TABLE Niveaux
 ADD CONSTRAINT Niveaux_ModeDeJeu_FK
 FOREIGN KEY(idModeDeJeu) REFERENCES ModesDeJeu(idModeDeJeu);
+
+
 
 /*****************************Table Apparences*************************************************/
 CREATE TABLE Apparences
