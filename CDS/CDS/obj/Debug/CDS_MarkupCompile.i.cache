@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-K:\chambre de survie\CDS\CDS\obj\Debug\
+D:\CDS\CDS\CDS\obj\Debug\
 CDS
 none
 false
 DEBUG;TRACE
-K:\chambre de survie\CDS\CDS\Écran\App.xaml
+D:\CDS\CDS\CDS\Écran\App.xaml
 171172822005
 
 38716935883
-17561635456
+17522086702
 Écran\ecranCreationPoursuivant.xaml;Écran\ecranMeilleurScore.xaml;Écran\ecranSupressionPoursuivant.xaml;Écran\jeuNiveau.xaml;Écran\menuConnexion.xaml;Écran\menuGestionProfil.xaml;Écran\JeuNormal.xaml;Écran\menuInscription.xaml;Écran\MenuMode.xaml;Écran\menuObjet.xaml;Écran\menuPoursuivant.xaml;Écran\menuPrincipal.xaml;Écran\menuEditeur.xaml;Écran\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\menuSelectionNiveau.xaml;Écran\menuSurvie.xaml;
 
 False
