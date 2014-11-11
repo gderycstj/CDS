@@ -268,6 +268,10 @@ VALUES
 ('/image/zappy.png'
 );
 
+INSERT INTO Apparences(image)
+VALUES
+('/image/barriere.png'
+);
 
 INSERT INTO utilisateurs(idApparence,nom,motDePasse)
 VALUES
@@ -369,6 +373,13 @@ VALUES
 ,'Sprint'
 );
 
+INSERT INTO Objets(idUtilisateur,idApparence,nom)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+,(SELECT idApparence FROM Apparences WHERE image = '/image/barriere.png')
+,'Barriere'
+);
+
 INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rareté)
 VALUES
 ((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Normal'))
@@ -426,6 +437,14 @@ VALUES
 ,25
 );
 
+INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
+VALUES
+((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Normal'))
+,(SELECT idObjet FROM Objets WHERE nom = 'Barriere')	
+,2
+,25
+);
+
 INSERT INTO Effets(idUtilisateur,nom,listeCMD)
 VALUES
 ((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
@@ -447,6 +466,13 @@ VALUES
  ,'V'
 );
 
+INSERT INTO Effets(idUtilisateur,nom,listeCMD)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Invincibilité 2'
+ ,'**'
+);
+
 INSERT INTO ObjetsEffets(idObjet,idEffet)
 VALUES
 ((SELECT idObjet FROM Objets WHERE nom = 'Potion de vie')
@@ -465,5 +491,10 @@ VALUES
  ,(SELECT idEffet FROM Effets WHERE nom = 'Sprint 1')
 );
 
+INSERT INTO ObjetsEffets(idObjet,idEffet)
+VALUES
+((SELECT idObjet FROM Objets WHERE nom = 'Barriere')
+ ,(SELECT idEffet FROM Effets WHERE nom = 'Invincibilité 2')
+);
 
 COMMIT
