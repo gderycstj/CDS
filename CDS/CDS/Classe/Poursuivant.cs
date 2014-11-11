@@ -122,6 +122,8 @@ namespace CDS
         /// <returns> que tout est correct</returns>
         public override bool action()
         {
+            int temps=0;
+            int numAction=0;
             string[] tabCMD = { "" };
             string CMD = "";
             
@@ -131,17 +133,19 @@ namespace CDS
             if (listeCMD.Contains('/'))
             {
                 //Calculer en combien de tour il fait un cyle
+                temps= listeCMD.Count(f => f== '/');
 
 
-
-                //Calculer a quel cycle on est rendu et quel partie chaine on doit mettre dans CMD
+                /*Calculer a quel cycle on est rendu et quel partie chaine on doit mettre dans CMD*/
+                numAction = age % temps;
+                
 
                 //un tableau de string avec tout les temps séparer
                 tabCMD = listeCMD.Split(new char[] { '/' });
 
 
                 //Mettre la section de listeCMD dans CMD
-
+                CMD = tabCMD[numAction];
             }
             else
             {
@@ -390,22 +394,38 @@ namespace CDS
                                         {
                                             case 1:
                                                 if (ifJoueurSud())
-                                                    lire(sousCMD);
+                                                    if(!lire(sousCMD))
+                                                    {
+                                                        CMD="";
+                                                        return false;
+                                                    }         
                                                 break;
 
                                             case 2:
                                                 if (ifJoueurOuest())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
 
                                             case 3:
                                                 if (ifJoueurNord())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
 
                                             case 4:
                                                 if (ifJoueurEst())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
                                         }
                                         break;
@@ -415,22 +435,38 @@ namespace CDS
                                         {
                                             case 4:
                                                 if (ifJoueurSud())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
 
                                             case 1:
                                                 if (ifJoueurOuest())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
 
                                             case 2:
                                                 if (ifJoueurNord())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
 
                                             case 3:
                                                 if (ifJoueurEst())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
                                         }
                                         break;
@@ -440,22 +476,38 @@ namespace CDS
                                         {
                                             case 3:
                                                 if (ifJoueurSud())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
 
                                             case 4:
                                                 if (ifJoueurOuest())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
 
                                             case 1:
                                                 if (ifJoueurNord())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
 
                                             case 2:
                                                 if (ifJoueurEst())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
                                         }
                                         break;
@@ -465,29 +517,49 @@ namespace CDS
                                         {
                                             case 2:
                                                 if(ifJoueurSud())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
 
                                             case 3:
                                                 if(ifJoueurOuest())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
 
                                             case 4:
                                                 if(ifJoueurNord())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
 
                                             case 1:
                                                 if(ifJoueurEst())
-                                                    lire(sousCMD);
+                                                    if (!lire(sousCMD))
+                                                    {
+                                                        CMD = "";
+                                                        return false;
+                                                    }
                                                 break;
                                         }
                                         break;
                                     //Proximité
                                     case 'p':
                                         if(ifJoueurProche())
-                                            lire(sousCMD);
+                                            if (!lire(sousCMD))
+                                            {
+                                                CMD = "";
+                                                return false;
+                                            }
                                         break;
                                 }
                                 break;
@@ -547,7 +619,10 @@ namespace CDS
                         //vérifie si le joueur est là, s'il ne marcher pas sur du feu, s'il active une mine, etc.
                         //bouger sans faire de check, c'est de la téléportation
                         if (verification())
+                        { 
                             CMD="";
+                            return false;
+                        }
                         break;
                 }
                 if (iLecture >= CMD.Length)
@@ -558,12 +633,7 @@ namespace CDS
             return true;
         }
 
-        //Vérification et action effectuer à chaque fin de tour
-        public override bool finDetour()
-        {
-            age++;
-            return true;
-        }
+        
         //Get nécéssaire
         public string getUrlImage()
         {
