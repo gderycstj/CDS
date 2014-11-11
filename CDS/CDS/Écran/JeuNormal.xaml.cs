@@ -420,9 +420,7 @@ namespace CDS
                         Globale.j1.pathImage = "/image/bonhommeModBarriereArmure.png";
                     }
                     else
-                    {
-                        Globale.j1.pathImage = "/image/bonhommeModBarriere.png";
-                    }
+                    Globale.j1.pathImage = "/image/bonhommeModBarriere.png";
                     AfficherJoueur();
                     AfficherPoursuivant();
                     AfficherObjet();
@@ -474,17 +472,18 @@ namespace CDS
                 partieNormal.finDeTour();
                 if (Globale.mode == "Normal")
                 {
-                    tim = null;
-                    timerFin.Interval = 1500;
-                    timerFin.Tick += new EventHandler(OnTimedEvent2);
                     if(!Globale.vie.finDeTour())
-                    {   
+                    { 
+                        tim = null;
+                        timerFin.Interval = 1500;
+                        timerFin.Tick += new EventHandler(OnTimedEvent2);
+
                         Globale.j1.pathImage=("/image/bonhommeMort.png");
                         grillePrincipale.Children.Clear();
                         AfficherJoueur();
                         partieEnCours = false;
                         timerFin.Start();
-                    }
+                     }
 
                  }
                  validationVie();
