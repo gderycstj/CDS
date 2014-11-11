@@ -26,7 +26,7 @@
         </Button>
         <Rectangle Fill="#FF4B634D" HorizontalAlignment="Left" Height="481" Margin="266,80,0,0" Stroke="Black" VerticalAlignment="Top" Width="454"/>
         <TextBlock x:Name="txtTitreOnglet" HorizontalAlignment="Left" Height="54" Margin="324,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" FontFamily="/CDS;component/#Broken Type" FontSize="48" TextAlignment="Center"/>
-        <Button x:Name="btnConfirmerMod" Content="Confirmer" HorizontalAlignment="Left" Height="64" Margin="326,479,0,0" VerticalAlignment="Top" Width="338" FontFamily="Agency FB" FontSize="48" Click="btnConfirmerMod_Click">
+        <Button x:Name="btnConfirmerMod" Content="Confirmer" HorizontalAlignment="Left" Height="64" Margin="326,479,0,0" VerticalAlignment="Top" Width="338" FontFamily="Agency FB" FontSize="48" Click="btnConfirmerMod_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
@@ -36,15 +36,15 @@
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <TextBlock x:Name="txtSupprimerInfo" HorizontalAlignment="Left" Height="133" Margin="281,141,0,0" TextWrapping="Wrap" Text="Si vous entrer votre mot de passe et confirmer, vous ne pourrez plus accéder à votre compte et à tout information provenant de celui-ci. Cependant, les modes créer resteront disponible.Lorsque vous allez cliquer sur confirmer, vous serez automatiquement redirigez vers l'écran de connexion" VerticalAlignment="Top" Width="425" FontFamily="Agency FB" FontSize="20" TextAlignment="Center" Visibility="Hidden"/>
-        <TextBlock x:Name="txtMDPSupp" HorizontalAlignment="Left" Height="40" Margin="324,274,0,0" TextWrapping="Wrap" Text="Mot de Passe" VerticalAlignment="Top" Width="338" TextAlignment="Center" FontFamily="Agency FB" FontSize="36" Visibility="Hidden"/>
-        <PasswordBox x:Name="txtMotDePasseSupp" HorizontalAlignment="Left" Height="50" Margin="324,337,0,0" VerticalAlignment="Top" Width="338" Background="#FF4B634D" FontFamily="Agency FB" FontSize="36" Visibility="Hidden"/>
-        <PasswordBox x:Name="txtMotDePasseModif" HorizontalAlignment="Left" Height="40" Margin="326,264,0,0"  VerticalAlignment="Top" Width="338" FontFamily="Agency FB" FontSize="24" Background="#FF4B634D"/>
-        <TextBlock x:Name="txtMotPasse" HorizontalAlignment="Left" Height="33" Margin="364,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Text="Nouveau Mot de Passe" FontFamily="Agency FB" FontSize="24" TextAlignment="Center"/>
-        <TextBlock x:Name="txtConfirmMotPasse" HorizontalAlignment="Left" Height="33" Margin="364,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Text="Confirmation mot de passe" FontFamily="Agency FB" FontSize="24" TextAlignment="Center"/>
-        <PasswordBox x:Name="txtMotDePasseConfirm" HorizontalAlignment="Left" Height="40" Margin="326,352,0,0"  VerticalAlignment="Top" Width="338" FontFamily="Agency FB" FontSize="24" Background="#FF4B634D"/>
+        <TextBlock x:Name="txtSupprimerInfo" HorizontalAlignment="Left" Height="133" Margin="281,141,0,0" TextWrapping="Wrap" Text="Si vous entrer votre mot de passe et confirmer, vous ne pourrez plus accéder à votre compte et à tout information provenant de celui-ci. Cependant, les modes créer resteront disponible.Lorsque vous allez cliquer sur confirmer, vous serez automatiquement redirigez vers l'écran de connexion" VerticalAlignment="Top" Width="425" FontFamily="Agency FB" FontSize="20" TextAlignment="Center"/>
+        <TextBlock x:Name="txtMDPSupp" HorizontalAlignment="Left" Height="40" Margin="324,274,0,0" TextWrapping="Wrap" Text="Mot de Passe" VerticalAlignment="Top" Width="338" TextAlignment="Center" FontFamily="Agency FB" FontSize="36"/>
+        <PasswordBox x:Name="txtMotDePasseSupp" HorizontalAlignment="Left" Height="50" Margin="324,337,0,0" VerticalAlignment="Top" Width="338" Background="#FF4B634D" FontFamily="Agency FB" FontSize="36"/>
+        <PasswordBox x:Name="txtMotDePasseModif" HorizontalAlignment="Left" Height="40" Margin="326,264,0,0"  VerticalAlignment="Top" Width="338" FontFamily="Agency FB" FontSize="24" Background="#FF4B634D" Visibility="Hidden"/>
+        <TextBlock x:Name="txtMotPasse" HorizontalAlignment="Left" Height="33" Margin="364,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Text="Nouveau Mot de Passe" FontFamily="Agency FB" FontSize="24" TextAlignment="Center" Visibility="Hidden"/>
+        <TextBlock x:Name="txtConfirmMotPasse" HorizontalAlignment="Left" Height="33" Margin="364,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Text="Confirmation mot de passe" FontFamily="Agency FB" FontSize="24" TextAlignment="Center" Visibility="Hidden"/>
+        <PasswordBox x:Name="txtMotDePasseConfirm" HorizontalAlignment="Left" Height="40" Margin="326,352,0,0"  VerticalAlignment="Top" Width="338" FontFamily="Agency FB" FontSize="24" Background="#FF4B634D" Visibility="Hidden"/>
         <TextBlock x:Name="txtErreur" HorizontalAlignment="Left" Height="64" Margin="281,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="425" FontFamily="Agency FB" FontSize="24" Foreground="#FFF9F8F8" TextAlignment="Center"/>
-        <PasswordBox x:Name="txtAncienMdp" HorizontalAlignment="Left" Height="40" Margin="328,184,0,0" VerticalAlignment="Top" Width="336" Background="#FF4B634D" FontFamily="Agency FB" FontSize="24"/>
-        <TextBlock x:Name="txtAncienMdpTxt" HorizontalAlignment="Left" Height="33" Margin="364,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Text="Mot de passe Actuel" FontFamily="Agency FB" FontSize="24" TextAlignment="Center"/>
+        <PasswordBox x:Name="txtAncienMdp" HorizontalAlignment="Left" Height="40" Margin="328,184,0,0" VerticalAlignment="Top" Width="336" Background="#FF4B634D" FontFamily="Agency FB" FontSize="24" Visibility="Hidden"/>
+        <TextBlock x:Name="txtAncienMdpTxt" HorizontalAlignment="Left" Height="33" Margin="364,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Text="Mot de passe Actuel" FontFamily="Agency FB" FontSize="24" TextAlignment="Center" Visibility="Hidden"/>
     </Grid>
 </Window>

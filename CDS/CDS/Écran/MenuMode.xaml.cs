@@ -25,5 +25,13 @@ namespace CDS
             InitializeComponent();
         }
 
+        private void btnAjoutMode_Click(object sender, RoutedEventArgs e)
+        {
+            //Regarde si tout les informations ont été fait
+
+            //Si oui, fait les nombreuses Requête en BD
+
+        }
+
     }
 }

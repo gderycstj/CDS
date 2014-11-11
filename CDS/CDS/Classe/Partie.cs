@@ -10,13 +10,14 @@ namespace CDS
     public class Partie
     {
         public int score { get;set;}
-        Objectif objectif { get;set;}
+        public Objectif objectif { get;set;}
         public List<Poursuivant> PoursuivantDispoPourLaPartie { get; set; }
         public List<Poursuivant> PoursuivantDansLaPartie{ get; set; }
         public List<Objet> objetDansLaPartie{get; set;}
         public List<Objet> objetDispoPourLaPartie { get;set;}
         public Objet obj1{get;set;}
         public Objet obj2{get;set;}
+        public int numNiveaux {get;set;}
         public Partie()
         {   
             score = 0;
@@ -25,16 +26,17 @@ namespace CDS
             PoursuivantDispoPourLaPartie = new List<Poursuivant>();
             objetDansLaPartie = new List<Objet>();
             objetDispoPourLaPartie = new List<Objet>();
+            Globale.j1.pathImage = "/image/bonhommeMod.png";
+            numNiveaux = 0;
+            objectif = new Objectif("Survie",3);
         }
-
-        /*public Partie(Vie viedepart, Objectif objParti,int maxobjets, List<Objet> objetDepart)
+        
+  
+        public void setPartie(string nObjectif,int ScoreObjectif,int numNiveau)
         {
-            vie=viedepart;
-            objectif=objParti;
-            qtyObjetsMax=maxobjets;
-            objetDepart.CopyTo(objets);
-        }*/
-
+            numNiveaux = numNiveau;
+            objectif = new Objectif(nObjectif,ScoreObjectif);
+        }
         /// <summary>
         /// initialisation des param de base de la partie
         /// (transfèr de donné BD dans des classes)
@@ -45,8 +47,8 @@ namespace CDS
         {
             //Requête BD
             //-------------------------------------------------------------------------------------------------------------
-            chargerEnnemi(0);
-            chargerObjet(0);
+            chargerEnnemi(numNiveaux);
+            chargerObjet(numNiveaux);
             débutDePartieGenPoursuivant();
             //-------------------------------------------------------------------------------------------------------------
 
@@ -113,26 +115,17 @@ namespace CDS
             }
          }
 
-        public bool finDeTour()
+        public void finDeTour()
         {
             foreach (Objet o in objetDansLaPartie)
             {
                 o.age += 1;
             }
 
-            bool validation = true;
-            if(!Globale.vie.finDeTour())
+            foreach(Poursuivant p in PoursuivantDansLaPartie)
             {
-                validation = false;
+                p.age += 1;
             }
-            /*if(objectif.finDeTour())
-            {
-                validation = false;
-            }*/
-            if(validation == false)
-            {return false;}
-
-            else { return true;}
         }
 
       
@@ -241,7 +234,7 @@ namespace CDS
             for (int i = objetDansLaPartie.Count - 1; i >= 0; i--)
             {
                 validation = true;
-                if(objetDansLaPartie[i].age > 10)
+                if(objetDansLaPartie[i].age > 15)
                 {
                     objetDansLaPartie.RemoveAt(i);
                     validation = false;

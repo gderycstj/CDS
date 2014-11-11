@@ -24,14 +24,14 @@ namespace CDS
             InitializeComponent();
             if (Globale.j1.getNom() == "visiteur")
             {
-                txtPub.Text = "Vous souhaitez partager vos scores également? Créer vous un compte dès maintenant pour envoyé automatiquement vos scores et à accéder a de nombreux autres modes de jeux!";
+                txtPub.Text = "Vous souhaitez partager vos pointages également? Créez-vous un compte dès maintenant pour envoyé automatiquement vos pointages et à accéder a de nombreux autres modes de jeux!";
             }
             else 
             {
                 //envoie le meilleur score
                 Globale.score.envoyerScore();
 
-                txtPub.Text = "Votre score a été enregistré, merci d'avoir joué.";
+                txtPub.Text = "Votre pointage a été enregistré, merci d'avoir joué.";
             
             }
             AfficherScore();

@@ -16,19 +16,21 @@ using System.Windows.Shapes;
 namespace CDS
 {
     /// <summary>
-    /// Logique d'interaction pour Jeu.xaml
+    /// Logique d'interaction pour jeuNiveau.xaml
     /// </summary>
-    public partial class JeuNormal : Window
+    public partial class jeuNiveau : Window
     {
-        
         int tour = 1;
+        int numNiveau;
         Partie partieNormal = new Partie();
         bool partieEnCours = true;
         Timer tim = new Timer();
         Timer timerFin = new Timer();
-        public JeuNormal()
+        public jeuNiveau()
         {
             InitializeComponent();
+            //chargerMode();
+
             tim.Tick += new EventHandler(OnTimedEvent);
             tim.Interval = 1750;
 
@@ -470,22 +472,33 @@ namespace CDS
 			public void validationObjectifPartieNormal()
             {
                 partieNormal.finDeTour();
-                if (Globale.mode == "Normal")
+                if(Globale.mode == "Normal")
                 {
-                    if(!Globale.vie.finDeTour())
-                    { 
-                        tim = null;
-                        timerFin.Interval = 1500;
-                        timerFin.Tick += new EventHandler(OnTimedEvent2);
+                    tim = null;
+                    timerFin.Interval = 1500;
+                    timerFin.Tick += new EventHandler(OnTimedEvent2);
 
-                        Globale.j1.pathImage=("/image/bonhommeMort.png");
-                        grillePrincipale.Children.Clear();
-                        AfficherJoueur();
-                        partieEnCours = false;
-                        timerFin.Start();
-                     }
-
+                    Globale.j1.pathImage=("/image/bonhommeMort.png");
+                    grillePrincipale.Children.Clear();
+                    AfficherJoueur();
+                    partieEnCours = false;
+                    timerFin.Start();
                  }
+                 if(Globale.mode == "Survie")
+                 {
+                    if(!validerObjectif())
+                    {
+                        //Écran niveau suivant
+                    }
+                 }
+                 if(Globale.mode != "Normal" || Globale.mode != "Survie")
+                 {
+                     if (!validerObjectif())
+                     {
+                         //Écran partie terminée(différente de celui de mode normal)
+                     }
+                 }
+
                  validationVie();
              }
 
@@ -531,6 +544,42 @@ namespace CDS
                 AfficherObjet();
             }
 
+            public void chargerMode()
+            {
+                //Requête BD
+                //Initialisation de partie
+                //partieNormal.setPartie()
+            }
+
+            public bool validerObjectif()
+            {
+                    switch (partieNormal.objectif.typeObjectif)
+                    {
+                        case "Point":
+                            if(partieNormal.score >= partieNormal.objectif.valeurObjectif)
+                            {
+                                return false;
+                            }
+                            break;
+
+                        case "Tour":
+                            if (tour >= partieNormal.objectif.valeurObjectif)
+                            {
+                                return false;
+                            }
+                            break;
+
+                        case "Survie":
+                            if (!Globale.vie.finDeTour())
+                            {
+                                return false;
+                            }
+                            break;
+
+                    }
+                    return true;
+            }
+
             private void btnQuitter_Click(object sender, RoutedEventArgs e)
             {
                 Globale.vie.nbVieActu = 0;
@@ -538,7 +587,6 @@ namespace CDS
                 validationVie();
                 validationObjectifPartieNormal();
             }
-
-           
     }
 }
+

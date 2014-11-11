@@ -51,7 +51,7 @@ namespace CDS
             }
             if (txtMotDePasse.Password != txtConfirmMotPasse.Password)
             {
-                txtErreurConfirm.Text = "Les 2 mots de passe que vous avez écrit ne sont pas identique";
+                txtErreurConfirm.Text = "Les 2 mots de passe ne sont pas identiques";
                 txtMotDePasse.Clear();
                 txtConfirmMotPasse.Clear();
                 estValide = false;
@@ -59,7 +59,7 @@ namespace CDS
             if (estValide == true)
             {
 
-                string Req = "INSERT INTO Utilisateurs(idApparence,nom,motDePasse)VALUES ((SELECT idApparence FROM Apparences WHERE image = '/image/perso.png'),'" + txtUtilisateur.Text + "','" + txtMotDePasse.Password + "');";
+                string Req = "INSERT INTO Utilisateurs(idApparence,nom,motDePasse)VALUES ((SELECT idApparence FROM Apparences WHERE image = '/image/bonhommeMod.png'),'" + txtUtilisateur.Text + "','" + txtMotDePasse.Password + "');";
                 int id = Globale.bdCDS.Insertion(Req);
                 if (id == 0) 
                 {
@@ -71,7 +71,7 @@ namespace CDS
                  else
                 { 
                     Globale.bdCDS.Insertion("COMMIT;");
-                    Globale.j1.setJoueur(txtUtilisateur.Text, id, "/image/perso.png", true);
+                    Globale.j1.setJoueur(txtUtilisateur.Text, id, "/image/bonhommeMod.png", true);
                     menuJouer mj = new menuJouer();
                     mj.Show();
                     Close();

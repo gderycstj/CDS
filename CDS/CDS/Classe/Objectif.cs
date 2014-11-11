@@ -6,48 +6,16 @@ using System.Threading.Tasks;
 
 namespace CDS
 {
-    class Objectif
+    public class Objectif
     {
-        string  typeObjectif { get;set;}
-        int valeurObjectif { get;set;}
-
-        public Objectif()
-        {
-            typeObjectif="point";
-            valeurObjectif=1;
-        }
+        public string  typeObjectif { get;set;}
+        public int valeurObjectif { get;set;}
 
         public Objectif(string typeO, int O)
         {
             typeObjectif = typeO;
             valeurObjectif = O;
         }
-
-        //retourne si le joueur a complète l'objectif
-        public bool finDeTour()
-        {
-            switch(typeObjectif)
-            {
-                case "point":
-                    if(testObjectifPoint())
-                        return true;
-                    break;
-
-                case "tour":
-
-                    break;
-
-            }
-
-
-            return false;
-        }
-
-        //Vérifie si le nombre de point à d'épasser l'objectif
-        private bool testObjectifPoint()
-        {
-            return false;
-        }
-
+ 
     }
 }

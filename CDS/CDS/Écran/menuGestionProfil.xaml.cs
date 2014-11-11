@@ -49,7 +49,7 @@ namespace CDS
 
             if(txtAncienMdp.Password != listeJoueur[0][0].ToString())
             {
-                txtErreur.Text = "Votre mot de passe actuel ne correspond pas avec celui inscrit";
+                txtErreur.Text = "Votre mot de passe actuel inscrit est incorrect";
                 estValide = false;
             }
 
@@ -62,7 +62,7 @@ namespace CDS
 
             if(txtMotDePasseModif.Password != txtMotDePasseConfirm.Password)
             {
-                txtErreur.Text = "Les 2 mots de passe que vous avez écrit ne sont pas identique";
+                txtErreur.Text = "Les 2 mots de passe ne sont pas identiques";
                 estValide = false;
             }
 
@@ -70,7 +70,7 @@ namespace CDS
             {
                 string req2 = "UPDATE Utilisateurs SET motDePasse = '"+txtMotDePasseModif.Password+"' WHERE nom ='" + nom + "';";
                 Globale.bdCDS.modification(req2);
-                txtErreur.Text = "Votre mot de passe à été mis à jour";
+                txtErreur.Text = "Votre mot de passe a été mis à jour";
                 txtMotDePasseModif.Clear();
                 txtMotDePasseConfirm.Clear();
                 txtAncienMdp.Clear();
@@ -89,15 +89,24 @@ namespace CDS
             //On va chercher le mot de passe
             string req = "SELECT motDePasse FROM Utilisateurs WHERE nom = '" + nom + "';";
             listeJoueur = Globale.bdCDS.selection(req, 1, ref nombreRange);
+            txtErreur.Visibility = Visibility.Visible;
             //Si le mot de passe est pareille, on désactive le compte
             if (txtMotDePasseSupp.Password == listeJoueur[0][0].ToString())
             {
                 string req2 = "UPDATE Utilisateurs SET estActive=false WHERE nom ='" + nom + "';";
                 Globale.bdCDS.modification(req2);
                 Globale.j1.estConnecte = false;
-                menuJouer menuJ = new menuJouer();
-                menuJ.Show();
-                Close();
+
+                btnModifier.IsEnabled = false;
+                btnSupprimer.IsEnabled = false;
+                btnConfirmerSupp.IsEnabled = false;
+                txtMDPSupp.IsEnabled = false;
+                txtMotDePasseSupp.IsEnabled = false;
+                txtErreur.Text = "Votre compte a été supprimé avec succès. Cliquez sur retour pour retourner au menu jouer";
+            }
+            else
+            {
+                txtErreur.Text = "Votre mot de passe actuel inscrit est incorrect";
             }
 
         }

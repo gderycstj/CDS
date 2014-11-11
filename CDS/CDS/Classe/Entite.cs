@@ -21,7 +21,7 @@ namespace CDS
             positionEntite = new Position();
             listeCMD=listeC;
             urlImage=image;
-            age = 1;
+            age = -1;
         }
 
         //lire la liste CMD et agire
