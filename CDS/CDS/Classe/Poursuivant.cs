@@ -634,6 +634,12 @@ namespace CDS
         }
 
         
+        public override bool finDetour()
+        {
+            age++;
+            return true;
+        }
+
         //Get nécéssaire
         public string getUrlImage()
         {
