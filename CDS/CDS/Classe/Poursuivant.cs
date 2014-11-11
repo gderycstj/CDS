@@ -127,6 +127,9 @@ namespace CDS
             string[] tabCMD = { "" };
             string CMD = "";
             
+            //correction en cas d'age plus bas que 0
+            if(age<0)
+                age=0;
 
             //Verifie si c'est en plusieur temps et prend la bonne partie de la chaine
             //Si c'est un seul temps, il prend la chaine au complet
@@ -137,7 +140,7 @@ namespace CDS
 
 
                 /*Calculer a quel cycle on est rendu et quel partie chaine on doit mettre dans CMD*/
-                numAction = age % temps;
+                numAction = age % (temps+1);
                 
 
                 //un tableau de string avec tout les temps séparer
