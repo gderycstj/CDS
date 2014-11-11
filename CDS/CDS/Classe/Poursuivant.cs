@@ -224,19 +224,35 @@ namespace CDS
                                 switch(direction)
                                 { 
                                     case 1:
-                                        mouvementSud();
+                                        if (mouvementSud())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
 
                                     case 2:
-                                        mouvementOuest();
+                                        if (mouvementOuest())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
 
                                     case 3:
-                                        mouvementNord();
+                                        if (mouvementNord())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
 
                                     case 4:
-                                        mouvementEst();
+                                        if (mouvementEst())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
                                 }
                                 break;
@@ -246,19 +262,35 @@ namespace CDS
                                 switch (direction)
                                 {
                                     case 2:
-                                        mouvementNord();
+                                        if (mouvementNord())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
 
                                     case 3:
-                                        mouvementEst();
+                                        if (mouvementEst())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
 
                                     case 4:
-                                        mouvementSud();
+                                        if (mouvementSud())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
 
                                     case 1:
-                                        mouvementOuest();
+                                        if (mouvementOuest())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
                                 }
                                 break;
@@ -268,19 +300,35 @@ namespace CDS
                                 switch (direction)
                                 {
                                     case 3:
-                                        mouvementSud();
+                                        if (mouvementSud())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
 
                                     case 4:
-                                        mouvementOuest();
+                                        if (mouvementOuest())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
 
                                     case 1:
-                                        mouvementNord();
+                                        if (mouvementNord())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
 
                                     case 2:
-                                        mouvementEst();
+                                        if (mouvementEst())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
                                 }
                                 break;
@@ -290,19 +338,35 @@ namespace CDS
                                 switch (direction)
                                 {
                                     case 4:
-                                        mouvementNord();
+                                        if (mouvementNord())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
 
                                     case 1:
-                                        mouvementEst();
+                                        if (mouvementEst())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
 
                                     case 2:
-                                        mouvementSud();
+                                        if (mouvementSud())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
 
                                     case 3:
-                                        mouvementOuest();
+                                        if (mouvementOuest())
+                                        {
+                                            CMD = "";
+                                            return false;
+                                        }
                                         break;
                                 }
                                 break;
@@ -657,33 +721,37 @@ namespace CDS
         /// <summary>
         /// WIP mouvement vers le haut
         /// </summary>
-        public void mouvementNord()
+        public bool mouvementNord()
         {
             this.positionEntite.posY = positionEntite.posY - 1;
+            return inBoundary();
         }
 
         /// <summary>
         /// WIP mouvement vers le bas
         /// </summary>
-        public void mouvementSud()
+        public bool mouvementSud()
         {
             this.positionEntite.posY = positionEntite.posY + 1;
+            return inBoundary();
         }
 
         /// <summary>
         /// WIP mouvement vers la droite
         /// </summary>
-        public void mouvementEst()
+        public bool mouvementEst()
         {
             this.positionEntite.posX = positionEntite.posX + 1;
+            return inBoundary();
         }
 
         /// <summary>
         /// WIP mouvement vers la gauche
         /// </summary>
-        public void mouvementOuest()
+        public bool mouvementOuest()
         {
             this.positionEntite.posX = positionEntite.posX - 1;
+            return inBoundary();
         }
 
         /// <summary>
