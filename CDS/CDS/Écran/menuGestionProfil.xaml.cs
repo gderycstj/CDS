@@ -123,12 +123,7 @@ namespace CDS
             //Titre
             txtTitreOnglet.Text = "Modification";
 
-            //Activation/Désactivation Bouton
-            btnModifier.IsEnabled = false;
-            btnSupprimer.IsEnabled = true;
-
             //Activation
-            btnConfirmerMod.Visibility = Visibility.Visible;
             txtMotPasse.Visibility = Visibility.Visible;
             txtMotDePasseModif.Visibility = Visibility.Visible;
             txtMotDePasseConfirm.Visibility = Visibility.Visible;
@@ -143,6 +138,11 @@ namespace CDS
             txtMDPSupp.Visibility = Visibility.Hidden;
             txtMotDePasseSupp.Visibility = Visibility.Hidden;
 
+            //Activation/Désactivation Bouton
+            btnModifier.IsEnabled = false;
+            btnSupprimer.IsEnabled = true;
+            btnConfirmerMod.Visibility = Visibility.Visible;
+
         }
 
         public void supprimer()
@@ -150,12 +150,7 @@ namespace CDS
             //Titre
             txtTitreOnglet.Text = "Supprimer";
 
-            //Activation/Désactivation Bouton(Gauche)
-            btnModifier.IsEnabled = true;
-            btnSupprimer.IsEnabled = false;
-
             //Activation
-            btnConfirmerSupp.Visibility = Visibility.Visible;
             txtSupprimerInfo.Visibility = Visibility.Visible;
             txtMDPSupp.Visibility = Visibility.Visible;
             txtMotDePasseSupp.Visibility = Visibility.Visible;
@@ -169,6 +164,12 @@ namespace CDS
             txtErreur.Visibility = Visibility.Hidden;
             txtAncienMdp.Visibility = Visibility.Hidden;
             txtAncienMdpTxt.Visibility = Visibility.Hidden;
+
+            //Activation/Désactivation Bouton(Gauche)
+            btnConfirmerSupp.Visibility = Visibility.Visible;
+            btnModifier.IsEnabled = true;
+            btnSupprimer.IsEnabled = false;
+
         }
     }
 }

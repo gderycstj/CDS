@@ -9,12 +9,12 @@
             <ImageBrush ImageSource="/CDS;component/Image/2.jpg"/>
         </Grid.Background>
         <TextBox x:Name="txtNomUsager" HorizontalAlignment="Left" Height="29" Margin="123,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
+        <PasswordBox x:Name="txtMotDePasse" HorizontalAlignment="Left" Height="29" Margin="123,188,0,0" VerticalAlignment="Top" Width="187" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
         <Button x:Name="btnConnexion" Content="Connexion" HorizontalAlignment="Left" Height="56" Margin="123,262,0,0" VerticalAlignment="Top" Width="187" FontFamily="Agency FB" FontSize="24" Click="btnConnexion_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <PasswordBox x:Name="txtMotDePasse" HorizontalAlignment="Left" Height="29" Margin="123,188,0,0" VerticalAlignment="Top" Width="187" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
         <TextBlock HorizontalAlignment="Left" Height="67" Margin="47,12,0,0" TextWrapping="Wrap" Text="Connexion" VerticalAlignment="Top" Width="338" FontFamily="/CDS;component/#Broken Type" TextAlignment="Center" FontSize="48"/>
         <TextBlock HorizontalAlignment="Left" Height="34" Margin="123,84,0,0" TextWrapping="Wrap" Text="Nom d'utilisateur" VerticalAlignment="Top" Width="187" FontFamily="Agency FB" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Height="29" Margin="123,159,0,0" TextWrapping="Wrap" Text="Mot de passe" VerticalAlignment="Top" Width="187" FontFamily="Agency FB" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
