@@ -346,7 +346,7 @@ VALUES('zappy'
 ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom='Admin')
 ,(SELECT idApparence FROM apparences WHERE image = '/image/zappy.png')
 ,350
-,'Mh/MhCMh/MhCMhCMh/MhCMhCMhCMh'
+,'Mh/MhCMh/MhCMhCMh/MhCMhCMh'
 );
 
 
