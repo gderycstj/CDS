@@ -196,6 +196,7 @@ namespace CDS
             char lettre3;
 
             string sousCMD=""; //Une sous liste pour savoir quoi faire pour le if
+            string[] tabCMD = { "" };
 
             int numero;
             int iLecture = 0;
@@ -404,6 +405,7 @@ namespace CDS
                          iLecture++;
 
                         //...pouvoir isolet la/les actions en cas de true
+                        incrementation = 0;
                         faitwhile=true;
                         iEcriture=0;
                         sousCMD="";
@@ -630,6 +632,8 @@ namespace CDS
                                         break;
                                 }
                                 break;
+
+
                             //=====Danger=====
                             case 'd':
                                 lettre3 = CMD[iLecture];
@@ -681,6 +685,79 @@ namespace CDS
 
                         break;
 
+                    //=====Random=====
+                    case 'R':
+                        Random Rdm = new Random();
+
+                        numero=0; //qty de possibilité
+                        faitwhile=true;
+                        iEcriture=0;
+                        sousCMD="";
+                        while(faitwhile)
+                        {
+                            switch(CMD[iLecture])
+                            {
+                                case '{':
+                                    //Acolade qui ne viennent pas du Random en cours de traitage
+                                    //on veut l'acolade dans la sousliste
+                                    if(incrementation!=0)
+                                    {
+                                        sousCMD = sousCMD.Insert(iEcriture,CMD.Substring(iLecture,1));
+                                        iEcriture++;
+                                    }
+                                    else//acolade du random en cours
+                                    {
+                                        numero++;
+
+                                    }
+                                    iLecture++;
+                                    incrementation++;
+                                    break;
+
+                                case '}':
+                                    //idem de l'autre acolade
+                                    if(incrementation!=1)
+                                    {
+                                        sousCMD = sousCMD.Insert(iEcriture,CMD.Substring(iLecture,1));
+                                        iEcriture++;
+                                    }
+                                    else//acolade du random en cours
+                                    {
+                                        //on ajoute un / pour séparer les chaines de sousCMD comme les actions en plusieur temps dans action()
+                                        sousCMD = sousCMD.Insert(iEcriture, "/");
+                                        iEcriture++;
+                                    }
+                                    iLecture++;
+                                    incrementation--;
+                                    break;
+
+                                default:
+                                    //si on n'est plus dans une des possiblillité du random, on veux pas avoir le début de la prochaine commande
+                                    //le if a la fin vas terminer le while si on entre pas dans ce if
+                                    if(incrementation!=0)
+                                    { 
+                                        sousCMD = sousCMD.Insert(iEcriture,CMD.Substring(iLecture,1));
+                                        iEcriture++;
+                                        iLecture++;
+                                    }
+                                    break;
+                            }
+
+                            
+                            if (incrementation <= 0 || iLecture >= CMD.Length)
+                                faitwhile=false;
+
+                        }
+
+                        //on cinde sousCMD en plusieur chaine
+                        //un tableau de string avec toutes les possibilitées séparé
+                        tabCMD = listeCMD.Split(new char[] { '/' });
+
+
+                        //Mettre la section de listeCMD dans CMD
+                        sousCMD = tabCMD[Rdm.Next(0,numero)];
+                    
+                    break;
                     //=====Check=====
                     case 'C':
                         //vérifie si le joueur est là, s'il ne marcher pas sur du feu, s'il active une mine, etc.
