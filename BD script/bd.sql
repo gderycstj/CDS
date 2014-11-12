@@ -9,8 +9,8 @@ DROP TABLE IF EXISTS Apparences;
 DROP TABLE IF EXISTS Niveaux;
 DROP TABLE IF EXISTS Progressions;
 DROP TABLE IF EXISTS Objectifs;
-DROP TABLE IF EXISTS ModesDeJeu;
 DROP TABLE IF EXISTS Scores;
+DROP TABLE IF EXISTS ModesDeJeu;
 DROP TABLE IF EXISTS Utilisateurs;
 
 
@@ -28,17 +28,6 @@ ALTER TABLE Utilisateurs
 ADD CONSTRAINT nom_UK
 UNIQUE(nom);
 
-/*******************************Table Score********************************************/
-CREATE TABLE IF NOT EXISTS Scores
-(idScore INT AUTO_INCREMENT PRIMARY KEY,
- idUtilisateur INT NOT NULL,
- score INT NOT NULL
-);
-
-ALTER TABLE Scores
-ADD CONSTRAINT Scores_Utilisateurs_FK
-FOREIGN KEY(idUtilisateur) REFERENCES Utilisateurs(idUtilisateur);
-
 /*********************************Table mode de jeu***************************************/
 CREATE TABLE IF NOT EXISTS ModesDeJeu
 (idModeDeJeu INT AUTO_INCREMENT PRIMARY KEY,
@@ -54,6 +43,24 @@ FOREIGN KEY(idUtilisateur) REFERENCES Utilisateurs(idUtilisateur);
 ALTER TABLE ModesDeJeu
 ADD CONSTRAINT nomMode_UK
 UNIQUE(nom);
+
+
+/*******************************Table Score********************************************/
+CREATE TABLE IF NOT EXISTS Scores
+(idScore INT AUTO_INCREMENT PRIMARY KEY,
+ idModeDeJeu INT NOT NULL,
+ idUtilisateur INT NOT NULL,
+ score INT NOT NULL
+);
+
+ALTER TABLE Scores
+ADD CONSTRAINT Scores_ModesDeJeu_FK
+FOREIGN KEY(idModeDeJeu) REFERENCES ModesDeJeu(idModeDeJeu);
+
+ALTER TABLE Scores
+ADD CONSTRAINT Scores_Utilisateurs_FK
+FOREIGN KEY(idUtilisateur) REFERENCES Utilisateurs(idUtilisateur);
+
 
 /*************************************Table Objectifs********************************************/
 CREATE TABLE Objectifs
@@ -530,11 +537,6 @@ INSERT INTO ObjetsEffets(idObjet,idEffet)
 VALUES
 ((SELECT idObjet FROM Objets WHERE nom = 'Barriere')
  ,(SELECT idEffet FROM Effets WHERE nom = 'Invincibilité 2')
-);
-
-INSERT INTO Scores(idUtilisateur,score)
-VALUES((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'William'),
-,1500
 );
 
 
