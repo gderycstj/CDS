@@ -734,29 +734,37 @@ namespace CDS
                                 default:
                                     //si on n'est plus dans une des possiblillité du random, on veux pas avoir le début de la prochaine commande
                                     //le if a la fin vas terminer le while si on entre pas dans ce if
-                                    if(incrementation!=0)
+                                    if(incrementation>0)
                                     { 
                                         sousCMD = sousCMD.Insert(iEcriture,CMD.Substring(iLecture,1));
                                         iEcriture++;
                                         iLecture++;
                                     }
+                                    else
+                                        faitwhile = false;
                                     break;
                             }
 
                             
-                            if (incrementation <= 0 || iLecture >= CMD.Length)
+                            if (iLecture >= CMD.Length)
                                 faitwhile=false;
 
                         }
 
                         //on cinde sousCMD en plusieur chaine
                         //un tableau de string avec toutes les possibilitées séparé
-                        tabCMD = listeCMD.Split(new char[] { '/' });
+                        tabCMD = sousCMD.Split(new char[] { '/' });
 
 
                         //Mettre la section de listeCMD dans CMD
                         sousCMD = tabCMD[Rdm.Next(0,numero)];
-                    
+
+                        if (!lire(sousCMD))
+                        {
+                            CMD = "";
+                            return false;
+                        }   
+
                     break;
                     //=====Check=====
                     case 'C':
