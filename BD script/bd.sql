@@ -532,4 +532,10 @@ VALUES
  ,(SELECT idEffet FROM Effets WHERE nom = 'Invincibilité 2')
 );
 
+INSERT INTO Scores(idUtilisateur,score)
+VALUES((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'William'),
+,1500
+);
+
+
 COMMIT
