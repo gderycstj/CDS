@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 K:\chambre de survie\CDS\CDS\Écran\App.xaml
-171172822005
+20-593274138
 
-341844915177
+37-567356808
 17561635456
-Écran\ecranCreationPoursuivant.xaml;Écran\ecranMeilleurScore.xaml;Écran\ecranSupressionPoursuivant.xaml;Écran\jeuNiveau.xaml;Écran\menuConnexion.xaml;Écran\menuGestionProfil.xaml;Écran\JeuNormal.xaml;Écran\menuInscription.xaml;Écran\MenuMode.xaml;Écran\menuObjet.xaml;Écran\menuPoursuivant.xaml;Écran\menuPrincipal.xaml;Écran\menuEditeur.xaml;Écran\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\menuSelectionNiveau.xaml;Écran\menuSurvie.xaml;
+Écran\ecranCreationPoursuivant.xaml;Écran\ecranFinDePartieMode.xaml;Écran\ecranFinDePartieNiveauEchec.xaml;Écran\ecranMeilleurScore.xaml;Écran\ecranSupressionPoursuivant.xaml;Écran\jeuNiveau.xaml;Écran\menuConnexion.xaml;Écran\menuFinDePartieNiveau.xaml;Écran\menuGestionProfil.xaml;Écran\JeuNormal.xaml;Écran\menuInscription.xaml;Écran\MenuMode.xaml;Écran\menuObjet.xaml;Écran\menuPoursuivant.xaml;Écran\menuPrincipal.xaml;Écran\menuEditeur.xaml;Écran\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\menuSelectionNiveau.xaml;Écran\menuSurvie.xaml;
 
 False
 

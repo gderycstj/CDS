@@ -470,23 +470,22 @@ namespace CDS
 			public void validationObjectifPartieNormal()
             {
                 partieNormal.finDeTour();
-                if (Globale.mode == "Normal")
-                {
-                    if(!Globale.vie.finDeTour())
-                    { 
-                        tim = null;
-                        timerFin.Interval = 1500;
-                        timerFin.Tick += new EventHandler(OnTimedEvent2);
-
-                        Globale.j1.pathImage=("/image/bonhommeMort.png");
-                        grillePrincipale.Children.Clear();
-                        AfficherJoueur();
-                        partieEnCours = false;
-                        timerFin.Start();
-                     }
-
+                if(!Globale.vie.finDeTour())
+                { 
+                   tim = null;
+                   timerFin.Interval = 1500;
+                   timerFin.Tick += new EventHandler(OnTimedEvent2);
+                   validationVie();
+                   Globale.j1.pathImage=("/image/bonhommeMort.png");
+                   grillePrincipale.Children.Clear();
+                   AfficherJoueur();
+                   partieEnCours = false;
+                   timerFin.Start();
                  }
-                 validationVie();
+                 else
+                {
+                    validationVie();
+                }
              }
 
 

@@ -26,6 +26,7 @@ namespace CDS
                              "((SELECT idUtilisateur FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() + "')" +
                              ",(SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = '" + Globale.mode + "')" +
                              "," + score + ");COMMIT;";
+
             Globale.bdCDS.Insertion(req);
             return true;
         }

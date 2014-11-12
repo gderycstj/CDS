@@ -63,11 +63,42 @@ namespace CDS
             //va setter le score avec celui de fin de partie en globale pour y avoir accès dans le nouvel écran
             Globale.score.score = partieNormal.score;
 
-            ecranMeilleurScore ecranM = new ecranMeilleurScore();
+            ecranFinDePartieNiveauEchec ecranM = new ecranFinDePartieNiveauEchec();
             ecranM.Show();
             timerFin = null;
             Close();
         }
+
+        private void OnTimedEvent4(object sender, EventArgs e)
+        {
+            timerFin.Stop();
+            //Appel de l'écran de fin de partie
+            //Utiliser un timer pour afficher l'ecran après 5 secondes.
+
+            //va setter le score avec celui de fin de partie en globale pour y avoir accès dans le nouvel écran
+            Globale.score.score = partieNormal.score;
+
+            ecranFinDePartieMode ecranM = new ecranFinDePartieMode();
+            ecranM.Show();
+            timerFin = null;
+            Close();
+        }
+
+        private void OnTimedEvent3(object sender, EventArgs e)
+        {
+            timerFin.Stop();
+            //Appel de l'écran de fin de partie
+            //Utiliser un timer pour afficher l'ecran après 5 secondes.
+
+            //va setter le score avec celui de fin de partie en globale pour y avoir accès dans le nouvel écran
+            Globale.score.score = partieNormal.score;
+
+            menuFinDePartieNiveau ecranM = new menuFinDePartieNiveau();
+            ecranM.Show();
+            timerFin = null;
+            Close();
+        }
+
         void AfficherJoueur()
         {
             Image img = new Image();
@@ -472,34 +503,68 @@ namespace CDS
 			public void validationObjectifPartieNormal()
             {
                 partieNormal.finDeTour();
-                if(Globale.mode == "Normal")
-                {
-                    tim = null;
-                    timerFin.Interval = 1500;
-                    timerFin.Tick += new EventHandler(OnTimedEvent2);
-
-                    Globale.j1.pathImage=("/image/bonhommeMort.png");
-                    grillePrincipale.Children.Clear();
-                    AfficherJoueur();
-                    partieEnCours = false;
-                    timerFin.Start();
-                 }
                  if(Globale.mode == "Survie")
                  {
-                    if(!validerObjectif())
+                    if(Globale.vie.finDeTour())
                     {
-                        //Écran niveau suivant
+
+                        if(!validerObjectif())
+                        {
+                            //Écran niveau suivant
+                            tim = null;
+                            timerFin.Interval = 1500;
+                            timerFin.Tick += new EventHandler(OnTimedEvent3);
+                            grillePrincipale.Children.Clear();
+                            AfficherJoueur();
+                            partieEnCours = false;
+                            timerFin.Start();
+                        }
+                    }
+                    else
+                    {
+                        tim = null;
+                        timerFin.Interval = 1500;
+                        timerFin.Tick += new EventHandler(OnTimedEvent2);
+                        validationVie();
+
+                        Globale.j1.pathImage = ("/image/bonhommeMort.png");
+                        grillePrincipale.Children.Clear();
+                        AfficherJoueur();
+                        partieEnCours = false;
+                        timerFin.Start();
+                        //Ecran niveau réessayer
                     }
                  }
                  if(Globale.mode != "Normal" || Globale.mode != "Survie")
                  {
-                     if (!validerObjectif())
-                     {
-                         //Écran partie terminée(différente de celui de mode normal)
-                     }
-                 }
+                      if(Globale.vie.finDeTour())
+                      {
+                            if (!validerObjectif())
+                            {
+                                tim = null;
+                                timerFin.Interval = 1500;
+                                timerFin.Tick += new EventHandler(OnTimedEvent4);
 
-                 validationVie();
+                                grillePrincipale.Children.Clear();
+                                AfficherJoueur();
+                                partieEnCours = false;
+                                timerFin.Start();
+                            }
+                       }
+                      else
+                      {
+                          tim = null;
+                          timerFin.Interval = 1500;
+                          timerFin.Tick += new EventHandler(OnTimedEvent4);
+                          validationVie();
+
+                          Globale.j1.pathImage = ("/image/bonhommeMort.png");
+                          grillePrincipale.Children.Clear();
+                          AfficherJoueur();
+                          partieEnCours = false;
+                          timerFin.Start();
+                      }
+                 }
              }
 
 
