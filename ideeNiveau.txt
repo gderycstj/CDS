@@ -10,26 +10,47 @@ Potion de vitesse,bouclier
 
 Niveau 3:
 Carré-Losange-Triangle
-Une Vie
+Deux Vie
 Survivre 100 tours
 Potion de vitesse,Bouclier,Armure
  
 Niveau 4:
-Zappy
+Zappy(rareté 2, valeur 10)
 Atteindre 10 000 points
 Potion de vitesse
 
 Niveau 5:
-Carré-Losange-Triangle-Zappy
-Récupérer un X objet 100 fois
+Carré-Losange-Triangle-Zappy-Cercle
+obtenir 12 stack d'armure
+Bouclier,Potion de vitesse,Armure,potion de vie
 
 
 Niveau 6:
+Carré-Losange-Triangle-Zappy-Cercle
+une Vie
+Survivre 500 tours
+Potion de vitesse,Bouclier,Armure
 
-Niveau 7:
+Niveau 7: DIAGONALE
+Losange (Rareté de 1, valeur de 10)
+Une Vie
+Survivre 250 tours points
+Potion de vitesse,Bouclier,Armure
 
 Niveau 8:
+Triangle-Zappy-Cercle (Rareté de 4, valeur de 5)
+Une Vie
+Obtenir 12 500 points
+Potion de vitesse,Bouclier
  
-Niveau 9:
+Niveau 9:RUNNNNNN
+Triangle(Rareté de 3, Valeur 8)
+Deux Vie,Deux d'armure
+Obtenir 16 000 points
+potion de vie,Armure
 
-Niveau 10:
+
+Niveau 10: ITS OVER
+Cercle(bocoup)(rareté 2)(valeur 10)
+Survivre 150 tours
+Potion de vie,Armure,Bouclier,Potion de Vitesse

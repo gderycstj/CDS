@@ -1,6 +1,4 @@
 Poursuivant à faire
-Zappy
-Cercle
 Spring(Temporaire) (Se déplace comme le cheval au échec).
 
 
