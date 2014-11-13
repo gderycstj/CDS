@@ -20,9 +20,27 @@ namespace CDS
     /// </summary>
     public partial class menuObjet : UserControl
     {
+        public MainViewModel ViewModel { get { return (MainViewModel)DataContext; } }
         public menuObjet()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
+            ViewModel.CurrentView = new ecranCreationObjet();
+        }
+
+        private void btnNouveauObjet_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.CurrentView = new ecranCreationObjet();
+        }
+
+        private void btnModifObjet_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.CurrentView = new ecranCreationObjet();
+        }
+
+        private void btnSupprimObjet_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.CurrentView = new ecranSupressionObjet();
         }
     }
 }

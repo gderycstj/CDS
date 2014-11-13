@@ -26,7 +26,7 @@
         </Button>
 
         <DataGrid HorizontalAlignment="Left" Margin="545,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6.611,-0.923" Width="333" Height="214" Background="#FF4B634D"/>
-        <Button x:Name="btnAjoutMode" Content="Ajouter Mode" HorizontalAlignment="Left" Margin="390,343,0,0" VerticalAlignment="Top" Width="161" Height="47" Click="btnAjoutMode_Click">
+        <Button Content="Ajouter Mode" HorizontalAlignment="Left" Margin="390,343,0,0" VerticalAlignment="Top" Width="161" Height="47">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>

@@ -4,9 +4,26 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="400" d:DesignWidth="975">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Height="22" Margin="67,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"><Run Language="fr-ca" Text="Objet"/></TextBlock>
+        <Button x:Name="btnNouveauObjet" Content="Nouveau" HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" Margin="10,10,0,0" Height="32" Click="btnNouveauObjet_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnModifObjet" Content="modifier" HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" Margin="325,10,0,0" Height="32" Click="btnModifObjet_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnSupprimObjet" Content="supprimer" HorizontalAlignment="Left" Margin="640,10,0,0" VerticalAlignment="Top" Width="310" Height="32" Click="btnSupprimObjet_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Grid x:Name="grillePoursuivant" Margin="0,47,0,10">
+            <ContentPresenter Content="{Binding CurrentView}" Grid.ColumnSpan="2" />
+        </Grid>
 
     </Grid>
 </UserControl>

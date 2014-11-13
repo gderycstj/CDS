@@ -22,10 +22,6 @@
             </Button.Background>
         </Button>
         <Grid x:Name="grillePoursuivant" Margin="0,47,0,10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="14*"/>
-                <ColumnDefinition Width="61*"/>
-            </Grid.ColumnDefinitions>
             <ContentPresenter Content="{Binding CurrentView}" Grid.ColumnSpan="2" />
         </Grid>
     </Grid>
