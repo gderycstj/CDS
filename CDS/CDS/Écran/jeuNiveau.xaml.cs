@@ -21,7 +21,6 @@ namespace CDS
     public partial class jeuNiveau : Window
     {
         int tour = 1;
-        int numNiveau;
         Partie partieNormal = new Partie();
         bool partieEnCours = true;
         Timer tim = new Timer();
@@ -29,7 +28,7 @@ namespace CDS
         public jeuNiveau()
         {
             InitializeComponent();
-            //chargerMode();
+            chargerMode();
 
             tim.Tick += new EventHandler(OnTimedEvent);
             tim.Interval = 1750;
@@ -44,6 +43,7 @@ namespace CDS
             AfficherJoueur();
             AfficherPoursuivant();
             tim.Start();
+            
         }
 
         private void OnTimedEvent(object sender, EventArgs e) 
@@ -611,9 +611,19 @@ namespace CDS
 
             public void chargerMode()
             {
+                List<string>[] reponse;
+                int nombreRange = 0;
                 //Requête BD
+                string req = " SELECT o.nom, o.valeurObjectif FROM modesdejeu m INNER JOIN niveaux n ON n.idModeDeJeu = m.idModeDeJeu  INNER JOIN objectifs o ON o.idObjectif = n.idObjectif WHERE m.idModeDeJeu=(SELECT idModeDeJeu  FROM modesdejeu WHERE nom='"+ Globale.mode  +"') AND n.numniveau='"+ Globale.iNumeroDuNiveauAJouer +"'; ";
+                reponse = Globale.bdCDS.selection(req, 2, ref nombreRange);
                 //Initialisation de partie
-                //partieNormal.setPartie()
+                if(nombreRange==1)
+                {
+                    partieNormal.setPartie(reponse[0][0], Convert.ToInt32(reponse[0][1]));
+                }
+                else
+                   System.Windows.MessageBox.Show("Erreur");
+
             }
 
             public bool validerObjectif()

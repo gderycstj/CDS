@@ -17,7 +17,6 @@ namespace CDS
         public List<Objet> objetDispoPourLaPartie { get;set;}
         public Objet obj1{get;set;}
         public Objet obj2{get;set;}
-        public int numNiveaux {get;set;}
         public Partie()
         {   
             score = 0;
@@ -27,14 +26,12 @@ namespace CDS
             objetDansLaPartie = new List<Objet>();
             objetDispoPourLaPartie = new List<Objet>();
             Globale.j1.pathImage = "/image/bonhommeMod.png";
-            numNiveaux = 0;
             objectif = new Objectif("Survie",3);
         }
         
   
-        public void setPartie(string nObjectif,int ScoreObjectif,int numNiveau)
+        public void setPartie(string nObjectif,int ScoreObjectif)
         {
-            numNiveaux = numNiveau;
             objectif = new Objectif(nObjectif,ScoreObjectif);
         }
         /// <summary>
@@ -47,8 +44,8 @@ namespace CDS
         {
             //Requête BD
             //-------------------------------------------------------------------------------------------------------------
-            chargerEnnemi(numNiveaux);
-            chargerObjet(numNiveaux);
+            chargerEnnemi(Globale.iNumeroDuNiveauAJouer);
+            chargerObjet(Globale.iNumeroDuNiveauAJouer);
             débutDePartieGenPoursuivant();
             //-------------------------------------------------------------------------------------------------------------
 

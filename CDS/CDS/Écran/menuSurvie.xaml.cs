@@ -46,7 +46,10 @@ namespace CDS
 
         private void btnNouvellePartie_Click(object sender, RoutedEventArgs e)
         {
-            return;
+            Globale.iNumeroDuNiveauAJouer = 1;
+            jeuNiveau partiNiveau = new jeuNiveau();
+            partiNiveau.Show();
+            Close();
         }
 
         private void btnCharger_Click(object sender, RoutedEventArgs e)

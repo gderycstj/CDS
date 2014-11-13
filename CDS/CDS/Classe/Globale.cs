@@ -13,6 +13,7 @@ namespace CDS
     {
        public static Joueur j1;
        public static string mode;
+       public static int iNumeroDuNiveauAJouer;
        public static BdService bdCDS;
        public static int tailleGrille = 11;
        public static Vie vie;
@@ -29,6 +30,7 @@ namespace CDS
             bdCDS = bd;
             j1 = j0;
             score = s1;
+            iNumeroDuNiveauAJouer=0;
         }
 
     }
