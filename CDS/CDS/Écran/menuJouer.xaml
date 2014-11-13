@@ -49,9 +49,9 @@
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnGestionProfil" Content="Gestion de Profil" HorizontalAlignment="Left" Height="29" Margin="325,162,0,0" VerticalAlignment="Top" Width="154" FontFamily="Agency FB" FontSize="20" Foreground="#000000" Click="btnGestionProfil_Click" Visibility="Hidden">
+        <Button x:Name="btnGestionProfil" Content="Gestion de Profil" HorizontalAlignment="Left" Height="33" Margin="325,162,0,0" VerticalAlignment="Top" Width="154" FontFamily="Agency FB" FontSize="20" Foreground="Black" Click="btnGestionProfil_Click" Visibility="Hidden">
             <Button.Background>
-                <ImageBrush/>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
         <TextBlock x:Name="txtNomJoueur" HorizontalAlignment="Left" Height="39" Margin="309,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" FontFamily="Agency FB" FontSize="36" TextAlignment="Center"/>
