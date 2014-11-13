@@ -54,10 +54,10 @@
             <Border BorderThickness="2" BorderBrush="Black" Grid.Row="9" Grid.Column="1"></Border>
         </Grid>
         <TextBlock x:Name="txtNom" HorizontalAlignment="Left" Height="42" Margin="43,133,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="283" FontFamily="Agency FB" TextAlignment="Center" FontSize="36"/>
-        <TextBlock x:Name="txtScore" HorizontalAlignment="Left" Height="42" Margin="326,133,0,0" TextWrapping="Wrap" Text="Score" VerticalAlignment="Top" Width="283" FontFamily="Agency FB" TextAlignment="Center" FontSize="36" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="txtScore" HorizontalAlignment="Left" Height="42" Margin="326,133,0,0" TextWrapping="Wrap" Text="Pointage" VerticalAlignment="Top" Width="283" FontFamily="Agency FB" TextAlignment="Center" FontSize="36" Grid.ColumnSpan="2"/>
         <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="48" Margin="44,127,0,0" VerticalAlignment="Top" Width="282"/>
         <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="48" Margin="326,127,0,0" VerticalAlignment="Top" Width="281" Grid.ColumnSpan="2"/>
-        <TextBlock x:Name="txtMeilleursScores" HorizontalAlignment="Left" Height="45" Margin="119,77,0,0" TextWrapping="Wrap" Text="Meilleurs Scores" VerticalAlignment="Top" Width="413" FontFamily="Agency FB" FontSize="36" TextAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="txtMeilleursScores" HorizontalAlignment="Left" Height="45" Margin="119,77,0,0" TextWrapping="Wrap" Text="Top 10" VerticalAlignment="Top" Width="413" FontFamily="Agency FB" FontSize="36" TextAlignment="Center" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="txtPub" HorizontalAlignment="Left" Height="103" Margin="45,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="564" FontFamily="Agency FB" FontSize="24" TextAlignment="Center" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

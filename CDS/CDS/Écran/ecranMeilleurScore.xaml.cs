@@ -58,38 +58,40 @@ namespace CDS
             List<string>[] meilleurScore;
 
             meilleurScore = Globale.score.obtenirScore();
-
             for (int i = 0; i < meilleurScore.Length; i++) 
             {
-                Thickness marge = new Thickness();
-                marge.Left = 10;
-                marge.Top = 3;
-               
-                TextBlock nom = new TextBlock();
-                TextBlock score = new TextBlock();
-                
-                //Change le font Family
-                nom.FontFamily = new FontFamily("Agency FB");
-                score.FontFamily = new FontFamily("Agency FB");
+                if(meilleurScore[i][0] != "")
+                {
+                     Thickness marge = new Thickness();
+                     marge.Left = 10;
+                     marge.Top = 3;
+                    
+                     TextBlock nom = new TextBlock();
+                     TextBlock score = new TextBlock();
+                     
+                     //Change le font Family
+                     nom.FontFamily = new FontFamily("Agency FB");
+                     score.FontFamily = new FontFamily("Agency FB");
 
-                //Change le fontSize
-                nom.FontSize = 18;
-                score.FontSize = 18;
+                     //Change le fontSize
+                     nom.FontSize = 18;
+                     score.FontSize = 18;
 
-                //Change le padding
-                nom.Padding = marge;
-                score.Padding = marge;
-                
-                nom.Text = meilleurScore[i][0];
-                score.Text = meilleurScore[i][1];
+                     //Change le padding
+                     nom.Padding = marge;
+                     score.Padding = marge;
+                     
+                     nom.Text = meilleurScore[i][0];
+                     score.Text = meilleurScore[i][1];
 
-                Grid.SetColumn(nom,0);
-                Grid.SetRow(nom, i);
+                     Grid.SetColumn(nom,0);
+                     Grid.SetRow(nom, i);
 
-                Grid.SetColumn(score,1);
-                Grid.SetRow(score, i);
-                GrilleScore.Children.Add(nom);
-                GrilleScore.Children.Add(score);
+                     Grid.SetColumn(score,1);
+                     Grid.SetRow(score, i);
+                     GrilleScore.Children.Add(nom);
+                     GrilleScore.Children.Add(score);
+                 }
             }
         
         
