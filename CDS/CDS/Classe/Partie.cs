@@ -67,7 +67,7 @@ namespace CDS
             int nbRange = 0;
 
             //requête qui sélectionne toutes les infos d'un poursuivant et son apparence
-            string req = "SELECT nom,valeur,rareté,valeurPoint,listeCMD,image FROM Niveaux as n " +
+            string req = "SELECT nom,valeur,rarete,valeurPoint,listeCMD,image FROM Niveaux as n " +
                          "INNER JOIN NiveauxPoursuivants as np ON np.idNiveau = n.idNiveau " + 
                          "INNER JOIN Poursuivants as p ON np.idPoursuivant = p.idPoursuivant "+
                          "INNER JOIN Apparences a ON a.idApparence = p.idApparence " +

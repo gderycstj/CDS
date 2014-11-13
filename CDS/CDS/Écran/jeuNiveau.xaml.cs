@@ -634,8 +634,8 @@ namespace CDS
                             }
                             break;
 
-                        case "Survie":
-                            if (!Globale.vie.finDeTour())
+                        case "Armure":
+                            if (Globale.vie.nbArmure >= partieNormal.objectif.valeurObjectif)
                             {
                                 return false;
                             }
