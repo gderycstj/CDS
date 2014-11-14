@@ -27,8 +27,16 @@ namespace CDS
             InitializeComponent();
             if(Globale.j1.estConnecte == true)
             {
-                btnCharger.IsEnabled = true; 
                 btnNouvellePartie.IsEnabled = true;
+
+                if(Globale.iNumeroDuNiveauAJouer <2)
+                {
+                    btnCharger.IsEnabled = false;
+                }
+                else
+                {
+                    btnCharger.IsEnabled = true; 
+                }
             }
             else
             {

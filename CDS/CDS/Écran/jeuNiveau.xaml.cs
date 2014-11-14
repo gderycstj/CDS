@@ -29,7 +29,7 @@ namespace CDS
         {
             InitializeComponent();
             chargerMode();
-
+            
             tim.Tick += new EventHandler(OnTimedEvent);
             tim.Interval = 1750;
 
@@ -43,6 +43,7 @@ namespace CDS
             AfficherJoueur();
             AfficherPoursuivant();
             tim.Start();
+            
             
         }
 
@@ -60,9 +61,6 @@ namespace CDS
             //Appel de l'écran de fin de partie
             //Utiliser un timer pour afficher l'ecran après 5 secondes.
 
-            //va setter le score avec celui de fin de partie en globale pour y avoir accès dans le nouvel écran
-            Globale.score.score = partieNormal.score;
-
             ecranFinDePartieNiveauEchec ecranM = new ecranFinDePartieNiveauEchec();
             ecranM.Show();
             timerFin = null;
@@ -75,9 +73,6 @@ namespace CDS
             //Appel de l'écran de fin de partie
             //Utiliser un timer pour afficher l'ecran après 5 secondes.
 
-            //va setter le score avec celui de fin de partie en globale pour y avoir accès dans le nouvel écran
-            Globale.score.score = partieNormal.score;
-
             ecranFinDePartieMode ecranM = new ecranFinDePartieMode();
             ecranM.Show();
             timerFin = null;
@@ -89,9 +84,6 @@ namespace CDS
             timerFin.Stop();
             //Appel de l'écran de fin de partie
             //Utiliser un timer pour afficher l'ecran après 5 secondes.
-
-            //va setter le score avec celui de fin de partie en globale pour y avoir accès dans le nouvel écran
-            Globale.score.score = partieNormal.score;
 
             menuFinDePartieNiveau ecranM = new menuFinDePartieNiveau();
             ecranM.Show();
@@ -502,7 +494,7 @@ namespace CDS
 			
 			public void validationObjectifPartieNormal()
             {
-                partieNormal.finDeTour();
+                 partieNormal.finDeTour();
                  if(Globale.mode == "Survie")
                  {
                     if(Globale.vie.finDeTour())
@@ -518,6 +510,10 @@ namespace CDS
                             AfficherJoueur();
                             partieEnCours = false;
                             timerFin.Start();
+                        }
+                        else
+                        {
+                            validationVie();
                         }
                     }
                     else
@@ -535,35 +531,27 @@ namespace CDS
                         //Ecran niveau réessayer
                     }
                  }
-                 if(Globale.mode != "Normal" || Globale.mode != "Survie")
+                 else
                  {
-                      if(Globale.vie.finDeTour())
-                      {
-                            if (!validerObjectif())
-                            {
-                                tim = null;
-                                timerFin.Interval = 1500;
-                                timerFin.Tick += new EventHandler(OnTimedEvent4);
+                     if (Globale.vie.finDeTour())
+                     {
+                         if (!validerObjectif())
+                         {
+                             tim = null;
+                             timerFin.Interval = 1500;
+                             timerFin.Tick += new EventHandler(OnTimedEvent4);
+                             validationVie();
 
-                                grillePrincipale.Children.Clear();
-                                AfficherJoueur();
-                                partieEnCours = false;
-                                timerFin.Start();
-                            }
-                       }
-                      else
-                      {
-                          tim = null;
-                          timerFin.Interval = 1500;
-                          timerFin.Tick += new EventHandler(OnTimedEvent4);
-                          validationVie();
-
-                          Globale.j1.pathImage = ("/image/bonhommeMort.png");
-                          grillePrincipale.Children.Clear();
-                          AfficherJoueur();
-                          partieEnCours = false;
-                          timerFin.Start();
-                      }
+                             grillePrincipale.Children.Clear();
+                             AfficherJoueur();
+                             partieEnCours = false;
+                             timerFin.Start();
+                         }
+                         else
+                         {
+                             validationVie();
+                         }
+                     }
                  }
              }
 
@@ -624,6 +612,8 @@ namespace CDS
                 else
                    System.Windows.MessageBox.Show("Erreur");
 
+                ecranDescriptionObjectif menuD = new ecranDescriptionObjectif(reponse[0][0], Convert.ToInt32(reponse[0][1]));
+                menuD.Show();
             }
 
             public bool validerObjectif()

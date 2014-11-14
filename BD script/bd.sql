@@ -560,7 +560,7 @@ VALUES
 INSERT INTO Objectifs(nom,valeurObjectif)
 VALUES
 ('Point'
-,10000
+,25000
 );
 
 INSERT INTO Objectifs(nom,valeurObjectif)
@@ -621,7 +621,7 @@ INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)
 VALUES
 ((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Survie')
 ,(SELECT idUtilisateur  FROM Utilisateurs  WHERE nom = 'Admin')
-,(SELECT idObjectif FROM Objectifs WHERE nom = 'Point' AND valeurObjectif = '10000')
+,(SELECT idObjectif FROM Objectifs WHERE nom = 'Point' AND valeurObjectif = '25000')
 ,4
 );
 
@@ -1049,8 +1049,8 @@ VALUES
 INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
 WHERE nom = 'Survie' AND numNiveau = '4')
 ,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'zappy')
-,10
-,2
+,15
+,1
 );
 
 /* */

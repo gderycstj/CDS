@@ -30,5 +30,12 @@ namespace CDS
             menuS.Show();
             Close();
         }
+
+        private void btnRejouer_Click(object sender, RoutedEventArgs e)
+        {
+            jeuNiveau jeu = new jeuNiveau();
+            jeu.Show();
+            Close();
+        }
     }
 }

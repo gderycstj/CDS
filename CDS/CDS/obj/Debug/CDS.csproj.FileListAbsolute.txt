@@ -51,3 +51,10 @@ K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.exe
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.pdb
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
+K:\chambre de survie\CDS\CDS\bin\Debug\MySql.Data.dll
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationObjet.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionObjet.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationObjet.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionObjet.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranDescriptionObjectif.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranDescriptionObjectif.g.cs
