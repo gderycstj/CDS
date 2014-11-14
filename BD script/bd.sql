@@ -788,30 +788,11 @@ VALUES
 ((SELECT idNiveau FROM Niveaux AS n
 INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
 WHERE nom = 'Survie' AND numNiveau = '5')
-,(SELECT idObjet FROM Objets WHERE nom = 'Sprint')
-,2
-,25
-);
-
-INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
-VALUES
-((SELECT idNiveau FROM Niveaux AS n
-INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '5')
 ,(SELECT idObjet FROM Objets WHERE nom = 'Armure')
 ,2
 ,25
 );
 
-INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
-VALUES
-((SELECT idNiveau FROM Niveaux AS n
-INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '5')
-,(SELECT idObjet FROM Objets WHERE nom = 'Potion de vie')
-,2
-,25
-);
 /* */
 
 /* Objet Niveau 6 */
@@ -1218,5 +1199,14 @@ WHERE nom = 'Survie' AND numNiveau = '10')
 );
 
 /* */
+
+
+
+INSERT INTO progressions(idUtilisateur,idModeDeJeu,niveauAtteint)
+VALUES
+((SELECT idUtilisateur FROM utilisateurs WHERE nom='admin')
+,(SELECT idModeDeJeu FROM modesdejeu WHERE nom='survie')
+,10
+);
 
 COMMIT

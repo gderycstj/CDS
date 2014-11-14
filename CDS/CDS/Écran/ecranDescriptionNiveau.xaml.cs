@@ -80,7 +80,7 @@ namespace CDS
                 case 5:
                     txtTitreNiveau.Text = "Armure à gogo";
                     txtPoursuivantDispo.Text = "Carré, Losange, Triangle, Zappy, Cercle";
-                    txtObjetDispo.Text = "Potion de vitesse, Barrière, Potion de vie, Armure";
+                    txtObjetDispo.Text = "Barrière, Armure";
                     txtRestriction.Text = "Aucune";
                     imgPoursuivant.Source = new BitmapImage(new Uri(@"/image/armure.png", UriKind.Relative));
                     break;
