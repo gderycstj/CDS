@@ -58,3 +58,5 @@ K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationObjet.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionObjet.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranDescriptionObjectif.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranDescriptionObjectif.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranDescriptionNiveau.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranDescriptionNiveau.g.cs

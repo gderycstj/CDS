@@ -84,6 +84,9 @@
     <Compile Include="Écran\ecranCreationPoursuivant.xaml.cs">
       <DependentUpon>ecranCreationPoursuivant.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Écran\ecranDescriptionNiveau.xaml.cs">
+      <DependentUpon>ecranDescriptionNiveau.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\ecranDescriptionObjectif.xaml.cs">
       <DependentUpon>ecranDescriptionObjectif.xaml</DependentUpon>
     </Compile>
@@ -142,6 +145,10 @@
     <Page Include="Écran\ecranCreationPoursuivant.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\ecranDescriptionNiveau.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Écran\ecranDescriptionObjectif.xaml">
       <SubType>Designer</SubType>

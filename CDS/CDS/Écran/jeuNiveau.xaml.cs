@@ -612,8 +612,16 @@ namespace CDS
                 else
                    System.Windows.MessageBox.Show("Erreur");
 
-                ecranDescriptionObjectif menuD = new ecranDescriptionObjectif(reponse[0][0], Convert.ToInt32(reponse[0][1]));
-                menuD.Show();
+                if (Globale.mode == "Survie")
+                {
+                    ecranDescriptionNiveau menuDN = new ecranDescriptionNiveau(reponse[0][0], Convert.ToInt32(reponse[0][1]));
+                    menuDN.Show();
+                }
+                else
+                {
+                    ecranDescriptionObjectif menuD = new ecranDescriptionObjectif(reponse[0][0], Convert.ToInt32(reponse[0][1]));
+                    menuD.Show();
+                }
             }
 
             public bool validerObjectif()
