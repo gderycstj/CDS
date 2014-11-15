@@ -595,7 +595,11 @@ namespace CDS
             {
                 Globale.j1.vitesse -= 1;
                 mouvement.Text = Globale.j1.vitesse.ToString();
+                partieNormal.validationPoursuivant(false);
+                partieNormal.validationObjet();
+                rentrerObjet();
                 grillePrincipale.Children.Clear();
+                validationVie();
                 AfficherJoueur();
                 AfficherPoursuivant();
                 AfficherObjet();
