@@ -571,6 +571,12 @@ VALUES
 
 INSERT INTO Objectifs(nom,valeurObjectif)
 VALUES
+('Armure'
+,6
+);
+
+INSERT INTO Objectifs(nom,valeurObjectif)
+VALUES
 ('Tour'
 ,500
 );
@@ -629,7 +635,7 @@ INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)
 VALUES
 ((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Survie')
 ,(SELECT idUtilisateur  FROM Utilisateurs  WHERE nom = 'Admin')
-,(SELECT idObjectif FROM Objectifs WHERE nom = 'Armure' AND valeurObjectif = '12')
+,(SELECT idObjectif FROM Objectifs WHERE nom = 'Armure' AND valeurObjectif = '6')
 ,5
 );
 
@@ -1099,15 +1105,6 @@ WHERE nom = 'Survie' AND numNiveau = '6')
 ,3
 );
 
-INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
-VALUES
-((SELECT idNiveau FROM Niveaux AS n
-INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '6')
-,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Triangle')
-,1
-,12
-);
 
 INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
 VALUES
