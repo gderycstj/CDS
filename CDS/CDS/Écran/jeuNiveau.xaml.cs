@@ -28,6 +28,10 @@ namespace CDS
         public jeuNiveau()
         {
             InitializeComponent();
+            Globale.vie.nbVieActu = 3;
+            Globale.j1.positionJoueur.posX = 5;
+            Globale.j1.positionJoueur.posY = 5;
+            Globale.vie.nbArmure = 0;
             chargerMode();
             
             tim.Tick += new EventHandler(OnTimedEvent);
@@ -614,6 +618,7 @@ namespace CDS
 
                 if (Globale.mode == "Survie")
                 {
+                    vieRestriction();
                     ecranDescriptionNiveau menuDN = new ecranDescriptionNiveau(reponse[0][0], Convert.ToInt32(reponse[0][1]));
                     menuDN.Show();
                 }
@@ -659,6 +664,38 @@ namespace CDS
                 tim.Stop();
                 validationVie();
                 validationObjectifPartieNormal();
+            }
+
+            public void vieRestriction()
+            {
+                switch(Globale.iNumeroDuNiveauAJouer)
+                {
+                    case 3:
+                    Globale.vie.nbVieActu = 2;
+                    break;
+
+                    case 6:
+                    Globale.vie.nbVieActu = 1;
+                    break;
+
+                    case 7:
+                    Globale.vie.nbVieActu = 1;
+                    break;
+
+                    case 8:
+                    Globale.vie.nbVieActu = 1;
+                    break;
+
+                    case 9:
+                    Globale.vie.nbVieActu = 2;
+                    Globale.vie.nbArmure = 2;
+                    break;
+
+                    default:
+                    Globale.vie.nbVieActu = 3;
+                    Globale.vie.nbArmure = 0;
+                    break;
+                }
             }
     }
 }

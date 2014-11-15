@@ -86,7 +86,7 @@ namespace CDS
                     break;
                 case 6:
                     txtTitreNiveau.Text = "Au gouffre de la mort";
-                    txtPoursuivantDispo.Text = "Carré, Losange, Triangle, Zappy, Cercle";
+                    txtPoursuivantDispo.Text = "Carré, Losange, Zappy, Cercle";
                     txtObjetDispo.Text = "Potion de vitesse, Barrière, Armure";
                     txtRestriction.Text = "Une Vie Seulement";
                     imgPoursuivant.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
