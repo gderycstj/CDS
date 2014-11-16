@@ -74,7 +74,8 @@ CREATE TABLE IF NOT EXISTS Progressions
 (idProgression INT AUTO_INCREMENT PRIMARY KEY,
  idUtilisateur INT NOT NULL,
  idModeDeJeu INT NOT NULL,
- niveauAtteint INT NOT NULL
+ niveauAtteint INT NOT NULL,
+ niveauAtteintMax INT NOT NULL
 );
 
 ALTER TABLE Progressions
@@ -1199,10 +1200,11 @@ WHERE nom = 'Survie' AND numNiveau = '10')
 
 
 
-INSERT INTO progressions(idUtilisateur,idModeDeJeu,niveauAtteint)
+INSERT INTO progressions(idUtilisateur,idModeDeJeu,niveauAtteint,niveauAtteintMax)
 VALUES
 ((SELECT idUtilisateur FROM utilisateurs WHERE nom='admin')
 ,(SELECT idModeDeJeu FROM modesdejeu WHERE nom='survie')
+,10
 ,10
 );
 

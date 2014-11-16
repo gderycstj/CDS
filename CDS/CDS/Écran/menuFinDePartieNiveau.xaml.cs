@@ -31,8 +31,9 @@ namespace CDS
             {
                 if (Globale.iNumeroDuNiveauAJouer < 10)
                 {
-                    txtPub.Text = "Vous avez survécu au niveau "+Globale.iNumeroDuNiveauAJouer+" , mais il reste toujours les niveaux supérieur à surpasser.";
+                    txtPub.Text = "Vous avez survécu au niveau "+ Globale.iNumeroDuNiveauAJouer+" , mais il reste toujours les niveaux supérieur à surpasser.";
                     Globale.iNumeroDuNiveauAJouer += 1;
+                    sauvegarder();
                 }
                 else
                 {
@@ -52,13 +53,6 @@ namespace CDS
 
         private void btnSelectionNiveau_Click(object sender, RoutedEventArgs e)
         {
-            if(Globale.j1.estConnecte == true)
-            {
-                if(Globale.iNumeroDuNiveauAJouer<10)
-                {
-                    Globale.iNumeroDuNiveauAJouer += 1;
-                }
-            }
             menuSelectionNiveau menuSelec = new menuSelectionNiveau();
             menuSelec.Show();
             Close();
@@ -70,5 +64,36 @@ namespace CDS
             jeu.Show();
             Close();
         }
+
+        private void sauvegarder() 
+        {
+
+                    List<string>[] lstSauvegarde;
+                    int col = 0;
+                    string req = "SELECT idProgression,niveauAtteint,niveauAtteintMax FROM Progressions p INNER JOIN Utilisateurs u on p.idUtilisateur = u.idUtilisateur INNER JOIN ModesDeJeu m ON m.idModeDeJeu = p.idModeDeJeu WHERE u.nom = '" + Globale.j1.getNom() + "' AND m.nom = '" + Globale.mode + "';";
+                    lstSauvegarde = Globale.bdCDS.selection(req,3,ref col);
+
+                    if (col == 0) 
+                    {
+                        string req2 = "INSERT INTO Progressions(idUtilisateur,idModeDeJeu,niveauAtteint,niveauAtteintMax) VALUES((SELECT idUtilisateur FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() + "'),(SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = '" + Globale.mode + "')," + Globale.iNumeroDuNiveauAJouer + "," + Globale.iNumeroDuNiveauAJouer + ");";
+
+                        Globale.bdCDS.Insertion(req2);
+                        lstSauvegarde = Globale.bdCDS.selection(req, 3, ref col);
+                    }
+
+                    if (Convert.ToInt32(lstSauvegarde[0][2]) > Globale.iNumeroDuNiveauAJouer)
+                    {
+                        req = "UPDATE Progressions SET niveauAtteint = " + Globale.iNumeroDuNiveauAJouer + " WHERE idProgression = " + lstSauvegarde[0][0] + ";";
+                    }
+                    else 
+                    {
+                        req = "UPDATE Progressions SET niveauAtteint = " + Globale.iNumeroDuNiveauAJouer + " ,niveauAtteintMax = " + Globale.iNumeroDuNiveauAJouer + " WHERE idProgression = " + lstSauvegarde[0][0] + ";";                   
+                    }
+
+                    Globale.bdCDS.modification(req);
+        
+        }
+        
     }
+
 }

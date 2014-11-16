@@ -17,6 +17,8 @@ namespace CDS
         public List<Objet> objetDispoPourLaPartie { get;set;}
         public Objet obj1{get;set;}
         public Objet obj2{get;set;}
+
+
         public Partie()
         {   
             score = 0;

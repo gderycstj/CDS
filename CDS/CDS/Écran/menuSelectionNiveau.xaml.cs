@@ -41,9 +41,10 @@ namespace CDS
 
         public void chargerNiveau()
         {
-            string req = "SELECT niveauAtteint FROM Progressions as p "+ 
-            "INNER JOIN Utilisateurs as u ON p.idUtilisateur = u.idUtilisateur "+
-            "INNER JOIN ModesDeJeu as m ON p.idModeDeJeu = m.idModeDeJeu ";
+            string req = "SELECT niveauAtteintMax FROM Progressions as p " +
+            "INNER JOIN Utilisateurs as u ON p.idUtilisateur = u.idUtilisateur " +
+            "INNER JOIN ModesDeJeu as m ON p.idModeDeJeu = m.idModeDeJeu " +
+            "WHERE u.idUtilisateur = (SELECT idUtilisateur FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() + "') AND m.nom = '" + Globale.mode + "';";
 
             int nbRange = 0;
             List<string>[] niveauMaxList;

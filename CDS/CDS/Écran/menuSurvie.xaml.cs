@@ -29,6 +29,17 @@ namespace CDS
             {
                 btnNouvellePartie.IsEnabled = true;
 
+                     List<string>[] lstCharge;
+                    int col = 0;
+                    string req = "SELECT niveauAtteint FROM Progressions p INNER JOIN Utilisateurs u on p.idUtilisateur = u.idUtilisateur INNER JOIN ModesDeJeu m ON m.idModeDeJeu = p.idModeDeJeu WHERE u.nom = '" + Globale.j1.getNom() + "' AND m.nom = '" + Globale.mode + "';";
+                    lstCharge = Globale.bdCDS.selection(req,1,ref col);
+
+                    if (col != 0)
+                    {
+                        Globale.iNumeroDuNiveauAJouer = Convert.ToInt32(lstCharge[0][0]);
+                    }
+
+
                 if(Globale.iNumeroDuNiveauAJouer <2)
                 {
                     btnCharger.IsEnabled = false;
@@ -62,7 +73,9 @@ namespace CDS
 
         private void btnCharger_Click(object sender, RoutedEventArgs e)
         {
-            return;
+            jeuNiveau partiNiveau = new jeuNiveau();
+            partiNiveau.Show();
+            Close();
         }
 
         private void btnSelection_Click(object sender, RoutedEventArgs e)
