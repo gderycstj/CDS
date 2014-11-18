@@ -25,6 +25,10 @@ namespace CDS
         bool partieEnCours = true;
         Timer tim = new Timer();
         Timer timerFin = new Timer();
+
+        Timer timActiv = new Timer();
+        bool activerEvent = false;
+
         public jeuNiveau()
         {
             InitializeComponent();
@@ -32,10 +36,17 @@ namespace CDS
             Globale.j1.positionJoueur.posX = 5;
             Globale.j1.positionJoueur.posY = 5;
             Globale.vie.nbArmure = 0;
-            chargerMode();
-            
+            chargerMode(); 
+            demarrerPartie();      
+        }
+
+        public void demarrerPartie()
+        {
             tim.Tick += new EventHandler(OnTimedEvent);
-            tim.Interval = 1750;
+            tim.Interval = 1950;
+
+            timActiv.Tick += new EventHandler(OnTimedEvent6);
+            timActiv.Interval = 1750;
 
             txtCTour.Text = tour.ToString();
             mouvement.Text = Globale.j1.vitesse.ToString();
@@ -47,8 +58,7 @@ namespace CDS
             AfficherJoueur();
             AfficherPoursuivant();
             tim.Start();
-            
-            
+            timActiv.Start();
         }
 
         private void OnTimedEvent(object sender, EventArgs e) 
@@ -68,6 +78,7 @@ namespace CDS
             ecranFinDePartieNiveauEchec ecranM = new ecranFinDePartieNiveauEchec();
             ecranM.Show();
             timerFin = null;
+
             Close();
         }
 
@@ -93,6 +104,12 @@ namespace CDS
             ecranM.Show();
             timerFin = null;
             Close();
+        }
+
+        private void OnTimedEvent6(object sender, EventArgs e)
+        {
+            timActiv.Stop();
+            activerEvent = true;
         }
 
         void AfficherJoueur()
@@ -139,7 +156,7 @@ namespace CDS
         //fonction de déplacement pour les boutons, haut veux dire déplacement haut... fait aussi les validations pour pas dépasser la grille
         private void haut(object sender, RoutedEventArgs e)
         {
-            if (partieEnCours == true)
+            if (partieEnCours == true && activerEvent == false)
             {
                 deplacerHaut();
                 afficherInfo();
@@ -148,7 +165,7 @@ namespace CDS
 
         private void bas(object sender, RoutedEventArgs e)
         {
-            if (partieEnCours == true)
+            if (partieEnCours == true && activerEvent == false)
             {
                 deplacerBas();
                 afficherInfo();
@@ -157,7 +174,7 @@ namespace CDS
 
         private void droite(object sender, RoutedEventArgs e)
         {
-            if (partieEnCours == true)
+            if (partieEnCours == true && activerEvent == false)
             {
                 deplacerDroite();
                 afficherInfo();
@@ -166,7 +183,7 @@ namespace CDS
 
         private void gauche(object sender, RoutedEventArgs e)
         {
-            if (partieEnCours == true)
+            if (partieEnCours == true && activerEvent == false)
             {
                 deplacerGauche();
                 afficherInfo();
@@ -175,7 +192,7 @@ namespace CDS
 
         private void btnPasserTour_Click(object sender, RoutedEventArgs e)
         {
-            if (partieEnCours == true)
+            if (partieEnCours == true && activerEvent == false)
             {
                 if (Globale.j1.vitesse > 1)
                 {
@@ -195,34 +212,34 @@ namespace CDS
               //Vers le bas
               if(Keyboard.IsKeyDown(Key.Down))
               {
-                  if (partieEnCours == true)
+                  if (partieEnCours == true && activerEvent == false)
                   {
                       deplacerBas();
                       afficherInfo();
                   }
               }
             //Vers le Haut
-              if(Keyboard.IsKeyDown(Key.Up))
+              else if(Keyboard.IsKeyDown(Key.Up))
               {
-                  if (partieEnCours == true)
+                  if (partieEnCours == true && activerEvent == false)
                   {
                       deplacerHaut();
                       afficherInfo();
                   }
               }
             //Vers la droite
-            if(Keyboard.IsKeyDown(Key.Right))
+            else if(Keyboard.IsKeyDown(Key.Right))
             {
-                if (partieEnCours == true)
+                if (partieEnCours == true && activerEvent == false)
                 {
                     deplacerDroite();
                     afficherInfo();
                 }
             }
             //Vers la gauche
-            if(Keyboard.IsKeyDown(Key.Left))
+            else if(Keyboard.IsKeyDown(Key.Left))
             {
-                if (partieEnCours == true)
+                if (partieEnCours == true && activerEvent == false)
                 {
                     deplacerGauche();
                     afficherInfo();
@@ -237,12 +254,17 @@ namespace CDS
                     if (partieNormal.obj2 != null)
                     {
                         tim.Stop();
+                        timActiv.Stop();
+
                         partieNormal.obj2.unEffet.action();
                         mouvement.Text = Globale.j1.vitesse.ToString();
                         partieNormal.obj2 = null;
                         validationVie();
                         item2.Background = null;
+
                         tim.Start();
+                        timActiv.Start();
+                        activerEvent = false;
                     }
                 }
             }
@@ -251,24 +273,29 @@ namespace CDS
             //Bouton Z(item)
             if(Keyboard.IsKeyDown(Key.Z))
             {
-                if (partieEnCours == true)
+                if (partieEnCours == true && activerEvent == false)
                 {
                     if (partieNormal.obj1 != null)
                     {
                         tim.Stop();
+                        timActiv.Stop();
+
                         partieNormal.obj1.unEffet.action();
                         mouvement.Text = Globale.j1.vitesse.ToString();
                         partieNormal.obj1 = null;
                         validationVie();
                         item1.Background = null;
+
                         tim.Start();
+                        timActiv.Start();
+                        activerEvent = false;
                     }
                 }
             } 
             //Bouton Enter(passer le tour)
             if(Keyboard.IsKeyDown(Key.Enter))
             {
-                if(partieEnCours == true)
+                if (partieEnCours == true && activerEvent == false)
                 {
                     if (Globale.j1.vitesse > 1)
                     {
@@ -463,9 +490,10 @@ namespace CDS
             {
                 grillePrincipale.Children.Clear();
                 //va éffacer la grille a chaque déplacement et va réafficher le joueur à sa nouvelle position
-                if(tim.Enabled)
+                if(tim.Enabled && timActiv.Enabled)
                 {
                     tim.Stop();
+                    timActiv.Stop();
                 }
                 partieNormal.validationPoursuivant(false);
                 partieNormal.validationObjet();
@@ -485,6 +513,9 @@ namespace CDS
                     AfficherPoursuivant();
 
                     partieNormal.GenerationObjet(tour);
+                    partieNormal.validationObjet();
+                    rentrerObjet();
+
                     AfficherObjet();
                 }
                 validationVie();
@@ -492,6 +523,8 @@ namespace CDS
                 if (partieEnCours != false)
                 {
                     tim.Start();
+                    timActiv.Start();
+                    activerEvent = false;
                 }
 
             }
@@ -508,6 +541,7 @@ namespace CDS
                         {
                             //Écran niveau suivant
                             tim = null;
+                            timActiv = null;
                             timerFin.Interval = 1500;
                             timerFin.Tick += new EventHandler(OnTimedEvent3);
                             grillePrincipale.Children.Clear();
@@ -523,6 +557,7 @@ namespace CDS
                     else
                     {
                         tim = null;
+                        timActiv = null;
                         timerFin.Interval = 1500;
                         timerFin.Tick += new EventHandler(OnTimedEvent2);
                         validationVie();
@@ -542,6 +577,7 @@ namespace CDS
                          if (!validerObjectif())
                          {
                              tim = null;
+                             timActiv = null;
                              timerFin.Interval = 1500;
                              timerFin.Tick += new EventHandler(OnTimedEvent4);
                              validationVie();
@@ -562,30 +598,40 @@ namespace CDS
 
             private void item1_click(object sender, RoutedEventArgs e)
             {
-                if (partieNormal.obj1 != null) 
+                if (partieNormal.obj1 != null && activerEvent == false) 
                 {
                     tim.Stop();
+                    timActiv.Stop();
+
                     partieNormal.obj1.unEffet.action();
                     mouvement.Text = Globale.j1.vitesse.ToString();
                     partieNormal.obj1 = null;
                     validationVie();
                     item1.Background = null;
+
                     tim.Start();
+                    timActiv.Start();
+                    activerEvent = false;
                 }
 
             }
 
             private void item2_click(object sender, RoutedEventArgs e)
             {
-                if (partieNormal.obj2 != null)
+                if (partieNormal.obj2 != null && activerEvent == false)
                 {
                     tim.Stop();
+                    timActiv.Stop();
+
                     partieNormal.obj2.unEffet.action();
                     mouvement.Text = Globale.j1.vitesse.ToString();
                     partieNormal.obj2 = null;
                     validationVie();
                     item2.Background = null;
+
                     tim.Start();
+                    timActiv.Start();
+                    activerEvent = false;
 
                 }
 
@@ -602,6 +648,8 @@ namespace CDS
                 validationVie();
                 AfficherJoueur();
                 AfficherPoursuivant();
+                partieNormal.validationObjet();
+                rentrerObjet();
                 AfficherObjet();
             }
 
@@ -624,12 +672,12 @@ namespace CDS
                 {
                     vieRestriction();
                     ecranDescriptionNiveau menuDN = new ecranDescriptionNiveau(reponse[0][0], Convert.ToInt32(reponse[0][1]));
-                    menuDN.Show();
+                    menuDN.ShowDialog();
                 }
                 else
                 {
                     ecranDescriptionObjectif menuD = new ecranDescriptionObjectif(reponse[0][0], Convert.ToInt32(reponse[0][1]));
-                    menuD.Show();
+                    menuD.ShowDialog();
                 }
             }
 
@@ -666,6 +714,7 @@ namespace CDS
             {
                 Globale.vie.nbVieActu = 0;
                 tim.Stop();
+                timActiv.Stop();
                 validationVie();
                 validationObjectifPartieNormal();
             }

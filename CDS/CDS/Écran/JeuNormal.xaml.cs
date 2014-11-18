@@ -26,11 +26,22 @@ namespace CDS
         bool partieEnCours = true;
         Timer tim = new Timer();
         Timer timerFin = new Timer();
+
+        Timer timActiv = new Timer();
+        bool activerEvent = false;
         public JeuNormal()
         {
             InitializeComponent();
+            demarrerPartie();
+        }
+
+        public void demarrerPartie()
+        {
             tim.Tick += new EventHandler(OnTimedEvent);
-            tim.Interval = 1750;
+            tim.Interval = 1950;
+
+            timActiv.Tick += new EventHandler(OnTimedEvent3);
+            timActiv.Interval = 1750;
 
             txtCTour.Text = tour.ToString();
             mouvement.Text = Globale.j1.vitesse.ToString();
@@ -42,6 +53,7 @@ namespace CDS
             AfficherJoueur();
             AfficherPoursuivant();
             tim.Start();
+            timActiv.Start();
         }
 
         private void OnTimedEvent(object sender, EventArgs e) 
@@ -66,6 +78,13 @@ namespace CDS
             timerFin = null;
             Close();
         }
+
+        private void OnTimedEvent3(object sender, EventArgs e)
+        {
+            timActiv.Stop();
+            activerEvent = true;
+        }
+
         void AfficherJoueur()
         {
             Image img = new Image();
@@ -110,7 +129,7 @@ namespace CDS
         //fonction de déplacement pour les boutons, haut veux dire déplacement haut... fait aussi les validations pour pas dépasser la grille
         private void haut(object sender, RoutedEventArgs e)
         {
-            if (partieEnCours == true)
+            if (partieEnCours == true && activerEvent == false)
             {
                 deplacerHaut();
                 afficherInfo();
@@ -119,7 +138,7 @@ namespace CDS
 
         private void bas(object sender, RoutedEventArgs e)
         {
-            if (partieEnCours == true)
+            if (partieEnCours == true && activerEvent == false)
             {
                 deplacerBas();
                 afficherInfo();
@@ -128,7 +147,7 @@ namespace CDS
 
         private void droite(object sender, RoutedEventArgs e)
         {
-            if (partieEnCours == true)
+            if (partieEnCours == true && activerEvent == false)
             {
                 deplacerDroite();
                 afficherInfo();
@@ -137,7 +156,7 @@ namespace CDS
 
         private void gauche(object sender, RoutedEventArgs e)
         {
-            if (partieEnCours == true)
+            if (partieEnCours == true && activerEvent == false)
             {
                 deplacerGauche();
                 afficherInfo();
@@ -146,7 +165,7 @@ namespace CDS
 
         private void btnPasserTour_Click(object sender, RoutedEventArgs e)
         {
-            if (partieEnCours == true)
+            if (partieEnCours == true && activerEvent == false)
             {
                 if (Globale.j1.vitesse > 1)
                 {
@@ -166,34 +185,34 @@ namespace CDS
               //Vers le bas
               if(Keyboard.IsKeyDown(Key.Down))
               {
-                  if (partieEnCours == true)
+                  if (partieEnCours == true && activerEvent == false)
                   {
                       deplacerBas();
                       afficherInfo();
                   }
               }
             //Vers le Haut
-              if(Keyboard.IsKeyDown(Key.Up))
+              else if(Keyboard.IsKeyDown(Key.Up))
               {
-                  if (partieEnCours == true)
+                  if (partieEnCours == true && activerEvent == false)
                   {
                       deplacerHaut();
                       afficherInfo();
                   }
               }
             //Vers la droite
-            if(Keyboard.IsKeyDown(Key.Right))
+            else if(Keyboard.IsKeyDown(Key.Right))
             {
-                if (partieEnCours == true)
+                if (partieEnCours == true && activerEvent == false)
                 {
                     deplacerDroite();
                     afficherInfo();
                 }
             }
             //Vers la gauche
-            if(Keyboard.IsKeyDown(Key.Left))
+           else if(Keyboard.IsKeyDown(Key.Left))
             {
-                if (partieEnCours == true)
+                if (partieEnCours == true && activerEvent == false)
                 {
                     deplacerGauche();
                     afficherInfo();
@@ -203,17 +222,22 @@ namespace CDS
             //Bouton X(item)
             if(Keyboard.IsKeyDown(Key.X))
             {
-                if (partieEnCours == true)
+                if (partieEnCours == true && activerEvent == false)
                 {
                     if (partieNormal.obj2 != null)
                     {
                         tim.Stop();
+                        timActiv.Stop();
+
                         partieNormal.obj2.unEffet.action();
                         mouvement.Text = Globale.j1.vitesse.ToString();
                         partieNormal.obj2 = null;
                         validationVie();
                         item2.Background = null;
+
                         tim.Start();
+                        timActiv.Start();
+                        activerEvent = false;
                     }
                 }
             }
@@ -222,7 +246,7 @@ namespace CDS
             //Bouton Z(item)
             if(Keyboard.IsKeyDown(Key.Z))
             {
-                if (partieEnCours == true)
+                if (partieEnCours == true && activerEvent == false)
                 {
                     if (partieNormal.obj1 != null)
                     {
@@ -233,13 +257,15 @@ namespace CDS
                         validationVie();
                         item1.Background = null;
                         tim.Start();
+                        timActiv.Start();
+                        activerEvent = false;
                     }
                 }
             } 
             //Bouton Enter(passer le tour)
             if(Keyboard.IsKeyDown(Key.Enter))
             {
-                if(partieEnCours == true)
+                if(partieEnCours == true && activerEvent == false)
                 {
                     if (Globale.j1.vitesse > 1)
                     {
@@ -434,9 +460,10 @@ namespace CDS
             {
                 grillePrincipale.Children.Clear();
                 //va éffacer la grille a chaque déplacement et va réafficher le joueur à sa nouvelle position
-                if(tim.Enabled)
+                if(tim.Enabled && timActiv.Enabled)
                 {
                     tim.Stop();
+                    timActiv.Stop();
                 }
                 partieNormal.validationPoursuivant(false);
                 partieNormal.validationObjet();
@@ -456,6 +483,10 @@ namespace CDS
                     AfficherPoursuivant();
 
                     partieNormal.GenerationObjet(tour);
+
+                    partieNormal.validationObjet();
+                    rentrerObjet();
+
                     AfficherObjet();
                 }
                 validationVie();
@@ -463,6 +494,8 @@ namespace CDS
                 if (partieEnCours != false)
                 {
                     tim.Start();
+                    timActiv.Start();
+                    activerEvent = false;
                 }
 
             }
@@ -473,6 +506,8 @@ namespace CDS
                 if(!Globale.vie.finDeTour())
                 { 
                    tim = null;
+                   timActiv = null;
+
                    timerFin.Interval = 1500;
                    timerFin.Tick += new EventHandler(OnTimedEvent2);
                    validationVie();
@@ -494,12 +529,18 @@ namespace CDS
                 if (partieNormal.obj1 != null) 
                 {
                     tim.Stop();
+                    timActiv.Stop();
+
                     partieNormal.obj1.unEffet.action();
                     mouvement.Text = Globale.j1.vitesse.ToString();
                     partieNormal.obj1 = null;
                     validationVie();
                     item1.Background = null;
+
+                    timActiv.Start();
                     tim.Start();
+                    activerEvent = false;
+
                 }
 
             }
@@ -509,12 +550,17 @@ namespace CDS
                 if (partieNormal.obj2 != null)
                 {
                     tim.Stop();
+                    timActiv.Stop();
+
                     partieNormal.obj2.unEffet.action();
                     mouvement.Text = Globale.j1.vitesse.ToString();
                     partieNormal.obj2 = null;
                     validationVie();
                     item2.Background = null;
+
+                    timActiv.Start();
                     tim.Start();
+                    activerEvent = false;
 
                 }
 
@@ -531,6 +577,8 @@ namespace CDS
                 validationVie();
                 AfficherJoueur();
                 AfficherPoursuivant();
+                partieNormal.validationObjet();
+                rentrerObjet();
                 AfficherObjet();
             }
 
