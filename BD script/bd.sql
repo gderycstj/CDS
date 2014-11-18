@@ -1138,6 +1138,16 @@ WHERE nom = 'Survie' AND numNiveau = '7')
 ,10
 ,1
 );
+
+INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
+VALUES
+((SELECT idNiveau FROM Niveaux AS n
+INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
+WHERE nom = 'Survie' AND numNiveau = '7')
+,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Triangle')
+,1
+,15
+);
 /* */
 
 /* Poursuivant Niveau 8 */
