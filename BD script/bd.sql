@@ -652,7 +652,7 @@ INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)
 VALUES
 ((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Survie')
 ,(SELECT idUtilisateur  FROM Utilisateurs  WHERE nom = 'Admin')
-,(SELECT idObjectif FROM Objectifs WHERE nom = 'Tour' AND valeurObjectif = '250')
+,(SELECT idObjectif FROM Objectifs WHERE nom = 'Tour' AND valeurObjectif = '150')
 ,7
 );
 
@@ -1181,7 +1181,7 @@ INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
 WHERE nom = 'Survie' AND numNiveau = '9')
 ,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Triangle')
 ,10
-,4
+,3
 );
 /* */
 
