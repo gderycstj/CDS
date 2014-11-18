@@ -78,6 +78,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Écran\ecranCreationEffets.xaml.cs">
+      <DependentUpon>ecranCreationEffets.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\ecranCreationObjet.xaml.cs">
       <DependentUpon>ecranCreationObjet.xaml</DependentUpon>
     </Compile>
@@ -98,6 +101,9 @@
     </Compile>
     <Compile Include="Écran\ecranMeilleurScore.xaml.cs">
       <DependentUpon>ecranMeilleurScore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\ecranSupressionEffet.xaml.cs">
+      <DependentUpon>ecranSupressionEffet.xaml</DependentUpon>
     </Compile>
     <Compile Include="Écran\ecranSupressionObjet.xaml.cs">
       <DependentUpon>ecranSupressionObjet.xaml</DependentUpon>
@@ -138,6 +144,10 @@
     <Compile Include="Écran\menuSurvie.xaml.cs">
       <DependentUpon>menuSurvie.xaml</DependentUpon>
     </Compile>
+    <Page Include="Écran\ecranCreationEffets.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Écran\ecranCreationObjet.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -163,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Écran\ecranMeilleurScore.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\ecranSupressionEffet.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

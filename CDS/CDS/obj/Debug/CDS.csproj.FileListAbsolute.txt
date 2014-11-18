@@ -121,3 +121,6 @@ C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
 C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.g.resources
 C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
+D:\CDS\CDS\CDS\bin\Debug\CDS.exe.config
+D:\CDS\CDS\CDS\obj\Debug\CDS.exe
+D:\CDS\CDS\CDS\obj\Debug\CDS.pdb

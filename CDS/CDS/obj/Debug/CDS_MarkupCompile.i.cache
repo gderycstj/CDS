@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\
+D:\CDS\CDS\CDS\obj\Debug\
 CDS
 none
 false
 DEBUG;TRACE
-C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\Écran\App.xaml
-241655768223
+D:\CDS\CDS\CDS\Écran\App.xaml
+261271246744
 
-45-878879416
-17-1610375398
-Écran\ecranCreationObjet.xaml;Écran\ecranCreationPoursuivant.xaml;Écran\ecranDescriptionNiveau.xaml;Écran\ecranDescriptionObjectif.xaml;Écran\ecranFinDePartieMode.xaml;Écran\ecranFinDePartieNiveauEchec.xaml;Écran\ecranMeilleurScore.xaml;Écran\ecranSupressionObjet.xaml;Écran\ecranSupressionPoursuivant.xaml;Écran\jeuNiveau.xaml;Écran\menuConnexion.xaml;Écran\menuFinDePartieNiveau.xaml;Écran\menuGestionProfil.xaml;Écran\JeuNormal.xaml;Écran\menuInscription.xaml;Écran\MenuMode.xaml;Écran\menuObjet.xaml;Écran\menuPoursuivant.xaml;Écran\menuPrincipal.xaml;Écran\menuEditeur.xaml;Écran\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\menuSelectionNiveau.xaml;Écran\menuSurvie.xaml;
+471600169888
+17522086702
+Écran\ecranCreationEffets.xaml;Écran\ecranCreationObjet.xaml;Écran\ecranCreationPoursuivant.xaml;Écran\ecranDescriptionNiveau.xaml;Écran\ecranDescriptionObjectif.xaml;Écran\ecranFinDePartieMode.xaml;Écran\ecranFinDePartieNiveauEchec.xaml;Écran\ecranMeilleurScore.xaml;Écran\ecranSupressionEffet.xaml;Écran\ecranSupressionObjet.xaml;Écran\ecranSupressionPoursuivant.xaml;Écran\jeuNiveau.xaml;Écran\menuConnexion.xaml;Écran\menuFinDePartieNiveau.xaml;Écran\menuGestionProfil.xaml;Écran\JeuNormal.xaml;Écran\menuInscription.xaml;Écran\MenuMode.xaml;Écran\menuObjet.xaml;Écran\menuPoursuivant.xaml;Écran\menuPrincipal.xaml;Écran\menuEditeur.xaml;Écran\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\menuSelectionNiveau.xaml;Écran\menuSurvie.xaml;
 
 False
 
