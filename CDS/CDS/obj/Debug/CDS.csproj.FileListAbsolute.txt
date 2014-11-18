@@ -50,8 +50,6 @@ K:\chambre de survie\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.exe
 K:\chambre de survie\CDS\CDS\obj\Debug\CDS.pdb
-K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
-K:\chambre de survie\CDS\CDS\bin\Debug\MySql.Data.dll
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationObjet.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionObjet.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationObjet.g.cs
@@ -121,6 +119,8 @@ C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
 C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.g.resources
 C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
-D:\CDS\CDS\CDS\bin\Debug\CDS.exe.config
-D:\CDS\CDS\CDS\obj\Debug\CDS.exe
-D:\CDS\CDS\CDS\obj\Debug\CDS.pdb
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationEffets.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionEffet.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationEffets.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionEffet.g.cs

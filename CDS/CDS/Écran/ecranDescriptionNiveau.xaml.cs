@@ -93,7 +93,7 @@ namespace CDS
                     break;
                 case 7:
                     txtTitreNiveau.Text = "Diagonale?!";
-                    txtPoursuivantDispo.Text = "Losange";
+                    txtPoursuivantDispo.Text = "Losange, Triangle";
                     txtObjetDispo.Text = "Potion de vitesse, Barrière, Armure";
                     txtRestriction.Text = "Une Vie Seulement";
                     imgPoursuivant.Source = new BitmapImage(new Uri(@"/image/LosangeJaune.png", UriKind.Relative));

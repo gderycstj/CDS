@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -19,9 +20,12 @@ namespace CDS
     /// </summary>
     public partial class menuFinDePartieNiveau : Window
     {
+        Timer timerFin = new Timer();
         public menuFinDePartieNiveau()
         {
             InitializeComponent();
+            timerFin.Interval = 100;
+            timerFin.Tick += new EventHandler(OnTimedEvent);
             if(Globale.j1.estConnecte == false)
             {
                 btnNiveauSuivant.IsEnabled = false;
@@ -60,9 +64,9 @@ namespace CDS
 
         private void btnNiveauSuivant_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             jeuNiveau jeu = new jeuNiveau();
             jeu.Show();
-            Close();
         }
 
         private void sauvegarder() 
@@ -92,6 +96,12 @@ namespace CDS
 
                     Globale.bdCDS.modification(req);
         
+        }
+
+        private void OnTimedEvent(object sender, EventArgs e)
+        {
+            timerFin.Stop();
+            Close();
         }
         
     }

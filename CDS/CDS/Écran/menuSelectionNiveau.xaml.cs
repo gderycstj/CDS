@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -19,9 +20,13 @@ namespace CDS
     /// </summary>
     public partial class menuSelectionNiveau : Window
     {
+        Timer timerFin = new Timer();
         public menuSelectionNiveau()
         {
             InitializeComponent();
+            timerFin.Interval = 100;
+            timerFin.Tick += new EventHandler(OnTimedEvent2);
+
             if(Globale.j1.estConnecte==true)
             {
                 chargerNiveau();
@@ -30,6 +35,12 @@ namespace CDS
             {
                 btnNiveau1.IsEnabled = true;
             }
+        }
+
+        private void OnTimedEvent2(object sender, EventArgs e)
+        {
+            timerFin.Stop();
+            Close();
         }
 
         private void btnRetour_Click(object sender, RoutedEventArgs e)
@@ -141,84 +152,84 @@ namespace CDS
 
         private void btnNiveau1_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             Globale.iNumeroDuNiveauAJouer = 1;
             jeuNiveau partiNiveau= new jeuNiveau();
             partiNiveau.Show();
-            Close();
         }
 
 
 
         private void btnNiveau2_Click_1(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             Globale.iNumeroDuNiveauAJouer = 2;
             jeuNiveau partiNiveau = new jeuNiveau();
             partiNiveau.Show();
-            Close();
         }
 
         private void btnNiveau3_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             Globale.iNumeroDuNiveauAJouer = 3;
             jeuNiveau partiNiveau = new jeuNiveau();
             partiNiveau.Show();
-            Close();
         }
 
         private void btnNiveau4_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             Globale.iNumeroDuNiveauAJouer = 4;
             jeuNiveau partiNiveau = new jeuNiveau();
             partiNiveau.Show();
-            Close();
         }
 
         private void btnNiveau5_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             Globale.iNumeroDuNiveauAJouer = 5;
             jeuNiveau partiNiveau = new jeuNiveau();
             partiNiveau.Show();
-            Close();
         }
 
         private void btnNiveau6_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             Globale.iNumeroDuNiveauAJouer = 6;
             jeuNiveau partiNiveau = new jeuNiveau();
             partiNiveau.Show();
-            Close();
         }
 
         private void btnNiveau7_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             Globale.iNumeroDuNiveauAJouer = 7;
             jeuNiveau partiNiveau = new jeuNiveau();
             partiNiveau.Show();
-            Close();
         }
 
         private void btnNiveau8_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             Globale.iNumeroDuNiveauAJouer = 8;
             jeuNiveau partiNiveau = new jeuNiveau();
             partiNiveau.Show();
-            Close();
         }
 
         private void btnNiveau9_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             Globale.iNumeroDuNiveauAJouer = 9;
             jeuNiveau partiNiveau = new jeuNiveau();
             partiNiveau.Show();
-            Close();
         }
 
         private void btnNiveau10_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             Globale.iNumeroDuNiveauAJouer = 10;
             jeuNiveau partiNiveau = new jeuNiveau();
             partiNiveau.Show();
-            Close();
         }
     }
 }

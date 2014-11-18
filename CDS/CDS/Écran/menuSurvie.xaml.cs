@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -22,9 +20,13 @@ namespace CDS
     /// </summary>
     public partial class menuSurvie : Window
     {
+        Timer timerFin = new Timer();
         public menuSurvie()
         {
             InitializeComponent();
+            timerFin.Interval = 100;
+            timerFin.Tick += new EventHandler(OnTimedEvent);
+
             if(Globale.j1.estConnecte == true)
             {
                 btnNouvellePartie.IsEnabled = true;
@@ -65,17 +67,17 @@ namespace CDS
 
         private void btnNouvellePartie_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             Globale.iNumeroDuNiveauAJouer = 1;
             jeuNiveau partiNiveau = new jeuNiveau();
             partiNiveau.Show();
-            Close();
         }
 
         private void btnCharger_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             jeuNiveau partiNiveau = new jeuNiveau();
             partiNiveau.Show();
-            Close();
         }
 
         private void btnSelection_Click(object sender, RoutedEventArgs e)
@@ -84,5 +86,12 @@ namespace CDS
             menuSelec.Show();
             Close();
         }
+
+        private void OnTimedEvent(object sender, EventArgs e)
+        {
+            timerFin.Stop();
+            Close();
+        }
+
     }
 }

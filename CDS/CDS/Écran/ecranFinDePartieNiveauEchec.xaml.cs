@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -19,9 +20,12 @@ namespace CDS
     /// </summary>
     public partial class ecranFinDePartieNiveauEchec : Window
     {
+        Timer timerFin = new Timer();
         public ecranFinDePartieNiveauEchec()
         {
             InitializeComponent();
+            timerFin.Interval = 100;
+            timerFin.Tick += new EventHandler(OnTimedEvent);
         }
 
         private void btnMenu_Click(object sender, RoutedEventArgs e)
@@ -33,8 +37,14 @@ namespace CDS
 
         private void btnRejouer_Click(object sender, RoutedEventArgs e)
         {
+            timerFin.Start();
             jeuNiveau jeu = new jeuNiveau();
             jeu.Show();
+        }
+
+        private void OnTimedEvent(object sender, EventArgs e)
+        {
+            timerFin.Stop();
             Close();
         }
     }

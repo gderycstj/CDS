@@ -108,7 +108,10 @@ namespace CDS
 
         private void OnTimedEvent6(object sender, EventArgs e)
         {
-            timActiv.Stop();
+            if(timActiv.Enabled)
+            {
+                timActiv.Stop();
+            }
             activerEvent = true;
         }
 
@@ -496,9 +499,6 @@ namespace CDS
                     timActiv.Stop();
                 }
                 partieNormal.validationPoursuivant(false);
-                partieNormal.validationObjet();
-                rentrerObjet();
-
                 tour += 1;
                 AfficherJoueur();
                 foreach (Poursuivant p in partieNormal.PoursuivantDansLaPartie)
@@ -556,6 +556,11 @@ namespace CDS
                     }
                     else
                     {
+                        if(timActiv.Enabled && tim.Enabled)
+                        {
+                            timActiv.Stop();
+                            tim.Stop();
+                         }
                         tim = null;
                         timActiv = null;
                         timerFin.Interval = 1500;
@@ -645,12 +650,15 @@ namespace CDS
                 partieNormal.validationObjet();
                 rentrerObjet();
                 grillePrincipale.Children.Clear();
+                partieNormal.finDeTour();
                 validationVie();
                 AfficherJoueur();
                 AfficherPoursuivant();
                 partieNormal.validationObjet();
                 rentrerObjet();
                 AfficherObjet();
+
+                validationObjectifPartieNormal();
             }
 
             public void chargerMode()

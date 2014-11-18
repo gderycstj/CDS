@@ -466,11 +466,9 @@ namespace CDS
                     timActiv.Stop();
                 }
                 partieNormal.validationPoursuivant(false);
-                partieNormal.validationObjet();
-                rentrerObjet();
-
                 tour += 1;
                 AfficherJoueur();
+
                 foreach (Poursuivant p in partieNormal.PoursuivantDansLaPartie)
                 {
                     p.action();
@@ -505,6 +503,11 @@ namespace CDS
                 partieNormal.finDeTour();
                 if(!Globale.vie.finDeTour())
                 { 
+                   if(tim.Enabled && timActiv.Enabled)
+                   {
+                        tim.Stop();
+                        timActiv.Stop();
+                   }
                    tim = null;
                    timActiv = null;
 
@@ -580,6 +583,8 @@ namespace CDS
                 partieNormal.validationObjet();
                 rentrerObjet();
                 AfficherObjet();
+
+                validationObjectifPartieNormal();
             }
 
             private void btnQuitter_Click(object sender, RoutedEventArgs e)
