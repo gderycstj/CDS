@@ -20,12 +20,14 @@ namespace CDS
     public partial class menuEditeur : Window
     {
         public MainViewModel ViewModel { get { return (MainViewModel)DataContext; } }
+        public string edit = "M";
         public menuEditeur()
         {
             InitializeComponent();
             btnMode.IsEnabled = false;
             DataContext = new MainViewModel();
             ViewModel.CurrentView = new menuMode();
+            btnNouveau.IsEnabled = false;
         }
 
         /// <summary>
@@ -37,7 +39,14 @@ namespace CDS
             btnPoursuivant.IsEnabled = true;
             btnObjet.IsEnabled = true;
             btnEffet.IsEnabled = true;
+            
         }
+        public void activerBoutonEdit() 
+        {
+            btnNouveau.IsEnabled = true;
+            btnModif.IsEnabled = true;
+            btnSupprim.IsEnabled = true;
+         }
 
         private void btnRetour_Click(object sender, RoutedEventArgs e)
         {
@@ -50,30 +59,133 @@ namespace CDS
         {
             activerBouton();
             btnMode.IsEnabled = false;
+
+            activerBoutonEdit();
+            btnNouveau.IsEnabled = false;
+
+            edit = "M";
             ViewModel.CurrentView = new menuMode();
-           
         }
 
         private void btnPoursuivant_Click(object sender, RoutedEventArgs e)
         {
             activerBouton();
             btnPoursuivant.IsEnabled = false;
-            ViewModel.CurrentView = new menuPoursuivant();
+
+            activerBoutonEdit();
+            btnNouveau.IsEnabled = false;
+
+            edit = "P";
+            ViewModel.CurrentView = new ecranCreationPoursuivant();
+          
         }
 
         private void btnObjet_Click(object sender, RoutedEventArgs e)
         {
             activerBouton();
             btnObjet.IsEnabled = false;
-            ViewModel.CurrentView = new menuObjet();
+
+            activerBoutonEdit();
+            btnNouveau.IsEnabled = false;
+
+            edit = "O";
+            ViewModel.CurrentView = new ecranCreationObjet();
+          
         }
 
         private void btnEffet_Click(object sender, RoutedEventArgs e)
         {
             activerBouton();
             btnEffet.IsEnabled = false;
-            //ViewModel.CurrentView = new menuEffet();
+
+            activerBoutonEdit();
+            btnNouveau.IsEnabled = false;
+
+            edit = "E";
+            ViewModel.CurrentView = new ecranCreationEffets();
 
         }
+
+        private void btnNouveau_Click(object sender, RoutedEventArgs e)
+        {
+            activerBoutonEdit();
+            if (edit == "M") 
+            {
+                ViewModel.CurrentView = new menuMode();
+            }
+
+            if (edit == "P") 
+            {
+                ViewModel.CurrentView = new ecranCreationPoursuivant();
+            }
+
+            if (edit == "O") 
+            {
+                ViewModel.CurrentView = new ecranCreationObjet();
+            }
+
+            if (edit == "E")
+            {
+                ViewModel.CurrentView = new ecranCreationEffets();
+            }
+
+            btnNouveau.IsEnabled = false;
+        }
+
+        private void btnModif_Click(object sender, RoutedEventArgs e)
+        {
+            activerBoutonEdit();
+
+            if (edit == "M")
+            {
+                ViewModel.CurrentView = new menuMode();
+            }
+
+            if (edit == "P")
+            {
+                ViewModel.CurrentView = new ecranCreationPoursuivant();
+            }
+
+            if (edit == "O")
+            {
+                ViewModel.CurrentView = new ecranCreationObjet();
+            }
+
+            if (edit == "E")
+            {
+                ViewModel.CurrentView = new ecranCreationEffets();
+            }
+
+            btnModif.IsEnabled = false;
+        }
+
+        private void btnSupprim_Click(object sender, RoutedEventArgs e)
+        {
+            activerBoutonEdit();
+
+            if (edit == "M")
+            {
+                ViewModel.CurrentView = new ecranSupressionMode();
+            }
+
+            if (edit == "P")
+            {
+                ViewModel.CurrentView = new ecranSupressionPoursuivant();
+            }
+
+            if (edit == "O")
+            {
+                ViewModel.CurrentView = new ecranSupressionObjet();
+            }
+
+            if (edit == "E")
+            {
+                ViewModel.CurrentView = new ecranSupressionEffet();
+            }
+
+            btnSupprim.IsEnabled = false;
+        }
+
+
     }
 }

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\
+D:\CDS2\CDS\obj\Debug\
 CDS
 none
 false
 DEBUG;TRACE
-C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\Écran\App.xaml
-28-370492221
+D:\CDS2\CDS\Écran\App.xaml
+27-872533006
 
-45836939737
-17-1806842082
-Écran\Instruction\infoBut.xaml;Écran\Instruction\infoCommande.xaml;Écran\Éditeur\ecranCreationEffets.xaml;Écran\Éditeur\ecranCreationObjet.xaml;Écran\Éditeur\ecranCreationPoursuivant.xaml;Écran\Survie\ecranDescriptionNiveau.xaml;Écran\ModeCustom\ecranDescriptionObjectif.xaml;Écran\ModeCustom\ecranFinDePartieMode.xaml;Écran\Survie\ecranFinDePartieNiveauEchec.xaml;Écran\Normal\ecranMeilleurScore.xaml;Écran\Éditeur\ecranSupressionEffet.xaml;Écran\Éditeur\ecranSupressionObjet.xaml;Écran\Éditeur\ecranSupressionPoursuivant.xaml;Écran\ModeCustom\jeuNiveau.xaml;Écran\Éditeur\menuConnexion.xaml;Écran\Survie\ecranFinDePartieNiveau.xaml;Écran\Compte\menuGestionProfil.xaml;Écran\Normal\JeuNormal.xaml;Écran\Compte\menuInscription.xaml;Écran\Éditeur\MenuMode.xaml;Écran\Éditeur\menuObjet.xaml;Écran\Éditeur\menuPoursuivant.xaml;Écran\menuPrincipal.xaml;Écran\Éditeur\menuEditeur.xaml;Écran\Instruction\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\Survie\menuSelectionNiveau.xaml;Écran\Survie\menuSurvie.xaml;
+44-1955090784
+17-1299215692
+Écran\Instruction\infoBut.xaml;Écran\Instruction\infoCommande.xaml;Écran\Survie\ecranDescriptionNiveau.xaml;Écran\ModeCustom\ecranDescriptionObjectif.xaml;Écran\ModeCustom\ecranFinDePartieMode.xaml;Écran\Survie\ecranFinDePartieNiveauEchec.xaml;Écran\Normal\ecranMeilleurScore.xaml;Écran\ModeCustom\jeuNiveau.xaml;Écran\Survie\ecranFinDePartieNiveau.xaml;Écran\Compte\menuGestionProfil.xaml;Écran\Normal\JeuNormal.xaml;Écran\Compte\menuInscription.xaml;Écran\menuPrincipal.xaml;Écran\Instruction\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\Survie\menuSelectionNiveau.xaml;Écran\Survie\menuSurvie.xaml;Écran\Éditeur\ecranCreationEffets.xaml;Écran\Éditeur\ecranCreationObjet.xaml;Écran\Éditeur\ecranCreationPoursuivant.xaml;Écran\Éditeur\ecranSupressionEffet.xaml;Écran\Éditeur\ecranSupressionMode.xaml;Écran\Éditeur\ecranSupressionObjet.xaml;Écran\Éditeur\ecranSupressionPoursuivant.xaml;Écran\Éditeur\menuConnexion.xaml;Écran\Éditeur\menuEditeur.xaml;Écran\Éditeur\MenuMode.xaml;
 
 False
 

@@ -84,15 +84,6 @@
     <Compile Include="Écran\Instruction\infoCommande.xaml.cs">
       <DependentUpon>infoCommande.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Écran\Éditeur\ecranCreationEffets.xaml.cs">
-      <DependentUpon>ecranCreationEffets.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Écran\Éditeur\ecranCreationObjet.xaml.cs">
-      <DependentUpon>ecranCreationObjet.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Écran\Éditeur\ecranCreationPoursuivant.xaml.cs">
-      <DependentUpon>ecranCreationPoursuivant.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Écran\Survie\ecranDescriptionNiveau.xaml.cs">
       <DependentUpon>ecranDescriptionNiveau.xaml</DependentUpon>
     </Compile>
@@ -108,20 +99,8 @@
     <Compile Include="Écran\Normal\ecranMeilleurScore.xaml.cs">
       <DependentUpon>ecranMeilleurScore.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Écran\Éditeur\ecranSupressionEffet.xaml.cs">
-      <DependentUpon>ecranSupressionEffet.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Écran\Éditeur\ecranSupressionObjet.xaml.cs">
-      <DependentUpon>ecranSupressionObjet.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Écran\Éditeur\ecranSupressionPoursuivant.xaml.cs">
-      <DependentUpon>ecranSupressionPoursuivant.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Écran\ModeCustom\jeuNiveau.xaml.cs">
       <DependentUpon>jeuNiveau.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Écran\Éditeur\menuConnexion.xaml.cs">
-      <DependentUpon>menuConnexion.xaml</DependentUpon>
     </Compile>
     <Compile Include="Écran\Survie\ecranFinDePartieNiveau.xaml.cs">
       <DependentUpon>ecranFinDePartieNiveau.xaml</DependentUpon>
@@ -135,20 +114,41 @@
     <Compile Include="Écran\Compte\menuInscription.xaml.cs">
       <DependentUpon>menuInscription.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Écran\Éditeur\MenuMode.xaml.cs">
-      <DependentUpon>MenuMode.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Écran\Éditeur\menuObjet.xaml.cs">
-      <DependentUpon>menuObjet.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Écran\Éditeur\menuPoursuivant.xaml.cs">
-      <DependentUpon>menuPoursuivant.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Écran\Survie\menuSelectionNiveau.xaml.cs">
       <DependentUpon>menuSelectionNiveau.xaml</DependentUpon>
     </Compile>
     <Compile Include="Écran\Survie\menuSurvie.xaml.cs">
       <DependentUpon>menuSurvie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Éditeur\ecranCreationEffets.xaml.cs">
+      <DependentUpon>ecranCreationEffets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Éditeur\ecranCreationObjet.xaml.cs">
+      <DependentUpon>ecranCreationObjet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Éditeur\ecranCreationPoursuivant.xaml.cs">
+      <DependentUpon>ecranCreationPoursuivant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Éditeur\ecranSupressionEffet.xaml.cs">
+      <DependentUpon>ecranSupressionEffet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Éditeur\ecranSupressionMode.xaml.cs">
+      <DependentUpon>ecranSupressionMode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Éditeur\ecranSupressionObjet.xaml.cs">
+      <DependentUpon>ecranSupressionObjet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Éditeur\ecranSupressionPoursuivant.xaml.cs">
+      <DependentUpon>ecranSupressionPoursuivant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Éditeur\menuConnexion.xaml.cs">
+      <DependentUpon>menuConnexion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Éditeur\menuEditeur.xaml.cs">
+      <DependentUpon>menuEditeur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Éditeur\MenuMode.xaml.cs">
+      <DependentUpon>MenuMode.xaml</DependentUpon>
     </Compile>
     <Page Include="Écran\Instruction\infoBut.xaml">
       <SubType>Designer</SubType>
@@ -157,18 +157,6 @@
     <Page Include="Écran\Instruction\infoCommande.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Écran\Éditeur\ecranCreationEffets.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Écran\Éditeur\ecranCreationObjet.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Écran\Éditeur\ecranCreationPoursuivant.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Écran\Survie\ecranDescriptionNiveau.xaml">
       <SubType>Designer</SubType>
@@ -190,23 +178,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Écran\Éditeur\ecranSupressionEffet.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Écran\Éditeur\ecranSupressionObjet.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Écran\Éditeur\ecranSupressionPoursuivant.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Écran\ModeCustom\jeuNiveau.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Écran\Éditeur\menuConnexion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -226,18 +198,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Écran\Éditeur\MenuMode.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Écran\Éditeur\menuObjet.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Écran\Éditeur\menuPoursuivant.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Écran\menuPrincipal.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -250,10 +210,6 @@
       <DependentUpon>menuPrincipal.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Écran\Éditeur\menuEditeur.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Écran\Instruction\menuInstruction.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -270,11 +226,48 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Écran\Éditeur\ecranCreationEffets.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Éditeur\ecranCreationObjet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Éditeur\ecranCreationPoursuivant.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Éditeur\ecranSupressionEffet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Éditeur\ecranSupressionMode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Éditeur\ecranSupressionObjet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Éditeur\ecranSupressionPoursuivant.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Éditeur\menuConnexion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Éditeur\menuEditeur.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Éditeur\MenuMode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Écran\Éditeur\menuEditeur.xaml.cs">
-      <DependentUpon>menuEditeur.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Écran\Instruction\menuInstruction.xaml.cs">
       <DependentUpon>menuInstruction.xaml</DependentUpon>
     </Compile>

@@ -20,10 +20,50 @@ namespace CDS
     /// </summary>
     public partial class menuMode : UserControl
     {
+        public class Poursuivant
+        {
+            public string Nom;
+            public string Valeur;
+            public string Rarete;
+        }
+
         public menuMode()
         {
             InitializeComponent();
+
+
+            String req = "SELECT nom FROM Poursuivants WHERE idUtilisateur = (SELECT idUtilisateur FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() + "') OR (SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin');";
+            List<string>[] listePoursuivant;
+            int col = 0;
+            listePoursuivant = Globale.bdCDS.selection(req, 1, ref col);
+
+            for (int i = 0; i < listePoursuivant.Length; i++)
+            {
+                cboPoursuivant.Items.Add(listePoursuivant[i][0]);
+            }
+
+            cboPoursuivant.SelectedIndex = 0;
+
+            String req2 = "SELECT nom FROM Objets WHERE idUtilisateur = (SELECT idUtilisateur FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() + "')  OR (SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin');";
+            List<string>[] listeObjet;
+            listeObjet = Globale.bdCDS.selection(req2, 1, ref col);
+
+            for (int i = 0; i < listeObjet.Length; i++)
+            {
+                cboObjet.Items.Add(listeObjet[i][0]);
+            }
+
+
+            cboObjet.SelectedIndex = 0;
         }
+
+        private void btnPoursuivants_Click(object sender, RoutedEventArgs e) 
+        {
+                string poursuivant = cboPoursuivant.SelectedIndex.ToString();
+
+                string[] row = new string[] {"allo","0","0","0"};
+                dataPoursuivant.Items.Add(new Poursuivant() {Nom = "toto", Rarete= "0", Valeur="0"});
+         }
 
     }
 }
