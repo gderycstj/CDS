@@ -123,6 +123,9 @@
     <Compile Include="Écran\Éditeur\ecranSupressionEffet.xaml.cs">
       <DependentUpon>ecranSupressionEffet.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Écran\Éditeur\ecranSupressionMode.xaml.cs">
+      <DependentUpon>ecranSupressionMode.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\Éditeur\ecranSupressionObjet.xaml.cs">
       <DependentUpon>ecranSupressionObjet.xaml</DependentUpon>
     </Compile>
@@ -219,6 +222,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Écran\Éditeur\ecranSupressionEffet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Éditeur\ecranSupressionMode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

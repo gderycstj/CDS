@@ -201,3 +201,5 @@ K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Instruction\infoObjet1.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Instruction\infoObjet2.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Instruction\infoPoursuivant1.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Instruction\infoPoursuivant2.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Éditeur\ecranSupressionMode.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Éditeur\ecranSupressionMode.g.cs

@@ -19,19 +19,16 @@ namespace CDS
     /// </summary>
     public partial class menuInstruction : Window
     {
+        public MainViewModel ViewModel { get { return (MainViewModel)DataContext; } }
         public menuInstruction()
         {
             InitializeComponent();
-            txtContenu.Width = 512;
-            desactivIMG();
-            txtContenu.TextAlignment = TextAlignment.Center;
-            txtContenu.Text = "La chambre de survie vous confrontera à plusieurs niveaux de survie qui augmente en difficulté. En outre, si la peur vous hante, vous pourriez toujours vous entrainer face aux plus puissants poursuivants avant de relevé le défi.\n Dans la chambre de survie, vous allez devoir survivre à des vagues de poursuivants de plus en plus acharnée au fil du temps et des niveaux. De plus, plusieurs variétés de poursuivants seront disponibles et s'ajouterons aux poursuivants de « base » présente dans les premiers niveaux. \n" +
-            "Vous devrez éviter les poursuivants au péril de votre vie. Ceux-ci disparaitrons lorsqu'ils atteindront le bord de la grille vous donnant des points.Il vous sera également possible d'utiliser des objets apparaissant aléatoirement au fil de la partie qui seront la pour vous assister pendant votre périple. Cependant, si vous êtes touchés 3 fois, la partie sera terminée.\n Saurez-vous survivre à la chambre de survie?";
+            DataContext = new MainViewModel();
+
             //Désactivation du button But
-            if(btnBut.IsEnabled == true)
-            {
-                btnBut.IsEnabled = false;
-            }
+            ToutActiver();
+            btnBut.IsEnabled = false;
+            ViewModel.CurrentView = new infoBut();
         }
 
         private void btnRetour_Click(object sender, RoutedEventArgs e)
@@ -39,125 +36,92 @@ namespace CDS
             menuPrincipal menuP = new menuPrincipal();
             menuP.Show();
             Close();
-
         }
 
         private void btnBut_Click(object sender, RoutedEventArgs e)
         {
-            txtTitreInstruc.Text = "But";
-            txtContenu.Width = 512;
-            desactivIMG();
-            txtContenu.TextAlignment = TextAlignment.Center;
-            txtContenu.Text = "La chambre de survie vous confrontera à plusieurs niveaux de survie qui augmente en difficulté. En outre, si la peur vous hante, vous pourriez toujours vous entrainer face aux plus puissants poursuivants avant de relevé le défi.\n Dans la chambre de survie, vous allez devoir survivre à des vagues de poursuivants de plus en plus acharnée au fil du temps et des niveaux. De plus, plusieurs variétés de poursuivants seront disponibles et s'ajouterons aux poursuivants de « base » présente dans les premiers niveaux. \n"+
-            "Vous devrez éviter les poursuivants au péril de votre vie. Ceux-ci disparaitrons lorsqu'ils atteindront le bord de la grille vous donnant des points.Il vous sera également possible d'utiliser des objets apparaissant aléatoirement au fil de la partie qui seront la pour vous assister pendant votre périple. Cependant, si vous êtes touchés 3 fois, la partie sera terminée.\n Saurez-vous survivre à la chambre de survie?";
+            ToutActiver();
+            btnBut.IsEnabled = false;
 
-            //Activation/Désactivation des boutons
-            if (btnBut.IsEnabled == true)
-            {
-                btnBut.IsEnabled = false;
-            }
-            btnCommandes.IsEnabled = true;
-            btnPoursuivants.IsEnabled = true;
-            btnObjets.IsEnabled = true;
+            //User Control avec info But
+            ViewModel.CurrentView = new infoBut();
         }
 
         private void btnCommandes_Click(object sender, RoutedEventArgs e)
         {
-            txtTitreInstruc.Text = "Commandes";
-            txtContenu.Width = 350;
-            txtContenu.Text = "|"+"Déplacement du Personnage"+"|"+" \n"+
-            "Version Clavier\n Utiliser les flèches directionelles et la touche entrer pour passer votre tour.\n\n"+
-            "Version Souris\n Cliquer sur les flèches directionelles directement dans l'interface du jeu et cliquer sur le bouton rouge pour passer votre tour.\n \n" +
-            "|"+"Utilisation d'objet"+"|"+"\n"+
-            "Version Clavier\n Utiliser les touches Z(Case de Gauche) et X(Case de droite) pour utiliser vos objets\n\n" +
-            "Version Souris\n Cliquer sur la case contenant l'objet dans votre inventaire\n\n";
+            ToutActiver();
+            btnCommandes.IsEnabled = false;
 
-            //Désactivation des images
-            desactivIMG();
-            //Activation des images nécéssaires
-            imgClavierMouv.Visibility = Visibility.Visible;
-            imgClavierObjet.Visibility = Visibility.Visible;
-            imgCliquerMouv.Visibility = Visibility.Visible;
-            imgCliquerObjet.Visibility = Visibility.Visible;
-            
-            //Activation/Désactivation des boutons
-            if (btnCommandes.IsEnabled == true)
-            {
-                btnCommandes.IsEnabled = false;
-            }
-            btnBut.IsEnabled = true;
-            btnPoursuivants.IsEnabled = true;
-            btnObjets.IsEnabled = true;
+            ViewModel.CurrentView = new infoCommande();
         }
 
         private void btnPoursuivants_Click(object sender, RoutedEventArgs e)
         {
-            txtTitreInstruc.Text = "Poursuivants";
-            txtContenu.Width = 350;
-            txtContenu.Text ="|"+"Carrés"+"|"+" \n"+
-            "Les carrées vert et bleu se déplacent en ligne droite(Horizontalement et Verticalement respectivement).\n Ils se déplaceront seulement de une case à chaque tour.\n\n"+
-            "|"+"Losanges"+"|"+" \n"+ "Les losanges mauves et jaunes se déplacent en diagonale(mauve vers la droite , jaune vers la gauche).\n Ils se déplacerons seulement de une case à chaque tour.\n\n"+
-            "|"+"Triangle"+"|"+" \n"+ "Le triangle se déplace de toutes les façon possible vers la bas selon la position du personnage.\n Il se déplacera seulement de une case à chaque tour.\n D'autres poursuivants sont disponible. À vous de les découvrir.";
-
-            //Désactivation des images
-            desactivIMG();
-            //Activation des images nécéssaires
-            imgCarreBleu.Visibility = Visibility.Visible;
-            imgCarreVert.Visibility = Visibility.Visible;
-            imgTriangle.Visibility = Visibility.Visible;
-            imgLosangeJaune.Visibility = Visibility.Visible;
-            imgLosangeMauve.Visibility = Visibility.Visible;
-
-            //Activation/Désactivation des boutons
-            if (btnPoursuivants.IsEnabled == true)
-            {
-                btnPoursuivants.IsEnabled = false;
-            }
-            btnCommandes.IsEnabled = true;
-            btnBut.IsEnabled = true;
-            btnObjets.IsEnabled = true;
+            ToutActiver();
+            btnPoursuivants.IsEnabled = false;
+            gridUserControl.Height = 580;
+            ViewModel.CurrentView = new infoPoursuivant1();
+            btnSuivantPoursuivant.Visibility = Visibility.Visible;
         }
 
         private void btnObjets_Click(object sender, RoutedEventArgs e)
         {
-            txtTitreInstruc.Text = "Objets";
-            txtContenu.Width = 350;
-            txtContenu.Text = "|" + "Potion de vie" + "|" + " \n" +
-            "Lorsqu'elle est utilisée, la potion de vie vous redonne un point de vie\n\n" +
-            "|" + "Armure" + "|" + " \n" + "Lorsqu'utilisé ,l'armure vous donne un coeur d'armure(remplace ou s'ajoute aux autres coeurs)\n\n" +
-            "|" + "Bombe" + "|" + " \n" + "Lorsqu'elle est utilisée, la bombe se pose a votre case et explose 2 tours plus tard détruisant tous les poursuivants sur les cases aux alentours . \n\n\n D'autres objets sont disponible. À vous de les découvrir.";
-
-            //Désactivation des images
-            desactivIMG();
-            //Activation des images nécéssaires
-            imgBombe.Visibility = Visibility.Visible;
-            imgPotionRouge.Visibility = Visibility.Visible;
-            imgArmure.Visibility = Visibility.Visible;
-
-            //Activation/Désactivation des boutons
-            if (btnObjets.IsEnabled == true)
-            {
-                btnObjets.IsEnabled = false;
-            }
-            btnCommandes.IsEnabled = true;
-            btnPoursuivants.IsEnabled = true;
-            btnBut.IsEnabled = true;
+            ToutActiver();
+            btnObjets.IsEnabled = false;
+            gridUserControl.Height = 580;
+            ViewModel.CurrentView = new infoObjet1();
+            btnSuivantObjet.Visibility = Visibility.Visible;
         }
 
-        public void desactivIMG()
+
+        private void btnSuivantPoursuivant_Click(object sender, RoutedEventArgs e)
         {
-            imgBombe.Visibility = Visibility.Hidden;
-            imgCarreBleu.Visibility = Visibility.Hidden;
-            imgCarreVert.Visibility = Visibility.Hidden;
-            imgClavierMouv.Visibility = Visibility.Hidden;
-            imgClavierObjet.Visibility = Visibility.Hidden;
-            imgCliquerMouv.Visibility = Visibility.Hidden;
-            imgCliquerObjet.Visibility = Visibility.Hidden;
-            imgPotionRouge.Visibility = Visibility.Hidden;
-            imgArmure.Visibility = Visibility.Hidden;
-            imgTriangle.Visibility = Visibility.Hidden;
-            imgLosangeJaune.Visibility = Visibility.Hidden;
-            imgLosangeMauve.Visibility = Visibility.Hidden;
+            ToutActiver();
+            btnPoursuivants.IsEnabled = false;
+            gridUserControl.Height = 580;
+            ViewModel.CurrentView = new infoPoursuivant2();
+            btnPrecedentPoursuivant.Visibility = Visibility.Visible;
         }
+
+        private void btnPrecedentPoursuivant_Click(object sender, RoutedEventArgs e)
+        {
+            ToutActiver();
+            btnPoursuivants.IsEnabled = false;
+            gridUserControl.Height = 580;
+            ViewModel.CurrentView = new infoPoursuivant1();
+            btnSuivantPoursuivant.Visibility = Visibility.Visible;
+        }
+         public void ToutActiver()
+         {
+             gridUserControl.Height = 620;
+
+             btnSuivantPoursuivant.Visibility = Visibility.Hidden;
+             btnPrecedentPoursuivant.Visibility = Visibility.Hidden;
+             btnPrecedentObjet.Visibility = Visibility.Hidden;
+             btnSuivantObjet.Visibility = Visibility.Hidden;
+
+             btnBut.IsEnabled = true;
+             btnCommandes.IsEnabled = true;
+             btnPoursuivants.IsEnabled = true;
+             btnObjets.IsEnabled = true;
+         }
+
+         private void btnPrecedentObjet_Click_1(object sender, RoutedEventArgs e)
+         {
+             ToutActiver();
+             btnObjets.IsEnabled = false;
+             gridUserControl.Height = 580;
+             ViewModel.CurrentView = new infoObjet1();
+             btnSuivantObjet.Visibility = Visibility.Visible;
+         }
+
+         private void btnSuivantObjet_Click_1(object sender, RoutedEventArgs e)
+         {
+             ToutActiver();
+             btnPoursuivants.IsEnabled = false;
+             gridUserControl.Height = 580;
+             ViewModel.CurrentView = new infoObjet2();
+             btnPrecedentObjet.Visibility = Visibility.Visible;
+         }
     }
 }

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="975">
-    <Grid>
+    <Grid Margin="10,10,-10,-10">
         <Label Content="Nom:" HorizontalAlignment="Left" Margin="29,19,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontWeight="Bold"  FontSize="18"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="73,19,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="248" />
         <Label Content="Apparence:" HorizontalAlignment="Left" Height="42" Margin="37,47,0,0" VerticalAlignment="Top" Width="137" FontFamily="Agency FB" FontSize="30" FontWeight="Bold"/>

@@ -2,58 +2,61 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Icon="/CDS;component/Image/cds.png"
-        Title="Instruction" Height="730" Width="780"
+        Title="Instruction" Height="730" Width="940"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/CDS;component/Image/2.jpg"/>
         </Grid.Background>
-        <TextBlock x:Name="txtInstruction" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Instruction" VerticalAlignment="Top" RenderTransformOrigin="0.477,1.329" Height="52" Margin="333,10,0,0" Width="164" FontFamily="/CDS;component/#Broken Type" FontSize="48"/>
-        <Button x:Name="btnBut" Content="But" HorizontalAlignment="Left" Margin="3,67,0,0" VerticalAlignment="Top" Width="224" Height="125" FontFamily="Agency FB" FontSize="36" Foreground="Black" Click="btnBut_Click">
+        <TextBlock x:Name="txtInstruction" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Instruction" VerticalAlignment="Top" RenderTransformOrigin="0.477,1.329" Height="52" Margin="414,10,0,0" Width="164" FontFamily="/CDS;component/#Broken Type" FontSize="48"/>
+        <Button x:Name="btnBut" Content="But" HorizontalAlignment="Left" Margin="3,67,0,0" VerticalAlignment="Top" Width="209" Height="125" FontFamily="Agency FB" FontSize="36" Foreground="Black" Click="btnBut_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnCommandes" Content="Commandes" HorizontalAlignment="Left" Margin="3,192,0,0" VerticalAlignment="Top" Width="224" Height="125" FontSize="36" Foreground="Black" Click="btnCommandes_Click">
+        <Button x:Name="btnCommandes" Content="Commandes" HorizontalAlignment="Left" Margin="3,192,0,0" VerticalAlignment="Top" Width="209" Height="125" FontSize="36" Foreground="Black" Click="btnCommandes_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnPoursuivants" Content="Poursuivants" HorizontalAlignment="Left" Margin="3,317,0,0" VerticalAlignment="Top" Width="224" Height="125" FontFamily="Agency FB" FontSize="36" Foreground="Black" Click="btnPoursuivants_Click">
+        <Button x:Name="btnPoursuivants" Content="Poursuivants" HorizontalAlignment="Left" Margin="3,317,0,0" VerticalAlignment="Top" Width="209" Height="125" FontFamily="Agency FB" FontSize="36" Foreground="Black" Click="btnPoursuivants_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnObjets" Content="Objets" HorizontalAlignment="Left" Margin="3,442,0,0" VerticalAlignment="Top" Width="224" Height="125" FontFamily="Agency FB" FontSize="36" Foreground="Black" Click="btnObjets_Click" IsHitTestVisible="True">
+        <Button x:Name="btnObjets" Content="Objets" HorizontalAlignment="Left" Margin="3,442,0,0" VerticalAlignment="Top" Width="209" Height="125" FontFamily="Agency FB" FontSize="36" Foreground="Black" Click="btnObjets_Click" IsHitTestVisible="True">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnRetour" Content="Retour" HorizontalAlignment="Left" Margin="3,567,0,0" VerticalAlignment="Top" Width="224" Height="125" FontFamily="Agency FB" FontSize="36" Foreground="Black" Click="btnRetour_Click" IsHitTestVisible="True">
+        <Button x:Name="btnRetour" Content="Retour" HorizontalAlignment="Left" Margin="3,567,0,0" VerticalAlignment="Top" Width="209" Height="125" FontFamily="Agency FB" FontSize="36" Foreground="Black" Click="btnRetour_Click" IsHitTestVisible="True">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Rectangle Fill="#FF4B634D" HorizontalAlignment="Left" Height="625" Margin="241,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="512"/>
-        <TextBlock x:Name="txtTitreInstruc" HorizontalAlignment="Left" Height="59" Margin="333,67,0,0" TextWrapping="Wrap" Text="But" VerticalAlignment="Top" Width="333" FontFamily="/CDS;component/#Broken Type" FontSize="48" TextAlignment="Center"/>
-        <TextBlock x:Name="txtContenu" HorizontalAlignment="Left" Height="566" Margin="241,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="512" FontFamily="Agency FB" FontSize="24" TextAlignment="Center" Text=""></TextBlock>
-        <Image x:Name="imgClavierMouv" HorizontalAlignment="Left" Height="120" Margin="600,131,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/Image/clavierMouv.png" Visibility="Hidden">
-        </Image>
-        <Image x:Name="imgCliquerObjet" HorizontalAlignment="Left" Height="113" Margin="600,567,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/Image/cliqueObjet.png" Visibility="Hidden">
-        </Image>
-        <Image x:Name="imgCarreBleu" HorizontalAlignment="Left" Height="80" Margin="666,166,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/carreBleu.png" Visibility="Hidden"/>
-        <Image x:Name="imgCarreVert" HorizontalAlignment="Left" Height="80" Margin="585,166,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/carreVert.png" Visibility="Hidden"/>
-        <Image x:Name="imgLosangeMauve" HorizontalAlignment="Left" Height="80" Margin="666,376,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/LosangeJaune.png" Visibility="Hidden"/>
-        <Image x:Name="imgLosangeJaune" HorizontalAlignment="Left" Height="80" Margin="613,337,0,0" VerticalAlignment="Top" Width="87" Source="/CDS;component/Image/LosangeMauve.png" Visibility="Hidden"/>
-        <Image x:Name="imgTriangle" HorizontalAlignment="Left" Height="134" Margin="613,501,0,0" VerticalAlignment="Top" Width="140" Source="/CDS;component/Image/triangle.png" Visibility="Hidden">
-        </Image>
-        <Image x:Name="imgCliquerMouv" HorizontalAlignment="Left" Height="126" Margin="600,274,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/Image/cliqueMouv.png" Visibility="Hidden">
-        </Image>
-        <Image x:Name="imgClavierObjet" HorizontalAlignment="Left" Height="123" Margin="600,417,0,0" VerticalAlignment="Top" Width="139" Source="/CDS;component/Image/clavierObjet.png" Visibility="Hidden">
-        </Image>
-        <Image x:Name="imgPotionRouge" HorizontalAlignment="Left" Height="105" Margin="613,126,0,0" VerticalAlignment="Top" Width="126" Source="/CDS;component/Image/potionVie.png" Visibility="Hidden"/>
-        <Image x:Name="imgArmure" HorizontalAlignment="Left" Height="120" Margin="599,251,0,0" VerticalAlignment="Top" Width="140" Source="/CDS;component/Image/armure.png" Visibility="Hidden"/>
-        <Image x:Name="imgBombe" HorizontalAlignment="Left" Height="120" Margin="613,417,0,0" VerticalAlignment="Top" Width="140" Source="/CDS;component/Image/bombe.png" Visibility="Hidden"/>
-
+        <Rectangle Fill="#FF4B634D" HorizontalAlignment="Left" Height="625" Margin="217,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="704"/>
+        <Grid x:Name="gridUserControl" Margin="217,67,20,15">
+            <ContentPresenter Content="{Binding CurrentView}" />
+        </Grid>
+        <Button x:Name="btnSuivantPoursuivant" Content="" HorizontalAlignment="Left" Height="44" Margin="833,643,0,0" VerticalAlignment="Top" Width="81" Click="btnSuivantPoursuivant_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/flecheDroite.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPrecedentPoursuivant" Content="" HorizontalAlignment="Left" Height="44" Margin="229,643,0,0" VerticalAlignment="Top" Width="81" Click="btnPrecedentPoursuivant_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/flecheGauche.png"/>
+            </Button.Background>
+        </Button>
+        <Button Name="btnPrecedentObjet" Content="" HorizontalAlignment="Left" Height="44" Margin="229,643,0,0" VerticalAlignment="Top" Width="81" Click="btnPrecedentObjet_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/flecheGauche.png"/>
+            </Button.Background>
+        </Button>
+        <Button Name="btnSuivantObjet" Content="" HorizontalAlignment="Left" Height="44" Margin="833,643,0,0" VerticalAlignment="Top" Width="81" Click="btnSuivantObjet_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/flecheDroite.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
