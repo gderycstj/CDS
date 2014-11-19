@@ -66,7 +66,7 @@ namespace CDS
 
         private void OnTimedEvent2(object sender, EventArgs e)
         {
-            timerFin.Stop();
+                timerFin.Stop();
             //Appel de l'écran de fin de partie
             //Utiliser un timer pour afficher l'ecran après 5 secondes.
 
@@ -81,15 +81,32 @@ namespace CDS
 
         private void OnTimedEvent3(object sender, EventArgs e)
         {
-            timActiv.Stop();
+ 
+                timActiv.Stop();
+
+
             activerEvent = true;
         }
 
         void AfficherJoueur()
         {
             Image img = new Image();
-            img = Globale.j1.obtenirImage();
-            Grid.SetColumn(img, Globale.j1.positionJoueur.posX);
+            BitmapImage bimg = new BitmapImage();
+
+            bimg.BeginInit();
+
+            bimg.CacheOption = BitmapCacheOption.OnDemand;
+            bimg.CreateOptions = BitmapCreateOptions.DelayCreation;
+            bimg.DecodePixelHeight = 125;
+            bimg.DecodePixelWidth = 125;
+            bimg.UriSource = new Uri(Globale.j1.pathImage, UriKind.Relative);
+
+            bimg.EndInit();
+            img.Source = bimg;
+            img.Stretch = Stretch.Uniform;
+
+
+            Grid.SetColumn(img,Globale.j1.positionJoueur.posX);
             Grid.SetRow(img, Globale.j1.positionJoueur.posY);
             grillePrincipale.Children.Add(img);
 
@@ -101,8 +118,40 @@ namespace CDS
             foreach (Poursuivant p in partieNormal.PoursuivantDansLaPartie) 
             {
                 Image img = new Image();
-                img = p.obtenirImage();
-                 if(p.positionEntite.posX >= 0 && p.positionEntite.posY >= 0)
+                BitmapImage bimg = new BitmapImage();
+
+                bimg.BeginInit();
+
+                bimg.CacheOption = BitmapCacheOption.OnDemand;
+                bimg.CreateOptions = BitmapCreateOptions.DelayCreation;
+                bimg.DecodePixelHeight = 125;
+                bimg.DecodePixelWidth = 125;
+                //rotation selon direction
+                switch(p.getDirection())
+                {
+                    case 1:                     
+                        bimg.Rotation = Rotation.Rotate180;
+                        break;
+
+                    case 2:
+                        bimg.Rotation = Rotation.Rotate270;
+                        break;
+
+                    //case 3 et  aucune rotation
+
+                    case 4:
+                        bimg.Rotation = Rotation.Rotate90;
+                        break;
+
+                }
+                bimg.UriSource = new Uri(p.getUrlImage(), UriKind.Relative);
+                bimg.EndInit();
+
+                img.Source = bimg;
+
+                //-----
+                
+                if(p.positionEntite.posX >= 0 && p.positionEntite.posY >= 0)
                 { 
                   Grid.SetColumn(img,  p.positionEntite.posX);
                    Grid.SetRow(img, p.positionEntite.posY);
@@ -117,6 +166,8 @@ namespace CDS
             {
                 Image img = new Image();
                 img = o.obtenirImage();
+
+
                 if (o.positionEntite.posX >= 0 && o.positionEntite.posY >= 0)
                 {
                     Grid.SetColumn(img, o.positionEntite.posX);
@@ -591,6 +642,7 @@ namespace CDS
             {
                 Globale.vie.nbVieActu = 0;
                 tim.Stop();
+                timActiv.Stop();
                 validationVie();
                 validationObjectifPartieNormal();
             }

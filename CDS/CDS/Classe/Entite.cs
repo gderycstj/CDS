@@ -104,5 +104,10 @@ namespace CDS
         {
             return true;
         }
+
+        public int getDirection()
+        {
+            return direction;
+        }
     }
 }

@@ -118,10 +118,31 @@ namespace CDS
         void AfficherJoueur()
         {
             Image img = new Image();
-            img = Globale.j1.obtenirImage();
+            BitmapImage bimg = new BitmapImage();
+
+            bimg.BeginInit();
+
+            bimg.CacheOption = BitmapCacheOption.OnDemand;
+            bimg.CreateOptions = BitmapCreateOptions.DelayCreation;
+            bimg.DecodePixelHeight = 125;
+            bimg.DecodePixelWidth = 125;
+            bimg.UriSource = new Uri(Globale.j1.pathImage, UriKind.Relative);
+
+            bimg.EndInit();
+            img.Source = bimg;
+            img.Stretch = Stretch.Uniform;
+
+
             Grid.SetColumn(img, Globale.j1.positionJoueur.posX);
             Grid.SetRow(img, Globale.j1.positionJoueur.posY);
             grillePrincipale.Children.Add(img);
+
+
+          /*  Image img = new Image();
+            img = Globale.j1.obtenirImage();
+            Grid.SetColumn(img, Globale.j1.positionJoueur.posX);
+            Grid.SetRow(img, Globale.j1.positionJoueur.posY);
+            grillePrincipale.Children.Add(img);*///ancien affichage
 
         }
 
@@ -131,7 +152,40 @@ namespace CDS
             foreach (Poursuivant p in partieNormal.PoursuivantDansLaPartie) 
             {
                 Image img = new Image();
-                img = p.obtenirImage();
+
+                BitmapImage bimg = new BitmapImage();
+
+                bimg.BeginInit();
+
+                bimg.CacheOption = BitmapCacheOption.OnDemand;
+                bimg.CreateOptions = BitmapCreateOptions.DelayCreation;
+                bimg.DecodePixelHeight = 125;
+                bimg.DecodePixelWidth = 125;
+                //rotation selon direction
+                switch (p.getDirection())
+                {
+                    case 1:
+                        bimg.Rotation = Rotation.Rotate180;
+                        break;
+
+                    case 2:
+                        bimg.Rotation = Rotation.Rotate270;
+                        break;
+
+                    //case 3 et  aucune rotation
+
+                    case 4:
+                        bimg.Rotation = Rotation.Rotate90;
+                        break;
+
+                }
+                bimg.UriSource = new Uri(p.getUrlImage(), UriKind.Relative);
+                bimg.EndInit();
+
+                img.Source = bimg;
+
+                //-----
+
                  if(p.positionEntite.posX >= 0 && p.positionEntite.posY >= 0)
                 { 
                   Grid.SetColumn(img,  p.positionEntite.posX);
