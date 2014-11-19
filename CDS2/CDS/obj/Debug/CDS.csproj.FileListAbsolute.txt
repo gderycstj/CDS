@@ -1,0 +1,196 @@
+K:\chambre de survie\CDS\CDS\bin\Debug\CDS.exe.config
+K:\chambre de survie\CDS\CDS\bin\Debug\CDS.exe
+K:\chambre de survie\CDS\CDS\bin\Debug\CDS.pdb
+K:\chambre de survie\CDS\CDS\bin\Debug\Cstj.MvvmToolkit.dll
+K:\chambre de survie\CDS\CDS\bin\Debug\Cstj.MvvmToolkit.pdb
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationPoursuivant.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranFinDePartieMode.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranFinDePartieNiveauEchec.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionPoursuivant.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\jeuNiveau.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuConnexion.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuFinDePartieNiveau.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuGestionProfil.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\JeuNormal.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInscription.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\MenuMode.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuObjet.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuPoursuivant.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuPrincipal.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuEditeur.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInstruction.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuJouer.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSurvie.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationPoursuivant.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranFinDePartieMode.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranFinDePartieNiveauEchec.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionPoursuivant.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\jeuNiveau.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuConnexion.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuFinDePartieNiveau.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuGestionProfil.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\JeuNormal.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInscription.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\MenuMode.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuObjet.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuPoursuivant.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuPrincipal.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuEditeur.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuInstruction.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuJouer.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\menuSurvie.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\App.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS.g.resources
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS.exe
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS.pdb
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationObjet.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionObjet.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationObjet.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionObjet.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranDescriptionObjectif.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranDescriptionObjectif.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranDescriptionNiveau.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranDescriptionNiveau.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\bin\Debug\CDS.exe.config
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.exe
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.pdb
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\bin\Debug\CDS.exe
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\bin\Debug\CDS.pdb
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\bin\Debug\Cstj.MvvmToolkit.dll
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\bin\Debug\Cstj.MvvmToolkit.pdb
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranCreationObjet.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranCreationPoursuivant.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranDescriptionNiveau.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranDescriptionObjectif.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranFinDePartieMode.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranFinDePartieNiveauEchec.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranSupressionObjet.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranSupressionPoursuivant.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\jeuNiveau.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuConnexion.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuFinDePartieNiveau.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuGestionProfil.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\JeuNormal.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuInscription.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\MenuMode.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuObjet.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuPoursuivant.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuPrincipal.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuEditeur.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuInstruction.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuJouer.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuSurvie.baml
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranCreationObjet.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranCreationPoursuivant.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranDescriptionNiveau.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranDescriptionObjectif.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranFinDePartieMode.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranFinDePartieNiveauEchec.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranMeilleurScore.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranSupressionObjet.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\ecranSupressionPoursuivant.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\jeuNiveau.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuConnexion.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuFinDePartieNiveau.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuGestionProfil.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\JeuNormal.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuInscription.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\MenuMode.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuObjet.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuPoursuivant.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuPrincipal.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuEditeur.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuInstruction.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuJouer.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuSelectionNiveau.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\menuSurvie.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\Écran\App.g.cs
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.g.resources
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
+C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationEffets.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionEffet.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranCreationEffets.g.cs
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\ecranSupressionEffet.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\bin\Debug\CDS.exe.config
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.exe
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.pdb
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\bin\Debug\CDS.exe
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\bin\Debug\CDS.pdb
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\bin\Debug\Cstj.MvvmToolkit.dll
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\bin\Debug\MySql.Data.dll
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\bin\Debug\Cstj.MvvmToolkit.pdb
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuPrincipal.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuJouer.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuPrincipal.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\menuJouer.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\App.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.g.resources
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\ecranCreationEffets.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\ecranCreationObjet.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\ecranCreationPoursuivant.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Survie\ecranDescriptionNiveau.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\ModeCustom\ecranDescriptionObjectif.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\ModeCustom\ecranFinDePartieMode.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Survie\ecranFinDePartieNiveauEchec.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Normal\ecranMeilleurScore.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\ecranSupressionEffet.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\ecranSupressionObjet.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\ecranSupressionPoursuivant.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\ModeCustom\jeuNiveau.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\menuConnexion.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Compte\menuGestionProfil.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Normal\JeuNormal.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Compte\menuInscription.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\MenuMode.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\menuObjet.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\menuPoursuivant.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\menuEditeur.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Instruction\menuInstruction.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Survie\menuSelectionNiveau.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Survie\menuSurvie.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\ecranCreationEffets.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\ecranCreationObjet.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\ecranCreationPoursuivant.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Survie\ecranDescriptionNiveau.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\ModeCustom\ecranDescriptionObjectif.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\ModeCustom\ecranFinDePartieMode.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Survie\ecranFinDePartieNiveauEchec.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Normal\ecranMeilleurScore.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\ecranSupressionEffet.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\ecranSupressionObjet.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\ecranSupressionPoursuivant.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\ModeCustom\jeuNiveau.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\menuConnexion.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Compte\menuGestionProfil.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Normal\JeuNormal.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Compte\menuInscription.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\MenuMode.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\menuObjet.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\menuPoursuivant.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Éditeur\menuEditeur.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Instruction\menuInstruction.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Survie\menuSelectionNiveau.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Survie\menuSurvie.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Survie\ecranFinDePartieNiveau.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Survie\ecranFinDePartieNiveau.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Instruction\infoBut.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Instruction\infoBut.g.cs
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Instruction\infoCommande.baml
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\Instruction\infoCommande.g.cs

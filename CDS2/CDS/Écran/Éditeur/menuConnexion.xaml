@@ -1,0 +1,29 @@
+﻿<Window x:Class="CDS.menuConnexion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Connexion" Height="410" Width="450"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Icon="/CDS;component/Image/cds.png">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/CDS;component/Image/2.jpg"/>
+        </Grid.Background>
+        <TextBox x:Name="txtNomUsager" HorizontalAlignment="Left" Height="29" Margin="123,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
+        <PasswordBox x:Name="txtMotDePasse" HorizontalAlignment="Left" Height="29" Margin="123,188,0,0" VerticalAlignment="Top" Width="187" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
+        <Button x:Name="btnConnexion" Content="Connexion" HorizontalAlignment="Left" Height="56" Margin="123,262,0,0" VerticalAlignment="Top" Width="187" FontFamily="Agency FB" FontSize="24" Click="btnConnexion_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Height="67" Margin="47,12,0,0" TextWrapping="Wrap" Text="Connexion" VerticalAlignment="Top" Width="338" FontFamily="/CDS;component/#Broken Type" TextAlignment="Center" FontSize="48"/>
+        <TextBlock HorizontalAlignment="Left" Height="34" Margin="123,84,0,0" TextWrapping="Wrap" Text="Nom d'utilisateur" VerticalAlignment="Top" Width="187" FontFamily="Agency FB" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Height="29" Margin="123,159,0,0" TextWrapping="Wrap" Text="Mot de passe" VerticalAlignment="Top" Width="187" FontFamily="Agency FB" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock x:Name="txtErreur" HorizontalAlignment="Left" Height="40" Margin="10,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="424" FontFamily="Agency FB" FontSize="20" Foreground="#FFF9F8F8" TextDecorations="{x:Null}" TextAlignment="Center"/>
+        <Button x:Name="btnRetourCDS" Content="Retour" HorizontalAlignment="Left" VerticalAlignment="Top" Width="59" Margin="10,328,0,0" FontFamily="Agency FB" FontSize="24" Foreground="#FF4B634D" Click="btnRetourCDS_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

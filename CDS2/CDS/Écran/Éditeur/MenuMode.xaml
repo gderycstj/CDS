@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="CDS.menuMode"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="975">
+    <Grid>
+        <Label Content="Nom:" HorizontalAlignment="Left" Margin="292,10,0,0" VerticalAlignment="Top" FontFamily="Agency FB" Width="57" FontWeight="Bold" FontSize="24"/>
+        <TextBox x:Name="txtNom" HorizontalAlignment="Left" Height="25" Margin="354,18,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="255" Background="#FF4B634D"/>
+        <Separator HorizontalAlignment="Left" Height="45" Margin="70,30,0,0" VerticalAlignment="Top" Width="808" RenderTransformOrigin="0.501,0.655"/>
+        <ComboBox x:Name="cboMode" HorizontalAlignment="Left" Margin="195,75,0,0" VerticalAlignment="Top" Width="97"/>
+        <Label Content="Poursuivants" HorizontalAlignment="Left" Margin="64,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="btnAjoutPoursuivant" Content="+" HorizontalAlignment="Left" Margin="304,75,0,0" VerticalAlignment="Top" Width="32" Height="26">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <DataGrid HorizontalAlignment="Left" Margin="63,110,0,0" VerticalAlignment="Top" Width="333" Height="214" Background="#FF4B634D"/>
+        <ComboBox x:Name="cboObjet" HorizontalAlignment="Left" Margin="629,75,0,0" VerticalAlignment="Top" Width="97"/>
+        <Label Content="Objets" HorizontalAlignment="Left" Margin="544,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="btnObjet" Content="+" HorizontalAlignment="Left" Margin="738,75,0,0" VerticalAlignment="Top" Width="33" Height="26">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+
+        <DataGrid HorizontalAlignment="Left" Margin="545,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6.611,-0.923" Width="333" Height="214" Background="#FF4B634D"/>
+        <Button Content="Ajouter Mode" HorizontalAlignment="Left" Margin="390,343,0,0" VerticalAlignment="Top" Width="161" Height="47">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</UserControl>
