@@ -78,6 +78,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Écran\Instruction\infoBut.xaml.cs">
+      <DependentUpon>infoBut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Instruction\infoCommande.xaml.cs">
+      <DependentUpon>infoCommande.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Instruction\infoObjet1.xaml.cs">
+      <DependentUpon>infoObjet1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Instruction\infoObjet2.xaml.cs">
+      <DependentUpon>infoObjet2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Instruction\infoPoursuivant1.xaml.cs">
+      <DependentUpon>infoPoursuivant1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Écran\Instruction\infoPoursuivant2.xaml.cs">
+      <DependentUpon>infoPoursuivant2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\Éditeur\ecranCreationEffets.xaml.cs">
       <DependentUpon>ecranCreationEffets.xaml</DependentUpon>
     </Compile>
@@ -144,6 +162,30 @@
     <Compile Include="Écran\Survie\menuSurvie.xaml.cs">
       <DependentUpon>menuSurvie.xaml</DependentUpon>
     </Compile>
+    <Page Include="Écran\Instruction\infoBut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Instruction\infoCommande.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Instruction\infoObjet1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Instruction\infoObjet2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Instruction\infoPoursuivant1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\Instruction\infoPoursuivant2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Écran\Éditeur\ecranCreationEffets.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
