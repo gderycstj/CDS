@@ -55,7 +55,8 @@ CREATE TABLE IF NOT EXISTS Scores
 
 ALTER TABLE Scores
 ADD CONSTRAINT Scores_ModesDeJeu_FK
-FOREIGN KEY(idModeDeJeu) REFERENCES ModesDeJeu(idModeDeJeu);
+FOREIGN KEY(idModeDeJeu) REFERENCES ModesDeJeu(idModeDeJeu)
+ON DELETE CASCADE;
 
 ALTER TABLE Scores
 ADD CONSTRAINT Scores_Utilisateurs_FK
@@ -101,8 +102,8 @@ FOREIGN KEY(idUtilisateur) REFERENCES Utilisateurs(idUtilisateur);
 
 ALTER TABLE Niveaux
 ADD CONSTRAINT Niveaux_ModeDeJeu_FK
-FOREIGN KEY(idModeDeJeu) REFERENCES ModesDeJeu(idModeDeJeu);
-
+FOREIGN KEY(idModeDeJeu) REFERENCES ModesDeJeu(idModeDeJeu)
+ON DELETE CASCADE;
 
 
 /*****************************Table Apparences*************************************************/
@@ -145,7 +146,8 @@ CREATE TABLE NiveauxPoursuivants
 
 ALTER TABLE NiveauxPoursuivants
 ADD CONSTRAINT NiveauxPoursuivants_Niveaux_FK
-FOREIGN KEY(idNiveau) REFERENCES Niveaux(idNiveau);
+FOREIGN KEY(idNiveau) REFERENCES Niveaux(idNiveau)
+ON DELETE CASCADE;
 
 ALTER TABLE NiveauxPoursuivants
 ADD CONSTRAINT NiveauxPoursuivants_Poursuivants_FK
@@ -185,7 +187,8 @@ CREATE TABLE NiveauxObjets
 
 ALTER TABLE NiveauxObjets
 ADD CONSTRAINT NiveauxObjets_Niveaux_FK
-FOREIGN KEY(idNiveau) REFERENCES Niveaux(idNiveau);
+FOREIGN KEY(idNiveau) REFERENCES Niveaux(idNiveau)
+ON DELETE CASCADE;
 
 ALTER TABLE NiveauxObjets
 ADD CONSTRAINT NiveauxObjets_Objets_FK
