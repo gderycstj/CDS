@@ -1,0 +1,89 @@
+﻿<Window x:Name="grilleJeuWindow" x:Class="CDS.jeuNiveau"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Jeu" Height="710" Width="1100"
+        ResizeMode="NoResize"
+        Icon="/CDS;component/Image/cds.png"
+        KeyDown="grilleJeuWindow_KeyDown" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/CDS;component/Image/2.jpg"/>
+        </Grid.Background>
+        <Grid x:Name="grillePrincipale" Margin="2.5,2.5,275,2.5">
+            <Grid.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/grille.png" Stretch="None"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Button Content="" HorizontalAlignment="Left" Height="62" Margin="832,332,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="77" Click="gauche" BorderThickness="0" Focusable="False" IsHitTestVisible="True">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/flecheGauche.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Height="68" Margin="914,259,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="67" Click="haut" Focusable="False">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/flecheHaut.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Height="62" Margin="986,332,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="78" Click="droite" Focusable="False">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/flecheDroite.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Height="68" Margin="914,399,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.522,0.068" Click="bas" Focusable="False">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/flecheBas.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPasserTour" Content="" HorizontalAlignment="Left" Height="62" Margin="914,332,0,0" BorderBrush="Transparent" VerticalAlignment="Top" Width="67" Focusable="False" Click="btnPasserTour_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/rond.png"/>
+            </Button.Background>
+        </Button>
+        <Image x:Name="vie1" HorizontalAlignment="Left" Height="64" Margin="813,161,0,0" VerticalAlignment="Top" Width="74" Source="/CDS;component/Image/coeurPlein.png"/>
+        <Image x:Name="vie2" HorizontalAlignment="Left" Height="64" Margin="888,161,0,0" VerticalAlignment="Top" Width="74" Source="/CDS;component/Image/coeurPlein.png"/>
+        <Image x:Name="vie3" HorizontalAlignment="Left" Height="64" Margin="962,161,0,0" VerticalAlignment="Top" Width="74" Source="/CDS;component/Image/coeurPlein.png"/>
+        <TextBlock x:Name="txtTScore" HorizontalAlignment="Left" Height="38" Margin="824,10,0,0" TextWrapping="Wrap" Text="Pointage" VerticalAlignment="Top" Width="241" FontFamily="Agency FB" FontSize="36" TextAlignment="Center" Foreground="#FF4B634D"/>
+        <TextBlock x:Name="txtCScore" HorizontalAlignment="Left" Height="38" Margin="824,53,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="241" FontFamily="Agency FB" FontSize="36" TextAlignment="Center" Foreground="#FF4B634D"/>
+        <TextBlock x:Name="txtTTour" HorizontalAlignment="Left" Height="36" Margin="888,106,0,0" TextWrapping="Wrap" Text="Tours:" VerticalAlignment="Top" Width="77" Foreground="#FF4B634D" FontFamily="Agency FB" FontSize="36"/>
+        <TextBlock x:Name="txtCTour" HorizontalAlignment="Left" Height="38" Margin="970,108,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="83" FontFamily="Agency FB" FontSize="36" Foreground="#FF4B634D"/>
+        <TextBlock x:Name="txtTItem" HorizontalAlignment="Left" Height="41" Margin="832,473,0,0" TextWrapping="Wrap" Text="Objets" VerticalAlignment="Top" Width="77" Foreground="#FF4B6348" FontFamily="Agency FB" FontSize="36" RenderTransformOrigin="0.478,0.537"/>
+        <Ellipse HorizontalAlignment="Left" Height="82" Margin="824,517,0,0" Stroke="#FF4B634D" VerticalAlignment="Top" Width="112" Fill="#FF4B634D"/>
+        <Ellipse HorizontalAlignment="Left" Height="82" Margin="954,517,0,0" Stroke="#FF4B634D" VerticalAlignment="Top" Width="112" Fill="#FF4B634D"/>
+        <Button x:Name="item1" Content="" HorizontalAlignment="Left" Height="53" Margin="842,532,0,0" VerticalAlignment="Top" Width="78" Background="{x:Null}" BorderBrush="{x:Null}" Focusable="False" Click="item1_click"/>
+        <Button x:Name="item2" Content="" HorizontalAlignment="Left" Height="53" Margin="970,532,0,0" VerticalAlignment="Top" Width="78" Background="{x:Null}" BorderBrush="{x:Null}" Focusable="False" Click="item2_click"/>
+        <TextBlock x:Name="mouvement" HorizontalAlignment="Left" Margin="1011,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="55" Foreground="#FF0B8928" FontSize="36" TextAlignment="Center" LineHeight="6" RenderTransformOrigin="-0.128,0.726"/>
+        <TextBlock x:Name="armuresSup" HorizontalAlignment="Left" Margin="1036,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="48" Foreground="#FF494747" FontSize="36" LineHeight="6"/>
+        <Button x:Name="btnQuitter" Content="Quitter la partie" HorizontalAlignment="Left" Height="43" Margin="824,620,0,0" VerticalAlignment="Top" Width="242" FontFamily="Agency FB" FontSize="24" Click="btnQuitter_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
+

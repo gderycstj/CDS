@@ -1,0 +1,39 @@
+﻿<Window x:Class="CDS.menuPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="La chambre de survie" Height="500" Width="600"
+        WindowStyle="ThreeDBorderWindow"
+        ResizeMode="NoResize" Icon="/CDS;component/Image/cds.png" WindowStartupLocation="CenterScreen"
+       >
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/CDS;component/Image/2.jpg"/>
+        </Grid.Background>
+
+        <TextBlock Name="txtTitre" HorizontalAlignment="Left" Margin="74,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="447" Height="65" FontSize="72" FontFamily="/CDS;component/#Broken Type" TextAlignment="Center">
+            <TextBlock.Background>
+                <ImageBrush/>
+            </TextBlock.Background><Run Language="fr-ca" Text="La chambre de survie"/></TextBlock>
+
+        <Button  x:Name="btnJouer" Content="Jouer" Margin="74,131,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="447" Height="47" FontFamily="Agency FB" FontSize="36" Click="btnJouer_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Name="btnInstruction" Content="Instruction" HorizontalAlignment="Left" Margin="74,201,0,0" VerticalAlignment="Top" Width="447" Height="47" Click="btnInstruction_Click" FontFamily="Agency FB" FontSize="36">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Name="btnEditeur" Content="Éditeur" HorizontalAlignment="Left" VerticalAlignment="Top" Width="447" Margin="74,297,0,0" Height="47" Click="btnEditeur_Click" FontFamily="Agency FB" FontSize="36" BorderBrush="#FF707070">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Name="btnQuitter" Content="Quitter" HorizontalAlignment="Left" Margin="74,368,0,0" VerticalAlignment="Top" Width="447" Height="47" Click="btnQuitter_Click" FontFamily="Agency FB" FontSize="36">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
