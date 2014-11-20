@@ -1,55 +1,54 @@
-Niveau 1:
+Niveau 1: Que la fête commence!
 Carré-Losange
 Atteindre 7500 points
-Potion de vitesse,Bouclier,Potion de vie
+Potion de vitesse,Barrière,Potion de vie
 
-Niveau 2:
+Niveau 2:Rupture de Stock: Potion de vie
 Carré-Losange
 Survivre 150 tours
-Potion de vitesse,bouclier
+Potion de vitesse,Barrière
 
 Niveau 3: DIAGONALE
 Losange (Rareté de 1, valeur de 10)
 Une Vie
-Survivre 250 tours points
-Potion de vitesse,Bouclier,Armure
+Survivre 150 tours points
+Potion de vitesse,Barrière,Armure
 
-Niveau 4:
+Niveau 4: Un Triangle!?
 Carré-Losange-Triangle
 Deux Vie
 Survivre 100 tours
-Potion de vitesse,Bouclier,Armure
+Potion de vitesse,Barrière,Armure
  
-Niveau 5:
+Niveau 5:Au gouffre de la mort
 Carré-Losange-Triangle-Zappy-Cercle
 une Vie
-Survivre 500 tours
-Potion de vitesse,Bouclier,Armure
+Survivre 150 tours
+Potion de vitesse,Barrière,Armure
 
-Niveau 6:
+Niveau 6:Zappyyyyyyyyyyyyyyy!
 Zappy(rareté 2, valeur 10)
-Atteindre 10 000 points
+Atteindre 25 000 points
 Potion de vitesse
 
-Niveau 7:
+Niveau 7: Armure à gogo
 Carré-Losange-Triangle-Zappy-Cercle
-obtenir 6 stack d'armure
-Bouclier,Potion de vitesse,Armure,potion de vie
+obtenir 6 objet armure
+Barrière,Potion de vitesse,Armure,potion de vie
 
-Niveau 8:
+Niveau 8: Erreur Impossible
 Triangle-Zappy-Cercle (Rareté de 4, valeur de 5)
 Une Vie
 Obtenir 12 500 points
-Potion de vitesse,Bouclier
+Potion de vitesse,Barrière
  
-Niveau 9:RUNNNNNN
+Niveau 9:Sauvez-vous Pauvre fou!
 Triangle(Rareté de 3, Valeur 8)
 Deux Vie,Deux d'armure
 Obtenir 16 000 points
 potion de vie,Armure
 
-
-Niveau 10: ITS OVER
-Cercle(bocoup)(rareté 2)(valeur 10)
+Niveau 10:c'est la fin!
+Cercle(rareté 1)(valeur 10)
 Survivre 150 tours
-Potion de vie,Armure,Bouclier,Potion de Vitesse
+Potion de vie,Armure,Barrière,Potion de Vitesse
