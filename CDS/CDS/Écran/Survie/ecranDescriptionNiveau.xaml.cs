@@ -64,39 +64,39 @@ namespace CDS
                     imgPoursuivant.Source = new BitmapImage(new Uri(@"/image/potionVie.png", UriKind.Relative));
                     break;
                 case 3:
+                    txtTitreNiveau.Text = "Diagonale?!";
+                    txtPoursuivantDispo.Text = "Losange, Triangle";
+                    txtObjetDispo.Text = "Potion de vitesse, Barrière, Armure";
+                    txtRestriction.Text = "Une Vie Seulement";
+                    imgPoursuivant.Source = new BitmapImage(new Uri(@"/image/LosangeJaune.png", UriKind.Relative));
+                    break;
+                case 4:
                     txtTitreNiveau.Text = "Un Triangle!?";
                     txtPoursuivantDispo.Text = "Carré, Losange, Triangle";
                     txtObjetDispo.Text = "Potion de vitesse, Barrière, Armure";
                     txtRestriction.Text = "Deux Vies Seulement";
                     imgPoursuivant.Source = new BitmapImage(new Uri(@"/image/triangle.png", UriKind.Relative));
                     break;
-                case 4:
-                    txtTitreNiveau.Text = "Zappyyyyyyyyyyyyy!";
-                    txtPoursuivantDispo.Text = "Zappy";
-                    txtObjetDispo.Text = "Potion de vitesse";
-                    txtRestriction.Text = "Aucune";
-                    imgPoursuivant.Source = new BitmapImage(new Uri(@"/image/zappy.png", UriKind.Relative));
-                    break;
                 case 5:
-                    txtTitreNiveau.Text = "Armure à gogo";
-                    txtPoursuivantDispo.Text = "Carré, Losange, Triangle, Zappy, Cercle";
-                    txtObjetDispo.Text = "Barrière, Armure";
-                    txtRestriction.Text = "Aucune";
-                    imgPoursuivant.Source = new BitmapImage(new Uri(@"/image/armure.png", UriKind.Relative));
-                    break;
-                case 6:
                     txtTitreNiveau.Text = "Au gouffre de la mort";
                     txtPoursuivantDispo.Text = "Carré, Losange, Zappy, Cercle";
                     txtObjetDispo.Text = "Potion de vitesse, Barrière, Armure";
                     txtRestriction.Text = "Une Vie Seulement";
                     imgPoursuivant.Source = new BitmapImage(new Uri(@"/image/coeurPlein.png", UriKind.Relative));
                     break;
+                case 6:
+                    txtTitreNiveau.Text = "Zappyyyyyyyyyyyyy!";
+                    txtPoursuivantDispo.Text = "Zappy";
+                    txtObjetDispo.Text = "Potion de vitesse";
+                    txtRestriction.Text = "Aucune";
+                    imgPoursuivant.Source = new BitmapImage(new Uri(@"/image/zappy.png", UriKind.Relative));
+                    break;
                 case 7:
-                    txtTitreNiveau.Text = "Diagonale?!";
-                    txtPoursuivantDispo.Text = "Losange, Triangle";
-                    txtObjetDispo.Text = "Potion de vitesse, Barrière, Armure";
-                    txtRestriction.Text = "Une Vie Seulement";
-                    imgPoursuivant.Source = new BitmapImage(new Uri(@"/image/LosangeJaune.png", UriKind.Relative));
+                    txtTitreNiveau.Text = "Armure à gogo";
+                    txtPoursuivantDispo.Text = "Carré, Losange, Triangle, Zappy, Cercle";
+                    txtObjetDispo.Text = "Barrière, Armure";
+                    txtRestriction.Text = "Aucune";
+                    imgPoursuivant.Source = new BitmapImage(new Uri(@"/image/armure.png", UriKind.Relative));
                     break;
                 case 8:
                     txtTitreNiveau.Text = "Erreur Impossible";

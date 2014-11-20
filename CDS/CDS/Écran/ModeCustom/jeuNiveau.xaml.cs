@@ -786,14 +786,13 @@ namespace CDS
                 switch(Globale.iNumeroDuNiveauAJouer)
                 {
                     case 3:
+                    Globale.vie.nbVieActu = 1;
+                    break;
+                    case 4:
                     Globale.vie.nbVieActu = 2;
                     break;
 
-                    case 6:
-                    Globale.vie.nbVieActu = 1;
-                    break;
-
-                    case 7:
+                    case 5:
                     Globale.vie.nbVieActu = 1;
                     break;
 

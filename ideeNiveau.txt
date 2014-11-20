@@ -8,34 +8,33 @@ Carré-Losange
 Survivre 150 tours
 Potion de vitesse,bouclier
 
-Niveau 3:
+Niveau 3: DIAGONALE
+Losange (Rareté de 1, valeur de 10)
+Une Vie
+Survivre 250 tours points
+Potion de vitesse,Bouclier,Armure
+
+Niveau 4:
 Carré-Losange-Triangle
 Deux Vie
 Survivre 100 tours
 Potion de vitesse,Bouclier,Armure
  
-Niveau 4:
-Zappy(rareté 2, valeur 10)
-Atteindre 10 000 points
-Potion de vitesse
-
 Niveau 5:
-Carré-Losange-Triangle-Zappy-Cercle
-obtenir 12 stack d'armure
-Bouclier,Potion de vitesse,Armure,potion de vie
-
-
-Niveau 6:
 Carré-Losange-Triangle-Zappy-Cercle
 une Vie
 Survivre 500 tours
 Potion de vitesse,Bouclier,Armure
 
-Niveau 7: DIAGONALE
-Losange (Rareté de 1, valeur de 10)
-Une Vie
-Survivre 250 tours points
-Potion de vitesse,Bouclier,Armure
+Niveau 6:
+Zappy(rareté 2, valeur 10)
+Atteindre 10 000 points
+Potion de vitesse
+
+Niveau 7:
+Carré-Losange-Triangle-Zappy-Cercle
+obtenir 6 stack d'armure
+Bouclier,Potion de vitesse,Armure,potion de vie
 
 Niveau 8:
 Triangle-Zappy-Cercle (Rareté de 4, valeur de 5)

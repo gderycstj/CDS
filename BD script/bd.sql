@@ -623,7 +623,7 @@ INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)
 VALUES
 ((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Survie')
 ,(SELECT idUtilisateur  FROM Utilisateurs  WHERE nom = 'Admin')
-,(SELECT idObjectif FROM Objectifs WHERE nom = 'Tour' AND valeurObjectif = '100')
+,(SELECT idObjectif FROM Objectifs WHERE nom = 'Tour' AND valeurObjectif = '150')
 ,3
 );
 
@@ -631,7 +631,7 @@ INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)
 VALUES
 ((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Survie')
 ,(SELECT idUtilisateur  FROM Utilisateurs  WHERE nom = 'Admin')
-,(SELECT idObjectif FROM Objectifs WHERE nom = 'Point' AND valeurObjectif = '25000')
+,(SELECT idObjectif FROM Objectifs WHERE nom = 'Tour' AND valeurObjectif = '100')
 ,4
 );
 
@@ -639,7 +639,7 @@ INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)
 VALUES
 ((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Survie')
 ,(SELECT idUtilisateur  FROM Utilisateurs  WHERE nom = 'Admin')
-,(SELECT idObjectif FROM Objectifs WHERE nom = 'Armure' AND valeurObjectif = '6')
+,(SELECT idObjectif FROM Objectifs WHERE nom = 'Tour' AND valeurObjectif = '150')
 ,5
 );
 
@@ -647,7 +647,7 @@ INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)
 VALUES
 ((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Survie')
 ,(SELECT idUtilisateur  FROM Utilisateurs  WHERE nom = 'Admin')
-,(SELECT idObjectif FROM Objectifs WHERE nom = 'Tour' AND valeurObjectif = '150')
+,(SELECT idObjectif FROM Objectifs WHERE nom = 'Point' AND valeurObjectif = '25000')
 ,6
 );
 
@@ -655,7 +655,7 @@ INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)
 VALUES
 ((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Survie')
 ,(SELECT idUtilisateur  FROM Utilisateurs  WHERE nom = 'Admin')
-,(SELECT idObjectif FROM Objectifs WHERE nom = 'Tour' AND valeurObjectif = '150')
+,(SELECT idObjectif FROM Objectifs WHERE nom = 'Armure' AND valeurObjectif = '6')
 ,7
 );
 
@@ -744,16 +744,6 @@ VALUES
 ((SELECT idNiveau FROM Niveaux AS n
 INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
 WHERE nom = 'Survie' AND numNiveau = '3')
-,(SELECT idObjet FROM Objets WHERE nom = 'Armure')
-,2
-,25
-);
-
-INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
-VALUES
-((SELECT idNiveau FROM Niveaux AS n
-INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '3')
 ,(SELECT idObjet FROM Objets WHERE nom = 'Barriere')
 ,2
 ,25
@@ -768,9 +758,39 @@ WHERE nom = 'Survie' AND numNiveau = '3')
 ,2
 ,25
 );
-/* */
 
+INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
+VALUES
+((SELECT idNiveau FROM Niveaux AS n
+INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
+WHERE nom = 'Survie' AND numNiveau = '3')
+,(SELECT idObjet FROM Objets WHERE nom = 'Armure')
+,2
+,25
+);
+
+/* */
 /* Objet Niveau 4 */
+INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
+VALUES
+((SELECT idNiveau FROM Niveaux AS n
+INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
+WHERE nom = 'Survie' AND numNiveau = '4')
+,(SELECT idObjet FROM Objets WHERE nom = 'Armure')
+,2
+,25
+);
+
+INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
+VALUES
+((SELECT idNiveau FROM Niveaux AS n
+INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
+WHERE nom = 'Survie' AND numNiveau = '4')
+,(SELECT idObjet FROM Objets WHERE nom = 'Barriere')
+,2
+,25
+);
+
 INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
 VALUES
 ((SELECT idNiveau FROM Niveaux AS n
@@ -798,29 +818,6 @@ VALUES
 ((SELECT idNiveau FROM Niveaux AS n
 INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
 WHERE nom = 'Survie' AND numNiveau = '5')
-,(SELECT idObjet FROM Objets WHERE nom = 'Armure')
-,2
-,25
-);
-
-/* */
-
-/* Objet Niveau 6 */
-INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
-VALUES
-((SELECT idNiveau FROM Niveaux AS n
-INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '6')
-,(SELECT idObjet FROM Objets WHERE nom = 'Barriere')
-,2
-,25
-);
-
-INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
-VALUES
-((SELECT idNiveau FROM Niveaux AS n
-INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '6')
 ,(SELECT idObjet FROM Objets WHERE nom = 'Sprint')
 ,2
 ,25
@@ -830,8 +827,20 @@ INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
 VALUES
 ((SELECT idNiveau FROM Niveaux AS n
 INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '6')
+WHERE nom = 'Survie' AND numNiveau = '5')
 ,(SELECT idObjet FROM Objets WHERE nom = 'Armure')
+,2
+,25
+);
+/* */
+
+/* Objet Niveau 6 */
+INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
+VALUES
+((SELECT idNiveau FROM Niveaux AS n
+INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
+WHERE nom = 'Survie' AND numNiveau = '6')
+,(SELECT idObjet FROM Objets WHERE nom = 'Sprint')
 ,2
 ,25
 );
@@ -844,16 +853,6 @@ VALUES
 INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
 WHERE nom = 'Survie' AND numNiveau = '7')
 ,(SELECT idObjet FROM Objets WHERE nom = 'Barriere')
-,2
-,25
-);
-
-INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
-VALUES
-((SELECT idNiveau FROM Niveaux AS n
-INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '7')
-,(SELECT idObjet FROM Objets WHERE nom = 'Sprint')
 ,2
 ,25
 );
@@ -1007,19 +1006,9 @@ VALUES
 ((SELECT idNiveau FROM Niveaux AS n
 INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
 WHERE nom = 'Survie' AND numNiveau = '3')
-,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'carré vert')
-,5
-,1
-);
-
-INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
-VALUES
-((SELECT idNiveau FROM Niveaux AS n
-INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '3')
 ,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Losange Mauve')
-,5
-,3
+,10
+,1
 );
 
 INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
@@ -1029,7 +1018,7 @@ INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
 WHERE nom = 'Survie' AND numNiveau = '3')
 ,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Triangle')
 ,1
-,12
+,15
 );
 /* */
 
@@ -1039,11 +1028,30 @@ VALUES
 ((SELECT idNiveau FROM Niveaux AS n
 INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
 WHERE nom = 'Survie' AND numNiveau = '4')
-,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'zappy')
-,15
+,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'carré vert')
+,5
 ,1
 );
 
+INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
+VALUES
+((SELECT idNiveau FROM Niveaux AS n
+INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
+WHERE nom = 'Survie' AND numNiveau = '4')
+,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Losange Mauve')
+,5
+,3
+);
+
+INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
+VALUES
+((SELECT idNiveau FROM Niveaux AS n
+INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
+WHERE nom = 'Survie' AND numNiveau = '4')
+,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Triangle')
+,1
+,12
+);
 /* */
 
 /* Poursuivant Niveau 5 */
@@ -1067,15 +1075,6 @@ WHERE nom = 'Survie' AND numNiveau = '5')
 ,3
 );
 
-INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
-VALUES
-((SELECT idNiveau FROM Niveaux AS n
-INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '5')
-,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Triangle')
-,1
-,12
-);
 
 INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
 VALUES
@@ -1085,6 +1084,16 @@ WHERE nom = 'Survie' AND numNiveau = '5')
 ,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'zappy')
 ,3
 ,6
+);
+
+INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
+VALUES
+((SELECT idNiveau FROM Niveaux AS n
+INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
+WHERE nom = 'Survie' AND numNiveau = '5')
+,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'cercle')
+,7
+,10
 );
 /* */
 
@@ -1094,6 +1103,19 @@ VALUES
 ((SELECT idNiveau FROM Niveaux AS n
 INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
 WHERE nom = 'Survie' AND numNiveau = '6')
+,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'zappy')
+,15
+,1
+);
+
+/* */
+
+/* Poursuivant Niveau 7 */
+INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
+VALUES
+((SELECT idNiveau FROM Niveaux AS n
+INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
+WHERE nom = 'Survie' AND numNiveau = '7')
 ,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'carré vert')
 ,5
 ,1
@@ -1103,43 +1125,10 @@ INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
 VALUES
 ((SELECT idNiveau FROM Niveaux AS n
 INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '6')
+WHERE nom = 'Survie' AND numNiveau = '7')
 ,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Losange Mauve')
 ,5
 ,3
-);
-
-
-INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
-VALUES
-((SELECT idNiveau FROM Niveaux AS n
-INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '6')
-,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'zappy')
-,3
-,6
-);
-
-INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
-VALUES
-((SELECT idNiveau FROM Niveaux AS n
-INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '6')
-,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'cercle')
-,7
-,10
-);
-/* */
-
-/* Poursuivant Niveau 7 */
-INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
-VALUES
-((SELECT idNiveau FROM Niveaux AS n
-INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
-WHERE nom = 'Survie' AND numNiveau = '7')
-,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Losange Mauve')
-,10
-,1
 );
 
 INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
@@ -1149,7 +1138,17 @@ INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
 WHERE nom = 'Survie' AND numNiveau = '7')
 ,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Triangle')
 ,1
-,15
+,12
+);
+
+INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
+VALUES
+((SELECT idNiveau FROM Niveaux AS n
+INNER JOIN ModesDeJeu AS m ON m.idModeDeJeu = n.idModeDeJeu
+WHERE nom = 'Survie' AND numNiveau = '7')
+,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'zappy')
+,3
+,6
 );
 /* */
 
