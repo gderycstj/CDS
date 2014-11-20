@@ -23,6 +23,67 @@ namespace CDS
         public ecranSupressionPoursuivant()
         {
             InitializeComponent();
+            String req = "SELECT nom FROM Poursuivants WHERE idUtilisateur = (SELECT idUtilisateur FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() + "');";
+            List<string>[] listePoursuivant;
+            int col = 0;
+            listePoursuivant = Globale.bdCDS.selection(req, 1, ref col);
+            if (col != 0)
+            {
+                for (int i = 0; i < listePoursuivant.Length; i++)
+                {
+                    cboPoursuivant.Items.Add(listePoursuivant[i][0]);
+                }
+            }
+            else
+            {
+                cboPoursuivant.Items.Add("aucun poursuivant");
+                btnSupprimPoursuivant.IsEnabled = false;
+            }
+            cboPoursuivant.SelectedIndex = 0;
+            imageP();
         }
+
+        private void btnSupprimPoursuivant_Click(object sender, RoutedEventArgs e)
+        {
+             string req = "SELECT * FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() + "' AND MotDePasse = '" + passwordUser.Password + "';";
+
+            int col = 0;
+            Globale.bdCDS.selection(req, 1, ref col);
+
+            if (col != 0) 
+            {
+                req = "DELETE FROM Poursuivants  WHERE idUtilisateur = (SELECT idUtilisateur FROM Utilisateurs u WHERE nom = '" + Globale.j1.getNom() + "') AND nom ='" + cboPoursuivant.SelectedItem.ToString() + "';";
+                col = 0;
+                Globale.bdCDS.supression(req);
+                txtErreur.Text= "votre poursuivant a bien été supprimé";
+                cboPoursuivant.Items.Remove(cboPoursuivant.SelectedItem);
+
+             }
+             else
+            {
+                txtErreur.Text = "Vous n'avez pas rentrer le bon mot de passe";
+            }
+
+
+        }
+
+        private void trouverImageP(object sender, EventArgs e)
+        {
+               imageP();
+        }
+
+        public void imageP() 
+        {
+            string req = "SELECT image FROM Poursuivants p INNER JOIN Apparences a ON a.idApparence = p.idApparence WHERE nom ='" + cboPoursuivant.SelectedItem.ToString() + "';";
+            int col = 0;
+            List<string>[] listImage;
+            listImage = Globale.bdCDS.selection(req, 1, ref col);
+
+
+            if (col != 0)
+            {
+                imgPoursuivant.Source = new BitmapImage(new Uri("pack://application:,,," + listImage[0][0], UriKind.RelativeOrAbsolute));
+            }       
+         }    
     }
 }

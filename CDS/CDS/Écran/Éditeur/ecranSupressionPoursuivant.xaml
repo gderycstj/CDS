@@ -8,15 +8,16 @@
     <Grid>
         <Label Content="nom:" HorizontalAlignment="Left" Height="42" Margin="33,35,0,0" VerticalAlignment="Top" Width="95" FontFamily="Agency FB" FontSize="30" FontWeight="Bold"/>
         <Label Content="Apparence:" HorizontalAlignment="Left" Height="42" Margin="33,92,0,0" VerticalAlignment="Top" Width="137" FontFamily="Agency FB" FontSize="30" FontWeight="Bold"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="128,47,0,0"/>
+        <ComboBox x:Name="cboPoursuivant" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="128,47,0,0" DropDownClosed="trouverImageP"/>
         <Image x:Name="imgPoursuivant" HorizontalAlignment="Left" Height="100" Margin="170,92,0,0" VerticalAlignment="Top" Width="131"/>
-        <Label Content="MDP du créateur:" HorizontalAlignment="Left" Margin="483,119,0,0" VerticalAlignment="Top" Width="170" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.368,0.527"/>
-        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="670,92,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button Content="Supprimer poursuivant" HorizontalAlignment="Left" Margin="670,134,0,0" VerticalAlignment="Top" Width="150">
+        <Label Content="MDP du créateur:" HorizontalAlignment="Left" Margin="485,92,0,0" VerticalAlignment="Top" Width="170" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.368,0.527"/>
+        <PasswordBox x:Name="passwordUser" HorizontalAlignment="Left" Margin="670,92,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button x:Name="btnSupprimPoursuivant" Content="Supprimer poursuivant" HorizontalAlignment="Left" Margin="670,170,0,0" VerticalAlignment="Top" Width="150" Click="btnSupprimPoursuivant_Click" RenderTransformOrigin="0.48,1.091">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
+        <TextBlock x:Name="txtErreur" HorizontalAlignment="Left" Margin="670,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Foreground="#FFFBFBFB" Height="32"/>
 
     </Grid>
 </UserControl>
