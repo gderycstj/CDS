@@ -118,7 +118,7 @@ namespace CDS
          private void btnSuivantObjet_Click_1(object sender, RoutedEventArgs e)
          {
              ToutActiver();
-             btnPoursuivants.IsEnabled = false;
+             btnObjets.IsEnabled = false;
              gridUserControl.Height = 580;
              ViewModel.CurrentView = new infoObjet2();
              btnPrecedentObjet.Visibility = Visibility.Visible;
