@@ -98,7 +98,7 @@ namespace CDS
             bimg.CacheOption = BitmapCacheOption.OnDemand;
             bimg.CreateOptions = BitmapCreateOptions.DelayCreation;
             bimg.DecodePixelHeight = 125;
-            bimg.DecodePixelWidth = 125;
+            bimg.DecodePixelWidth = 150;
             bimg.UriSource = new Uri(Globale.j1.pathImage, UriKind.Relative);
 
             bimg.EndInit();
@@ -110,6 +110,31 @@ namespace CDS
             Grid.SetRow(img, Globale.j1.positionJoueur.posY);
             grillePrincipale.Children.Add(img);
 
+            //Étoile de dégat
+            if(Globale.j1.toucher==true)
+            {
+                Image img2 = new Image();
+                BitmapImage bimg2 = new BitmapImage();
+
+                bimg2.BeginInit();
+
+                bimg2.CacheOption = BitmapCacheOption.OnDemand;
+                bimg2.CreateOptions = BitmapCreateOptions.DelayCreation;
+                bimg2.DecodePixelHeight = 125;
+                bimg2.DecodePixelWidth = 150;
+                bimg2.UriSource = new Uri(@"/Image/outch.png", UriKind.Relative);
+                    
+                bimg2.EndInit();
+                img2.Source = bimg;
+                img2.Stretch = Stretch.Uniform;
+
+
+                Grid.SetColumn(img2, Globale.j1.positionJoueur.posX);
+                Grid.SetRow(img2, Globale.j1.positionJoueur.posY);
+                grillePrincipale.Children.Add(img2);
+
+                Globale.j1.toucher =false;
+            }
         }
 
         //fonction test

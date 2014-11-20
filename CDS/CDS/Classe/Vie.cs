@@ -49,6 +49,7 @@ namespace CDS
                     nbVieActu -= 1;
                     toursImmunite +=1;
                 }
+                Globale.j1.toucher= true;
              }
             else
             {

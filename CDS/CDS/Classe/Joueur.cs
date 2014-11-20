@@ -17,6 +17,7 @@ namespace CDS
         public bool estConnecte;
         public Position positionJoueur{get;set;}
         public int vitesse { get;set;}
+        public bool toucher { get;set;}
 
         public Joueur()
         {
@@ -26,6 +27,7 @@ namespace CDS
             estConnecte = false;
             positionJoueur = new Position(5,5);
             vitesse = 1;
+            toucher = false;
         }
 
        public string getNom()

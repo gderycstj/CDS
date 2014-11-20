@@ -9,6 +9,8 @@ namespace CDS
     public class Effet:Entite
     {
            List<Effet> listeEffet;
+           bool estDangereux = false;
+
 		public Effet(string listC,string url):base(listC,url)
         {
         }
@@ -66,14 +68,15 @@ namespace CDS
             char lettre2;
             char lettre3;
 
-            char[] sousCMD={'\0'}; //Une sous liste pour savoir quoi faire pour le if
+            string sousCMD = ""; //Une sous liste pour savoir quoi faire pour le if
+            string[] tabCMD = { "" };
 
             int numero;
             int iLecture = 0;
             int incrementation=0;// la profondeur et quantiter de if dans un if dans un if dans... etc.
             int iEcriture=0;//
 
-            bool endif=false;
+            bool faitwhile = true;
             //Lecture de CMD
             while(CMD!="")
             {
@@ -94,19 +97,35 @@ namespace CDS
                                switch (direction)
                                {
                                    case 1:
-                                       mouvementSud();
+                                       if (mouvementSud())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
 
                                    case 2:
-                                       mouvementOuest();
+                                       if (mouvementOuest())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
 
                                    case 3:
-                                       mouvementNord();
+                                       if (mouvementNord())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
 
                                    case 4:
-                                       mouvementEst();
+                                       if (mouvementEst())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
                                }
                                break;
@@ -116,19 +135,35 @@ namespace CDS
                                switch (direction)
                                {
                                    case 2:
-                                       mouvementSud();
+                                       if (mouvementNord())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
 
                                    case 3:
-                                       mouvementOuest();
+                                       if (mouvementEst())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
 
                                    case 4:
-                                       mouvementNord();
+                                       if (mouvementSud())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
 
                                    case 1:
-                                       mouvementEst();
+                                       if (mouvementOuest())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
                                }
                                break;
@@ -138,19 +173,35 @@ namespace CDS
                                switch (direction)
                                {
                                    case 3:
-                                       mouvementSud();
+                                       if (mouvementSud())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
 
                                    case 4:
-                                       mouvementOuest();
+                                       if (mouvementOuest())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
 
                                    case 1:
-                                       mouvementNord();
+                                       if (mouvementNord())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
 
                                    case 2:
-                                       mouvementEst();
+                                       if (mouvementEst())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
                                }
                                break;
@@ -160,19 +211,35 @@ namespace CDS
                                switch (direction)
                                {
                                    case 4:
-                                       mouvementSud();
+                                       if (mouvementNord())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
 
                                    case 1:
-                                       mouvementOuest();
+                                       if (mouvementEst())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
 
                                    case 2:
-                                       mouvementNord();
+                                       if (mouvementSud())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
 
                                    case 3:
-                                       mouvementEst();
+                                       if (mouvementOuest())
+                                       {
+                                           CMD = "";
+                                           return false;
+                                       }
                                        break;
                                }
                                break;
@@ -206,10 +273,15 @@ namespace CDS
                        lettre2 = CMD[iLecture];
                        iLecture++;
 
+                       lettre3 = CMD[iLecture];
+                       iLecture++;
+
                        //...pouvoir isolet la/les actions en cas de true
-                       endif = false;
+                       incrementation = 0;
+                       faitwhile = true;
                        iEcriture = 0;
-                       while (endif)
+                       sousCMD = "";
+                       while (faitwhile)
                        {
                            switch (CMD[iLecture])
                            {
@@ -218,7 +290,8 @@ namespace CDS
                                    //on veut l'acolade dans la sousliste
                                    if (incrementation != 0)
                                    {
-                                       sousCMD[iEcriture] = CMD[iLecture];
+                                       sousCMD = sousCMD.Insert(iEcriture, CMD.Substring(iLecture, 1));
+                                       //sousCMD[iEcriture] = CMD[iLecture];
                                        iEcriture++;
                                    }
                                    incrementation++;
@@ -228,30 +301,31 @@ namespace CDS
                                    //idem de l'autre acolade
                                    if (incrementation != 1)
                                    {
-                                       sousCMD[iEcriture] = CMD[iLecture];
+                                       sousCMD = sousCMD.Insert(iEcriture, CMD.Substring(iLecture, 1));
+                                       //sousCMD[iEcriture] = CMD[iLecture];
                                        iEcriture++;
                                    }
                                    incrementation--;
                                    break;
 
                                default:
-                                   sousCMD[iEcriture] = CMD[iLecture];
+                                   sousCMD = sousCMD.Insert(iEcriture, CMD.Substring(iLecture, 1));
+                                   //sousCMD[iEcriture]=CMD[iLecture];
                                    iEcriture++;
                                    break;
                            }
 
                            iLecture++;
                            if (incrementation <= 0)
-                               endif = true;
+                               faitwhile = false;
                        }
 
                        //on lit la lettre prise en réserve plus tôt pour savoir quoi vérifier
                        switch (lettre2)
                        {
                            //=====Joueur=====
-                           case 'p':
-                               lettre3 = CMD[iLecture];
-                               iLecture++;
+                           case 'j':
+
 
                                switch (lettre3)
                                {
@@ -261,22 +335,38 @@ namespace CDS
                                        {
                                            case 1:
                                                if (ifJoueurSud())
-                                                   lire(sousCMD);
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
                                                break;
 
                                            case 2:
                                                if (ifJoueurOuest())
-                                                   lire(sousCMD);
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
                                                break;
 
                                            case 3:
                                                if (ifJoueurNord())
-                                                   lire(sousCMD);
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
                                                break;
 
                                            case 4:
                                                if (ifJoueurEst())
-                                                   lire(sousCMD);
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
                                                break;
                                        }
                                        break;
@@ -284,24 +374,40 @@ namespace CDS
                                    case 'd':
                                        switch (direction)
                                        {
-                                           case 2:
-                                               if (ifJoueurSud())
-                                                   lire(sousCMD);
-                                               break;
-
-                                           case 3:
-                                               if (ifJoueurOuest())
-                                                   lire(sousCMD);
-                                               break;
-
                                            case 4:
-                                               if (ifJoueurNord())
-                                                   lire(sousCMD);
+                                               if (ifJoueurSud())
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
                                                break;
 
                                            case 1:
+                                               if (ifJoueurOuest())
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
+                                               break;
+
+                                           case 2:
+                                               if (ifJoueurNord())
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
+                                               break;
+
+                                           case 3:
                                                if (ifJoueurEst())
-                                                   lire(sousCMD);
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
                                                break;
                                        }
                                        break;
@@ -311,22 +417,38 @@ namespace CDS
                                        {
                                            case 3:
                                                if (ifJoueurSud())
-                                                   lire(sousCMD);
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
                                                break;
 
                                            case 4:
                                                if (ifJoueurOuest())
-                                                   lire(sousCMD);
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
                                                break;
 
                                            case 1:
                                                if (ifJoueurNord())
-                                                   lire(sousCMD);
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
                                                break;
 
                                            case 2:
                                                if (ifJoueurEst())
-                                                   lire(sousCMD);
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
                                                break;
                                        }
                                        break;
@@ -334,34 +456,56 @@ namespace CDS
                                    case 'g':
                                        switch (direction)
                                        {
-                                           case 4:
-                                               if (ifJoueurSud())
-                                                   lire(sousCMD);
-                                               break;
-
-                                           case 1:
-                                               if (ifJoueurOuest())
-                                                   lire(sousCMD);
-                                               break;
-
                                            case 2:
-                                               if (ifJoueurNord())
-                                                   lire(sousCMD);
+                                               if (ifJoueurSud())
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
                                                break;
 
                                            case 3:
+                                               if (ifJoueurOuest())
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
+                                               break;
+
+                                           case 4:
+                                               if (ifJoueurNord())
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
+                                               break;
+
+                                           case 1:
                                                if (ifJoueurEst())
-                                                   lire(sousCMD);
+                                                   if (!lire(sousCMD))
+                                                   {
+                                                       CMD = "";
+                                                       return false;
+                                                   }
                                                break;
                                        }
                                        break;
                                    //Proximité
                                    case 'p':
                                        if (ifJoueurProche())
-                                           lire(sousCMD);
+                                           if (!lire(sousCMD))
+                                           {
+                                               CMD = "";
+                                               return false;
+                                           }
                                        break;
                                }
                                break;
+
+
                            //=====Danger=====
                            case 'd':
                                lettre3 = CMD[iLecture];
@@ -386,7 +530,7 @@ namespace CDS
                                }
                                break;
                            //=====Poursuivant=====
-                           case 'e':
+                           case 'p':
                                lettre3 = CMD[iLecture];
                                iLecture++;
                                switch (lettre3)
@@ -408,9 +552,93 @@ namespace CDS
                                        break;
                                }
                                break;
+
                        }
 
                        break;
+
+                   //=====Random=====
+                   case 'R':
+                       Random Rdm = new Random();
+
+                       numero = 0; //qty de possibilité
+                       faitwhile = true;
+                       iEcriture = 0;
+                       sousCMD = "";
+                       while (faitwhile)
+                       {
+                           switch (CMD[iLecture])
+                           {
+                               case '{':
+                                   //Acolade qui ne viennent pas du Random en cours de traitage
+                                   //on veut l'acolade dans la sousliste
+                                   if (incrementation != 0)
+                                   {
+                                       sousCMD = sousCMD.Insert(iEcriture, CMD.Substring(iLecture, 1));
+                                       iEcriture++;
+                                   }
+                                   else//acolade du random en cours
+                                   {
+                                       numero++;
+
+                                   }
+                                   iLecture++;
+                                   incrementation++;
+                                   break;
+
+                               case '}':
+                                   //idem de l'autre acolade
+                                   if (incrementation != 1)
+                                   {
+                                       sousCMD = sousCMD.Insert(iEcriture, CMD.Substring(iLecture, 1));
+                                       iEcriture++;
+                                   }
+                                   else//acolade du random en cours
+                                   {
+                                       //on ajoute un / pour séparer les chaines de sousCMD comme les actions en plusieur temps dans action()
+                                       sousCMD = sousCMD.Insert(iEcriture, "/");
+                                       iEcriture++;
+                                   }
+                                   iLecture++;
+                                   incrementation--;
+                                   break;
+
+                               default:
+                                   //si on n'est plus dans une des possiblillité du random, on veux pas avoir le début de la prochaine commande
+                                   //le if a la fin vas terminer le while si on entre pas dans ce if
+                                   if (incrementation > 0)
+                                   {
+                                       sousCMD = sousCMD.Insert(iEcriture, CMD.Substring(iLecture, 1));
+                                       iEcriture++;
+                                       iLecture++;
+                                   }
+                                   else
+                                       faitwhile = false;
+                                   break;
+                           }
+
+
+                           if (iLecture >= CMD.Length)
+                               faitwhile = false;
+
+                       }
+
+                       //on cinde sousCMD en plusieur chaine
+                       //un tableau de string avec toutes les possibilitées séparé
+                       tabCMD = sousCMD.Split(new char[] { '/' });
+
+
+                       //Mettre la section de listeCMD dans CMD
+                       sousCMD = tabCMD[Rdm.Next(0, numero)];
+
+                       if (!lire(sousCMD))
+                       {
+                           CMD = "";
+                           return false;
+                       }
+
+                       break;
+                    
 
                     //Degat
                     case 'D': break;
@@ -454,34 +682,53 @@ namespace CDS
         /// <summary>
         /// WIP mouvement vers le haut
         /// </summary>
-        public void mouvementNord()
+        public bool mouvementNord()
         {
             this.positionEntite.posY = positionEntite.posY - 1;
+            return inBoundary();
         }
 
         /// <summary>
         /// WIP mouvement vers le bas
         /// </summary>
-        public void mouvementSud()
+        public bool mouvementSud()
         {
             this.positionEntite.posY = positionEntite.posY + 1;
+            return inBoundary();
         }
 
         /// <summary>
         /// WIP mouvement vers la droite
         /// </summary>
-        public void mouvementEst()
+        public bool mouvementEst()
         {
             this.positionEntite.posX = positionEntite.posX + 1;
+            return inBoundary();
         }
 
         /// <summary>
         /// WIP mouvement vers la gauche
         /// </summary>
-        public void mouvementOuest()
+        public bool mouvementOuest()
         {
             this.positionEntite.posX = positionEntite.posX - 1;
+            return inBoundary();
         }
+
+        /// <summary>
+        /// Valide si l'entité est dans une zone interdite (rouge)
+        /// </summary>
+        /// <returns></returns>
+        public override bool inBoundary()
+        {
+            if (positionEntite.posX == 0 || positionEntite.posX == 10 || positionEntite.posY == 0 || positionEntite.posY == 10)
+            {
+                return true;
+            }
+            else
+            { return false; }
+        }
+
         //Get nécéssaire
         public string getUrlImage()
         {
