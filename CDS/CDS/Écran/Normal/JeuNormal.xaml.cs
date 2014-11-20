@@ -90,6 +90,9 @@ namespace CDS
 
         void AfficherJoueur()
         {
+            
+
+
             Image img = new Image();
             BitmapImage bimg = new BitmapImage();
 
@@ -105,13 +108,13 @@ namespace CDS
             img.Source = bimg;
             img.Stretch = Stretch.Uniform;
 
-
+            
             Grid.SetColumn(img,Globale.j1.positionJoueur.posX);
             Grid.SetRow(img, Globale.j1.positionJoueur.posY);
             grillePrincipale.Children.Add(img);
 
             //Étoile de dégat
-            if(Globale.j1.toucher==true)
+            if (Globale.j1.toucher == true)
             {
                 Image img2 = new Image();
                 BitmapImage bimg2 = new BitmapImage();
@@ -122,19 +125,22 @@ namespace CDS
                 bimg2.CreateOptions = BitmapCreateOptions.DelayCreation;
                 bimg2.DecodePixelHeight = 125;
                 bimg2.DecodePixelWidth = 150;
-                bimg2.UriSource = new Uri(@"/Image/outch.png", UriKind.Relative);
-                    
+                bimg2.UriSource = new Uri("/image/outch.png", UriKind.Relative);
+                
                 bimg2.EndInit();
-                img2.Source = bimg;
+                img2.Source = bimg2;
                 img2.Stretch = Stretch.Uniform;
 
+                img2.Height= img.Height;
+                img2.Width = img.Width;
 
                 Grid.SetColumn(img2, Globale.j1.positionJoueur.posX);
                 Grid.SetRow(img2, Globale.j1.positionJoueur.posY);
                 grillePrincipale.Children.Add(img2);
 
-                Globale.j1.toucher =false;
+                
             }
+            
         }
 
         //fonction test
@@ -571,6 +577,8 @@ namespace CDS
                     timActiv.Start();
                     activerEvent = false;
                 }
+
+                Globale.j1.toucher = false;
 
             }
 			
