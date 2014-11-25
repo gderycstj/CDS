@@ -13,24 +13,85 @@
             <ComboBox.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </ComboBox.Background>
-       </ComboBox>
-            <Label Content="Poursuivants" HorizontalAlignment="Left" Margin="64,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
-        <Button x:Name="btnAjoutPoursuivant" Content="+" HorizontalAlignment="Left" Margin="304,75,0,0" VerticalAlignment="Top" Width="32" Height="26" Click="btnPoursuivants_Click" >
+        </ComboBox>
+        <Label Content="Poursuivants" HorizontalAlignment="Left" Margin="64,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="btnAjoutPoursuivant" Content="+" HorizontalAlignment="Left" Margin="377,76,0,0" VerticalAlignment="Top" Width="32" Height="26" Click="btnPoursuivants_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <DataGrid x:Name="dataPoursuivant" HorizontalAlignment="Left" Margin="64,110,0,0" VerticalAlignment="Top" Width="333" Height="214" Background="#FF4B634D">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Nom" IsReadOnly="True"  Width="120"/>
-                <DataGridTextColumn Header="Valeur" IsReadOnly="True"  Width="70"/>
-                <DataGridTextColumn Header="Rarete" IsReadOnly="True"  Width="70"/>
-                <DataGridTextColumn Header="Supprim" IsReadOnly="True"  Width="60"/>
-            </DataGrid.Columns>
 
+        <Grid x:Name="grille_poursuivants" Width="340" Height="214" Margin="64,110,578,76" Background="#FF4B634D" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.8*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="1.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.4*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="0">
+                <Label Content="Poursuivant" HorizontalAlignment="Left" Margin="-1" VerticalAlignment="Top"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="1">
+                <Label Content="Valeur"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="2">
+                <Label Content="Rareté" />
+            </Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="3">
+                <Label Content="Supression" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="74"/>
+            </Border>
 
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="1"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="2"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="3" Margin="0,0,7,0"></Border>
 
-        </DataGrid>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="1"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="2"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="3" Margin="0,0,7,0"></Border>
+
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="1"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="2"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="3" Margin="0,0,7,0"></Border>
+
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="1"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="2"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="3" Margin="0,0,7,0"></Border>
+
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="1"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="2"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="3" Margin="0,0,7,0"></Border>
+
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="1"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="2"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="3" Margin="0,0,7,0"></Border>
+
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="1"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="2"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="3" Margin="0,0,7,0"></Border>
+
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="1"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="2"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="3" Margin="0,0,7,0"></Border>
+        </Grid>
         <ComboBox x:Name="cboObjet" HorizontalAlignment="Left" Margin="629,75,0,0" VerticalAlignment="Top" Width="97">
             <ComboBox.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
@@ -44,10 +105,14 @@
         </Button>
 
         <DataGrid HorizontalAlignment="Left" Margin="545,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6.611,-0.923" Width="333" Height="214" Background="#FF4B634D"/>
-        <Button Content="Ajouter Mode" HorizontalAlignment="Left" Margin="391,324,0,0" VerticalAlignment="Top" Width="161" Height="47">
+        <Button Content="Ajouter Mode" HorizontalAlignment="Left" Margin="391,324,0,0" VerticalAlignment="Top" Width="161" Height="41">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
+        <TextBox x:Name="txtValeur" HorizontalAlignment="Left" Height="21" Margin="305,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="22"/>
+        <Label Content="V" HorizontalAlignment="Left" Margin="305,54,0,0" VerticalAlignment="Top" Height="25"/>
+        <TextBox  x:Name="txtRarete" HorizontalAlignment="Left" Height="21" Margin="341,79,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="25"/>
+        <Label  Content="R" HorizontalAlignment="Left" Margin="349,54,0,0" VerticalAlignment="Top" Height="25"/>
     </Grid>
 </UserControl>

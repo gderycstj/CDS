@@ -20,12 +20,23 @@ namespace CDS
     /// </summary>
     public partial class menuMode : UserControl
     {
-        public class Poursuivant
+        private class PoursuivantNiveau
         {
-            public string Nom;
-            public string Valeur;
-            public string Rarete;
+            public string nom{get;set;}
+            public string valeur{get;set;}
+            public string rarete{get;set;}
+
+            public PoursuivantNiveau(string n, string v, string r) 
+            {
+                rarete = r;
+                valeur = v;
+                nom = n;
+            }
+
         }
+
+       List<PoursuivantNiveau> lstPoursuivant;
+
 
         public menuMode()
         {
@@ -59,11 +70,27 @@ namespace CDS
 
         private void btnPoursuivants_Click(object sender, RoutedEventArgs e) 
         {
-                string poursuivant = cboPoursuivant.SelectedIndex.ToString();
+            if (txtRarete.Text == "" || txtValeur.Text == "") 
+            {
+                MessageBox.Show("Vous devez rentrer une valeur et une rareté");
+            
+            }
+            else 
+            {
+                 lstPoursuivant.Add(new PoursuivantNiveau(cboPoursuivant.SelectedItem.ToString(),txtValeur.Text,txtRarete.Text));
 
-                string[] row = new string[] {"allo","0","0","0"};
-                dataPoursuivant.Items.Add(new Poursuivant() {Nom = "toto", Rarete= "0", Valeur="0"});
+                 foreach(PoursuivantNiveau p in lstPoursuivant)
+                 {
+                   
+        
+                 
+                 
+                 }
+
+            }
+
          }
+
 
     }
 }

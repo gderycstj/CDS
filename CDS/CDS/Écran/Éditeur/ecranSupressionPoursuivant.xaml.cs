@@ -57,7 +57,8 @@ namespace CDS
                 Globale.bdCDS.supression(req);
                 txtErreur.Text= "votre poursuivant a bien été supprimé";
                 cboPoursuivant.Items.Remove(cboPoursuivant.SelectedItem);
-
+                cboPoursuivant.SelectedIndex = 0;
+                imageP();
              }
              else
             {
