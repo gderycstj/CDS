@@ -6,44 +6,95 @@
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="975">
     <Grid>
-        <Label Content="Nom:" HorizontalAlignment="Left" Margin="29,19,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontWeight="Bold"  FontSize="18"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="73,19,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="248" />
-        <Label Content="Valeur en points:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.947,2.308" Margin="29,50,0,0" Width="116" FontWeight="Bold" FontFamily="Agency FB" Height="31"  FontSize="18"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,53,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.739"/>
-        <Label Content="Apparence:" HorizontalAlignment="Left" Margin="30,81,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Agency FB" FontSize="18"/>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Label Content="Nom:" HorizontalAlignment="Left" Margin="29,19,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontWeight="Bold"  FontSize="18" Foreground="#FF4B634D"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="73,22,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="248" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18" />
+        <Label Content="Valeur en points:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.947,2.308" Margin="29,50,0,0" Width="116" FontWeight="Bold" FontFamily="Agency FB" Height="31"  FontSize="18" Foreground="#FF4B634D"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,53,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.739" Background="#FF4B634D"/>
+        <Label Content="Apparence:" HorizontalAlignment="Left" Margin="30,81,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Agency FB" FontSize="18" Foreground="#FF4B634D"/>
         <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="120" Margin="150,81,0,0"/>
-        <Button Content="Importer image" HorizontalAlignment="Left" Margin="29,159,0,0" VerticalAlignment="Top" Width="93"/>
+        <Button Content="Importer image" HorizontalAlignment="Left" Margin="29,159,0,0" VerticalAlignment="Top" Width="93" FontFamily="Agency FB" FontSize="14">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
         <Button x:Name="btnCreation" Content="Création du poursuivant" HorizontalAlignment="Left" Height="56" Margin="10,227,0,0" VerticalAlignment="Top" Width="231" FontFamily="Agency FB" FontSize="24" >
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="10,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="946"/>
-        <Button Content="-" HorizontalAlignment="Left" Margin="293,248,0,0" VerticalAlignment="Top" Width="28">
+        <TextBlock x:Name="txtCMD" HorizontalAlignment="Left" Margin="10,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="946" FontFamily="Agency FB" FontSize="18" Background="#FF4B634D"/>
+        <Button x:Name="btnTourRetrait" Content="-" HorizontalAlignment="Left" Margin="293,248,0,0" VerticalAlignment="Top" Width="28">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button Content="+" HorizontalAlignment="Left" Margin="293,214,0,0" VerticalAlignment="Top" Width="28" >
+        <Button x:Name="btnTourAjout" Content="+" HorizontalAlignment="Left" Margin="293,214,0,0" VerticalAlignment="Top" Width="28" >
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="386,270,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Action en 0 tours" VerticalAlignment="Top" Margin="336,214,0,0" Height="56" Width="59"/>
-        <TextBlock HorizontalAlignment="Left" Margin="678,19,0,0" TextWrapping="Wrap" Text="Mouvement et action" VerticalAlignment="Top" Width="181" Height="26" FontSize="18" FontFamily="Agency FB" FontWeight="Bold"/>
-        <Button Content="G" HorizontalAlignment="Left" Margin="455,249,0,0" VerticalAlignment="Top" Width="35"/>
-        <Button Content="D" HorizontalAlignment="Left" Margin="511,249,0,0" VerticalAlignment="Top" Width="34" RenderTransformOrigin="-0.029,0.409"/>
-        <Label Content="Tour 0" HorizontalAlignment="Left" Margin="455,215,0,0" VerticalAlignment="Top" Width="79"/>
-        <Button Content="attaque de base" HorizontalAlignment="Left" Margin="293,159,0,0" VerticalAlignment="Top" Width="131" Height="33"/>
-        <Button Content="B" HorizontalAlignment="Left" Margin="487,166,0,0" VerticalAlignment="Top" Width="30"/>
-        <Button Content="H" HorizontalAlignment="Left" Margin="487,121,0,0" VerticalAlignment="Top" Width="30"/>
-        <Button Content="D" HorizontalAlignment="Left" Margin="522,143,0,0" VerticalAlignment="Top" Width="31"/>
-        <Button Content="G" HorizontalAlignment="Left" Margin="455,143,0,0" VerticalAlignment="Top" Width="27"/>
-        <Button Content="Backspace" HorizontalAlignment="Left" Margin="336,85,0,0" VerticalAlignment="Top" Width="88" Height="32"/>
-        <Button Content="Test" HorizontalAlignment="Left" Margin="760,53,0,0" VerticalAlignment="Top" Width="75"/>
-        <ComboBox HorizontalAlignment="Left" Margin="487,19,0,0" VerticalAlignment="Top" Width="120" Height="31"/>
-        <Label Content="Poursuivants" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="345,19,0,0" Width="137" FontWeight="Bold" FontSize="18" FontFamily="Agency FB"/>
-        <Button Content="Effets" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="667,54,0,0" />
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Action en 0 tours" VerticalAlignment="Top" Margin="336,214,0,0" Height="56" Width="59" Foreground="#FF4B634D"/>
+        <TextBlock HorizontalAlignment="Left" Margin="678,19,0,0" TextWrapping="Wrap" Text="Mouvement et action" VerticalAlignment="Top" Width="181" Height="26" FontSize="18" FontFamily="Agency FB" FontWeight="Bold" Foreground="#FF4B634D"/>
+        <Button x:Name="btnTourPrecedent" Content="G" HorizontalAlignment="Left" Margin="455,249,0,0" VerticalAlignment="Top" Width="35" FontFamily="Agency FB" FontSize="14">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnTourSuivant" Content="D" HorizontalAlignment="Left" Margin="511,249,0,0" VerticalAlignment="Top" Width="34" RenderTransformOrigin="-0.029,0.409" FontFamily="Agency FB" FontSize="14">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Tour 0" HorizontalAlignment="Left" Margin="473,216,0,0" VerticalAlignment="Top" Width="59" Foreground="#FF4B634D" FontFamily="Agency FB" FontSize="16"/>
+        <Button x:Name="btnCheck" Content="attaque de base" HorizontalAlignment="Left" Margin="293,159,0,0" VerticalAlignment="Top" Width="131" Height="33" FontFamily="Agency FB" FontSize="18">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnBas" Content="B" HorizontalAlignment="Left" Margin="487,166,0,0" VerticalAlignment="Top" Width="30" FontFamily="Agency FB" FontSize="14">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnHaut" Content="H" HorizontalAlignment="Left" Margin="487,121,0,0" VerticalAlignment="Top" Width="30" FontFamily="Agency FB" FontSize="14">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnDroit" Content="D" HorizontalAlignment="Left" Margin="522,143,0,0" VerticalAlignment="Top" Width="31" FontFamily="Agency FB" FontSize="14">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnGauche" Content="G" HorizontalAlignment="Left" Margin="455,143,0,0" VerticalAlignment="Top" Width="27" FontFamily="Agency FB" FontSize="14">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnBackspace" Content="Backspace" HorizontalAlignment="Left" Margin="293,89,0,0" VerticalAlignment="Top" Width="131" Height="32" FontFamily="Agency FB" FontSize="18">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Test" HorizontalAlignment="Left" Margin="759,54,0,0" VerticalAlignment="Top" Width="75" FontFamily="Agency FB" Height="20">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
+        <ComboBox HorizontalAlignment="Left" Margin="442,19,0,0" VerticalAlignment="Top" Width="120" Height="31" FontFamily="Agency FB" FontSize="16">
+            <ComboBox.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="Poursuivants" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="345,19,0,0" Width="92" FontWeight="Bold" FontSize="18" FontFamily="Agency FB" Foreground="#FF4B634D" OpacityMask="#FF030000"/>
+        <Button Content="Effets" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="667,54,0,0" FontFamily="Agency FB" >
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </UserControl>

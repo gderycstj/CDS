@@ -6,16 +6,20 @@
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="975">
     <Grid>
-        <Label Content="nom:" HorizontalAlignment="Left" Height="42" Margin="33,35,0,0" VerticalAlignment="Top" Width="95" FontFamily="Agency FB" FontSize="30" FontWeight="Bold"/>
-        <ComboBox x:Name="cboMode" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="128,47,0,0"/>
-        <Label Content="MDP du créateur:" HorizontalAlignment="Left" Margin="475,32,0,0" VerticalAlignment="Top" Width="170" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.368,0.527"/>
-        <PasswordBox x:Name="passwordUser" HorizontalAlignment="Left" Margin="669,47,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button x:Name="btnSupprimMode" Content="Supprimer Mode" HorizontalAlignment="Left" Margin="669,109,0,0" VerticalAlignment="Top" Width="150" Click="btnSupprimMode_Click">
+        <Label Content="Nom" HorizontalAlignment="Left" Height="42" Margin="439,15,0,0" VerticalAlignment="Top" Width="50" FontFamily="Agency FB" FontSize="24" FontWeight="Bold" Foreground="#FF4B634D"/>
+        <ComboBox x:Name="cboMode" HorizontalAlignment="Left" VerticalAlignment="Top" Width="184" Margin="379,60,0,0" Height="30" FontFamily="Agency FB" FontSize="16">
+            <ComboBox.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="MDP du créateur" HorizontalAlignment="Left" Margin="393,99,0,0" VerticalAlignment="Top" Width="157" FontSize="24" FontWeight="Bold" RenderTransformOrigin="0.368,0.527" Foreground="#FF4B634D" FontFamily="Agency FB"/>
+        <PasswordBox x:Name="passwordUser" HorizontalAlignment="Left" Margin="379,142,0,0" VerticalAlignment="Top" Width="184" Background="#FF4B634D" Height="26"/>
+        <Button x:Name="btnSupprimMode" Content="Supprimer Mode" HorizontalAlignment="Left" Margin="379,234,0,0" VerticalAlignment="Top" Width="184" Click="btnSupprimMode_Click" Height="51" FontFamily="Agency FB" FontSize="22">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <TextBlock x:Name="txtErreur" HorizontalAlignment="Left" Margin="669,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Foreground="#FFFBFBFB" Height="32"/>
+        <TextBlock x:Name="txtErreur" HorizontalAlignment="Left" Margin="316,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="315" Foreground="#FFFBFBFB" Height="32" FontFamily="Agency FB" FontSize="16"/>
 
     </Grid>
 </UserControl>

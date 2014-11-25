@@ -6,17 +6,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="975">
     <Grid>
-        <Label Content="nom:" HorizontalAlignment="Left" Height="42" Margin="33,35,0,0" VerticalAlignment="Top" Width="95" FontFamily="Agency FB" FontSize="30" FontWeight="Bold"/>
-        <Label Content="Apparence:" HorizontalAlignment="Left" Height="42" Margin="33,92,0,0" VerticalAlignment="Top" Width="137" FontFamily="Agency FB" FontSize="30" FontWeight="Bold"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="128,47,0,0"/>
-        <Image x:Name="imgPoursuivant" HorizontalAlignment="Left" Height="100" Margin="170,92,0,0" VerticalAlignment="Top" Width="131"/>
-        <Label Content="MDP du créateur:" HorizontalAlignment="Left" Margin="476,75,0,0" VerticalAlignment="Top" Width="170" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.368,0.527"/>
-        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="670,92,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button Content="Supprimer Effets" HorizontalAlignment="Left" Margin="670,134,0,0" VerticalAlignment="Top" Width="150">
+        <Label Content="Nom" HorizontalAlignment="Left" Height="42" Margin="455,29,0,0" VerticalAlignment="Top" Width="71" FontFamily="Agency FB" FontSize="30" FontWeight="Bold" Foreground="#FF4B634D"/>
+        <Label Content="Apparence" HorizontalAlignment="Left" Height="42" Margin="723,86,0,0" VerticalAlignment="Top" Width="137" FontFamily="Agency FB" FontSize="30" FontWeight="Bold" Foreground="#FF4B634D"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="398,76,0,0" Height="30">
+            <ComboBox.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </ComboBox.Background>
+        </ComboBox>
+        <Image x:Name="imgPoursuivant" HorizontalAlignment="Left" Height="154" Margin="676,133,0,0" VerticalAlignment="Top" Width="219"/>
+        <Label Content="MDP du créateur" HorizontalAlignment="Left" Margin="416,111,0,0" VerticalAlignment="Top" Width="144" FontSize="24" FontWeight="Bold" RenderTransformOrigin="0.368,0.527" FontFamily="Agency FB" Foreground="#FF4B634D"/>
+        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="398,154,0,0" VerticalAlignment="Top" Width="175" Background="#FF4B634D" Height="30" FontFamily="Agency FB" FontSize="18"/>
+        <Button Content="Supprimer Effets" HorizontalAlignment="Left" Margin="398,256,0,0" VerticalAlignment="Top" Width="175" FontFamily="Agency FB" FontSize="16" Height="50">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
+        <TextBlock x:Name="txtErreur" HorizontalAlignment="Left" Margin="331,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="327" Foreground="#FFFBFBFB" Height="32" FontFamily="Agency FB" FontSize="18"/>
 
     </Grid>
 </UserControl>
