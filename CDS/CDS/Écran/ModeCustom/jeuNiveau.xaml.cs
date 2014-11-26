@@ -676,8 +676,55 @@ namespace CDS
                              validationVie();
                          }
                      }
+                     else
+                     {
+                         tim = null;
+                         timActiv = null;
+                         timerFin.Interval = 1500;
+                         timerFin.Tick += new EventHandler(OnTimedEvent4);
+                         validationVie();
+
+                         grillePrincipale.Children.Clear();
+                         AfficherJoueur();
+                         partieEnCours = false;
+                         timerFin.Start();
+                     }
                  }
              }
+
+            public bool validerObjectif()
+            {
+                switch (partieNormal.objectif.typeObjectif)
+                {
+                    case "Point":
+                        if (partieNormal.score >= partieNormal.objectif.valeurObjectif)
+                        {
+                            return false;
+                        }
+                        break;
+
+                    case "Tour":
+                        if (tour >= partieNormal.objectif.valeurObjectif)
+                        {
+                            return false;
+                        }
+                        break;
+
+                    case "Armure":
+                        if (Globale.vie.nbArmure >= partieNormal.objectif.valeurObjectif)
+                        {
+                            return false;
+                        }
+                        break;
+                    case "Survivre":
+                        if(Globale.vie.nbVieActu == partieNormal.objectif.valeurObjectif)
+                        {
+                            return false;
+                        }
+                    break;
+                }
+                return true;
+            }
 
 
             private void item1_click(object sender, RoutedEventArgs e)
@@ -766,35 +813,6 @@ namespace CDS
                     ecranDescriptionObjectif menuD = new ecranDescriptionObjectif(reponse[0][0], Convert.ToInt32(reponse[0][1]));
                     menuD.ShowDialog();
                 }
-            }
-
-            public bool validerObjectif()
-            {
-                    switch (partieNormal.objectif.typeObjectif)
-                    {
-                        case "Point":
-                            if(partieNormal.score >= partieNormal.objectif.valeurObjectif)
-                            {
-                                return false;
-                            }
-                            break;
-
-                        case "Tour":
-                            if (tour >= partieNormal.objectif.valeurObjectif)
-                            {
-                                return false;
-                            }
-                            break;
-
-                        case "Armure":
-                            if (Globale.vie.nbArmure >= partieNormal.objectif.valeurObjectif)
-                            {
-                                return false;
-                            }
-                            break;
-
-                    }
-                    return true;
             }
 
             private void btnQuitter_Click(object sender, RoutedEventArgs e)

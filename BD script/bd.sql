@@ -519,6 +519,62 @@ VALUES
  ,'**'
 );
 
+INSERT INTO Effets(idUtilisateur,nom,listeCMD)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Vie 2'
+ ,'SS'
+);
+
+INSERT INTO Effets(idUtilisateur,nom,listeCMD)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Armure 2'
+ ,'AA'
+);
+
+INSERT INTO Effets(idUtilisateur,nom,listeCMD)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Armure 3'
+ ,'AAA'
+);
+
+INSERT INTO Effets(idUtilisateur,nom,listeCMD)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Sprint 2'
+ ,'VV'
+);
+
+INSERT INTO Effets(idUtilisateur,nom,listeCMD)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Sprint 3'
+ ,'VVV'
+);
+
+INSERT INTO Effets(idUtilisateur,nom,listeCMD)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Invincibilité 1'
+ ,'*'
+);
+
+INSERT INTO Effets(idUtilisateur,nom,listeCMD)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Invincibilité 3'
+ ,'***'
+);
+
+INSERT INTO Effets(idUtilisateur,nom,listeCMD)
+VALUES
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+ ,'Invincibilité 4'
+ ,'****'
+);
+
 INSERT INTO ObjetsEffets(idObjet,idEffet)
 VALUES
 ((SELECT idObjet FROM Objets WHERE nom = 'Potion de vie')
@@ -601,6 +657,12 @@ INSERT INTO Objectifs(nom,valeurObjectif)
 VALUES
 ('Point'
 ,16000
+);
+
+INSERT INTO Objectifs(nom,valeurObjectif)
+VALUES
+('Survivre'
+,0
 );
 
 INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)

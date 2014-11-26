@@ -8,24 +8,58 @@
     <Grid Margin="10,10,-10,-10">
         <Label Content="Nom:" HorizontalAlignment="Left" Margin="29,19,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontWeight="Bold"  FontSize="18" Foreground="#FF4B634D"/>
         <TextBox HorizontalAlignment="Left" Height="31" Margin="74,19,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="252" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
-        <Label Content="Apparence:" HorizontalAlignment="Left" Height="42" Margin="37,47,0,0" VerticalAlignment="Top" Width="137" FontFamily="Agency FB" FontSize="30" FontWeight="Bold" Foreground="#FF4B634D"/>
-        <Image x:Name="imgObjet" HorizontalAlignment="Left" Height="100" Margin="174,47,0,0" VerticalAlignment="Top" Width="131"/>
-        <Button x:Name="btnCreation" Content="Création de l'objet" HorizontalAlignment="Left" Height="56" Margin="29,254,0,0" VerticalAlignment="Top" Width="231" FontFamily="Agency FB" FontSize="24" >
+        <Label Content="Apparence" HorizontalAlignment="Left" Height="42" Margin="37,47,0,0" VerticalAlignment="Top" Width="118" FontFamily="Agency FB" FontSize="30" FontWeight="Bold" Foreground="#FF4B634D"/>
+        <Image x:Name="imgObjet" HorizontalAlignment="Left" Height="180" Margin="43,96,0,0" VerticalAlignment="Top" Width="283"/>
+        <Button x:Name="btnCreation" Content="Création de l'objet" HorizontalAlignment="Left" Height="56" Margin="339,273,0,0" VerticalAlignment="Top" Width="231" FontFamily="Agency FB" FontSize="24" >
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <ComboBox x:Name="cboEffets" HorizontalAlignment="Left" Margin="648,61,0,0" VerticalAlignment="Top" Width="147" FontFamily="Agency FB" FontSize="18">
+        <ComboBox x:Name="cboEffets" HorizontalAlignment="Left" Margin="669,25,0,0" VerticalAlignment="Top" Width="147" FontFamily="Agency FB" FontSize="18">
             <ComboBox.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </ComboBox.Background>
         </ComboBox>
-        <Label Content="Effets" HorizontalAlignment="Left" Margin="567,50,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" FontFamily="Agency FB" Foreground="#FF4B634D"/>
-        <Button x:Name="btnAjoutEffets" Content="+" HorizontalAlignment="Left" Margin="807,61,0,0" VerticalAlignment="Top" Width="32" Height="26">
+        <Label Content="Effets" HorizontalAlignment="Left" Margin="588,14,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" FontFamily="Agency FB" Foreground="#FF4B634D"/>
+        <Button x:Name="btnAjoutEffets" Content="+" HorizontalAlignment="Left" Margin="828,25,0,0" VerticalAlignment="Top" Width="32" Height="26" Click="btnAjoutEffets_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <DataGrid HorizontalAlignment="Left" Margin="566,96,0,0" VerticalAlignment="Top" Width="333" Height="214" Background="#FF4B634D"/>
+        <Grid HorizontalAlignment="Left" Height="200" Margin="588,76,0,0" VerticalAlignment="Top" Width="339" Background="#FF4B634D" x:Name="Grille_Effet">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="0">
+                <TextBlock HorizontalAlignment="Left" Height="28" Margin="9,0,0,0" TextWrapping="Wrap" Text="Nom de l'effet" VerticalAlignment="Top" Width="150" FontFamily="Agency FB" FontSize="22" TextAlignment="Center"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="1">
+                <TextBlock HorizontalAlignment="Left" Height="28" Margin="9,0,0,0" TextWrapping="Wrap" Text="Supprimer" VerticalAlignment="Top" Width="150" FontFamily="Agency FB" FontSize="22" TextAlignment="Center"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="1"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="1"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="1"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="1"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="1"></Border>
+        </Grid>
+        <ComboBox x:Name="cboApparence" HorizontalAlignment="Left" Margin="160,55,0,0" VerticalAlignment="Top" Width="166" Height="34" FontFamily="Agency FB" FontSize="16" DropDownClosed="cboApparence_DropDownClosed">
+            <ComboBox.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
+            </ComboBox.Background>
+        </ComboBox>
     </Grid>
 </UserControl>
