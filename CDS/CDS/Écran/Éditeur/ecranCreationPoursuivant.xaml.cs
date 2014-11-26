@@ -29,7 +29,26 @@ namespace CDS
         public ecranCreationPoursuivant()
         {
             InitializeComponent();
+            //Liste d'apparence
+            String req2 = "SELECT image FROM Apparences";
+            List<string>[] listeApparence;
+            int col2 = 0;
 
+            String nomTemp1;
+
+            listeApparence = Globale.bdCDS.selection(req2, 1, ref col2);
+
+            for (int i = 0; i < listeApparence.Length; i++)
+            {
+                nomTemp1 = listeApparence[i][0].Substring(7);
+                nomTemp1 = Retourner(nomTemp1);
+                nomTemp1 = nomTemp1.Substring(4);
+                nomTemp1 = Retourner(nomTemp1);
+
+                cboApparence.Items.Add(nomTemp1);
+            }
+
+            cboApparence.SelectedIndex = 0;
 
         }
 
@@ -209,8 +228,21 @@ namespace CDS
             }
         }
 
+        private void cboApparence_DropDownClosed(object sender, EventArgs e)
+        {
+            if (cboApparence.SelectedItem != null)
+            {
 
+                imagePoursuivant.Source = new BitmapImage(new Uri("pack://application:,,,/image/" + cboApparence.SelectedItem.ToString() + ".png", UriKind.RelativeOrAbsolute));
+            }
+        }
 
+        public static string Retourner(string s)
+        {
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
 
 
 
