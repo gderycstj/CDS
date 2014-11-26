@@ -64,7 +64,7 @@ namespace CDS
         {
             if(cboEffets.SelectedItem != null)
             { 
-                if(listeEffets.Count <6)
+                if(listeEffets.Count <1)
                 {
                     listeEffets.Add(cboEffets.SelectedItem.ToString());
                     AfficherElementGrilleEffet();
@@ -94,7 +94,7 @@ namespace CDS
                 nom.SetValue(Grid.ColumnProperty, colonneNom);
                 nom.TextAlignment = TextAlignment.Center;
                 nom.FontFamily = new FontFamily("Agency FB");
-                nom.FontSize = 20;
+                nom.FontSize = 26;
 
                 s.SetValue(Grid.RowProperty, rangee);
                 s.SetValue(Grid.ColumnProperty, colonneSupprim);
@@ -108,6 +108,7 @@ namespace CDS
                 {
                     cboEffets.Items.RemoveAt(cboEffets.SelectedIndex);
                     cboEffets.SelectedIndex=0;
+
                 }
             }
              

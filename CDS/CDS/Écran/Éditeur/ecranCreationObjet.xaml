@@ -10,7 +10,7 @@
         <TextBox HorizontalAlignment="Left" Height="31" Margin="74,19,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="252" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
         <Label Content="Apparence" HorizontalAlignment="Left" Height="42" Margin="37,47,0,0" VerticalAlignment="Top" Width="118" FontFamily="Agency FB" FontSize="30" FontWeight="Bold" Foreground="#FF4B634D"/>
         <Image x:Name="imgObjet" HorizontalAlignment="Left" Height="180" Margin="43,96,0,0" VerticalAlignment="Top" Width="283"/>
-        <Button x:Name="btnCreation" Content="Création de l'objet" HorizontalAlignment="Left" Height="56" Margin="339,273,0,0" VerticalAlignment="Top" Width="231" FontFamily="Agency FB" FontSize="24" >
+        <Button x:Name="btnCreation" Content="Création de l'objet" HorizontalAlignment="Left" Height="56" Margin="350,239,0,0" VerticalAlignment="Top" Width="231" FontFamily="Agency FB" FontSize="24" >
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
@@ -26,18 +26,14 @@
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Grid HorizontalAlignment="Left" Height="200" Margin="588,76,0,0" VerticalAlignment="Top" Width="339" Background="#FF4B634D" x:Name="Grille_Effet">
+        <Grid HorizontalAlignment="Left" Height="70" Margin="588,76,0,0" VerticalAlignment="Top" Width="339" Background="#FF4B634D" x:Name="Grille_Effet">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="1.5*"></RowDefinition>
             </Grid.RowDefinitions>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="0">
                 <TextBlock HorizontalAlignment="Left" Height="28" Margin="9,0,0,0" TextWrapping="Wrap" Text="Nom de l'effet" VerticalAlignment="Top" Width="150" FontFamily="Agency FB" FontSize="22" TextAlignment="Center"/>
