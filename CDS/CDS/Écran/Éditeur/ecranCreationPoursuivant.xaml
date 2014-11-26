@@ -26,56 +26,56 @@
             </Button.Background>
         </Button>
         <TextBlock x:Name="txtCMD" HorizontalAlignment="Left" Margin="10,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="946" FontFamily="Agency FB" FontSize="18" Background="#FF4B634D"/>
-        <Button x:Name="btnTourRetrait" Content="-" HorizontalAlignment="Left" Margin="293,248,0,0" VerticalAlignment="Top" Width="28">
+        <Button x:Name="btnTourRetrait" Content="-" HorizontalAlignment="Left" Margin="293,248,0,0" VerticalAlignment="Top" Width="28" Click="btnTourRetrait_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnTourAjout" Content="+" HorizontalAlignment="Left" Margin="293,214,0,0" VerticalAlignment="Top" Width="28" >
+        <Button x:Name="btnTourAjout" Content="+" HorizontalAlignment="Left" Margin="293,214,0,0" VerticalAlignment="Top" Width="28" Click="btnTourAjout_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="386,270,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Action en 0 tours" VerticalAlignment="Top" Margin="336,214,0,0" Height="56" Width="59" Foreground="#FF4B634D"/>
+        <TextBlock x:Name="txtTourMax" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="336,244,0,0" Height="21" Width="68" Foreground="#FF4B634D" TextAlignment="Center"><Run Language="fr-ca" Text="1"/><Run Text=" tour"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="678,19,0,0" TextWrapping="Wrap" Text="Mouvement et action" VerticalAlignment="Top" Width="181" Height="26" FontSize="18" FontFamily="Agency FB" FontWeight="Bold" Foreground="#FF4B634D"/>
-        <Button x:Name="btnTourPrecedent" Content="G" HorizontalAlignment="Left" Margin="455,249,0,0" VerticalAlignment="Top" Width="35" FontFamily="Agency FB" FontSize="14">
+        <Button x:Name="btnTourPrecedent" Content="&lt;-" HorizontalAlignment="Left" Margin="448,246,0,0" VerticalAlignment="Top" Width="35" FontFamily="Agency FB" FontSize="14" Click="btnTourPrecedent_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnTourSuivant" Content="D" HorizontalAlignment="Left" Margin="511,249,0,0" VerticalAlignment="Top" Width="34" RenderTransformOrigin="-0.029,0.409" FontFamily="Agency FB" FontSize="14">
+        <Button x:Name="btnTourSuivant" Content="-&gt;" HorizontalAlignment="Left" Margin="519,246,0,0" VerticalAlignment="Top" Width="34" RenderTransformOrigin="-0.029,0.409" FontFamily="Agency FB" FontSize="14" Click="btnTourSuivant_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Label Content="Tour 0" HorizontalAlignment="Left" Margin="473,216,0,0" VerticalAlignment="Top" Width="59" Foreground="#FF4B634D" FontFamily="Agency FB" FontSize="16"/>
-        <Button x:Name="btnCheck" Content="attaque de base" HorizontalAlignment="Left" Margin="293,159,0,0" VerticalAlignment="Top" Width="131" Height="33" FontFamily="Agency FB" FontSize="18">
+        <Label x:Name="labelTour" Content="Tour(s)" HorizontalAlignment="Left" Margin="472,217,0,0" VerticalAlignment="Top" Width="59" Foreground="#FF4B634D" FontFamily="Agency FB" FontSize="16"/>
+        <Button x:Name="btnCheck" Content="attaque de base" HorizontalAlignment="Left" Margin="293,152,0,0" VerticalAlignment="Top" Width="131" Height="33" FontFamily="Agency FB" FontSize="18" Click="btnCheck_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnBas" Content="B" HorizontalAlignment="Left" Margin="487,166,0,0" VerticalAlignment="Top" Width="30" FontFamily="Agency FB" FontSize="14">
+        <Button x:Name="btnBas" Content="B" HorizontalAlignment="Left" Margin="487,166,0,0" VerticalAlignment="Top" Width="30" FontFamily="Agency FB" FontSize="14" Click="btnBas_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnHaut" Content="H" HorizontalAlignment="Left" Margin="487,121,0,0" VerticalAlignment="Top" Width="30" FontFamily="Agency FB" FontSize="14">
+        <Button x:Name="btnHaut" Content="H" HorizontalAlignment="Left" Margin="487,121,0,0" VerticalAlignment="Top" Width="30" FontFamily="Agency FB" FontSize="14" Click="btnHaut_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnDroit" Content="D" HorizontalAlignment="Left" Margin="522,143,0,0" VerticalAlignment="Top" Width="31" FontFamily="Agency FB" FontSize="14">
+        <Button x:Name="btnDroit" Content="D" HorizontalAlignment="Left" Margin="522,143,0,0" VerticalAlignment="Top" Width="31" FontFamily="Agency FB" FontSize="14" Click="btnDroit_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnGauche" Content="G" HorizontalAlignment="Left" Margin="455,143,0,0" VerticalAlignment="Top" Width="27" FontFamily="Agency FB" FontSize="14">
+        <Button x:Name="btnGauche" Content="G" HorizontalAlignment="Left" Margin="455,143,0,0" VerticalAlignment="Top" Width="27" FontFamily="Agency FB" FontSize="14" Click="btnGauche_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnBackspace" Content="Backspace" HorizontalAlignment="Left" Margin="293,89,0,0" VerticalAlignment="Top" Width="131" Height="32" FontFamily="Agency FB" FontSize="18">
+        <Button x:Name="btnBackspace" Content="Backspace" HorizontalAlignment="Left" Margin="293,89,0,0" VerticalAlignment="Top" Width="131" Height="32" FontFamily="Agency FB" FontSize="18" Click="btnBackspace_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
@@ -96,5 +96,7 @@
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
+        <TextBlock x:Name="txtTourselectionne" HorizontalAlignment="Left" Margin="483,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" TextAlignment="Center" Foreground="#FF4B634D"><Run Language="fr-ca" Text="1"/><LineBreak/><Run Language="fr-ca"/></TextBlock>
+        <Label x:Name="labelTourMax" Content="Action en" HorizontalAlignment="Left" Margin="345,210,0,0" VerticalAlignment="Top" Width="68" Foreground="#FF4B634D" FontFamily="Agency FB" FontSize="16"/>
     </Grid>
 </UserControl>

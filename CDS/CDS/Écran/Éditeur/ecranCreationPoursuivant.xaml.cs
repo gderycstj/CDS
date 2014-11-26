@@ -67,38 +67,56 @@ namespace CDS
 
         private void btnHaut_Click(object sender, RoutedEventArgs e)
         {
-            listeCMD[tempsActif] += "Mh";
+            listeCMD[tempsActif - 1] += "Mh";
             txtAdd("Haut", true);
             
         }
 
         private void btnDroit_Click(object sender, RoutedEventArgs e)
         {
-            listeCMD[tempsActif] += "Md";
+            listeCMD[tempsActif-1] += "Md";
             txtAdd("Droite",true);
         }
 
         private void btnGauche_Click(object sender, RoutedEventArgs e)
         {
-            listeCMD[tempsActif] += "Mg";
+            listeCMD[tempsActif-1] += "Mg";
             txtAdd("Gauche", true);
         }
 
         private void btnBas_Click(object sender, RoutedEventArgs e)
         {
-            listeCMD[tempsActif] += "Mb";
+            listeCMD[tempsActif-1] += "Mb";
             txtAdd("Bas", true);
         }
 
         private void btnCheck_Click(object sender, RoutedEventArgs e)
         {
-            listeCMD[tempsActif] += "C";
+            listeCMD[tempsActif-1] += "C";
             txtAdd("Attack", true);
         }
 
         private void btnTourAjout_Click(object sender, RoutedEventArgs e)
         {
+            int cmptr=0;
+            string[] sTemp = listeCMD;
+
+            listeCMD = new string[qtyTemps+1];
+
+            foreach(string S in sTemp)
+            {
+                listeCMD[cmptr]= S;
+                cmptr++;
+            }
+
             qtyTemps++;
+            txtTourMax.Text = qtyTemps.ToString() + "Tour";
+            //on ajoute le s s'il y a plusieur tours
+            if (qtyTemps > 1)
+                txtTourMax.Text = txtTourMax.Text + "s";
+
+            tempsActif= qtyTemps;
+            txtTourselectionne.Text = tempsActif.ToString();
             txtAdd("/", false);
         }
 
@@ -106,9 +124,31 @@ namespace CDS
         {
             if(qtyTemps>1)
             {
-                //!__! delete du temps de trop
+                int cmptr = 0;
+                string[] sTemp = listeCMD;
+
+                //
+                listeCMD = new string[qtyTemps-1];
+
+                foreach (string S in sTemp)
+                {
+                    if(cmptr<qtyTemps-1) { listeCMD[cmptr] = S; }
+
+
+                    cmptr++;
+                }
+
+                //"delete" du temps de trop
+                // moins 1 car le temps 1 est [0], 2 est [1], etc.
 
                 qtyTemps--;
+                txtTourMax.Text= qtyTemps.ToString() + "Tour";
+                //on ajoute le s s'il y a plusieur tours
+                if(qtyTemps>1)
+                    txtTourMax.Text=txtTourMax.Text +"s";
+
+                tempsActif= qtyTemps;
+                txtTourselectionne.Text = tempsActif.ToString();
                 txtRmv(false);
             }
         }
@@ -123,7 +163,7 @@ namespace CDS
             //MAIS il faut faire attention au if et random et ne pas delete leurs {}
 
             //on test si la dernière commende n'est pas un If ou Random
-            if(listeCMD[tempsActif][listeCMD.Length-1]!='}')
+            if(listeCMD[tempsActif-1][listeCMD.Length-1]!='}')
             {
 
                     while(lettre!='Z'+1)//on veut tester toutes les lettres maj (même Z donc on arrête après (+1))
@@ -150,6 +190,33 @@ namespace CDS
 
             txtRmv(true);
         }
+
+        private void btnTourSuivant_Click(object sender, RoutedEventArgs e)
+        {
+            if(tempsActif<qtyTemps)
+            {
+                tempsActif++;
+                txtTourselectionne.Text= tempsActif.ToString();
+            }
+        }
+
+        private void btnTourPrecedent_Click(object sender, RoutedEventArgs e)
+        {
+            if (tempsActif > 1)
+            {
+                tempsActif--;
+                txtTourselectionne.Text = tempsActif.ToString();
+            }
+        }
+
+
+
+
+
+
+
+
+
 
 
     }
