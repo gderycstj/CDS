@@ -14,7 +14,7 @@
         </ComboBox>
         <Label Content="MDP du créateur" HorizontalAlignment="Left" Margin="415,121,0,0" VerticalAlignment="Top" Width="170" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.368,0.527" Foreground="#FF4B634D"/>
         <PasswordBox x:Name="passwordUser" HorizontalAlignment="Left" Margin="403,163,0,0" VerticalAlignment="Top" Width="199" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
-        <Button Content="Supprimer poursuivant" HorizontalAlignment="Left" Margin="402,261,0,0" VerticalAlignment="Top" Width="199" FontFamily="Agency FB" FontSize="22" Height="56">
+        <Button Content="Supprimer Objet" HorizontalAlignment="Left" Margin="402,261,0,0" VerticalAlignment="Top" Width="199" FontFamily="Agency FB" FontSize="22" Height="56">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
