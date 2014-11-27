@@ -58,6 +58,7 @@ namespace CDS
             }
 
             cboApparence.SelectedIndex = 0;
+            imgObjet.Source = new BitmapImage(new Uri("pack://application:,,,/image/Objets/" + cboApparence.SelectedItem.ToString() + ".png", UriKind.RelativeOrAbsolute));
         }
 
         private void btnAjoutEffets_Click(object sender, RoutedEventArgs e)
@@ -135,11 +136,11 @@ namespace CDS
             int nbRangee =0;
             bool validation = true;
 
-            string req = "SELECT nom FROM Objets";
+            string req = "SELECT nom FROM Objets;";
             List<string>[] listeObjet = Globale.bdCDS.selection(req,1,ref nbRangee);
             for (int i=0; i < listeObjet.Length;i++)
             { 
-                if(listeObjet[0][0].ToString() == txtObjet.Text)
+                if(listeObjet[i][0].ToString() == txtObjet.Text)
                 {
                  validation = false;
                 }            
@@ -150,12 +151,13 @@ namespace CDS
                string reqObjet = "INSERT INTO Objets(idUtilisateur,idApparence,nom)"+
                "VALUES (((SELECT idUtilisateur FROM Utilisateurs WHERE nom = '"+Globale.j1.getNom()+"')"+
                 ",(SELECT idApparence FROM apparences WHERE image = '/image/Objets/"+cboApparence.SelectedItem.ToString()+".png')"+
-                ",'"+txtObjet.Text+";'";
+                ",'"+txtObjet.Text+"');";
                 Globale.bdCDS.Insertion(reqObjet);
+                MessageBox.Show(reqObjet);
 
                 string reqObjet2 = "INSERT INTO ObjetsEffets(idObjet,idEffet)"+
                 "VALUES((SELECT idObjet FROM Objets WHERE nom ='"+txtObjet.Text+"')"+
-                ",(SELECT idEffet FROM Effets WHERE nom = '"+listeEffets[0][0].ToString()+"';";
+                ",(SELECT idEffet FROM Effets WHERE nom = '"+listeEffets[0][0].ToString()+"'));";
                 Globale.bdCDS.Insertion(reqObjet2);
             }
         }

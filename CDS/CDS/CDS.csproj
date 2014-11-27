@@ -342,7 +342,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Image\Objets\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
@@ -458,6 +457,19 @@
     <Resource Include="Image\Poursuivants\polen.png" />
     <Resource Include="Image\Poursuivants\sparkley.png" />
     <Resource Include="Image\Poursuivants\talktome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Objets\bluePotion.png" />
+    <Resource Include="Image\Objets\etoileDeNinja.png" />
+    <Resource Include="Image\Objets\greenOrb.png" />
+    <Resource Include="Image\Objets\greenPotion.png" />
+    <Resource Include="Image\Objets\happyBoum.png" />
+    <Resource Include="Image\Objets\orangePotion.png" />
+    <Resource Include="Image\Objets\purpleOrb.png" />
+    <Resource Include="Image\Objets\redOrb.png" />
+    <Resource Include="Image\Objets\redPotion.png" />
+    <Resource Include="Image\Objets\superBox.png" />
+    <Resource Include="Image\Objets\yellowPotion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

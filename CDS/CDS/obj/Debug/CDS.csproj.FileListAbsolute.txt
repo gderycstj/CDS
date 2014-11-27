@@ -75,7 +75,6 @@ C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
 C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.g.resources
 C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 C:\Users\Admin\Desktop\projet\CDS\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
-K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\bin\Debug\CDS.exe.config
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.exe
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\CDS.pdb
@@ -219,3 +218,4 @@ C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\
 K:\NOUVELLE VERSION CDS\CDS\CDS\bin\Debug\CDS.exe.config
 K:\NOUVELLE VERSION CDS\CDS\CDS\obj\Debug\CDS.exe
 K:\NOUVELLE VERSION CDS\CDS\CDS\obj\Debug\CDS.pdb
+K:\chambre de survie\CDS\CDS\obj\Debug\CDS.csprojResolveAssemblyReference.cache

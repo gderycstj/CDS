@@ -8,11 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/poursuivants/orangespeed.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/poursuivants/pinky.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/poursuivants/pinstar.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/poursuivants/polen.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/poursuivants/sparkley.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/poursuivants/talktome.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/objets/bluepotion.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/objets/etoiledeninja.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/objets/greenorb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/objets/greenpotion.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/objets/happyboum.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/objets/orangepotion.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/objets/purpleorb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/objets/redorb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/objets/redpotion.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/objets/superbox.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/objets/yellowpotion.png")]
 
 

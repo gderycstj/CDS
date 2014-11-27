@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -20,12 +21,15 @@ namespace CDS
     /// 
     public partial class menuJouer : Window
     {
+        Timer timerFin = new Timer();
         string req = "SELECT nom FROM modesDeJeu;";
         List<string>[] listeMode;
         int col = 0;
         public menuJouer()
         {
             InitializeComponent();
+            timerFin.Interval = 100;
+            timerFin.Tick += new EventHandler(OnTimedEvent);
             txtErreur.Text ="";
             Connect();
 
@@ -102,6 +106,7 @@ namespace CDS
             }
             else
             {
+                timerFin.Start();
                 jeuNiveau partiNiveau = new jeuNiveau();
                 partiNiveau.Show();
             }
@@ -176,6 +181,12 @@ namespace CDS
                 cboChoixMode.Items.Add(listeMode[i][0]);
             }
             cboChoixMode.SelectedIndex = 0;
+        }
+
+        private void OnTimedEvent(object sender, EventArgs e)
+        {
+            timerFin.Stop();
+            Close();
         }
     }
 }

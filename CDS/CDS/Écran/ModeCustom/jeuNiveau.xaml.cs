@@ -125,7 +125,7 @@ namespace CDS
             bimg.CacheOption = BitmapCacheOption.OnDemand;
             bimg.CreateOptions = BitmapCreateOptions.DelayCreation;
             bimg.DecodePixelHeight = 125;
-            bimg.DecodePixelWidth = 125;
+            bimg.DecodePixelWidth = 150;
             bimg.UriSource = new Uri(Globale.j1.pathImage, UriKind.Relative);
 
             bimg.EndInit();

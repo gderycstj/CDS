@@ -66,7 +66,7 @@ namespace CDS
 
         private void OnTimedEvent2(object sender, EventArgs e)
         {
-                timerFin.Stop();
+            timerFin.Stop();
             //Appel de l'écran de fin de partie
             //Utiliser un timer pour afficher l'ecran après 5 secondes.
 
@@ -90,9 +90,6 @@ namespace CDS
 
         void AfficherJoueur()
         {
-            
-
-
             Image img = new Image();
             BitmapImage bimg = new BitmapImage();
 

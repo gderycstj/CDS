@@ -49,6 +49,7 @@ namespace CDS
             }
 
             cboApparence.SelectedIndex = 0;
+            imagePoursuivant.Source = new BitmapImage(new Uri("pack://application:,,,/image/Poursuivants/" + cboApparence.SelectedItem.ToString() + ".png", UriKind.RelativeOrAbsolute));
 
         }
 
@@ -224,7 +225,6 @@ namespace CDS
         {
             if (cboApparence.SelectedItem != null)
             {
-
                 imagePoursuivant.Source = new BitmapImage(new Uri("pack://application:,,,/image/Poursuivants/" + cboApparence.SelectedItem.ToString() + ".png", UriKind.RelativeOrAbsolute));
             }
         }
@@ -238,30 +238,35 @@ namespace CDS
 
         private void btnCreation_Click(object sender, RoutedEventArgs e)
         {
-            
-            string reqPoursuivant;
-            StringBuilder sBldr = new StringBuilder();
-            
-            for(int i=1;i<=qtyTemps ; i++)
+            int nbRangee = 0;
+            bool validation = true;
+
+            string req = "SELECT nom FROM Poursuivants;";
+            List<string>[] listePoursuivant = Globale.bdCDS.selection(req, 1, ref nbRangee);
+            for (int i = 0; i < listePoursuivant.Length; i++)
             {
-                sBldr.Append(listeCMD[i-1]);
+                if (listePoursuivant[i][0].ToString() == txtNomPoursuivant.Text)
+                {
+                    validation = false;
+                }
             }
+            if(validation == true)
+            {
+              string reqPoursuivant;
+              StringBuilder sBldr = new StringBuilder();
+              
+              for(int i=1;i<=qtyTemps ; i++)
+              {
+                  sBldr.Append(listeCMD[i-1]);
+              }
 
-           reqPoursuivant = "INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)"+
-           "VALUES(txtNomPoursuivant.Text,(SELECT idUtilisateur FROM Utilisateurs WHERE nom='" + Globale.j1.getNom() + "')"+
-           ",(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/" + cboApparence.SelectedItem.ToString() + ".png')"+
-           ",txtPoint.Text,'" + sBldr.ToString() + "');";
-
-            return;
-            
+             reqPoursuivant = "INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)"+
+             "VALUES('"+txtNomPoursuivant.Text+"',(SELECT idUtilisateur FROM Utilisateurs WHERE nom='" + Globale.j1.getNom() + "')"+
+             ",(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/" + cboApparence.SelectedItem.ToString() + ".png')"+
+             ","+txtPoint.Text+",'" + sBldr.ToString() + "');";
+              Globale.bdCDS.Insertion(reqPoursuivant);
+           }
         }
-
-
-
-
-
-
-
 
     }
 }
