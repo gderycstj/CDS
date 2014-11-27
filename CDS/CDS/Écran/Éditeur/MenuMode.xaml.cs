@@ -113,10 +113,15 @@ namespace CDS
 
                     txtRarete.Clear();
                     txtValeur.Clear();
+
                 }
                 else
                 {
                     MessageBox.Show("Vous avez atteint le maximum de poursuivants possibles");
+                }
+                if (cboPoursuivant.Items.Count == 0)
+                {
+                    btnAjoutPoursuivant.IsEnabled = false;
                 }
 
             }
@@ -136,6 +141,9 @@ namespace CDS
                 lstPoursuivant.RemoveAt(rangee);
                 AfficherElementGrillePoursuivant();
        }
+
+
+
        /// <summary>
        /// va afficher les éléments de la grille de poursuivant
        /// </summary>
@@ -181,6 +189,10 @@ namespace CDS
 
                 rangee++;
             }
+
+
+            cboPoursuivant.Items.RemoveAt(cboPoursuivant.SelectedIndex);
+            cboPoursuivant.SelectedIndex = 0;
         }
         /// <summary>
         /// va afficher les éléments dans la liste d'objet
@@ -211,6 +223,9 @@ namespace CDS
 
                 rangee++;
             }
+
+            cboObjet.Items.RemoveAt(cboObjet.SelectedIndex);
+            cboObjet.SelectedIndex = 0;
          }
 
          /// <summary>
@@ -232,6 +247,11 @@ namespace CDS
                 MessageBox.Show("Vous avez atteint le maximum d'objets possibles");
             }
 
+            if (cboObjet.Items.Count == 0) 
+            {
+                btnObjet.IsEnabled = false;
+            }
+
         }
 
         /// <summary>
@@ -244,9 +264,9 @@ namespace CDS
             bool validation = true;
 
             //validation du nom
-            if (txtNom.Text == "") 
+            if (txtNom.Text == "" || txtNom.Text.Length > 30) 
             {
-                MessageBox.Show("Vous devez rentrer un nom à votre mode");
+                MessageBox.Show("Vous devez rentrer un nom à votre mode et il doit contenir moins que 30 caractères");
                 validation = false;
            }
 
@@ -265,6 +285,13 @@ namespace CDS
                 validation = false;    
             
             }
+
+            if (cboObjectif.SelectedItem.ToString() == "Armure" && Convert.ToInt32(txtValeurObjectif.Text) < 0 || Convert.ToInt32(txtValeurObjectif.Text) > 12)
+            {
+                MessageBox.Show("Votre nombre d'armure doit être entre 0 et 12");
+
+            }
+
 
             //si tout est validé, le mode sera inséré
             if (validation) 
@@ -298,6 +325,7 @@ namespace CDS
                        id + ",(SELECT idUtilisateur FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() + 
                        "'), (SELECT idObjectif FROM Objectifs WHERE nom = '" + cboObjectif.SelectedItem.ToString() + 
                        "' AND valeurObjectif = " + txtValeurObjectif.Text + "),0);";
+
               idNiveau = Globale.bdCDS.Insertion(req);
 
               foreach (PoursuivantNiveau p in lstPoursuivant) 
@@ -311,8 +339,10 @@ namespace CDS
               {
                   req = "INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)VALUES(" + idNiveau + ",(SELECT idObjet FROM Objets WHERE nom ='" + o.nom + "'),0,0);";
                   Globale.bdCDS.Insertion(req);
-              
                }
+
+
+
 
 
             }
