@@ -13,17 +13,17 @@
         <TextBlock HorizontalAlignment="Left" Height="117" Margin="89,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="397" FontFamily="Agency FB" FontSize="24" Text="Les carrées vert et bleu se déplacent en ligne droite(Horizontalement et Verticalement respectivement). Ils se déplaceront seulement de une case à chaque tour."/>
         <TextBlock HorizontalAlignment="Left" Height="28" Margin="22,219,0,0" TextWrapping="Wrap" Text="Pointage:" VerticalAlignment="Top" Width="69" FontFamily="Agency FB" FontSize="22"/>
         <TextBlock HorizontalAlignment="Left" Height="27" Margin="96,220,0,0" TextWrapping="Wrap" Text="100 points" VerticalAlignment="Top" Width="84" FontFamily="Agency FB" FontSize="24"/>
-        <Image HorizontalAlignment="Left" Height="89" Margin="491,113,0,0" VerticalAlignment="Top" Width="105" Source="/CDS;component/Image/carreBleu.png"/>
-        <Image HorizontalAlignment="Left" Height="89" Margin="584,113,0,0" VerticalAlignment="Top" Width="103" Source="/CDS;component/Image/carreVert.png"/>
+        <Image HorizontalAlignment="Left" Height="89" Margin="491,113,0,0" VerticalAlignment="Top" Width="105" Source="/CDS;component/Image/Poursuivants/carreBleu.png"/>
+        <Image HorizontalAlignment="Left" Height="89" Margin="584,113,0,0" VerticalAlignment="Top" Width="103" Source="/CDS;component/Image/Poursuivants/carreVert.png"/>
         <TextBlock HorizontalAlignment="Left" Height="119" Margin="100,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="424" FontFamily="Agency FB" FontSize="24" Text="Les losanges mauves et jaunes se déplacent en diagonale(mauve vers la droite , jaune vers la gauche). Ils se déplacerons seulement de une case à chaque tour."/>
         <TextBlock HorizontalAlignment="Left" Height="28" Margin="22,375,0,0" TextWrapping="Wrap" Text="Pointage:" VerticalAlignment="Top" Width="69" FontFamily="Agency FB" FontSize="22"/>
         <TextBlock HorizontalAlignment="Left" Height="27" Margin="96,375,0,0" TextWrapping="Wrap" Text="250 points" VerticalAlignment="Top" Width="84" FontFamily="Agency FB" FontSize="24"/>
-        <Image HorizontalAlignment="Left" Height="89" Margin="529,251,0,0" VerticalAlignment="Top" Width="106" Source="/CDS;component/Image/LosangeJaune.png"/>
-        <Image HorizontalAlignment="Left" Height="95" Margin="584,307,0,0" VerticalAlignment="Top" Width="92" Source="/CDS;component/Image/LosangeMauve.png"/>
+        <Image HorizontalAlignment="Left" Height="89" Margin="529,251,0,0" VerticalAlignment="Top" Width="106" Source="/CDS;component/Image/Poursuivants/LosangeJaune.png"/>
+        <Image HorizontalAlignment="Left" Height="95" Margin="584,307,0,0" VerticalAlignment="Top" Width="92" Source="/CDS;component/Image/Poursuivants/LosangeMauve.png"/>
         <TextBlock HorizontalAlignment="Left" Height="146" Margin="94,407,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="397" FontFamily="Agency FB" FontSize="24"><Run Text="Le triangle se déplace de toutes les façon"/><Run Language="fr-ca" Text="s "/><Run Text="possible"/><Run Language="fr-ca" Text="s"/><Run Text=" vers la bas selon la position du personnage. Il se déplacera seulement de une case à chaque tour. Il y a un moyen efficace de l'éviter à vous de le découvrir"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="28" Margin="20,553,0,0" TextWrapping="Wrap" Text="Pointage:" VerticalAlignment="Top" Width="69" FontFamily="Agency FB" FontSize="22"/>
         <TextBlock HorizontalAlignment="Left" Height="27" Margin="94,553,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" FontFamily="Agency FB" FontSize="24"><Run Language="fr-ca" Text="400"/><Run Text=" points"/></TextBlock>
-        <Image HorizontalAlignment="Left" Height="152" Margin="517,401,0,0" VerticalAlignment="Top" Width="144" Source="/CDS;component/Image/triangle.png"/>
+        <Image HorizontalAlignment="Left" Height="152" Margin="517,401,0,0" VerticalAlignment="Top" Width="144" Source="/CDS;component/Image/Poursuivants/triangle.png"/>
 
     </Grid>
 </UserControl>

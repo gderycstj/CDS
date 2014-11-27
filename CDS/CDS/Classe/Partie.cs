@@ -191,23 +191,23 @@ namespace CDS
                 foreach( Poursuivant pi in PoursuivantDansLaPartie)
                 {
                     //Si on tente d'ajouter un carrer, on regarde si les 2 couleurs de carré ne dépasse pas la valeur maximale
-                    if (p.getUrlImage() == "/image/carreVert.png" || p.getUrlImage() == "/image/carreBleu.png")
+                    if (p.getUrlImage() == "/image/Poursuivants/carreVert.png" || p.getUrlImage() == "/image/Poursuivants/carreBleu.png")
                     {
-                        if(pi.getUrlImage() == "/image/carreVert.png" || pi.getUrlImage() == "/image/carreBleu.png")
+                        if (pi.getUrlImage() == "/image/Poursuivants/carreVert.png" || pi.getUrlImage() == "/image/Poursuivants/carreBleu.png")
                         {
                             nbPoursuivant += 1;
                         }
                     }
                     //Si on tente d'ajouter un losange, on regarde si les 2 couleurs de losange ne dépasse pas la valeur maximale
-                    if (p.getUrlImage() == "/image/LosangeJaune.png" || p.getUrlImage() == "/image/LosangeMauve.png")
+                    if (p.getUrlImage() == "/image/Poursuivants/LosangeJaune.png" || p.getUrlImage() == "/image/Poursuivants/LosangeMauve.png")
                     {
-                        if (pi.getUrlImage() == "/image/LosangeJaune.png" || pi.getUrlImage() == "/image/LosangeMauve.png")
+                        if (pi.getUrlImage() == "/image/Poursuivants/LosangeJaune.png" || pi.getUrlImage() == "/image/Poursuivants/LosangeMauve.png")
                         {
                             nbPoursuivant += 1;
                         }
                     }
                     //Tout les autres
-                    if (p.getUrlImage() != "/image/LosangeJaune.png" && p.getUrlImage() != "/image/LosangeMauve.png" && p.getUrlImage() == "/image/carreVert.png" && p.getUrlImage() == "/image/carreBleu.png")
+                    if (p.getUrlImage() != "/image/Poursuivants/LosangeJaune.png" && p.getUrlImage() != "/image/Poursuivants/LosangeMauve.png" && p.getUrlImage() == "/image/Poursuivants/carreVert.png" && p.getUrlImage() == "/image/Poursuivants/carreBleu.png")
                     {
                         if (p.getUrlImage() == pi.getUrlImage())
                         {

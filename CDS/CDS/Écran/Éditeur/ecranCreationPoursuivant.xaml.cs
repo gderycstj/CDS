@@ -30,7 +30,7 @@ namespace CDS
         {
             InitializeComponent();
             //Liste d'apparence
-            String req2 = "SELECT image FROM Apparences";
+            String req2 = "SELECT image FROM Apparences WHERE image LIKE '/image/Poursuivants/%'";
             List<string>[] listeApparence;
             int col2 = 0;
 
@@ -40,7 +40,7 @@ namespace CDS
 
             for (int i = 0; i < listeApparence.Length; i++)
             {
-                nomTemp1 = listeApparence[i][0].Substring(7);
+                nomTemp1 = listeApparence[i][0].Substring(20);
                 nomTemp1 = Retourner(nomTemp1);
                 nomTemp1 = nomTemp1.Substring(4);
                 nomTemp1 = Retourner(nomTemp1);
@@ -233,7 +233,7 @@ namespace CDS
             if (cboApparence.SelectedItem != null)
             {
 
-                imagePoursuivant.Source = new BitmapImage(new Uri("pack://application:,,,/image/" + cboApparence.SelectedItem.ToString() + ".png", UriKind.RelativeOrAbsolute));
+                imagePoursuivant.Source = new BitmapImage(new Uri("pack://application:,,,/image/Poursuivants/" + cboApparence.SelectedItem.ToString() + ".png", UriKind.RelativeOrAbsolute));
             }
         }
 
