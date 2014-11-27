@@ -219,6 +219,3 @@ C:\Users\Vincent\Documents\Visual Studio 2013\Projects\CDS\CDS\obj\Debug\Écran\
 K:\NOUVELLE VERSION CDS\CDS\CDS\bin\Debug\CDS.exe.config
 K:\NOUVELLE VERSION CDS\CDS\CDS\obj\Debug\CDS.exe
 K:\NOUVELLE VERSION CDS\CDS\CDS\obj\Debug\CDS.pdb
-D:\CDS\CDS\CDS\bin\Debug\CDS.exe.config
-D:\CDS\CDS\CDS\obj\Debug\CDS.exe
-D:\CDS\CDS\CDS\obj\Debug\CDS.pdb
