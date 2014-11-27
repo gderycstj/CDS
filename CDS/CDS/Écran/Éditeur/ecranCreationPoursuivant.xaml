@@ -10,12 +10,12 @@
             <ImageBrush/>
         </Grid.Background>
         <Label Content="Nom:" HorizontalAlignment="Left" Margin="29,19,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontWeight="Bold"  FontSize="18" Foreground="#FF4B634D"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="73,22,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="248" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18" />
+        <TextBox x:Name="txtNomPoursuivant" HorizontalAlignment="Left" Height="23" Margin="73,22,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="248" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18" />
         <Label Content="Valeur en points:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.947,2.308" Margin="29,50,0,0" Width="116" FontWeight="Bold" FontFamily="Agency FB" Height="31"  FontSize="18" Foreground="#FF4B634D"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,53,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.739" Background="#FF4B634D"/>
+        <TextBox x:Name="txtPoint" HorizontalAlignment="Left" Height="23" Margin="150,53,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.739" Background="#FF4B634D"/>
         <Label Content="Apparence" HorizontalAlignment="Left" Margin="7,86,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Agency FB" FontSize="22" Foreground="#FF4B634D"/>
         <Image x:Name="imagePoursuivant" HorizontalAlignment="Left" Height="149" VerticalAlignment="Top" Width="181" Margin="29,134,0,0"/>
-        <Button x:Name="btnCreation" Content="Création du poursuivant" HorizontalAlignment="Left" Height="39" Margin="745,251,0,0" VerticalAlignment="Top" Width="211" FontFamily="Agency FB" FontSize="24" >
+        <Button x:Name="btnCreation" Content="Création du poursuivant" HorizontalAlignment="Left" Height="39" Margin="745,251,0,0" VerticalAlignment="Top" Width="211" FontFamily="Agency FB" FontSize="24" Click="btnCreation_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
