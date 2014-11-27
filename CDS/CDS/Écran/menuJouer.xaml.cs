@@ -29,9 +29,16 @@ namespace CDS
             txtErreur.Text ="";
             Connect();
 
-            cboChoixMode.Items.Add("Normal");
-			cboChoixMode.Items.Add("Survie");
-            cboChoixMode.SelectedIndex = 0;
+            if(Globale.j1.estConnecte == false)
+            {
+                cboChoixMode.Items.Add("Normal");
+			    cboChoixMode.Items.Add("Survie");
+                cboChoixMode.SelectedIndex = 0;
+            }
+            else
+            {
+                genererListeCbo();
+            }
 
         }
 
@@ -66,16 +73,7 @@ namespace CDS
             {
                 Globale.j1.setJoueur(listeJoueur[0][0], Convert.ToInt32(listeJoueur[0][1]), listeJoueur[0][2],true);
                 Connect();
-
-                cboChoixMode.Items.Clear();
- 
-                req = "SELECT nom FROM modesDeJeu;";
-                listeMode = Globale.bdCDS.selection(req, 1, ref col);
-                for (int i = 0; i < listeMode.Length; i++)
-                {
-                    cboChoixMode.Items.Add(listeMode[i][0]);
-                }
-                cboChoixMode.SelectedIndex = 0;
+                genererListeCbo();
             }
         }
 
@@ -96,11 +94,16 @@ namespace CDS
                 menuS.Show();
                 Close();
             }
-            else
+            else if(cboChoixMode.SelectedItem.ToString() == "Normal")
             {
                 JeuNormal menuJeu = new JeuNormal();
                 menuJeu.Show();
                 Close();
+            }
+            else
+            {
+                jeuNiveau partiNiveau = new jeuNiveau();
+                partiNiveau.Show();
             }
         }
 
@@ -162,5 +165,17 @@ namespace CDS
             Close();
         } 
 
+        public void genererListeCbo()
+        {
+            cboChoixMode.Items.Clear();
+
+            req = "SELECT nom FROM modesDeJeu;";
+            listeMode = Globale.bdCDS.selection(req, 1, ref col);
+            for (int i = 0; i < listeMode.Length; i++)
+            {
+                cboChoixMode.Items.Add(listeMode[i][0]);
+            }
+            cboChoixMode.SelectedIndex = 0;
+        }
     }
 }

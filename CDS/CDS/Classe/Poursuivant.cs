@@ -61,54 +61,54 @@ namespace CDS
             }
 
             //Validation Carrer(selon sa direction)
-            if(urlImage == "/image/Poursuivants/carreVert.png")
+            if(urlImage == "/image/carreVert.png")
             {
                 if(direction == 1 || direction == 3)
                 {
-                    urlImage = "/image/Poursuivants/carreBleu.png";
+                    urlImage = "/image/carreBleu.png";
                 }
             }
 
-            if(urlImage == "/image/Poursuivants/carreBleu.png")
+            if(urlImage == "/image/carreBleu.png")
             {
                 if (direction == 2 || direction == 4)
                 {
-                    urlImage = "/image/Poursuivants/carreVert.png";
+                    urlImage = "/image/carreVert.png";
                 }
             }
             //-----------------------------------------------------------
             //Validation Losange(selon son positionnement)
-            if (urlImage == "/image/Poursuivants/LosangeMauve.png")
+            if (urlImage == "/image/LosangeMauve.png")
             {
                   if(memoireRdm == 5)
                    {
                         randomLosange = lesPositions.Next(1, 3);
                         if (randomLosange == 2)
                         {
-                            urlImage = "/image/Poursuivants/LosangeJaune.png";
+                            urlImage = "/image/LosangeJaune.png";
                             listeCMD = "MhMgC";
                         }
                     }
                    else if(memoireRdm <5)
                     {
-                        urlImage = "/image/Poursuivants/LosangeJaune.png";
+                        urlImage = "/image/LosangeJaune.png";
                          listeCMD = "MhMgC";
                     }     
             }
-            else if (urlImage == "/image/Poursuivants/LosangeJaune.png")
+            else if (urlImage == "/image/LosangeJaune.png")
             {
                 if (memoireRdm == 5)
                 {
                     randomLosange = lesPositions.Next(1, 3);
                     if (randomLosange == 1)
                     {
-                        urlImage = "/image/Poursuivants/LosangeMauve.png";
+                        urlImage = "/image/LosangeMauve.png";
                         listeCMD = "MhMdC";
                     }
                 }
                 else if (memoireRdm > 5)
                 {
-                    urlImage = "/image/Poursuivants/LosangeMauve.png";
+                    urlImage = "/image/LosangeMauve.png";
                     listeCMD = "MhMdC";
                 }
             }
@@ -206,7 +206,7 @@ namespace CDS
             bool faitwhile=true;
 
 
-
+           
             while (CMD != "")
             {
                 lettre = CMD[iLecture];

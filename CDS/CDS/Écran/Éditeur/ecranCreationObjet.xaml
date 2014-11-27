@@ -7,10 +7,10 @@
              d:DesignHeight="350" d:DesignWidth="975">
     <Grid Margin="10,10,-10,-10">
         <Label Content="Nom:" HorizontalAlignment="Left" Margin="29,19,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontWeight="Bold"  FontSize="18" Foreground="#FF4B634D"/>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="74,19,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="252" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
+        <TextBox x:Name="txtObjet" HorizontalAlignment="Left" Height="31" Margin="74,19,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="252" Background="#FF4B634D" FontFamily="Agency FB" FontSize="18"/>
         <Label Content="Apparence" HorizontalAlignment="Left" Height="42" Margin="37,47,0,0" VerticalAlignment="Top" Width="118" FontFamily="Agency FB" FontSize="30" FontWeight="Bold" Foreground="#FF4B634D"/>
         <Image x:Name="imgObjet" HorizontalAlignment="Left" Height="180" Margin="43,96,0,0" VerticalAlignment="Top" Width="283"/>
-        <Button x:Name="btnCreation" Content="Création de l'objet" HorizontalAlignment="Left" Height="56" Margin="350,239,0,0" VerticalAlignment="Top" Width="231" FontFamily="Agency FB" FontSize="24" >
+        <Button x:Name="btnCreation" Content="Création de l'objet" HorizontalAlignment="Left" Height="56" Margin="350,239,0,0" VerticalAlignment="Top" Width="231" FontFamily="Agency FB" FontSize="24" Click="btnCreation_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
