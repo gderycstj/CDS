@@ -8,6 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/outch.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/poursuivants/orangespeed.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/poursuivants/pinky.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/poursuivants/pinstar.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/poursuivants/polen.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/poursuivants/sparkley.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/poursuivants/talktome.png")]
 
 

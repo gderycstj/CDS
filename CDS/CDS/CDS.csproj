@@ -342,6 +342,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Image\Objets\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
@@ -363,16 +364,16 @@
     <Resource Include="Image\clavierObjet.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Poursuivants\triangle.png" />
+    <Resource Include="Image\triangle.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Objets\bombe.png" />
+    <Resource Include="Image\bombe.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Objets\sprint.png" />
+    <Resource Include="Image\sprint.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Objets\potionVie.png" />
+    <Resource Include="Image\potionVie.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\grille.png" />
@@ -388,25 +389,25 @@
     <Resource Include="Image\rond.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Poursuivants\carreBleu.png" />
+    <Resource Include="Image\carreBleu.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Poursuivants\carreVert.png" />
+    <Resource Include="Image\carreVert.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Poursuivants\LosangeJaune.png" />
+    <Resource Include="Image\LosangeJaune.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Poursuivants\LosangeMauve.png" />
+    <Resource Include="Image\LosangeMauve.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Objets\armure.png" />
+    <Resource Include="Image\armure.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\cliqueObjet.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Objets\barriere.png" />
+    <Resource Include="Image\barriere.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\bonhommeAvecArmure.png" />
@@ -430,13 +431,33 @@
     <Resource Include="Image\bonhommeTresBlesse.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Poursuivants\zappy.png" />
+    <Resource Include="Image\zappy.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Poursuivants\cercle.png" />
+    <Resource Include="Image\cercle.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\outch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Poursuivants\bubley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Poursuivants\coeurtoxic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Poursuivants\firey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Poursuivants\fleche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Poursuivants\orangeSpeed.png" />
+    <Resource Include="Image\Poursuivants\pinky.png" />
+    <Resource Include="Image\Poursuivants\pinstar.png" />
+    <Resource Include="Image\Poursuivants\polen.png" />
+    <Resource Include="Image\Poursuivants\sparkley.png" />
+    <Resource Include="Image\Poursuivants\talktome.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

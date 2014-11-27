@@ -247,7 +247,10 @@ namespace CDS
                 sBldr.Append(listeCMD[i-1]);
             }
 
-           reqPoursuivant = "INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)VALUES(txtNomPoursuivant.Text,(SELECT idUtilisateur FROM Utilisateurs WHERE nom='" + Globale.j1.getNom() + "'),(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/" + cboApparence.SelectedItem.ToString() + ".png'),txtPoint.Text,'" + sBldr.ToString() + "');";
+           reqPoursuivant = "INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)"+
+           "VALUES(txtNomPoursuivant.Text,(SELECT idUtilisateur FROM Utilisateurs WHERE nom='" + Globale.j1.getNom() + "')"+
+           ",(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/" + cboApparence.SelectedItem.ToString() + ".png')"+
+           ",txtPoint.Text,'" + sBldr.ToString() + "');";
 
             return;
             
