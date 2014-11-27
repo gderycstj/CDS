@@ -250,57 +250,57 @@ VALUES
 
 INSERT INTO apparences(image)
 VALUES
-('/image/carreBleu.png'
+('/image/Poursuivants/carreBleu.png'
 );
 
 INSERT INTO apparences(image)
 VALUES
-('/image/carreVert.png'
+('/image/Poursuivants/carreVert.png'
 );
 
 INSERT INTO apparences(image)
 VALUES
-('/image/LosangeJaune.png'
+('/image/Poursuivants/LosangeJaune.png'
 );
 
 INSERT INTO apparences(image)
 VALUES
-('/image/LosangeMauve.png'
+('/image/Poursuivants/LosangeMauve.png'
 );
 
 INSERT INTO apparences(image)
 VALUES
-('/image/triangle.png'
+('/image/Poursuivants/triangle.png'
 );
 
 INSERT INTO apparences(image)
 VALUES
-('/image/potionVie.png'
+('/image/Objets/potionVie.png'
 );
 
 INSERT INTO apparences(image)
 VALUES
-('/image/armure.png'
+('/image/Objets/armure.png'
 );
 
 INSERT INTO Apparences(image)
 VALUES
-('/image/sprint.png'
+('/image/Objets/sprint.png'
 );
 
 INSERT INTO Apparences(image)
 VALUES
-('/image/zappy.png'
+('/image/Poursuivants/zappy.png'
 );
 
 INSERT INTO Apparences(image)
 VALUES
-('/image/barriere.png'
+('/image/Objets/barriere.png'
 );
 
 INSERT INTO Apparences(image)
 VALUES
-('/image/cercle.png'
+('/image/Poursuivants/cercle.png'
 );
 
 INSERT INTO utilisateurs(idApparence,nom,motDePasse)
@@ -354,7 +354,7 @@ VALUES((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Normal')
 INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)
 VALUES('carré vert'
 	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
-	   ,(SELECT idApparence FROM apparences WHERE image = '/image/carreVert.png')
+	   ,(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/carreVert.png')
 	   ,100
 	   ,'MhC'
 );
@@ -362,7 +362,7 @@ VALUES('carré vert'
 INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)
 VALUES('Losange Mauve'
 	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
-	   ,(SELECT idApparence FROM apparences WHERE image = '/image/LosangeMauve.png')
+	   ,(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/LosangeMauve.png')
 	   ,250
 	   ,'MhMdC'
 );
@@ -370,7 +370,7 @@ VALUES('Losange Mauve'
 INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)
 VALUES('triangle'
 	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
-	   ,(SELECT idApparence FROM apparences WHERE image = '/image/triangle.png')
+	   ,(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/triangle.png')
 	   ,400
 	   ,'Ijp{MhC}MhIjg{Mg}Ijd{Md}C'
 );
@@ -378,7 +378,7 @@ VALUES('triangle'
 INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)
 VALUES('zappy'
 ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom='Admin')
-,(SELECT idApparence FROM apparences WHERE image = '/image/zappy.png')
+,(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/zappy.png')
 ,350
 ,'Mh/MhCMh/MhCMhCMh/MhCMhCMh'
 );
@@ -386,7 +386,7 @@ VALUES('zappy'
 INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)
 VALUES('Cercle'
 	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
-	   ,(SELECT idApparence FROM apparences WHERE image = '/image/cercle.png')
+	   ,(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/cercle.png')
 	   ,600
 	   ,'MhR{Md}{Mg}{}'
 );
@@ -394,27 +394,27 @@ VALUES('Cercle'
 
 INSERT INTO Objets(idUtilisateur,idApparence,nom)
 VALUES((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin' )
-	   ,(SELECT idApparence FROM apparences WHERE image = '/image/potionVie.png')
+	   ,(SELECT idApparence FROM apparences WHERE image = '/image/Objets/potionVie.png')
 	   ,'Potion de vie'
 );
 
 INSERT INTO Objets(idUtilisateur,idApparence,nom)
 VALUES((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin' )
-	   ,(SELECT idApparence FROM apparences WHERE image = '/image/armure.png')
+	   ,(SELECT idApparence FROM apparences WHERE image = '/image/Objets/armure.png')
 	   ,'Armure'
 );
 
 INSERT INTO Objets(idUtilisateur,idApparence,nom)
 VALUES
 ((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
-,(SELECT idApparence FROM Apparences WHERE image = '/image/sprint.png')
+,(SELECT idApparence FROM Apparences WHERE image = '/image/Objets/sprint.png')
 ,'Sprint'
 );
 
 INSERT INTO Objets(idUtilisateur,idApparence,nom)
 VALUES
 ((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
-,(SELECT idApparence FROM Apparences WHERE image = '/image/barriere.png')
+,(SELECT idApparence FROM Apparences WHERE image = '/image/Objets/barriere.png')
 ,'Barriere'
 );
 
