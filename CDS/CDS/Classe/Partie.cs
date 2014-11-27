@@ -50,11 +50,11 @@ namespace CDS
             chargerObjet(Globale.iNumeroDuNiveauAJouer);
             if (Globale.mode != "Normal")
             {
-                débutDePartieGenPoursuivant();
+                débutDePartieGenPoursuivant(false);
             }
             else
             {
-                débutDePartieGenPoursuivantNormal();
+                débutDePartieGenPoursuivant(true);
             }
             //-------------------------------------------------------------------------------------------------------------
 
@@ -135,7 +135,7 @@ namespace CDS
         }
 
       
-        public void débutDePartieGenPoursuivant()
+        public void débutDePartieGenPoursuivant(bool estNormal)
         {
             int nbPoursuivant;
             int nbPoursuivantDispoDansLaListe;
@@ -147,32 +147,18 @@ namespace CDS
 
             for(int i = 0;i<nbPoursuivant+1;i++)
             {
-                PoursuivantChoisi = iPoursuivant.Next(1, nbPoursuivantDispoDansLaListe+1);
-                PoursuivantChoisi = PoursuivantChoisi-1;
+                if(estNormal == false)
+                {
+                    PoursuivantChoisi = iPoursuivant.Next(1, nbPoursuivantDispoDansLaListe+1);
+                }
+                else
+                {
+                    PoursuivantChoisi = iPoursuivant.Next(1, 3);
+                }
 
+                PoursuivantChoisi = PoursuivantChoisi - 1;
                 PoursuivantDansLaPartie.Add(new Poursuivant(PoursuivantDispoPourLaPartie[PoursuivantChoisi].valeur,PoursuivantDispoPourLaPartie[PoursuivantChoisi].rareté, PoursuivantDispoPourLaPartie[PoursuivantChoisi].getListeCMD(), PoursuivantDispoPourLaPartie[PoursuivantChoisi].getUrlImage(),PoursuivantDispoPourLaPartie[PoursuivantChoisi].valeurScore));
                 if(i != nbPoursuivant)
-                {
-                    System.Threading.Thread.Sleep(150);
-                }
-            }
-        }
-
-        public void débutDePartieGenPoursuivantNormal()
-        {
-            int nbPoursuivant;
-            int PoursuivantChoisi;
-
-            Random iPoursuivant = new Random();
-            nbPoursuivant = iPoursuivant.Next(1, 4);
-
-            for (int i = 0; i < nbPoursuivant + 1; i++)
-            {
-                PoursuivantChoisi = iPoursuivant.Next(1,3);
-                PoursuivantChoisi = PoursuivantChoisi - 1;
-
-                PoursuivantDansLaPartie.Add(new Poursuivant(PoursuivantDispoPourLaPartie[PoursuivantChoisi].valeur, PoursuivantDispoPourLaPartie[PoursuivantChoisi].rareté, PoursuivantDispoPourLaPartie[PoursuivantChoisi].getListeCMD(), PoursuivantDispoPourLaPartie[PoursuivantChoisi].getUrlImage(), PoursuivantDispoPourLaPartie[PoursuivantChoisi].valeurScore));
-                if (i != nbPoursuivant)
                 {
                     System.Threading.Thread.Sleep(150);
                 }
