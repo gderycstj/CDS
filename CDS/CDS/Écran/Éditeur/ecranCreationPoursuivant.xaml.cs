@@ -67,7 +67,7 @@ namespace CDS
 
             if(signeDePlus)
             {
-                txtCMD.Text+= "+";
+                txtCMD.Text+= " + ";
             }
         }
 
@@ -175,36 +175,28 @@ namespace CDS
         private void btnBackspace_Click(object sender, RoutedEventArgs e)
         {
             int qtyADel= 0;
-            int iMemoire;
-            char lettre = 'A';
+            char[] lettre = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 
             // Les commande commence TOUTES par une lettre majuscule et le reste est des minuscules et des chiffres
             //MAIS il faut faire attention au if et random et ne pas delete leurs {}
 
             //on test si la dernière commende n'est pas un If ou Random
-            if(listeCMD[tempsActif-1][listeCMD.Length-1]!='}')
+            if( listeCMD[tempsActif-1]!="" && (listeCMD[tempsActif-1][listeCMD[tempsActif-1].Length-1]!='}'))
             {
 
-                    while(lettre!='Z'+1)//on veut tester toutes les lettres maj (même Z donc on arrête après (+1))
-                    {
-                        iMemoire = listeCMD[tempsActif].Length - listeCMD[tempsActif].LastIndexOf(lettre);
+                        qtyADel = listeCMD[tempsActif-1].Length - listeCMD[tempsActif-1].LastIndexOfAny(lettre);
 
-                        if (iMemoire != 0 && iMemoire < qtyADel)
-                        { 
-                            qtyADel=iMemoire;
-                        }
 
-                        lettre++;//on avance dans les lettres EX: A+1 = B 
-                    }
             }
             else
             {
-
+                //on cherche le caractère qui représente le début du If ou Random
             }
 
-            if(qtyADel!=null)
+            //s'il avait rien
+            if(qtyADel != -1)
             {
-                listeCMD[tempsActif].Remove(listeCMD.Length - qtyADel, qtyADel);
+                listeCMD[tempsActif-1]= listeCMD[tempsActif-1].Remove(listeCMD[tempsActif-1].Length - qtyADel, qtyADel);
             }
 
             txtRmv(true);
@@ -246,14 +238,19 @@ namespace CDS
 
         private void btnCreation_Click(object sender, RoutedEventArgs e)
         {
+            
+            string reqPoursuivant;
+            StringBuilder sBldr = new StringBuilder();
+            
+            for(int i=1;i<=qtyTemps ; i++)
+            {
+                sBldr.Append(listeCMD[i-1]);
+            }
+
+           reqPoursuivant = "INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)VALUES(txtNomPoursuivant.Text,(SELECT idUtilisateur FROM Utilisateurs WHERE nom='" + Globale.j1.getNom() + "'),(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/" + cboApparence.SelectedItem.ToString() + ".png'),txtPoint.Text,'" + sBldr.ToString() + "');";
+
             return;
-            /* string reqPoursuivant = "INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)
-             * VALUES(txtNomPoursuivant.Text
-             * ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom='"+ Globale.j1.nom + "')
-             * ,(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/"+ cboApparence.SelectedItem.ToString()+".png')
-             * ,txtPoint.Text
-             * ,'(La liste CMD ici)'
-             * );"*/
+            
         }
 
 
