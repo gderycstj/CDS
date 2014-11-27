@@ -303,6 +303,56 @@ VALUES
 ('/image/cercle.png'
 );
 
+INSERT INTO Apparences(image)
+VALUES
+('/image/Poursuivants/bubley.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Poursuivants/coeurtoxic.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Poursuivants/firey.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Poursuivants/fleche.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Poursuivants/orangeSpeed.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Poursuivants/pinky.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Poursuivants/pinstar.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Poursuivants/polen.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Poursuivants/sparkley.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Poursuivants/talktome.png'
+);
+
 INSERT INTO utilisateurs(idApparence,nom,motDePasse)
 VALUES
 ((SELECT idApparence FROM Apparences WHERE image = '/image/bonhommeMod.png')
