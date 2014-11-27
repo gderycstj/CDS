@@ -20,7 +20,7 @@
             </Button.Background>
         </Button>
 
-        <Grid x:Name="grille_poursuivants" Width="340" Height="214" Margin="64,110,578,76" Background="#FF4B634D" >
+        <Grid x:Name="grille_poursuivants" Width="340" Margin="64,110,571,46" Background="#FF4B634D" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1.8*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -54,32 +54,32 @@
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="0"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="1"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="2"></Border>
-            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="3" Margin="0,0,7,0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="3"/>
 
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="0"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="1"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="2"></Border>
-            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="3" Margin="0,0,7,0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="3"/>
 
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="0"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="1"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="2"></Border>
-            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="3" Margin="0,0,7,0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="3"/>
 
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="0"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="1"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="2"></Border>
-            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="3" Margin="0,0,7,0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="3"/>
 
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="0"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="1"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="2"></Border>
-            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="3" Margin="0,0,7,0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="3"/>
 
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="0"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="1"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="2"></Border>
-            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="3" Margin="0,0,7,0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="3"/>
 
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="0"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="1"></Border>
@@ -97,14 +97,12 @@
             </ComboBox.Background>
         </ComboBox>
         <Label Content="Objets" HorizontalAlignment="Left" Margin="544,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Foreground="#FF4B634D" FontFamily="Agency FB"/>
-        <Button x:Name="btnObjet" Content="+" HorizontalAlignment="Left" Margin="751,73,0,0" VerticalAlignment="Top" Width="33" Height="26" RenderTransformOrigin="0.477,0.33">
+        <Button x:Name="btnObjet" Content="+" HorizontalAlignment="Left" Margin="751,73,0,0" VerticalAlignment="Top" Width="33" Height="26" Click="btnObjet_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-
-        <DataGrid HorizontalAlignment="Left" Margin="545,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6.611,-0.923" Width="333" Height="214" Background="#FF4B634D"/>
-        <Button Content="Ajouter Mode" HorizontalAlignment="Left" Margin="391,324,0,0" VerticalAlignment="Top" Width="161" Height="41" FontFamily="Agency FB" FontSize="20">
+        <Button x:Name="AjouterMode" Content="Ajouter Mode" HorizontalAlignment="Left" Margin="391,324,0,0" VerticalAlignment="Top" Width="161" Height="41" FontFamily="Agency FB" FontSize="20" Click="AjouterMode_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
@@ -121,5 +119,44 @@
         </ComboBox>
         <Label Content="Valeur:" HorizontalAlignment="Left" Margin="732,16,0,0" VerticalAlignment="Top" FontFamily="Agency FB" Width="67" FontWeight="Bold" FontSize="24" Foreground="#FF4B634D"/>
         <TextBox x:Name="txtValeurObjectif" HorizontalAlignment="Left" Height="25" Margin="804,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Background="#FF4B634D" FontFamily="Agency FB" FontSize="16"/>
+        <Grid x:Name="grille_Objet" Width="333" Background="#FF4B634D" Margin="557,105,85,46" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.4*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="0">
+                <Label Content="Nom" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="32" Margin="63,0,0,0"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="1">
+                <Label Content="Supression" Grid.Column="1" HorizontalAlignment="Left" Margin="39,0,0,0" VerticalAlignment="Top" Height="32" Width="81"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="0"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="1"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="0"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="1"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="0"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="1"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="0"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="1"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="0"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="1"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="0"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="1"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="0"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="1"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="0"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="1"/>
+        </Grid>
     </Grid>
 </UserControl>
