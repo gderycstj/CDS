@@ -244,18 +244,6 @@ namespace CDS
             return new string(charArray);
         }
 
-        private void btnCreation_Click(object sender, RoutedEventArgs e)
-        {
-            return;
-            /* string reqPoursuivant = "INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)
-             * VALUES(txtNomPoursuivant.Text
-             * ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom='"+ Globale.j1.nom + "')
-             * ,(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/"+ cboApparence.SelectedItem.ToString()+".png')
-             * ,txtPoint.Text
-             * ,'(La liste CMD ici)'
-             * );"*/
-        }
-
 
 
 
