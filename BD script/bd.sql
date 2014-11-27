@@ -353,6 +353,61 @@ VALUES
 ('/image/Poursuivants/talktome.png'
 );
 
+INSERT INTO Apparences(image)
+VALUES
+('/image/Objets/bluePotion.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Objets/etoileDeNinja.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Objets/greenOrb.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Objets/greenPotion.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Objets/happyBoum.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Objets/orangePotion.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Objets/purpleOrb.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Objets/redOrb.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Objets/redPotion.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Objets/superBox.png'
+);
+
+INSERT INTO Apparences(image)
+VALUES
+('/image/Objets/yellowPotion.png'
+);
+
 INSERT INTO utilisateurs(idApparence,nom,motDePasse)
 VALUES
 ((SELECT idApparence FROM Apparences WHERE image = '/image/bonhommeMod.png')
