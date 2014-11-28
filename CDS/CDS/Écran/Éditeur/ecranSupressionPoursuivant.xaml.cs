@@ -55,7 +55,6 @@ namespace CDS
                 req = "DELETE FROM Poursuivants  WHERE idUtilisateur = (SELECT idUtilisateur FROM Utilisateurs u WHERE nom = '" + Globale.j1.getNom() + "') AND nom ='" + cboPoursuivant.SelectedItem.ToString() + "';";
                 col = 0;
                 Globale.bdCDS.supression(req);
-                txtErreur.Text= "votre poursuivant a bien été supprimé";
                 cboPoursuivant.Items.Remove(cboPoursuivant.SelectedItem);
                 cboPoursuivant.SelectedIndex = 0;
 
@@ -67,6 +66,7 @@ namespace CDS
                      {
                          imgPoursuivant.Source = new BitmapImage(new Uri("", UriKind.RelativeOrAbsolute));
                       }
+                      passwordUser.Clear();
             }
              else
             {

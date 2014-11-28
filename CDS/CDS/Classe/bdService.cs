@@ -107,6 +107,7 @@ namespace CDS
             catch (Exception e)
             {
                 MessageBox.Show("Erreur lors de la supression");
+                Fermer();
             }
         }
 

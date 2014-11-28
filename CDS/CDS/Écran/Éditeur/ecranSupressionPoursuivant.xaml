@@ -22,6 +22,7 @@
             </Button.Background>
         </Button>
         <TextBlock x:Name="txtErreur" HorizontalAlignment="Left" Margin="330,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="327" Foreground="#FFFBFBFB" Height="32" FontFamily="Agency FB" FontSize="18" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Height="279" Margin="31,32,0,0" TextWrapping="Wrap" Text="Pour Supprimer un Poursuivant, il ne doit pas être dans l'un de vos modes créer, sinon il sera impossible de le supprimer (une erreur vous avertira)" VerticalAlignment="Top" Width="316" FontFamily="Agency FB" FontSize="36" TextAlignment="Center" Foreground="#FF4B634D"/>
 
     </Grid>
 </UserControl>
