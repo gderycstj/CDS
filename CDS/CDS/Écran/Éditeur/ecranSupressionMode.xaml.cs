@@ -54,7 +54,6 @@ namespace CDS
             if (col != 0) 
             {
                 req = "DELETE FROM ModesDeJeu  WHERE idUtilisateur = (SELECT idUtilisateur FROM Utilisateurs u WHERE nom = '" + Globale.j1.getNom() + "') AND nom ='" + cboMode.SelectedItem.ToString() + "';";
-                MessageBox.Show(req);
                 col = 0;
                 Globale.bdCDS.supression(req);
                 txtErreur.Text= "votre mode a bien été supprimé";

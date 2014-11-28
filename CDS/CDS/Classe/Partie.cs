@@ -202,7 +202,7 @@ namespace CDS
                     }
                 }
 
-                if (valeur != nbPoursuivant)
+                if (valeur > nbPoursuivant)
                 {
                     //Rareté Spawn par tour
                     if (tour % rarete == 0)

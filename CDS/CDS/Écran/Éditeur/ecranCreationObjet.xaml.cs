@@ -137,6 +137,7 @@ namespace CDS
             bool validation = true;
 
             string req = "SELECT nom FROM Objets;";
+           
             List<string>[] listeObjet = Globale.bdCDS.selection(req,1,ref nbRangee);
             for (int i=0; i < listeObjet.Length;i++)
             { 
@@ -149,15 +150,17 @@ namespace CDS
             if(validation == true)
             {
                string reqObjet = "INSERT INTO Objets(idUtilisateur,idApparence,nom)"+
-               "VALUES (((SELECT idUtilisateur FROM Utilisateurs WHERE nom = '"+Globale.j1.getNom()+"')"+
+               "VALUES ((SELECT idUtilisateur FROM Utilisateurs WHERE nom = '"+Globale.j1.getNom()+"')"+
                 ",(SELECT idApparence FROM apparences WHERE image = '/image/Objets/"+cboApparence.SelectedItem.ToString()+".png')"+
                 ",'"+txtObjet.Text+"');";
+       
                 Globale.bdCDS.Insertion(reqObjet);
-                MessageBox.Show(reqObjet);
+
 
                 string reqObjet2 = "INSERT INTO ObjetsEffets(idObjet,idEffet)"+
                 "VALUES((SELECT idObjet FROM Objets WHERE nom ='"+txtObjet.Text+"')"+
-                ",(SELECT idEffet FROM Effets WHERE nom = '"+listeEffets[0][0].ToString()+"'));";
+                ",(SELECT idEffet FROM Effets WHERE nom = '"+listeEffets[0].ToString()+"'));";
+                MessageBox.Show(reqObjet2);
                 Globale.bdCDS.Insertion(reqObjet2);
             }
         }

@@ -271,26 +271,26 @@ namespace CDS
            }
 
            //validation de la liste objet et poursuivant
-            if (lstObjet.Count == 0 || lstPoursuivant.Count == 0)
+            if (lstPoursuivant.Count == 0)
             {
-                MessageBox.Show("Vous devez avoir au moins un objet et un poursuivant pour créer un nouveau mode");
+                MessageBox.Show("Vous devez avoir au moins un poursuivant pour créer un nouveau mode");
                 validation = false;
 
             }
 
             //Doit avoir une valeur pour l'objectif
-            if (txtValeurObjectif.Text == "" && cboObjectif.SelectedItem.ToString() != "Survie") 
+            if (txtValeurObjectif.Text == "" && cboObjectif.SelectedItem.ToString() != "Survivre") 
             {
                 MessageBox.Show("Vous devez rentrer une valeur pour votre objectif");
                 validation = false;    
             
             }
 
-            if (cboObjectif.SelectedItem.ToString() == "Armure" && Convert.ToInt32(txtValeurObjectif.Text) < 0 || Convert.ToInt32(txtValeurObjectif.Text) > 12)
-            {
-                MessageBox.Show("Votre nombre d'armure doit être entre 0 et 12");
+        //    if (cboObjectif.SelectedItem.ToString() == "Armure" && Convert.ToInt32(txtValeurObjectif.Text) < 0 || Convert.ToInt32(txtValeurObjectif.Text) > 12)
+          //  {
+            //    MessageBox.Show("Votre nombre d'armure doit être entre 0 et 12");
 
-            }
+            //}
 
 
             //si tout est validé, le mode sera inséré
@@ -303,28 +303,40 @@ namespace CDS
                 //insertion du Mode de jeu
                 string req = "INSERT INTO ModesDeJeu(idUtilisateur,nom)VALUES((SELECT idUtilisateur FROM Utilisateurs WHERE nom ='" + Globale.j1.getNom() + "'),'" + txtNom.Text + "');";
                 id = Globale.bdCDS.Insertion(req);
-                
-                //validation de l'objectif pour voir s'il est déjâ présent
-                req = "SELECT nom FROM Objectifs WHERE nom = '" + cboObjectif.SelectedItem.ToString() + "' AND valeurObjectif = " + txtValeurObjectif.Text + ";";
 
-                List<string>[] listeObjectif;
-                int col = 0;
-
-
-                listeObjectif = Globale.bdCDS.selection(req, 1, ref col);
-
-                //si l'objectif existe pas, un nouveau sera crée
-                if (col == 0) 
+                if (cboObjectif.SelectedItem.ToString() != "Survivre")
                 {
-                    req = "INSERT INTO Objectifs(nom,valeurObjectif)VALUES('" +  cboObjectif.SelectedItem.ToString() + "', " + txtValeurObjectif.Text + ");" ;
-                    Globale.bdCDS.Insertion(req);
-                }
+                    //validation de l'objectif pour voir s'il est déjâ présent
+                    req = "SELECT nom FROM Objectifs WHERE nom = '" + cboObjectif.SelectedItem.ToString() + "' AND valeurObjectif = " + txtValeurObjectif.Text + ";";
 
-                //insertion du niveau du mode de jeu avec son objectif
-                req = "INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)VALUES(" + 
-                       id + ",(SELECT idUtilisateur FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() + 
-                       "'), (SELECT idObjectif FROM Objectifs WHERE nom = '" + cboObjectif.SelectedItem.ToString() + 
-                       "' AND valeurObjectif = " + txtValeurObjectif.Text + "),0);";
+                    List<string>[] listeObjectif;
+                    int col = 0;
+
+
+                    listeObjectif = Globale.bdCDS.selection(req, 1, ref col);
+
+                    //si l'objectif existe pas, un nouveau sera crée
+                    if (col == 0) 
+                    {
+                        req = "INSERT INTO Objectifs(nom,valeurObjectif)VALUES('" +  cboObjectif.SelectedItem.ToString() + "', " + txtValeurObjectif.Text + ");" ;
+                        Globale.bdCDS.Insertion(req);
+                    }
+
+     
+                    //insertion du niveau du mode de jeu avec son objectif
+                    req = "INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)VALUES(" +
+                           id + ",(SELECT idUtilisateur FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() +
+                           "'), (SELECT idObjectif FROM Objectifs WHERE nom = '" + cboObjectif.SelectedItem.ToString() +
+                           "' AND valeurObjectif = " + txtValeurObjectif.Text + "),0);";
+                }
+                else 
+                {
+                       req = "INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)VALUES(" +
+                         id + ",(SELECT idUtilisateur FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() +
+                         "'), (SELECT idObjectif FROM Objectifs WHERE nom ='Survivre'),0);";
+                       MessageBox.Show(req);
+
+                }
 
               idNiveau = Globale.bdCDS.Insertion(req);
 
@@ -347,6 +359,20 @@ namespace CDS
 
             }
 
+        }
+
+        private void ActionObjectif(object sender, EventArgs e)
+        {
+            if (cboObjectif.SelectedItem.ToString() == "Survivre")
+            {
+                txtValeurObjectif.Clear();
+                txtValeurObjectif.IsEnabled = false;
+
+            }
+            else 
+            {
+                txtValeurObjectif.IsEnabled = true;
+            }
         }
 
     }
