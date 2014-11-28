@@ -160,8 +160,8 @@ namespace CDS
                 string reqObjet2 = "INSERT INTO ObjetsEffets(idObjet,idEffet)"+
                 "VALUES((SELECT idObjet FROM Objets WHERE nom ='"+txtObjet.Text+"')"+
                 ",(SELECT idEffet FROM Effets WHERE nom = '"+listeEffets[0].ToString()+"'));";
-                MessageBox.Show(reqObjet2);
                 Globale.bdCDS.Insertion(reqObjet2);
+                MessageBox.Show("Votre nouvel objet a bien été ajouté");
             }
         }
 

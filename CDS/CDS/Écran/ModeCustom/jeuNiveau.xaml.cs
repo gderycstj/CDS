@@ -684,6 +684,7 @@ namespace CDS
                          timerFin.Tick += new EventHandler(OnTimedEvent4);
                          validationVie();
 
+                         Globale.j1.pathImage = ("/image/bonhommeMort.png");
                          grillePrincipale.Children.Clear();
                          AfficherJoueur();
                          partieEnCours = false;

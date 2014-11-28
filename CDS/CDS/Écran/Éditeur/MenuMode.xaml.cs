@@ -354,7 +354,7 @@ namespace CDS
 
             }
 
-            MessageBox.Show("Le mode " + txtNom + "a bien été ajouté");
+            MessageBox.Show("Votre nouveau mode a bien été ajouté");
         }
 
         private void ActionObjectif(object sender, EventArgs e)

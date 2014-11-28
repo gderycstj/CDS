@@ -265,6 +265,8 @@ namespace CDS
              ",(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/" + cboApparence.SelectedItem.ToString() + ".png')"+
              ","+txtPoint.Text+",'" + sBldr.ToString() + "');";
               Globale.bdCDS.Insertion(reqPoursuivant);
+
+              MessageBox.Show("Votre nouveau poursuivant a bien été ajouté");
            }
         }
 
