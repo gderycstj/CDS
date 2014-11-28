@@ -35,6 +35,10 @@ namespace CDS
                 case "Armure":
                 txtObjectif.Text = "Il vous faudra récupérer des objets 'Armure' et les garder en stock. Garder "+ valeur +" armures en stock pour gagner";
                 break;
+
+                case "Survivre":
+                txtObjectif.Text = "Le but de ce mode est de survivre le plus de tours possibles et de faire le meilleur score";
+                break;
             }
         }
 

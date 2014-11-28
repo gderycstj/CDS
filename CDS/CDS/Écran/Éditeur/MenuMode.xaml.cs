@@ -298,7 +298,6 @@ namespace CDS
             {
                 int id;
                 int idNiveau;
-                int i = 0;
 
                 //insertion du Mode de jeu
                 string req = "INSERT INTO ModesDeJeu(idUtilisateur,nom)VALUES((SELECT idUtilisateur FROM Utilisateurs WHERE nom ='" + Globale.j1.getNom() + "'),'" + txtNom.Text + "');";
@@ -334,7 +333,6 @@ namespace CDS
                        req = "INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,idObjectif,numNiveau)VALUES(" +
                          id + ",(SELECT idUtilisateur FROM Utilisateurs WHERE nom = '" + Globale.j1.getNom() +
                          "'), (SELECT idObjectif FROM Objectifs WHERE nom ='Survivre'),0);";
-                       MessageBox.Show(req);
 
                 }
 
@@ -354,11 +352,9 @@ namespace CDS
                }
 
 
-
-
-
             }
 
+            MessageBox.Show("Le mode " + txtNom + "a bien été ajouté");
         }
 
         private void ActionObjectif(object sender, EventArgs e)
