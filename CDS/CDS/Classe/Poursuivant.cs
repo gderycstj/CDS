@@ -845,7 +845,7 @@ namespace CDS
         /// <returns></returns>
         public override bool inBoundary()
         {
-            if (positionEntite.posX == 0 || positionEntite.posX == 10 || positionEntite.posY == 0 || positionEntite.posY == 10)
+            if (positionEntite.posX <= 0 || positionEntite.posX >= 10 || positionEntite.posY <= 0 || positionEntite.posY >= 10)
             {
                 return true;
             }

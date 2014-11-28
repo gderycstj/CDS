@@ -24,11 +24,12 @@ namespace CDS
 
         int qtyTemps=1; // on commence avec un seul tour
         int tempsActif=1; //on commence en modifiant le tour 1 (selui que l'on commence avec)
-
+        int nbEvenement = 0;
 
         public ecranCreationPoursuivant()
         {
             InitializeComponent();
+            activerBtnBack();
             //Liste d'apparence
             String req2 = "SELECT image FROM Apparences WHERE image LIKE '/image/Poursuivants/%'";
             List<string>[] listeApparence;
@@ -88,6 +89,8 @@ namespace CDS
         private void btnHaut_Click(object sender, RoutedEventArgs e)
         {
             listeCMD[tempsActif - 1] += "Mh";
+            nbEvenement++;
+            activerBtnBack();
             txtAdd("Haut", true);
             
         }
@@ -95,18 +98,23 @@ namespace CDS
         private void btnDroit_Click(object sender, RoutedEventArgs e)
         {
             listeCMD[tempsActif-1] += "Md";
+            nbEvenement++;
+            activerBtnBack();
             txtAdd("Droite",true);
         }
 
         private void btnGauche_Click(object sender, RoutedEventArgs e)
         {
             listeCMD[tempsActif-1] += "Mg";
+            nbEvenement++;
+            activerBtnBack();
             txtAdd("Gauche", true);
         }
 
         private void btnBas_Click(object sender, RoutedEventArgs e)
         {
             listeCMD[tempsActif-1] += "Mb";
+            nbEvenement++;
             txtAdd("Bas", true);
         }
 
@@ -268,6 +276,18 @@ namespace CDS
 
               MessageBox.Show("Votre nouveau poursuivant a bien été ajouté");
            }
+        }
+
+        public void activerBtnBack()
+        { 
+            if(nbEvenement > 2)
+            {
+                btnBas.IsEnabled = true;
+            }
+            else
+            {
+                btnBas.IsEnabled = false;
+            }
         }
 
     }

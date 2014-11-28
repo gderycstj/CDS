@@ -112,12 +112,14 @@ namespace CDS
 
             List<string>[] unNiveau = Globale.bdCDS.selection(req, 5, ref nbRange);
 
-            for (int i = 0; i < unNiveau.Length; i++)
+            if(nbRange > 0)
             {
-                Effet e = new Effet(unNiveau[i][3], unNiveau[i][4]);
+                for (int i = 0; i < unNiveau.Length; i++)
+                {
+                    Effet e = new Effet(unNiveau[i][3], unNiveau[i][4]);
 
-                objetDispoPourLaPartie.Add(new Objet(e, Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][3], unNiveau[i][4]));
-
+                    objetDispoPourLaPartie.Add(new Objet(e, Convert.ToInt32(unNiveau[i][1]), Convert.ToInt32(unNiveau[i][2]), unNiveau[i][3], unNiveau[i][4]));
+                }
             }
          }
 
@@ -281,18 +283,21 @@ namespace CDS
             string urlImageEffet;
 
             Random rnd = new Random();
-            if(tour%7 == 0)
+            if(objetDispoPourLaPartie.Count > 0)
             {
-               objetChoisi = rnd.Next(1,nbObjetDispo+1);
-               objetChoisi -= 1;
-               listeCMDEffet = objetDispoPourLaPartie[objetChoisi].unEffet.getListeCMD();
-               urlImageEffet = objetDispoPourLaPartie[objetChoisi].unEffet.getUrlImage();
-               Effet e = new Effet(listeCMDEffet,urlImageEffet);
-               objetDansLaPartie.Add(new Objet(e,
-               objetDispoPourLaPartie[objetChoisi].valeur,
-               objetDispoPourLaPartie[objetChoisi].rareté,
-               objetDispoPourLaPartie[objetChoisi].getListeCMD(),
-               objetDispoPourLaPartie[objetChoisi].getUrlImage()));
+                if(tour%7 == 0)
+                {
+                      objetChoisi = rnd.Next(1,nbObjetDispo+1);
+                      objetChoisi -= 1;
+                      listeCMDEffet = objetDispoPourLaPartie[objetChoisi].unEffet.getListeCMD();
+                      urlImageEffet = objetDispoPourLaPartie[objetChoisi].unEffet.getUrlImage();
+                      Effet e = new Effet(listeCMDEffet,urlImageEffet);
+                      objetDansLaPartie.Add(new Objet(e,
+                      objetDispoPourLaPartie[objetChoisi].valeur,
+                      objetDispoPourLaPartie[objetChoisi].rareté,
+                      objetDispoPourLaPartie[objetChoisi].getListeCMD(),
+                      objetDispoPourLaPartie[objetChoisi].getUrlImage()));
+                 }
             }
         }
 

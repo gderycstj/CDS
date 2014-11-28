@@ -294,7 +294,7 @@ namespace CDS
 
 
             //si tout est validé, le mode sera inséré
-            if (validation) 
+            if (validation == true) 
             {
                 int id;
                 int idNiveau;
@@ -351,10 +351,8 @@ namespace CDS
                   Globale.bdCDS.Insertion(req);
                }
 
-
+              MessageBox.Show("Votre nouveau mode a bien été ajouté");
             }
-
-            MessageBox.Show("Votre nouveau mode a bien été ajouté");
         }
 
         private void ActionObjectif(object sender, EventArgs e)

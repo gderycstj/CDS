@@ -19,7 +19,7 @@
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <TextBlock x:Name="txtErreur" HorizontalAlignment="Left" Margin="316,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="315" Foreground="#FFFBFBFB" Height="32" FontFamily="Agency FB" FontSize="16"/>
+        <TextBlock x:Name="txtErreur" HorizontalAlignment="Left" Margin="316,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="315" Foreground="#FFFBFBFB" Height="32" FontFamily="Agency FB" FontSize="16" TextAlignment="Center"/>
 
     </Grid>
 </UserControl>
