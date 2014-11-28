@@ -58,13 +58,21 @@ namespace CDS
                 txtErreur.Text= "votre poursuivant a bien été supprimé";
                 cboPoursuivant.Items.Remove(cboPoursuivant.SelectedItem);
                 cboPoursuivant.SelectedIndex = 0;
-                imageP();
-             }
+
+                     if (cboPoursuivant.Items.Count != 0)
+                     { 
+                        imageP();
+                     }
+                     else 
+                     {
+                         imgPoursuivant.Source = new BitmapImage(new Uri("", UriKind.RelativeOrAbsolute));
+                      }
+            }
              else
             {
                 txtErreur.Text = "Vous n'avez pas rentrer le bon mot de passe";
             }
-
+         
 
         }
 
@@ -75,6 +83,7 @@ namespace CDS
 
         public void imageP() 
         {
+           
             string req = "SELECT image FROM Poursuivants p INNER JOIN Apparences a ON a.idApparence = p.idApparence WHERE nom ='" + cboPoursuivant.SelectedItem.ToString() + "';";
             int col = 0;
             List<string>[] listImage;
