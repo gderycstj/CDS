@@ -134,12 +134,12 @@ namespace CDS
          /// <param name="e"></param>
          public void Supprimer(object sender, RoutedEventArgs e) 
         {
-                Label label = sender as Label;
+            //    Label label = sender as Label;
            
-                int rangee = (int)label.GetValue(Grid.RowProperty);
+              //  int rangee = (int)label.GetValue(Grid.RowProperty);
 
-                lstPoursuivant.RemoveAt(rangee);
-                AfficherElementGrillePoursuivant();
+                //lstPoursuivant.RemoveAt(rangee);
+                //AfficherElementGrillePoursuivant();
        }
 
 

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Admin\Desktop\projet\CDS\CDS\obj\Debug\
+C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\
 CDS
 none
 false
 DEBUG;TRACE
-C:\Users\Admin\Desktop\projet\CDS\CDS\Écran\App.xaml
+C:\Users\Admin\Desktop\CDS\CDS\CDS\Écran\App.xaml
 33647305060
 
 541750777128
-17-1276588733
+17-2067737862
 Écran\Instruction\infoBut.xaml;Écran\Instruction\infoCommande.xaml;Écran\Instruction\infoObjet1.xaml;Écran\Instruction\infoObjet2.xaml;Écran\Instruction\infoPoursuivant1.xaml;Écran\Instruction\infoPoursuivant2.xaml;Écran\Éditeur\ecranCreationEffets.xaml;Écran\Éditeur\ecranCreationObjet.xaml;Écran\Éditeur\ecranCreationPoursuivant.xaml;Écran\Survie\ecranDescriptionNiveau.xaml;Écran\ModeCustom\ecranDescriptionObjectif.xaml;Écran\ModeCustom\ecranFinDePartieMode.xaml;Écran\Survie\ecranFinDePartieNiveauEchec.xaml;Écran\Normal\ecranMeilleurScore.xaml;Écran\Éditeur\ecranSupressionEffet.xaml;Écran\Éditeur\ecranSupressionMode.xaml;Écran\Éditeur\ecranSupressionObjet.xaml;Écran\Éditeur\ecranSupressionPoursuivant.xaml;Écran\ModeCustom\jeuNiveau.xaml;Écran\Éditeur\menuConnexion.xaml;Écran\Survie\ecranFinDePartieNiveau.xaml;Écran\Compte\menuGestionProfil.xaml;Écran\Normal\JeuNormal.xaml;Écran\Compte\menuInscription.xaml;Écran\Éditeur\MenuMode.xaml;Écran\Éditeur\menuObjet.xaml;Écran\Éditeur\menuPoursuivant.xaml;Écran\menuPrincipal.xaml;Écran\Éditeur\menuEditeur.xaml;Écran\Instruction\menuInstruction.xaml;Écran\menuJouer.xaml;Écran\Survie\menuSelectionNiveau.xaml;Écran\Survie\menuSurvie.xaml;
 
 False

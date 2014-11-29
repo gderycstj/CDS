@@ -25,12 +25,6 @@ VALUES
   ,750
 );
 
-INSERT INTO Scores(idModeDeJeu,idUtilisateur,score)
-VALUES
-(((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Normal'))
-  ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Gabriel')
-  ,2000
-);
 
 INSERT INTO Scores(idModeDeJeu,idUtilisateur,score)
 VALUES
@@ -70,21 +64,21 @@ VALUES
 INSERT INTO Scores(idModeDeJeu,idUtilisateur,score)
 VALUES
 (((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Normal'))
-  ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Gabriel')
+  ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Vincent')
   ,8000
 );
 
 INSERT INTO Scores(idModeDeJeu,idUtilisateur,score)
 VALUES
 (((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Normal'))
-  ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Gabriel')
+  ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'William')
   ,9000
 );
 
 INSERT INTO Scores(idModeDeJeu,idUtilisateur,score)
 VALUES
 (((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Normal'))
-  ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Gabriel')
+  ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'William')
   ,10000
 );
 
