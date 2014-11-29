@@ -195,7 +195,7 @@ namespace CDS
                         }
                     }
                     //Tout les autres
-                    if (p.getUrlImage() != "/image/LosangeJaune.png" && p.getUrlImage() != "/image/LosangeMauve.png" && p.getUrlImage() == "/image/carreVert.png" && p.getUrlImage() == "/image/carreBleu.png")
+                    if (p.getUrlImage() != "/image/LosangeJaune.png" && p.getUrlImage() != "/image/LosangeMauve.png" && p.getUrlImage() != "/image/carreVert.png" && p.getUrlImage() != "/image/carreBleu.png")
                     {
                         if (p.getUrlImage() == pi.getUrlImage())
                         {
