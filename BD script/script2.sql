@@ -1,4 +1,4 @@
-INSERT INTO utilisateurs(idApparence,nom,motDePasse)
+﻿INSERT INTO utilisateurs(idApparence,nom,motDePasse)
 VALUES
 ((SELECT idApparence FROM Apparences WHERE image = '/image/bonhommeMod.png')
  ,'Mathieu'
@@ -14,8 +14,8 @@ VALUES
 
 INSERT INTO modesdejeu(idUtilisateur,nom)
 VALUES
-((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Gabriel')
- ,'Spécial'
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Alain')
+ ,'surprise'
 );
 
 INSERT INTO Scores(idModeDeJeu,idUtilisateur,score)
@@ -94,8 +94,8 @@ VALUES
 ,'Armure');
 
 INSERT INTO Niveaux(idModeDeJeu,idUtilisateur,numNiveau,idObjectif)
-VALUES((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Special')
-	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Gabriel')
+VALUES((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'surprise')
+	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Alain')
 	   ,0
 	   ,(SELECT idObjectif FROM Objectifs WHERE nom = 'Armure' AND valeurObjectif = 3)
 );
@@ -103,15 +103,15 @@ VALUES((SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = 'Special')
 
 INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)
 VALUES('Cheval'
-	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Alain')
 	   ,(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/coeurtoxic.png')
 	   ,250
-	   ,'MhMhMdC'
+	   ,'MhMhMhMdC'
 );
 
 INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)
 VALUES('Ziggy'
-	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+	   ,(SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Alain')
 	   ,(SELECT idApparence FROM apparences WHERE image = '/image/Poursuivants/orangeSpeed.png')
 	   ,250
 	   ,'MhMdC/MhMgC'
@@ -119,14 +119,14 @@ VALUES('Ziggy'
 
 INSERT INTO Objets(idUtilisateur,idApparence,nom)
 VALUES
-((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Admin')
+((SELECT idUtilisateur FROM Utilisateurs WHERE nom = 'Alain')
 ,(SELECT idApparence FROM Apparences WHERE image = '/image/Objets/bluePotion.png')
 ,'Super potion'
 );
 
 INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
 VALUES
-((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Spécial'))
+((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'surprise'))
 ,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'cheval')	
 ,2
 ,1
@@ -134,7 +134,7 @@ VALUES
 
 INSERT INTO NiveauxPoursuivants(idNiveau,idPoursuivant,valeur,rarete)
 VALUES
-((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Spécial'))
+((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'surprise'))
 ,(SELECT idPoursuivant FROM Poursuivants WHERE nom = 'Ziggy')	
 ,2
 ,1
@@ -142,7 +142,7 @@ VALUES
 
 INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
 VALUES
-((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Spécial'))
+((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'surprise'))
 ,(SELECT idObjet FROM Objets WHERE nom = 'Super potion')	
 ,0
 ,0
@@ -150,7 +150,7 @@ VALUES
 
 INSERT INTO NiveauxObjets(idNiveau,idObjet,valeur,rarete)
 VALUES
-((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'Spécial'))
+((SELECT idNiveau FROM Niveaux WHERE numNiveau = 0 AND idModeDeJeu =  (SELECT idModeDeJeu FROM modesDeJeu WHERE nom = 'surprise'))
 ,(SELECT idObjet FROM Objets WHERE nom = 'Armure')	
 ,0
 ,0
@@ -165,7 +165,7 @@ VALUES
 
 INSERT INTO progressions(idUtilisateur,idModeDeJeu,niveauAtteint,niveauAtteintMax)
 VALUES
-((SELECT idUtilisateur FROM utilisateurs WHERE nom='alain')
+((SELECT idUtilisateur FROM utilisateurs WHERE nom='Alain')
 ,(SELECT idModeDeJeu FROM modesdejeu WHERE nom='survie')
 ,5
 ,10
