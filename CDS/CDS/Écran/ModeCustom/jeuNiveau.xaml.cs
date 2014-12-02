@@ -567,6 +567,9 @@ namespace CDS
 
             public void generationTour()
             {
+                int iCmptr=0;
+                List<int> memoireInt= new List<int>();
+
                 grillePrincipale.Children.Clear();
                 //va éffacer la grille a chaque déplacement et va réafficher le joueur à sa nouvelle position
                 if(tim.Enabled && timActiv.Enabled)
@@ -580,6 +583,18 @@ namespace CDS
                 foreach (Poursuivant p in partieNormal.PoursuivantDansLaPartie)
                 {
                     p.action();
+                }
+                iCmptr=0;
+                foreach(Effet e in partieNormal.EffetDansLaPartie)
+                {
+                    if(e.action())
+                        memoireInt.Add(iCmptr);
+
+                    iCmptr++;
+                }
+                foreach(int i in memoireInt)
+                {
+                    partieNormal.EffetDansLaPartie.RemoveAt(i);
                 }
                 if(Globale.vie.nbVieActu != 0)
                 {

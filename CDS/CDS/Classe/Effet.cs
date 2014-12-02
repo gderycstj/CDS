@@ -10,6 +10,7 @@ namespace CDS
     {
            List<Effet> listeEffet;
            bool estDangereux = false;
+           int duréeDeVie =1; //nombre de tour que l'effet est en jeu avant de mourrir
 
 		public Effet(string listC,string url):base(listC,url)
         {
@@ -21,26 +22,35 @@ namespace CDS
         /// <returns> que tout est correct</returns>
         public override bool action()
         {
+            estDangereux=false;//a chaque action on met l'effect pas dangereux, il sera remit dangereux s,il l'est encore
+            int temps = 0;
+            int numAction = 0;
             string[] tabCMD = { "" };
             string CMD = "";
-            
+
+
+            //correction en cas d'age plus bas que 0
+            if (age < 0)
+                age = 0;
 
             //Verifie si c'est en plusieur temps et prend la bonne partie de la chaine
             //Si c'est un seul temps, il prend la chaine au complet
             if (listeCMD.Contains('/'))
             {
                 //Calculer en combien de tour il fait un cyle
+                temps = listeCMD.Count(f => f == '/');
 
 
+                /*Calculer a quel cycle on est rendu et quel partie chaine on doit mettre dans CMD*/
+                numAction = age % (temps + 1);
 
-                //Calculer a quel cycle on est rendu et quel partie chaine on doit mettre dans CMD
 
                 //un tableau de string avec tout les temps séparer
                 tabCMD = listeCMD.Split(new char[] { '/' });
 
 
                 //Mettre la section de listeCMD dans CMD
-
+                CMD = tabCMD[numAction];
             }
             else
             {
@@ -641,7 +651,7 @@ namespace CDS
                     
 
                     //Degat
-                    case 'D': break;
+                    case 'D': estDangereux=true; break;
                     //Soin    
                     case 'S': 
                     Globale.vie.soin(1);
@@ -672,11 +682,27 @@ namespace CDS
             return true;
         }
        
-        //Vérification et action effectuer à chaque fin de tour
+        /// <summary>
+        /// Vérification et action effectuer à chaque fin de tour
+        /// </summary>
+        /// <returns>Si l'effet doit mourrir (disparaitre)</returns>
         public override bool finDetour()
         {
             age++;
-            return true;
+
+            if(estDangereux)
+            {
+                if( Globale.j1.positionJoueur.posX == this.positionEntite.posX &&
+                    Globale.j1.positionJoueur.posY == this.positionEntite.posY  )
+                {
+                    Globale.vie.degat();
+                }
+            }
+
+            if(age>=duréeDeVie)
+                return true;
+            else
+                return false;
         }
 
         /// <summary>

@@ -15,6 +15,8 @@ namespace CDS
         public List<Poursuivant> PoursuivantDansLaPartie{ get; set; }
         public List<Objet> objetDansLaPartie{get; set;}
         public List<Objet> objetDispoPourLaPartie { get;set;}
+        public List<Effet> EffetDispoPourLaPartie { get;set;}
+        public List<Effet> EffetDansLaPartie { get;set;}
         public Objet obj1{get;set;}
         public Objet obj2{get;set;}
 
@@ -27,6 +29,8 @@ namespace CDS
             PoursuivantDispoPourLaPartie = new List<Poursuivant>();
             objetDansLaPartie = new List<Objet>();
             objetDispoPourLaPartie = new List<Objet>();
+            EffetDansLaPartie = new List<Effet>();
+            EffetDispoPourLaPartie = new List<Effet>();
             Globale.j1.pathImage = "/image/bonhommeMod.png";
             objectif = new Objectif("Survie",3);
         }

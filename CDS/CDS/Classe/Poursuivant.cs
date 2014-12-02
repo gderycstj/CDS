@@ -13,7 +13,7 @@ namespace CDS
 		public int valeur { get; set; }
         public int rareté { get; set; }
         public int valeurScore { get; set; }
-
+        List<Effet> listeEffet;
 		
         /// <summary>
         /// Constructeur d'un poursuivant
@@ -388,9 +388,10 @@ namespace CDS
                             iLecture++;
                         }
 
-                       
+
 
                         //on lance l'effet commandé
+                        listeEffet[numero].action();
                         
 
                         break;

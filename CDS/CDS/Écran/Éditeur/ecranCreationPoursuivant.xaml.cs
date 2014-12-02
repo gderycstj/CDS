@@ -58,31 +58,20 @@ namespace CDS
 
 
 
-        /// <summary>
-        /// Ajoute un block de text a la liste !!!!WIP!!!!!
-        /// </summary>
-        /// <param name="text">le text à ajouter</param>
-        /// <param name="signeDePlus">si on veut ajouter le + après</param>
-        private void txtAdd(string text, bool signeDePlus)
+        
+        private void txtUpdate()
         {
-            txtCMD.Text += text;
+            txtCMD.Text = "";
 
-            if(signeDePlus)
+            foreach( string s in listeCMD)
             {
-                txtCMD.Text+= " + ";
+                txtCMD.Text += s + "/";
             }
+            //on enlève le dernier / qui est de trop
+            txtCMD.Text= txtCMD.Text.Remove(txtCMD.Text.Length-1);
+
         }
 
-        /// <summary>
-        /// efface la dernière comande ajouter !!!!WIP!!!!!
-        /// </summary>
-        /// <param name="deleteUnSeul"> true pour un backspace/ false pour delete un temps complèt</param>
-        /// <returns>si effacer est un succès</returns>
-        private bool txtRmv(bool deleteUnSeul)
-        {
-
-            return true;
-        }
 
 
 
@@ -91,7 +80,7 @@ namespace CDS
             listeCMD[tempsActif - 1] += "Mh";
             nbEvenement++;
             activerBtnBack();
-            txtAdd("Haut", true);
+            txtUpdate();
             
         }
 
@@ -100,7 +89,7 @@ namespace CDS
             listeCMD[tempsActif-1] += "Md";
             nbEvenement++;
             activerBtnBack();
-            txtAdd("Droite",true);
+            txtUpdate();
         }
 
         private void btnGauche_Click(object sender, RoutedEventArgs e)
@@ -108,20 +97,20 @@ namespace CDS
             listeCMD[tempsActif-1] += "Mg";
             nbEvenement++;
             activerBtnBack();
-            txtAdd("Gauche", true);
+            txtUpdate();
         }
 
         private void btnBas_Click(object sender, RoutedEventArgs e)
         {
             listeCMD[tempsActif-1] += "Mb";
             nbEvenement++;
-            txtAdd("Bas", true);
+            txtUpdate();
         }
 
         private void btnCheck_Click(object sender, RoutedEventArgs e)
         {
             listeCMD[tempsActif-1] += "C";
-            txtAdd("Attack", true);
+            txtUpdate();
         }
 
         private void btnTourAjout_Click(object sender, RoutedEventArgs e)
@@ -145,7 +134,7 @@ namespace CDS
 
             tempsActif= qtyTemps;
             txtTourselectionne.Text = tempsActif.ToString();
-            txtAdd("/", false);
+            txtUpdate();
         }
 
         private void btnTourRetrait_Click(object sender, RoutedEventArgs e)
@@ -177,7 +166,7 @@ namespace CDS
 
                 tempsActif= qtyTemps;
                 txtTourselectionne.Text = tempsActif.ToString();
-                txtRmv(false);
+                txtUpdate();
             }
         }
 
@@ -208,7 +197,7 @@ namespace CDS
                 listeCMD[tempsActif-1]= listeCMD[tempsActif-1].Remove(listeCMD[tempsActif-1].Length - qtyADel, qtyADel);
             }
 
-            txtRmv(true);
+            txtUpdate();
         }
 
         private void btnTourSuivant_Click(object sender, RoutedEventArgs e)
