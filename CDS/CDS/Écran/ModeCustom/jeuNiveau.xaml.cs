@@ -459,6 +459,22 @@ namespace CDS
             {
                 txtCTour.Text = tour.ToString();
                 txtCScore.Text = partieNormal.score.ToString();
+
+                if(partieNormal.objectif.typeObjectif=="Armure")
+                {
+                    txtTScore.Text = "Armure";
+                    txtCScore.Text = Globale.vie.nbArmure.ToString() + " / " + partieNormal.objectif.valeurObjectif.ToString();
+                }
+                else if (partieNormal.objectif.typeObjectif == "Tour")
+                {
+                    txtTScore.Text = "Tour à survivre";
+                    txtCScore.Text = partieNormal.objectif.valeurObjectif.ToString();
+                }
+                else if (partieNormal.objectif.typeObjectif == "Point")
+                {
+                    txtTScore.Text = "Points pour gagner";
+                    txtCScore.Text = partieNormal.score.ToString() + " / "+  partieNormal.objectif.valeurObjectif.ToString();
+                }
             }
 
             public void rentrerObjet() 
@@ -729,6 +745,9 @@ namespace CDS
                     case "Armure":
                         if (Globale.vie.nbArmure >= partieNormal.objectif.valeurObjectif)
                         {
+                            txtTScore.Text="Armure";
+                            txtCScore.Text= Globale.vie.nbArmure.ToString();
+
                             return false;
                         }
                         break;
