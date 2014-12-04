@@ -99,5 +99,10 @@
             </ComboBox.Background>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="726,49,0,0" TextWrapping="Wrap" Text="Gestion de tour" VerticalAlignment="Top" Width="181" Height="26" FontSize="24" FontFamily="Agency FB" FontWeight="Bold" Foreground="#FF4B634D" TextAlignment="Center"/>
+        <Button x:Name="btnAide" Content="?" HorizontalAlignment="Left" Margin="901,10,0,0" VerticalAlignment="Top" Width="35" Height="35" FontSize="18" FontWeight="Bold" Foreground="#FFFFF300" Click="btnAide_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </UserControl>

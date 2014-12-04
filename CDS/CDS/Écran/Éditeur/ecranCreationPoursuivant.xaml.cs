@@ -279,5 +279,10 @@ namespace CDS
             }
         }
 
+        private void btnAide_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Voici l'écran de création/modification d'un poursuivant. \n\nVous pouvez bâtir la chaîne de commande qui contrôle les actions des poursuivant à l'aide des boutons. \nLes boutons H B G D sont les 4 directions, garder en tête que vous crèé un poursuivant qui vien du bas vers le haut et que les 3 autres direction seront faites automatiquement. \nLes boutons + et - servent à ajouter ou enlever des actions différentes selon le tour et les bouton <- et -> servent à choisir le tour que l'on veut modifier. \nLe bouton attaque de base sert à blessé le joueur s'il est présent sur la case. Bouger de plusieur case sans faire d'attaque est comme se téléporter par dessus le joueur. \nBackspace sert à effacer la dernière commande entrée.","Aide", MessageBoxButton.OK,MessageBoxImage.Information);
+        }
+
     }
 }
