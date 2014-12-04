@@ -57,7 +57,7 @@ namespace CDS
         {
             List<string>[] meilleurScore;
 
-            meilleurScore = Globale.score.obtenirScore();
+            meilleurScore = Globale.score.obtenirScore(true);
             for (int i = 0; i < meilleurScore.Length; i++) 
             {
                 if(meilleurScore[i][0] != "")

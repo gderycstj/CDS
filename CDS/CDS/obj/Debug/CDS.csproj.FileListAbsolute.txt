@@ -535,3 +535,5 @@ C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\CDS.exe
 C:\Users\Admin\Desktop\CDS\CDS\CDS\obj\Debug\CDS.pdb
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Normal\ecranDebutPartie.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Normal\ecranDebutPartie.g.cs

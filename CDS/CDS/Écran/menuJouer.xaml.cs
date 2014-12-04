@@ -100,9 +100,9 @@ namespace CDS
             }
             else if(cboChoixMode.SelectedItem.ToString() == "Normal")
             {
+                timerFin.Start();
                 JeuNormal menuJeu = new JeuNormal();
                 menuJeu.Show();
-                Close();
             }
             else
             {
@@ -187,6 +187,25 @@ namespace CDS
         {
             timerFin.Stop();
             Close();
+        }
+
+        private void btnScore_Click(object sender, RoutedEventArgs e)
+        {
+            timerFin.Start();
+            ecranDebutPartie ecranP = new ecranDebutPartie("menuJouer",cboChoixMode.SelectedItem.ToString());
+            ecranP.Show();
+        }
+
+        private void cboChoixMode_DropDownClosed(object sender, EventArgs e)
+        {
+            if(cboChoixMode.SelectedItem == "Normal")
+            {
+                btnScore.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                btnScore.Visibility = Visibility.Hidden;
+            }
         }
     }
 }

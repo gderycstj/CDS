@@ -33,6 +33,8 @@ namespace CDS
         {
             Globale.iNumeroDuNiveauAJouer=0;
             InitializeComponent();
+            ecranDebutPartie ecranP = new ecranDebutPartie("jeuNormal",Globale.mode.ToString());
+            ecranP.ShowDialog();
             demarrerPartie();
         }
 

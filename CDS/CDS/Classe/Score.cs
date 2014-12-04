@@ -34,14 +34,25 @@ namespace CDS
         /// Va obtenir les 10 meilleurs scores pour un mode
         /// </summary>
         /// <returns>Retourne une liste qui contient les 10 meilleurs scores</returns>
-        public List<string>[] obtenirScore()
+        public List<string>[] obtenirScore(bool perso)
         {
             List<string>[] tabScore;
             int num = 0;
-            string req = "SELECT nom,score FROM Scores s " +
+            string req;
+            if(perso)
+            { 
+                req = "SELECT nom,score FROM Scores s " +
                          "INNER JOIN Utilisateurs u ON s.idUtilisateur = u.idUtilisateur " +
                          "WHERE idModeDeJeu = (SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = '" + Globale.mode + "') " +
                           "ORDER BY score DESC LIMIT 10; ";
+            }
+            else
+            {
+                req = "SELECT nom,score FROM Scores s " +
+                          "INNER JOIN Utilisateurs u ON s.idUtilisateur = u.idUtilisateur " +
+                          "WHERE idModeDeJeu = (SELECT idModeDeJeu FROM ModesDeJeu WHERE nom = '" + Globale.mode + "' AND u.nom = '"+Globale.j1.getNom()+"') " +
+                           "ORDER BY score DESC LIMIT 10; ";
+            }
 
            
           tabScore =  Globale.bdCDS.selection(req, 2, ref num);

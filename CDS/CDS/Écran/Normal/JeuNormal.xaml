@@ -72,7 +72,7 @@
         <TextBlock x:Name="txtCScore" HorizontalAlignment="Left" Height="38" Margin="824,53,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="241" FontFamily="Agency FB" FontSize="36" TextAlignment="Center" Foreground="#FF4B634D"/>
         <TextBlock x:Name="txtTTour" HorizontalAlignment="Left" Height="36" Margin="888,106,0,0" TextWrapping="Wrap" Text="Tours:" VerticalAlignment="Top" Width="77" Foreground="#FF4B634D" FontFamily="Agency FB" FontSize="36"/>
         <TextBlock x:Name="txtCTour" HorizontalAlignment="Left" Height="38" Margin="970,108,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="83" FontFamily="Agency FB" FontSize="36" Foreground="#FF4B634D"/>
-        <TextBlock x:Name="txtTItem" HorizontalAlignment="Left" Height="41" Margin="832,473,0,0" TextWrapping="Wrap" Text="Items" VerticalAlignment="Top" Width="67" Foreground="#FF4B6348" FontFamily="Agency FB" FontSize="36" RenderTransformOrigin="0.478,0.537"/>
+        <TextBlock x:Name="txtTItem" HorizontalAlignment="Left" Height="41" Margin="832,473,0,0" TextWrapping="Wrap" Text="Objets" VerticalAlignment="Top" Width="77" Foreground="#FF4B6348" FontFamily="Agency FB" FontSize="36" RenderTransformOrigin="0.478,0.537"/>
         <Ellipse HorizontalAlignment="Left" Height="82" Margin="824,517,0,0" Stroke="#FF4B634D" VerticalAlignment="Top" Width="112" Fill="#FF4B634D"/>
         <Ellipse HorizontalAlignment="Left" Height="82" Margin="954,517,0,0" Stroke="#FF4B634D" VerticalAlignment="Top" Width="112" Fill="#FF4B634D"/>
         <Button x:Name="item1" Content="" HorizontalAlignment="Left" Height="53" Margin="842,532,0,0" VerticalAlignment="Top" Width="78" Background="{x:Null}" BorderBrush="{x:Null}" Focusable="False" Click="item1_click"/>
