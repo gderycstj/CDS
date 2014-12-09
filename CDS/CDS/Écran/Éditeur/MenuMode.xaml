@@ -84,25 +84,25 @@
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="0"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="1"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="2"></Border>
-            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="3" Margin="0,0,7,0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="3"></Border>
 
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="0"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="1"></Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="2"></Border>
-            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="3" Margin="0,0,7,0"></Border>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="3"></Border>
         </Grid>
-        <ComboBox x:Name="cboObjet" HorizontalAlignment="Left" Margin="610,73,0,0" VerticalAlignment="Top" Width="117" Height="27">
+        <ComboBox x:Name="cboObjet" HorizontalAlignment="Left" Margin="598,73,0,0" VerticalAlignment="Top" Width="117" Height="27">
             <ComboBox.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </ComboBox.Background>
         </ComboBox>
-        <Label Content="Objets" HorizontalAlignment="Left" Margin="544,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Foreground="#FF4B634D" FontFamily="Agency FB"/>
-        <Button x:Name="btnObjet" Content="+" HorizontalAlignment="Left" Margin="751,73,0,0" VerticalAlignment="Top" Width="33" Height="26" Click="btnObjet_Click">
+        <Label Content="Objets" HorizontalAlignment="Left" Margin="532,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Foreground="#FF4B634D" FontFamily="Agency FB"/>
+        <Button x:Name="btnObjet" Content="+" HorizontalAlignment="Left" Margin="739,73,0,0" VerticalAlignment="Top" Width="33" Height="26" Click="btnObjet_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AjouterMode" Content="Ajouter Mode" HorizontalAlignment="Left" Margin="391,324,0,0" VerticalAlignment="Top" Width="161" Height="41" FontFamily="Agency FB" FontSize="20" Click="AjouterMode_Click">
+        <Button x:Name="AjouterMode" Content="Ajouter Mode" HorizontalAlignment="Left" Margin="404,297,0,0" VerticalAlignment="Top" Width="131" Height="41" FontFamily="Agency FB" FontSize="20" Click="AjouterMode_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
@@ -111,15 +111,15 @@
         <Label Content="V" HorizontalAlignment="Left" Margin="289,54,0,0" VerticalAlignment="Top" Height="26" Foreground="#FF4B634D" Width="25" FontFamily="Agency FB" FontSize="16"/>
         <TextBox  x:Name="txtRarete" HorizontalAlignment="Left" Height="21" Margin="319,79,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="25" Background="#FF4B634D"/>
         <Label  Content="R" HorizontalAlignment="Left" Margin="327,53,0,0" VerticalAlignment="Top" Height="25" Foreground="#FF4B634D" FontFamily="Agency FB" FontSize="16"/>
-        <Label Content="Objectif" HorizontalAlignment="Left" Margin="546,16,0,0" VerticalAlignment="Top" FontFamily="Agency FB" Width="82" FontWeight="Bold" FontSize="24" Foreground="#FF4B634D"/>
-        <ComboBox x:Name="cboObjectif" HorizontalAlignment="Left" Height="25" Margin="632,24,0,0" VerticalAlignment="Top" Width="95" FontFamily="Agency FB" FontSize="16" Padding="5,3,0,0" DropDownClosed="ActionObjectif">
+        <Label Content="Objectif" HorizontalAlignment="Left" Margin="471,16,0,0" VerticalAlignment="Top" FontFamily="Agency FB" Width="82" FontWeight="Bold" FontSize="24" Foreground="#FF4B634D"/>
+        <ComboBox x:Name="cboObjectif" HorizontalAlignment="Left" Height="25" Margin="557,24,0,0" VerticalAlignment="Top" Width="95" FontFamily="Agency FB" FontSize="16" Padding="5,3,0,0" DropDownClosed="ActionObjectif">
             <ComboBox.Background>
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </ComboBox.Background>
         </ComboBox>
-        <Label Content="Valeur:" HorizontalAlignment="Left" Margin="732,16,0,0" VerticalAlignment="Top" FontFamily="Agency FB" Width="67" FontWeight="Bold" FontSize="24" Foreground="#FF4B634D"/>
-        <TextBox x:Name="txtValeurObjectif" HorizontalAlignment="Left" Height="25" Margin="804,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Background="#FF4B634D" FontFamily="Agency FB" FontSize="16"/>
-        <Grid x:Name="grille_Objet" Width="333" Background="#FF4B634D" Margin="557,105,85,46" >
+        <Label Content="Valeur:" HorizontalAlignment="Left" Margin="700,16,0,0" VerticalAlignment="Top" FontFamily="Agency FB" Width="67" FontWeight="Bold" FontSize="24" Foreground="#FF4B634D"/>
+        <TextBox x:Name="txtValeurObjectif" HorizontalAlignment="Left" Height="25" Margin="772,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Background="#FF4B634D" FontFamily="Agency FB" FontSize="16"/>
+        <Grid x:Name="grille_Objet" Width="333" Background="#FF4B634D" Margin="545,105,97,46" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -158,5 +158,10 @@
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="0"/>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="1"/>
         </Grid>
+        <Button x:Name="btnAide" Content="?" HorizontalAlignment="Left" Margin="897,19,0,0" VerticalAlignment="Top" Width="35" Height="35" FontSize="18" FontWeight="Bold" Foreground="#FFFFF300" Click="btnAide_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </UserControl>

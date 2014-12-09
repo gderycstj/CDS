@@ -122,7 +122,12 @@ namespace CDS
         private void btnDeconnexion_Click(object sender, RoutedEventArgs e)
         {
             Globale.j1.estConnecte = false;
+            cboChoixMode.Items.Clear();
+            cboChoixMode.Items.Add("Normal");
+            cboChoixMode.Items.Add("Survie");
+            cboChoixMode.SelectedIndex = 0;
             Connect();
+            toggleBtnScore();
         }
 
         public void Connect()
@@ -181,6 +186,7 @@ namespace CDS
                 cboChoixMode.Items.Add(listeMode[i][0]);
             }
             cboChoixMode.SelectedIndex = 0;
+            toggleBtnScore();
         }
 
         private void OnTimedEvent(object sender, EventArgs e)
@@ -198,7 +204,12 @@ namespace CDS
 
         private void cboChoixMode_DropDownClosed(object sender, EventArgs e)
         {
-            if(cboChoixMode.SelectedItem == "Normal")
+            toggleBtnScore();
+        }
+
+        private void toggleBtnScore()
+        {
+            if (cboChoixMode.SelectedItem.ToString() == "Normal")
             {
                 btnScore.Visibility = Visibility.Visible;
             }

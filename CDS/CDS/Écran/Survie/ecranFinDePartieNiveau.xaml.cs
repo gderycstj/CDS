@@ -50,6 +50,7 @@ namespace CDS
 
         private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
+            Globale.iNumeroDuNiveauAJouer=0;
             menuSurvie menuS = new menuSurvie();
             menuS.Show();
             Close();
@@ -57,6 +58,7 @@ namespace CDS
 
         private void btnSelectionNiveau_Click(object sender, RoutedEventArgs e)
         {
+            Globale.iNumeroDuNiveauAJouer = 0;
             menuSelectionNiveau menuSelec = new menuSelectionNiveau();
             menuSelec.Show();
             Close();

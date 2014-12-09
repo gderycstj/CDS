@@ -30,6 +30,7 @@ namespace CDS
 
         private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
+            Globale.iNumeroDuNiveauAJouer = 0;
             menuSurvie menuS = new menuSurvie();
             menuS.Show();
             Close();

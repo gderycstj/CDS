@@ -96,6 +96,9 @@
     <Compile Include="Écran\Instruction\infoPoursuivant2.xaml.cs">
       <DependentUpon>infoPoursuivant2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Écran\msg.xaml.cs">
+      <DependentUpon>msg.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Écran\Normal\ecranDebutPartie.xaml.cs">
       <DependentUpon>ecranDebutPartie.xaml</DependentUpon>
     </Compile>
@@ -185,6 +188,10 @@
     <Page Include="Écran\Instruction\infoPoursuivant2.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Écran\msg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Écran\Normal\ecranDebutPartie.xaml">
       <SubType>Designer</SubType>

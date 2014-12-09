@@ -19,6 +19,10 @@ namespace CDS
        public static Vie vie;
        public static Score score;
 
+       public static string titreMsg;
+       public static string contenuMsg;
+       public static string titrePMsg;
+
         static Globale()
         {
             Joueur j0 = new Joueur();
@@ -31,6 +35,10 @@ namespace CDS
             j1 = j0;
             score = s1;
             iNumeroDuNiveauAJouer=0;
+
+            titrePMsg="pop-up";
+            titreMsg="Undefined";
+            contenuMsg="No text have been initialised";
         }
 
     }

@@ -24,5 +24,15 @@ namespace CDS
         {
             InitializeComponent();
         }
+
+        private void btnAide_Click(object sender, RoutedEventArgs e)
+        {
+            Globale.titrePMsg = "Aide";
+            Globale.titreMsg = "Écran supression";
+            Globale.contenuMsg = "Voici l'écran de supression d'un objet. \n\nIci, vous pouver supprimer vos créations et seulement les votres. \n\nChoisisez, entrez votre mot de passe et valider, c'est tout";
+
+            msg popup = new msg();
+            popup.ShowDialog();
+        }
     }
 }
