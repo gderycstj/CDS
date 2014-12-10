@@ -406,8 +406,6 @@ D:\CDS\CDS\CDS\obj\Debug\Écran\Compte\menuGestionProfil.baml
 D:\CDS\CDS\CDS\obj\Debug\Écran\Normal\JeuNormal.baml
 D:\CDS\CDS\CDS\obj\Debug\Écran\Compte\menuInscription.baml
 D:\CDS\CDS\CDS\obj\Debug\Écran\Éditeur\MenuMode.baml
-D:\CDS\CDS\CDS\obj\Debug\Écran\Éditeur\menuObjet.baml
-D:\CDS\CDS\CDS\obj\Debug\Écran\Éditeur\menuPoursuivant.baml
 D:\CDS\CDS\CDS\obj\Debug\Écran\menuPrincipal.baml
 D:\CDS\CDS\CDS\obj\Debug\Écran\Éditeur\menuEditeur.baml
 D:\CDS\CDS\CDS\obj\Debug\Écran\Instruction\menuInstruction.baml
@@ -439,8 +437,6 @@ D:\CDS\CDS\CDS\obj\Debug\Écran\Compte\menuGestionProfil.g.cs
 D:\CDS\CDS\CDS\obj\Debug\Écran\Normal\JeuNormal.g.cs
 D:\CDS\CDS\CDS\obj\Debug\Écran\Compte\menuInscription.g.cs
 D:\CDS\CDS\CDS\obj\Debug\Écran\Éditeur\MenuMode.g.cs
-D:\CDS\CDS\CDS\obj\Debug\Écran\Éditeur\menuObjet.g.cs
-D:\CDS\CDS\CDS\obj\Debug\Écran\Éditeur\menuPoursuivant.g.cs
 D:\CDS\CDS\CDS\obj\Debug\Écran\menuPrincipal.g.cs
 D:\CDS\CDS\CDS\obj\Debug\Écran\Éditeur\menuEditeur.g.cs
 D:\CDS\CDS\CDS\obj\Debug\Écran\Instruction\menuInstruction.g.cs
@@ -614,3 +610,7 @@ D:\CDS - Copie\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 D:\CDS - Copie\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\msg.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\msg.g.cs
+D:\CDS\CDS\CDS\obj\Debug\Écran\msg.baml
+D:\CDS\CDS\CDS\obj\Debug\Écran\Normal\ecranDebutPartie.baml
+D:\CDS\CDS\CDS\obj\Debug\Écran\msg.g.cs
+D:\CDS\CDS\CDS\obj\Debug\Écran\Normal\ecranDebutPartie.g.cs

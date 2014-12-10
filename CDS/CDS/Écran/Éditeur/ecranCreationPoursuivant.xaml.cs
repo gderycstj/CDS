@@ -255,7 +255,10 @@ namespace CDS
               for(int i=1;i<=qtyTemps ; i++)
               {
                   sBldr.Append(listeCMD[i-1]);
+                  sBldr.Append("/");
               }
+
+              sBldr.Remove(sBldr.Length-1,1);
 
              reqPoursuivant = "INSERT INTO Poursuivants(nom,idUtilisateur,idApparence,valeurPoint,listeCMD)"+
              "VALUES('"+txtNomPoursuivant.Text+"',(SELECT idUtilisateur FROM Utilisateurs WHERE nom='" + Globale.j1.getNom() + "')"+
