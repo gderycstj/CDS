@@ -157,8 +157,6 @@ K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Compte\menuGestionProfil.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Normal\JeuNormal.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Compte\menuInscription.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Éditeur\MenuMode.baml
-K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Éditeur\menuObjet.baml
-K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Éditeur\menuPoursuivant.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Éditeur\menuEditeur.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Instruction\menuInstruction.baml
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Survie\menuSelectionNiveau.baml
@@ -181,8 +179,6 @@ K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Compte\menuGestionProfil.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Normal\JeuNormal.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Compte\menuInscription.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Éditeur\MenuMode.g.cs
-K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Éditeur\menuObjet.g.cs
-K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Éditeur\menuPoursuivant.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Éditeur\menuEditeur.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Instruction\menuInstruction.g.cs
 K:\chambre de survie\CDS\CDS\obj\Debug\Écran\Survie\menuSelectionNiveau.g.cs
@@ -616,3 +612,5 @@ D:\CDS - Copie\CDS\CDS\obj\Debug\CDS_MarkupCompile.cache
 D:\CDS - Copie\CDS\CDS\obj\Debug\CDS.g.resources
 D:\CDS - Copie\CDS\CDS\obj\Debug\CDS.Properties.Resources.resources
 D:\CDS - Copie\CDS\CDS\obj\Debug\CDS.csproj.GenerateResource.Cache
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\msg.baml
+K:\chambre de survie\CDS\CDS\obj\Debug\Écran\msg.g.cs

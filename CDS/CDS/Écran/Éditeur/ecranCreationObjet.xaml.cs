@@ -169,7 +169,7 @@ namespace CDS
         {
             Globale.titrePMsg = "Aide";
             Globale.titreMsg = "Écran Objet";
-            Globale.contenuMsg = "Voici l'écran de création/modification d'un objet. \n\nIci, vous pouver lier un objet à un effet et lui donné un nom et une apparence. \n\nC'est tout, c'est super simple.";
+            Globale.contenuMsg = "Voici l'écran de création/modification d'un objet. \n\nIci, vous pouvez lier un objet à un effet et lui donné un nom et une apparence. \n\nC'est tout, c'est super simple.";
 
             msg popup = new msg();
             popup.ShowDialog();

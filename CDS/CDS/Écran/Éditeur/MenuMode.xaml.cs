@@ -373,10 +373,10 @@ namespace CDS
         {
             Globale.titrePMsg = "Aide";
             Globale.titreMsg = "Écran Mode";
-            Globale.contenuMsg = "Voici l'écran de création/modification d'un Mode. \n\nIci, vous pouvez lier des objets et poursuivant tout en ajoutant un objectif pour créer un mode. \n\n" + 
-            "Pour ajouter un poursuivant, choisissez celui que vous voulez ajouter. Donnez-lui une [R]areter (à chaque combien de tours il apparait) et une [V]aleur(quantité maximum en même temps) et finaliser le tout en appuyant sur le [+]\n\n" + 
+            Globale.contenuMsg = "Voici l'écran de création/modification d'un Mode. \n\nIci, vous pouvez lier des objets et des poursuivants tout en ajoutant un objectif pour créer un mode. \n\n" + 
+            "Pour ajouter un poursuivant, choisissez celui que vous voulez ajouter. Donnez-lui une [R]areté (à chaque combien de tours il apparait) et une [V]aleur(la quantité maximum de cette entité en même temps sur la grille de jeu) et finaliser le tout en appuyant sur le [+]\n\n" + 
             "Pour ajouter un objet, choisissez l'objet que vous voulez ajouter et appuyez sur le [+]\n\n" +
-            "Pour mettre en place l'objectif, choisissez quel type vous voulez et choisissez la valeur que l'objectif doit atteindre";
+            "Pour mettre en place l'objectif, choisissez quel type vous voulez et sélectionner la valeur que l'objectif doit atteindre";
 
             msg popup = new msg();
             popup.ShowDialog();
