@@ -834,8 +834,13 @@ namespace CDS
                 {
                     partieNormal.setPartie(reponse[0][0], Convert.ToInt32(reponse[0][1]));
                 }
-                else
-                   System.Windows.MessageBox.Show("Erreur");
+                if (nombreRange != 1)
+                {
+                    nombreRange = 0;
+                    Globale.iNumeroDuNiveauAJouer = 0;
+                    req = " SELECT o.nom, o.valeurObjectif FROM modesdejeu m INNER JOIN niveaux n ON n.idModeDeJeu = m.idModeDeJeu  INNER JOIN objectifs o ON o.idObjectif = n.idObjectif WHERE m.idModeDeJeu=(SELECT idModeDeJeu  FROM modesdejeu WHERE nom='" + Globale.mode + "') AND n.numniveau='" + Globale.iNumeroDuNiveauAJouer + "'; ";
+                    reponse = Globale.bdCDS.selection(req, 2, ref nombreRange);
+                }
 
                 if (Globale.mode == "Survie")
                 {
@@ -845,6 +850,7 @@ namespace CDS
                 }
                 else
                 {
+                    
                     ecranDescriptionObjectif menuD = new ecranDescriptionObjectif(reponse[0][0], Convert.ToInt32(reponse[0][1]));
                     menuD.ShowDialog();
                 }
