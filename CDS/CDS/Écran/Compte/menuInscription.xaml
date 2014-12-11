@@ -28,5 +28,10 @@
                 <ImageBrush ImageSource="/CDS;component/Image/3.jpg"/>
             </Button.Background>
         </Button>
+        <Button x:Name="btnAide" Content="?" HorizontalAlignment="Left" Margin="525,37,0,0" VerticalAlignment="Top" Width="50" Height="47" FontSize="18" FontWeight="Bold" Foreground="#FFFFF300" Click="btnAide_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CDS;component/Image/3.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

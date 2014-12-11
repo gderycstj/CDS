@@ -41,7 +41,7 @@ namespace CDS
                 txtUtilisateur.Clear();
                 estValide = false;
             }
-            if (txtMotDePasse.Password.Length < 3 || txtMotDePasse.Password.Length > 30)
+            if (txtMotDePasse.Password.Length < 3 || txtMotDePasse.Password.Length > 20)
             {
                 txtErreurMDP.Text = "Votre mot de passe doit avoir entre 3 et 20 caractères";
                 txtMotDePasse.Clear();
@@ -77,6 +77,16 @@ namespace CDS
                     Close();
                 }
             }
+        }
+
+        private void btnAide_Click(object sender, RoutedEventArgs e)
+        {
+            Globale.titrePMsg = "Aide";
+            Globale.titreMsg = "Inscription";
+            Globale.contenuMsg = "Voici l'écran d'inscription. \n\nIci, vous pouvez vous créer un compte pour pourvoir enregistrer vos score, utiliser l'éditeur et progresser dans le mode niveau. \n\nLe nom doit avoir entre 3 et 20 caraactère. \nLe mot de passe doit avoir entre 3 et 20 caractère et doit être réécrit dans le champs de confirmation de mot de passe.";
+
+            msg popup = new msg();
+            popup.ShowDialog();
         }
     }
 }

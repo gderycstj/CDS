@@ -53,7 +53,7 @@ namespace CDS
                 estValide = false;
             }
 
-            if (txtMotDePasseModif.Password.Length < 3 || txtMotDePasseModif.Password.Length > 30)
+            if (txtMotDePasseModif.Password.Length < 3 || txtMotDePasseModif.Password.Length > 20)
             {
                 txtErreur.Text = "Votre mot de passe doit avoir entre 3 et 20 caractères";
                 estValide = false;
@@ -170,6 +170,16 @@ namespace CDS
             btnModifier.IsEnabled = true;
             btnSupprimer.IsEnabled = false;
 
+        }
+
+        private void btnAide_Click(object sender, RoutedEventArgs e)
+        {
+            Globale.titrePMsg = "Aide";
+            Globale.titreMsg = "Gestion du profil ";
+            Globale.contenuMsg = "Voici l'écran de gestion de votre profil. \n\nIci, vous pouvez modifier votre mot de passe et supprimer votre compte. \n\n Oubliez pas que le mot de passe doit entre entre 3 et 20 carractère.";
+
+            msg popup = new msg();
+            popup.ShowDialog();
         }
     }
 }
